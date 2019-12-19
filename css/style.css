@@ -4,9 +4,10 @@ button {
   cursor: url(/img/pink_cursor.png), auto !important;
 }
 
-/* body {
-  padding-top: 40px;
-} */
+body {
+  min-height: 100vh;
+  background-color: #e6e6e6;
+}
 
 @font-face {
 	font-family: 'Zeit-MediumItalic';
@@ -99,7 +100,7 @@ button {
   margin-right: auto;
   font-size: 3vmax;
   z-index: 2;
-  color: #c07b42;
+  color: #fff;
 }
 
 #hero-image1 {
@@ -150,11 +151,7 @@ button {
 }
 
 .hero {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-content: end;
-  align-items: end; */
+
   color: #c9b7b7;
   color: #fff;
 
@@ -190,7 +187,7 @@ button {
 }
 
 footer {
-  background-color: #a89261;
+  background-color: #f1d3d3;
 }
 
 .alternate {
@@ -222,7 +219,7 @@ footer {
 
 .marquee {
   font-size: 4em;
-  /* line-height: 1; */
+  
   overflow: hidden;
   background-color: #c07b42;
   
@@ -258,7 +255,7 @@ footer {
 
   position: relative;
   width: 100%;
-  overflow-x: scroll;
+  overflow-x: hidden;
   overflow-y: hidden;
 
   /* white-space: nowrap; */
