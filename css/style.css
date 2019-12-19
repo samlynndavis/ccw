@@ -1,0 +1,436 @@
+body,
+a,
+button {
+  cursor: url(/img/pink_cursor.png), auto !important;
+}
+
+/* body {
+  padding-top: 40px;
+} */
+
+@font-face {
+	font-family: 'Zeit-MediumItalic';
+	src: url('/css/fonts/zeit-medium-italic.eot');
+	src: url('/css/fonts/zeit-medium-italic.svg') format('embedded-opentype'),
+       url('/css/fonts/zeit-medium-italic.woff2') format('woff2'),
+	     url('/css/fonts/zeit-medium-italic.woff') format('woff'),
+	     url('/css/fonts/zeit-medium-italic.ttf') format('truetype'),
+	     url('/css/fonts/zeit-medium-italic.svg#youworkforthem') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Zeit-Extralight';
+	src: url('/css/fonts/zeit-extralight.eot');
+	src: url('/css/fonts/zeit-extralight.eot?#iefix') format('embedded-opentype'),
+             url('/css/fonts/zeit-extralight.woff2') format('woff2'),
+	     url('/css/fonts/zeit-extralight.woff') format('woff'),
+	     url('/css/fonts/zeit-extralight.ttf') format('truetype'),
+	     url('/css/fonts/zeit-extralight.svg#youworkforthem') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Zeit-Heavy';
+	src: url('/css/fonts/zeit-heavy.eot');
+	src: url('/css/fonts/zeit-heavy.eot?#iefix') format('embedded-opentype'),
+       url('/css/fonts/zeit-heavy.woff2') format('woff2'),
+	     url('/css/fonts/zeit-heavy.woff') format('woff'),
+	     url('/css/fonts/zeit-heavy.ttf') format('truetype'),
+	     url('/css/fonts/zeit-heavy.svg#youworkforthem') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Zeit-Light';
+	src: url('/css/fonts/zeit-light.eot');
+	src: url('/css/fonts/zeit-light.eot?#iefix') format('embedded-opentype'),
+       url('/css/fonts/zeit-light.woff2') format('woff2'),
+	     url('/css/fonts/zeit-light.woff') format('woff'),
+	     url('/css/fonts/zeit-light.ttf') format('truetype'),
+	     url('/css/fonts/zeit-light.svg#youworkforthem') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.zeit {
+  font-family: 'Zeit-MediumItalic';
+}
+
+.zeit-extra {
+  font-family: 'Zeit-Extralight';
+}
+
+.zeit-light {
+  font-family: 'Zeit-Light';
+}
+
+.zeit-heavy {
+  font-family: 'Zeit-Heavy';
+}
+
+.montserrat {
+  font-family: Montserrat, sans-serif;
+}
+
+.story-title {
+  z-index: 10;
+  opacity: 0;
+  animation-name: fadein;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 800ms;
+
+  /* transition: 0.2s ease-in-out; */
+}
+
+/* .story-title:hover {
+  text-shadow: -5px 5px #8eb69b;
+  transition: 0.2s ease-in-out;
+} */
+
+.overview {
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 3vmax;
+  z-index: 2;
+  color: #c07b42;
+}
+
+#hero-image1 {
+  background-position: 52% 43%;
+  background-image: url(/img/000007230011.jpg);
+  height: calc(100vh - 316px);
+  min-height: calc(960px - 316px);
+  max-height: calc(1400px - 316px);
+  position: absolute;
+  background-size: cover;
+  width: auto;
+  z-index: 1;
+  left: 50%;
+  margin-top: 0;
+}
+
+#hero-image1:hover {
+  z-index: 3;
+  cursor: grab;
+  cursor: -webkit-grab;
+}
+
+#hero-image1.active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+
+#story-hero {
+  
+  background-image: url(/img/000007230011.jpg);
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48vw;
+  border-radius: 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  margin-top: 0;
+  transform: translateX(100%);
+
+  animation-name: slidein;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 750ms;
+}
+
+.hero {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: end;
+  align-items: end; */
+  color: #c9b7b7;
+  color: #fff;
+
+  background: url(/img/000007230009.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+/* .hidetext-container {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+  font-size: 200px;
+} */
+
+.firstcharacter {
+  color: #903;
+  float: left;
+  font-family: Georgia;
+  font-size: 75px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+}
+
+.hidetext {
+  position: absolute;
+} */
+
+.headline {
+  transform: translateY(-250);
+}
+
+footer {
+  background-color: #a89261;
+}
+
+.alternate {
+  -moz-font-feature-settings: "swsh";
+  -webkit-font-feature-settings: "swsh";
+  font-feature-settings: "swsh";
+}
+
+.bg-no10 {
+  background-color: #f1d3d3;;
+}
+
+.bg-soft-green {
+  background-color: #8eb69b;
+}
+
+.no12 {
+  color: #8eb69b;;
+
+}
+
+.cream {
+  background-color: #efe8d8
+}
+
+.f1 {
+  font-size: 11vmax;
+}
+
+.marquee {
+  font-size: 4em;
+  /* line-height: 1; */
+  overflow: hidden;
+  background-color: #c07b42;
+  
+  /* background: linear-gradient(
+    45deg,
+    rgba(255, 193, 7, 1),
+    rgb(183, 21, 64, 1),
+    rgba(255, 193, 7, 1)
+  );
+  background-size: 300% 300%;
+  -webkit-animation: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite; */
+}
+
+.caption {
+  color: #c07b42;
+  font-family: 'Zeit-Extralight';
+
+}
+
+.roster {
+  display:grid;
+  grid-column-gap: 50px;
+  grid-template-columns: repeat(5, minmax(500px, 1fr));
+  grid-template-rows: 650px;
+  align-content: center;
+
+  cursor: grab;
+  cursor: -webkit-grab;
+
+  /* transform: scale(0.98);
+  transition: 250ms ease; */
+
+  position: relative;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+  /* white-space: nowrap; */
+  /* will-change: transform; */
+
+  user-select: none;
+}
+
+.roster.active {
+  cursor:grabbing;
+  cursor: -webkit-grabbing;
+  /* transform: scale(1);
+  transition: 250ms ease; */
+}
+
+.roster-image {
+  background-size: cover;
+  height: 100%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  background-position: 45% 0%;
+}
+
+.roster-title {
+  color: #404040;
+}
+
+.roster-name {
+  font-size: 4em;
+}
+
+.roster-card-1 {
+  transition: 0.2s ease-in-out;
+}
+
+.roster-card-1:hover {
+  box-shadow: 8px 8px #fff;
+  transform: translateY(-8px);
+  transition: 0.2s ease-in-out;
+  background-color: black;
+}
+
+.roster-card-1:hover h1,
+.roster-card-1:hover p {
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+
+.roster-card-2 {
+  transition: 0.2s ease-in-out;
+}
+
+.roster-card-2:hover {
+  box-shadow: 8px 8px #fff;
+  transform: translateY(-8px);
+  transition: 0.2s ease-in-out;
+  background-color: black;
+}
+
+.roster-card-2:hover h1,
+.roster-card-2:hover p {
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+
+.roster-card-3 {
+  transition: 0.2s ease-in-out;
+}
+
+.roster-card-3:hover {
+  box-shadow: 8px 8px #fff;
+  transform: translateY(-8px);
+  transition: 0.2s ease-in-out;
+  background-color: black;
+}
+
+.roster-card-3:hover h1,
+.roster-card-3:hover p {
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+
+.roster-card-4 {
+  transition: 0.2s ease-in-out;
+}
+
+.roster-card-4:hover {
+  box-shadow: 8px 8px #fff;
+  transform: translateY(-8px);
+  transition: 0.2s ease-in-out;
+  background-color: black;
+}
+
+.roster-card-4:hover h1,
+.roster-card-4:hover p {
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+
+.roster-card-5 {
+  transition: 0.2s ease-in-out;
+}
+
+.roster-card-5:hover {
+  box-shadow: 8px 8px #fff;
+  transform: translateY(-8px);
+  transition: 0.2s ease-in-out;
+  background-color: black;
+}
+
+.roster-card-5:hover h1,
+.roster-card-5:hover p {
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+
+@keyframes moveLeft {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-3000vw);
+  }
+}
+
+.marquee span {
+  animation: moveLeft 200s infinite linear;
+  white-space: nowrap;
+  display: block;
+  position: relative;
+  color: #fff;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slidein {
+  from { transform: translateX(100%);}
+  to   { transform: translateX(0); }
+}
+
