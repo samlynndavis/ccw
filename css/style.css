@@ -238,7 +238,7 @@ footer {
 }
 
 .caption {
-  color: #c07b42;
+  color: #fff;
   font-family: 'Zeit-Extralight';
 
 }
@@ -434,3 +434,11 @@ footer {
   to   { transform: translateX(0); }
 }
 
+
+@media screen and (max-width: 1500px), screen and (max-height: 700px) {
+  .roster {
+    grid-template-columns: repeat(5, minmax(400px, 1fr));
+    grid-template-rows: 500px;
+  }
+}
+  
