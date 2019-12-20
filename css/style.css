@@ -255,7 +255,7 @@ footer {
 
   position: relative;
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: scroll;
   overflow-y: hidden;
 
   /* white-space: nowrap; */
@@ -288,12 +288,27 @@ footer {
   font-size: 4em;
 }
 
+.roster-card-2 h1 {
+  color: #a6cfe2;
+}
+
+.roster-card a:hover {
+  cursor: pointer !important;
+  text-shadow: 2px 2px #fff;
+  transition: 0.2s ease-in-out;
+}
+
+
 .roster-card-1 {
   transition: 0.2s ease-in-out;
 }
 
+.roster-card-1 a:hover {
+  color: #e54b4b;
+}
+
 .roster-card-1:hover {
-  box-shadow: 8px 8px #fff;
+  box-shadow: 8px 8px #e54b4b;
   transform: translateY(-8px);
   transition: 0.2s ease-in-out;
   background-color: black;
@@ -301,7 +316,7 @@ footer {
 
 .roster-card-1:hover h1,
 .roster-card-1:hover p {
-  color: #fff;
+  color: #e44b4b;
   transition: 0.2s ease-in-out;
 }
 
@@ -310,7 +325,7 @@ footer {
 }
 
 .roster-card-2:hover {
-  box-shadow: 8px 8px #fff;
+  box-shadow: 8px 8px #a6cfe2;
   transform: translateY(-8px);
   transition: 0.2s ease-in-out;
   background-color: black;
@@ -318,7 +333,7 @@ footer {
 
 .roster-card-2:hover h1,
 .roster-card-2:hover p {
-  color: #fff;
+  color: #a6cfe2 !important;
   transition: 0.2s ease-in-out;
 }
 
@@ -327,7 +342,7 @@ footer {
 }
 
 .roster-card-3:hover {
-  box-shadow: 8px 8px #fff;
+  box-shadow: 8px 8px #f0cf61;
   transform: translateY(-8px);
   transition: 0.2s ease-in-out;
   background-color: black;
@@ -335,7 +350,7 @@ footer {
 
 .roster-card-3:hover h1,
 .roster-card-3:hover p {
-  color: #fff;
+  color: #f0cf61;
   transition: 0.2s ease-in-out;
 }
 
@@ -373,6 +388,16 @@ footer {
   transition: 0.2s ease-in-out;
 }
 
+.marquee span {
+animation: moveLeft 200s infinite linear;
+white-space: nowrap;
+display: block;
+position: relative;
+color: #fff;
+}
+
+
+
 @keyframes moveLeft {
   0% {
       transform: translateX(0);
@@ -380,14 +405,6 @@ footer {
   100% {
       transform: translateX(-3000vw);
   }
-}
-
-.marquee span {
-  animation: moveLeft 200s infinite linear;
-  white-space: nowrap;
-  display: block;
-  position: relative;
-  color: #fff;
 }
 
 @keyframes gradient {
