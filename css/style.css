@@ -150,6 +150,28 @@ body {
   animation-delay: 750ms;
 }
 
+#story-hero2 {
+  
+  background-image: url(/img/000007230011.jpg);
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48vw;
+  border-radius: 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  margin-top: 0;
+  transform: translateX(100%);
+
+  animation-name: slidein;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 750ms;
+}
+
 .hero {
 
   color: #c9b7b7;
@@ -235,7 +257,7 @@ footer {
 }
 
 .caption {
-  color: #fff;
+  color: #000;
   font-family: 'Zeit-Extralight';
 
 }
@@ -288,12 +310,8 @@ footer {
   font-size: 4em;
 }
 
-.roster-card-2 h1 {
-  color: #a6cfe2;
-}
-
 .roster-card a:hover {
-  cursor: pointer !important;
+  cursor: pointer;
   text-shadow: 2px 2px #fff;
   transition: 0.2s ease-in-out;
 }
@@ -345,7 +363,7 @@ footer {
   box-shadow: 8px 8px #f0cf61;
   transform: translateY(-8px);
   transition: 0.2s ease-in-out;
-  background-color: black;
+  background-color: #3d2314;
 }
 
 .roster-card-3:hover h1,
