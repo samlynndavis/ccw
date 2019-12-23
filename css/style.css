@@ -93,7 +93,7 @@ body {
   transition: 0.2s ease-in-out;
 } */
 
-.overview {
+.overview-text {
   left: 0;
   right: 0;
   margin-left: auto;
@@ -101,6 +101,10 @@ body {
   font-size: 3vmax;
   z-index: 2;
   color: #fff;
+}
+
+.overview-title {
+  transform: rotate(-90deg) translateY(-40px);
 }
 
 #drag-image {
@@ -473,4 +477,42 @@ color: #fff;
     grid-template-rows: 500px;
   }
 }
-  
+
+
+@media screen and (max-width: 375px) {
+
+  .overview {
+    display: flex;
+    flex-direction: column;
+    background-image: url(/img/000007230011.jpg);
+    background-size: cover;
+    background-position: center
+
+  }
+
+  .overview-title {
+    transform: rotate(-0deg);
+  }
+
+  #drag-image {
+    display: none;
+  }
+
+  .roster {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .roster-name {
+    font-size: 2em;
+  }
+
+  .roster-image {
+    height: 300px;
+  }
+
+  .roster-title {
+    padding-left: 1em;
+  }
+}
