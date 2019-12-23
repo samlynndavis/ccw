@@ -74,7 +74,7 @@ function hasScrolled() {
     lastScrollTop = st;
 }
 
-dragElement(document.getElementById("hero-image1"));
+dragElement(document.getElementById("drag-image"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -117,7 +117,7 @@ function dragElement(elmnt) {
   }
 }
 
-const grabber = document.querySelector('#hero-image1');
+const grabber = document.querySelector('#drag-image');
 
 grabber.addEventListener('mousedown', () => {
   isDown = true;
@@ -164,3 +164,4 @@ slider.addEventListener('mousemove', (e) => {
   slider.scrollLeft = scrollLeft - walk;
   console.log(walk);
 });
+

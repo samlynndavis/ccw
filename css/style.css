@@ -103,7 +103,7 @@ body {
   color: #fff;
 }
 
-#hero-image1 {
+#drag-image {
   background-position: 52% 43%;
   background-image: url(/img/000007230011.jpg);
   height: calc(100vh - 316px);
@@ -117,13 +117,13 @@ body {
   margin-top: 0;
 }
 
-#hero-image1:hover {
+#drag-image:hover {
   z-index: 3;
   cursor: grab;
   cursor: -webkit-grab;
 }
 
-#hero-image1.active {
+#drag-image.active {
   cursor: grabbing;
   cursor: -webkit-grabbing;
 }
