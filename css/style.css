@@ -57,6 +57,8 @@ body {
 	font-style: normal;
 }
 
+
+
 .zeit {
   font-family: 'Zeit-MediumItalic';
 }
@@ -109,6 +111,10 @@ body {
 
 .overview-title {
   transform: rotate(-90deg) translateY(-40px);
+}
+
+.intro {
+  background-color: #f1d3d3;
 }
 
 #drag-image {
@@ -434,7 +440,6 @@ color: #fff;
 }
 
 
-
 @keyframes moveLeft {
   0% {
       transform: translateX(0);
@@ -485,21 +490,22 @@ color: #fff;
   to   { transform: translateX(0); }
 }
 
+@media screen and (min-width: 500px) {
 
-/* @media screen and (max-width: 1500px), screen and (max-height: 700px) {
-  .roster {
-    grid-template-columns: repeat(5, minmax(400px, 1fr));
-    grid-template-rows: 500px;
+  header.mobile {
+    display: none;
   }
-} */
 
+  .intro-title {
+    display: none;
+  }
+
+  .intro-text {
+    display: none;
+  }
+}
 
 @media screen and (max-width: 500px) {
-
-  header {
-    display:none !important;
-  }
-
   .roster-block {
     padding-left: 1rem;
     padding-right: 1rem;
