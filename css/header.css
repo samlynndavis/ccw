@@ -21,6 +21,10 @@ header.nav-up {
   top: -45px;
 }
 
+header.nav-down {
+  top: 0px;
+}
+
 header#navigation {
   background-color: transparent;
 }
@@ -45,6 +49,15 @@ header#navigation {
   fill: #fff;
 }
 
+.woman {
+  height: 25px;
+}
+
+.woman path,
+.woman polygon {
+  fill: #000;
+}
+
 .instagram:hover path,
 .instagram:hover polygon {
   fill: #232946;
@@ -56,6 +69,8 @@ header#navigation {
   fill: #232946;
   transition: 200ms ease-in;
 }
+
+
 
 .nav-item {
   margin-left: 16px;
@@ -135,5 +150,17 @@ ul {
   header.mobile {
       display: flex;
       justify-content: space-around;
+      height: 70px;
+      position: relative;
   }
+
+  header.mobile.nav-up {
+    top: -60px;
+  }
+
+  #drag-image {
+    display: none;
+  }
+
+
 }

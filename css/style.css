@@ -142,6 +142,18 @@ body {
   cursor: -webkit-grabbing;
 }
 
+#intro-image{
+  background-position: 52% 43%;
+  background-image: url(/img/000007230011.jpg);
+  height: calc(100vh - 316px);
+  min-height: calc(960px - 316px);
+  max-height: calc(1400px - 316px);
+  position: relative;
+  background-size: cover;
+  width: auto;
+  z-index: 1;
+}
+
 #story-hero {
   
   background-image: url(/img/000007230011.jpg);
@@ -501,6 +513,10 @@ color: #fff;
   }
 
   .intro-text {
+    display: none;
+  }
+
+  #intro-image {
     display: none;
   }
 }
