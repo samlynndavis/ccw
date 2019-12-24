@@ -1,5 +1,4 @@
 body,
-a,
 button {
   cursor: url(/img/pink_cursor.png), auto !important;
 }
@@ -10,69 +9,75 @@ body {
 }
 
 @font-face {
-	font-family: 'Zeit-MediumItalic';
-	src: url('/css/fonts/zeit-medium-italic.eot');
-	src: url('/css/fonts/zeit-medium-italic.svg') format('embedded-opentype'),
-       url('/css/fonts/zeit-medium-italic.woff2') format('woff2'),
-	     url('/css/fonts/zeit-medium-italic.woff') format('woff'),
-	     url('/css/fonts/zeit-medium-italic.ttf') format('truetype'),
-	     url('/css/fonts/zeit-medium-italic.svg#youworkforthem') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: "Matahari";
+  src: url("/css/fonts/Fontspring-DEMO-matahari-900black.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-	font-family: 'Zeit-Extralight';
-	src: url('/css/fonts/zeit-extralight.eot');
-	src: url('/css/fonts/zeit-extralight.eot?#iefix') format('embedded-opentype'),
-             url('/css/fonts/zeit-extralight.woff2') format('woff2'),
-	     url('/css/fonts/zeit-extralight.woff') format('woff'),
-	     url('/css/fonts/zeit-extralight.ttf') format('truetype'),
-	     url('/css/fonts/zeit-extralight.svg#youworkforthem') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: "Zeit-MediumItalic";
+  src: url("/css/fonts/zeit-medium-italic.eot");
+  src: url("/css/fonts/zeit-medium-italic.svg") format("embedded-opentype"),
+    url("/css/fonts/zeit-medium-italic.woff2") format("woff2"),
+    url("/css/fonts/zeit-medium-italic.woff") format("woff"),
+    url("/css/fonts/zeit-medium-italic.ttf") format("truetype"),
+    url("/css/fonts/zeit-medium-italic.svg#youworkforthem") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-	font-family: 'Zeit-Heavy';
-	src: url('/css/fonts/zeit-heavy.eot');
-	src: url('/css/fonts/zeit-heavy.eot?#iefix') format('embedded-opentype'),
-       url('/css/fonts/zeit-heavy.woff2') format('woff2'),
-	     url('/css/fonts/zeit-heavy.woff') format('woff'),
-	     url('/css/fonts/zeit-heavy.ttf') format('truetype'),
-	     url('/css/fonts/zeit-heavy.svg#youworkforthem') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: "Zeit-Extralight";
+  src: url("/css/fonts/zeit-extralight.eot");
+  src: url("/css/fonts/zeit-extralight.eot?#iefix") format("embedded-opentype"),
+    url("/css/fonts/zeit-extralight.woff2") format("woff2"),
+    url("/css/fonts/zeit-extralight.woff") format("woff"),
+    url("/css/fonts/zeit-extralight.ttf") format("truetype"),
+    url("/css/fonts/zeit-extralight.svg#youworkforthem") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-	font-family: 'Zeit-Light';
-	src: url('/css/fonts/zeit-light.eot');
-	src: url('/css/fonts/zeit-light.eot?#iefix') format('embedded-opentype'),
-       url('/css/fonts/zeit-light.woff2') format('woff2'),
-	     url('/css/fonts/zeit-light.woff') format('woff'),
-	     url('/css/fonts/zeit-light.ttf') format('truetype'),
-	     url('/css/fonts/zeit-light.svg#youworkforthem') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: "Zeit-Heavy";
+  src: url("/css/fonts/zeit-heavy.eot");
+  src: url("/css/fonts/zeit-heavy.eot?#iefix") format("embedded-opentype"),
+    url("/css/fonts/zeit-heavy.woff2") format("woff2"),
+    url("/css/fonts/zeit-heavy.woff") format("woff"),
+    url("/css/fonts/zeit-heavy.ttf") format("truetype"),
+    url("/css/fonts/zeit-heavy.svg#youworkforthem") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
-
+@font-face {
+  font-family: "Zeit-Light";
+  src: url("/css/fonts/zeit-light.eot");
+  src: url("/css/fonts/zeit-light.eot?#iefix") format("embedded-opentype"),
+    url("/css/fonts/zeit-light.woff2") format("woff2"),
+    url("/css/fonts/zeit-light.woff") format("woff"),
+    url("/css/fonts/zeit-light.ttf") format("truetype"),
+    url("/css/fonts/zeit-light.svg#youworkforthem") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 
 .zeit {
-  font-family: 'Zeit-MediumItalic';
+  font-family: "Zeit-MediumItalic";
 }
 
 .zeit-extra {
-  font-family: 'Zeit-Extralight';
+  font-family: "Zeit-Extralight";
 }
 
 .zeit-light {
-  font-family: 'Zeit-Light';
+  font-family: "Zeit-Light";
 }
 
 .zeit-heavy {
-  font-family: 'Zeit-Heavy';
+  font-family: "Zeit-Heavy";
 }
 
 .montserrat {
@@ -142,7 +147,7 @@ body {
   cursor: -webkit-grabbing;
 }
 
-#intro-image{
+#intro-image {
   background-position: 52% 43%;
   background-image: url(/img/000007230011.jpg);
   height: calc(100vh - 316px);
@@ -155,7 +160,6 @@ body {
 }
 
 #story-hero {
-  
   background-image: url(/img/000007230011.jpg);
   background-size: cover;
   height: 100%;
@@ -177,7 +181,6 @@ body {
 }
 
 #story-hero2 {
-  
   background-image: url(/img/000007230011.jpg);
   background-size: cover;
   height: 100%;
@@ -199,7 +202,6 @@ body {
 }
 
 .hero {
-
   color: #c9b7b7;
   color: #fff;
 
@@ -215,22 +217,10 @@ body {
   font-size: 200px;
 } */
 
-.firstcharacter {
-  color: #903;
-  float: left;
-  font-family: Georgia;
-  font-size: 75px;
-  line-height: 60px;
-  padding-top: 4px;
-  padding-right: 8px;
-  padding-left: 3px;
-}
-
 .hidetext {
   position: absolute;
-} */
-
-.headline {
+}
+*/ .headline {
   transform: translateY(-250);
 }
 
@@ -245,7 +235,7 @@ footer {
 }
 
 .bg-no10 {
-  background-color: #f1d3d3;;
+  background-color: #f1d3d3;
 }
 
 .bg-soft-green {
@@ -253,12 +243,11 @@ footer {
 }
 
 .no12 {
-  color: #8eb69b;;
-
+  color: #8eb69b;
 }
 
 .cream {
-  background-color: #efe8d8
+  background-color: #efe8d8;
 }
 
 /* .f1 {
@@ -267,10 +256,10 @@ footer {
 
 .marquee {
   font-size: 4em;
-  
+
   overflow: hidden;
   background-color: #c07b42;
-  
+
   /* background: linear-gradient(
     45deg,
     rgba(255, 193, 7, 1),
@@ -284,8 +273,7 @@ footer {
 
 .caption {
   color: #000;
-  font-family: 'Zeit-Extralight';
-
+  font-family: "Zeit-Extralight";
 }
 
 .roster-block {
@@ -293,8 +281,8 @@ footer {
   padding-right: 2rem;
 }
 
-.roster {
-  display:grid;
+/* .roster {
+  display: grid;
   grid-column-gap: 50px;
   grid-template-columns: repeat(5, minmax(500px, 1fr));
   grid-template-rows: 650px;
@@ -304,23 +292,47 @@ footer {
   cursor: -webkit-grab;
 
   /* transform: scale(0.98);
-  transition: 250ms ease; */
+  transition: 250ms ease;
 
   position: relative;
   width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
 
-  /* white-space: nowrap; */
-  /* will-change: transform; */
+   white-space: nowrap;
+   will-change: transform;
 
   user-select: none;
 
   min-height: 100vh;
+} */
+
+.roster {
+  display: grid;
+  grid-column-gap: 50px;
+  grid-template-columns: repeat(3, minmax(100px, 415px));
+  grid-template-columns: repeat(3, calc(25vw - 20px));
+  grid-template-columns: repeat(5, minmax(100px, calc(20vw - 10px)));
+  grid-template-rows: 650px;
+  grid-template-rows: 35vw;
+  grid-template-rows: 24vw;
+  align-content: center;
+  cursor: pointer;
+  cursor: -webkit-pointer;
+  transform: scale(0.98);
+  transition: 250ms ease;
+  position: relative;
+  width: 100%;
+  /* white-space: nowrap;
+  will-change: transform;
+  user-select: none;
+  min-height: 100vh;*/
+  justify-content: center;
+  grid-column-gap: 20px;
 }
 
 .roster.active {
-  cursor:grabbing;
+  cursor: grabbing;
   cursor: -webkit-grabbing;
   /* transform: scale(1);
   transition: 250ms ease; */
@@ -340,7 +352,22 @@ footer {
 }
 
 .roster-name {
-  font-size: 4em;
+  font-size: 2vmax;
+}
+
+.roster-row-two {
+  display: flex;
+  height: 35vw;
+  justify-content: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
+
+  cursor: pointer;
+  cursor: -webkit-pointer;
+}
+
+.roster-card {
+  display: flex;
 }
 
 .roster-card a:hover {
@@ -349,13 +376,8 @@ footer {
   transition: 0.2s ease-in-out;
 }
 
-
 .roster-card-1 {
   transition: 0.2s ease-in-out;
-}
-
-.roster-card-1.roster-name {
-  font-size: 5em;
 }
 
 .roster-card-1 a:hover {
@@ -383,7 +405,7 @@ footer {
   box-shadow: 8px 8px #a6cfe2;
   transform: translateY(-8px);
   transition: 0.2s ease-in-out;
-  background-color: black;
+  background-color: #f1d3d3;
 }
 
 .roster-card-2:hover h1,
@@ -411,6 +433,8 @@ footer {
 
 .roster-card-4 {
   transition: 0.2s ease-in-out;
+  /* width: calc(25vw - 20px); */
+  
 }
 
 .roster-card-4:hover {
@@ -428,6 +452,7 @@ footer {
 
 .roster-card-5 {
   transition: 0.2s ease-in-out;
+  /* width: calc(25vw - 20px); */
 }
 
 .roster-card-5:hover {
@@ -444,20 +469,19 @@ footer {
 }
 
 .marquee span {
-animation: moveLeft 200s infinite linear;
-white-space: nowrap;
-display: block;
-position: relative;
-color: #fff;
+  animation: moveLeft 200s infinite linear;
+  white-space: nowrap;
+  display: block;
+  position: relative;
+  color: #fff;
 }
-
 
 @keyframes moveLeft {
   0% {
-      transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
-      transform: translateX(-3000vw);
+    transform: translateX(-3000vw);
   }
 }
 
@@ -476,34 +500,53 @@ color: #fff;
 }
 
 @keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @-moz-keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Internet Explorer */
 @-ms-keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slidein {
-  from { transform: translateX(100%);}
-  to   { transform: translateX(0); }
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 @media screen and (min-width: 500px) {
-
   header.mobile {
     display: none;
   }
@@ -519,29 +562,37 @@ color: #fff;
   #intro-image {
     display: none;
   }
+
+  #mobile-nav {
+    display: none;
+  }
+
+  .roster-block-mobile {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 500px) {
   .roster-block {
+    display: none;
+  }
+
+  .roster-block-mobile {
     padding-left: 1rem;
     padding-right: 1rem;
   }
 
-  .roster {
-  display: grid;
-  grid-column-gap: 25px;
-  grid-template-columns: repeat(5, minmax(300px, 1fr));
-  grid-template-rows: 450px;
+  .roster-mobile {
+    display: grid;
+    grid-column-gap: 25px;
+    grid-template-columns: repeat(5, minmax(300px, 1fr));
+    grid-template-rows: 450px;
 
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 
-  min-height: auto;
-
-  cursor: pointer;
-  cursor: -webkit-pointer;
-
-
+    min-height: auto;
+    overflow-x: scroll;
   }
 
   .intro {
@@ -552,7 +603,6 @@ color: #fff;
     background-position: center */
     min-height: 100vh;
     background-color: #f1d3d3;
-
   }
 
   .intro-title {
@@ -563,6 +613,12 @@ color: #fff;
     font-size: 7vmax;
     color: #fff;
     text-align: center;
+    font-family: "Matahari";
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    letter-spacing: 2px;
   }
 
   #drag-image {

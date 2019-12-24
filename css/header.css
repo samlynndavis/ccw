@@ -197,5 +197,14 @@ ul {
     transition: 250ms ease-in-out;
   }
 
+  #mobile-nav a {
+    font-family: 'Matahari';
+    text-transform: uppercase;
+    color: #8eb69b;
+    /* -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white; */
+    letter-spacing: 2px;
+  }
+
 
 }
