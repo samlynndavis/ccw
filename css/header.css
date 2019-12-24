@@ -133,6 +133,7 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: flex-end;
     position: relative;
     height: 9px;
     width: 50px;
@@ -144,7 +145,19 @@ ul {
       display: block;
       width: 80%;
       height: 1px;
-      background-color: #000;
+      background-color: #fff;
+  }
+
+  .hamburger span:nth-child(1) {
+    width: 80%;
+  }
+  
+  .hamburger span:nth-child(2) {
+    width: 60%;
+  }
+  
+  .hamburger span:nth-child(3) {
+    width: 40%;;
   }
   
   header.mobile {
@@ -160,6 +173,28 @@ ul {
 
   #drag-image {
     display: none;
+  }
+
+  #mobile-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #f1d3d3;
+    height: 50%;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    z-index: 100;
+
+    transform: translateY(100%);
+    transition: 250ms ease-in-out;
+  }
+  
+  #mobile-nav.open {
+    transform: translateY(0);
+    transition: 250ms ease-in-out;
   }
 
 

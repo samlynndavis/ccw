@@ -165,3 +165,9 @@ slider.addEventListener('mousemove', (e) => {
   console.log(walk);
 });
 
+$(document).ready(function(){
+	$('#nav-icon').click(function(){
+		$('#mobile-nav').toggleClass('open');
+	});
+});
+
