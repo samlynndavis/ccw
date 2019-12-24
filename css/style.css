@@ -93,6 +93,10 @@ body {
   transition: 0.2s ease-in-out;
 } */
 
+.overview {
+  background-color: #f1d3d3;
+}
+
 .overview-text {
   left: 0;
   right: 0;
@@ -239,9 +243,9 @@ footer {
   background-color: #efe8d8
 }
 
-.f1 {
+/* .f1 {
   font-size: 11vmax;
-}
+} */
 
 .marquee {
   font-size: 4em;
@@ -490,7 +494,11 @@ color: #fff;
 } */
 
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
+
+  header {
+    display:none !important;
+  }
 
   .roster-block {
     padding-left: 1rem;
@@ -514,21 +522,30 @@ color: #fff;
 
   }
 
-  .overview {
+  .intro {
     display: flex;
     flex-direction: column;
-    background-image: url(/img/000007230011.jpg);
+    /* background-image: url(/img/000007230011.jpg);
     background-size: cover;
-    background-position: center
+    background-position: center */
+    min-height: 100vh;
+    background-color: #f1d3d3;
 
   }
 
-  .overview-title {
+  .intro-title {
     transform: rotate(-0deg);
   }
 
+  .intro-text {
+    font-size: 7vmax;
+    color: #fff;
+    text-align: center;
+  }
+
   #drag-image {
-    display: none;
+    position: relative;
+    left: 0;
   }
 
   /* .roster {
@@ -547,5 +564,9 @@ color: #fff;
 
   .roster-title {
     padding-left: 1em;
+  }
+
+  .artists {
+    width: 100%;
   }
 }
