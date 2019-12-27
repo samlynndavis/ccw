@@ -1,30 +1,30 @@
-barba.init({
-  transitions: [
-    {
-      name: "switch",
-      once({ current, next, trigger }) {
-        return new Promise(resolve => {
-          const timeline = gsap.timeline({
-            onComplete() {
-              resolve();
-            }
-          });
+// barba.init({
+//   transitions: [
+//     {
+//       name: "switch",
+//       once({ current, next, trigger }) {
+//         return new Promise(resolve => {
+//           const timeline = gsap.timeline({
+//             onComplete() {
+//               resolve();
+//             }
+//           });
 
-		  // gsap.set(".hidetext", { y: "100%" });
-      gsap.set("body", { opacity: 0});
-      gsap.set("header", { y: "-50px"});
+// 		  // gsap.set(".hidetext", { y: "100%" });
+//       gsap.set("body", { opacity: 0});
+//       // gsap.set("header", { y: "-50px"});
 
-		  timeline
-		  .to("body", { duration: 2, opacity: 1, ease: Power4.easeOut, delay: 0.5})
-      // .to(".hidetext", { duration: 2, y: "0%", ease: Power4.easeOut})
-      .to("header", { duration: 1, y: "0px", ease: Power4.easeOut, delay: 0.8}, 0)
+// 		  timeline
+// 		  .to("body", { duration: 2, opacity: 1, ease: Power4.easeOut, delay: 0.5})
+//       // .to(".hidetext", { duration: 2, y: "0%", ease: Power4.easeOut})
+//       // .to("header", { duration: 1, y: "0px", ease: Power4.easeOut, delay: 0.8}, 0)
 		  
-        });
-      }
-    }
-  ],
-  debug: true
-});
+//         });
+//       }
+//     }
+//   ],
+//   debug: true
+// });
 
 // function makeMarquee () {
 //   const title = ' Mia Gholar. Elizabeth De La Piedra. Laura Sophia Cardozo. Anna Michal Paul. Nev Rosales.'
