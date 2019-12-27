@@ -298,7 +298,7 @@ footer {
 }
 
 .cream {
-  background-color: #efe8d8;
+  color: #efe8d8;
 }
 
 .bg-ana {
@@ -323,11 +323,11 @@ footer {
   background-color: #2f3924;
 }
 
-/* .marquee {
+.marquee {
   font-size: 4em;
   overflow: hidden;
   background-color: #c07b42;
-} */
+}
 
 .caption {
   color: #000;
@@ -458,6 +458,7 @@ footer {
 
 .roster-title {
   color: #404040;
+  font-size: 1.5vmin;
 }
 
 .roster-name {
@@ -770,6 +771,11 @@ footer {
 
     min-height: auto;
     overflow-x: scroll;
+  }
+
+  .roster-title {
+    color: #404040;
+    font-size: 0.75em;
   }
 
   .intro {
