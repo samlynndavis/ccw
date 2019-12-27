@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body,
 button {
   cursor: url(/img/pink_cursor.png), auto !important;
@@ -6,11 +10,32 @@ button {
 body {
   min-height: 100vh;
   background-color: #e6e6e6;
+  background-color: #fff;
+}
+
+a {
+  font-style: normal;
 }
 
 @font-face {
-  font-family: "Matahari";
+  font-family: "Matahari-Regular";
+  src: url("/css/fonts/Fontspring-DEMO-matahari-400regular.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Matahari-Black";
   src: url("/css/fonts/Fontspring-DEMO-matahari-900black.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Matahari-Bold";
+  src: url("/css/fonts/Fontspring-DEMO-matahari-700bold.otf")
     format("opentype");
   font-weight: normal;
   font-style: normal;
@@ -84,6 +109,18 @@ body {
   font-family: Montserrat, sans-serif;
 }
 
+.matahari {
+  font-family: "Matahari-Bold";
+}
+
+.matahari-regular {
+  font-family: "Matahari-Regular";
+}
+
+.matahari-black {
+  font-family: "Matahari-Black";
+}
+
 .story-title {
   z-index: 10;
   opacity: 0;
@@ -92,13 +129,26 @@ body {
   animation-fill-mode: forwards;
   animation-delay: 800ms;
 
+  font-size: 15vw;
+
   /* transition: 0.2s ease-in-out; */
 }
 
-/* .story-title:hover {
-  text-shadow: -5px 5px #8eb69b;
-  transition: 0.2s ease-in-out;
-} */
+.story-title span {
+  transition: color 3s;
+  transition-delay: 1s;
+}
+
+.photo-caption span {
+  transition: color 3s;
+  transition-delay: 1s;
+}
+
+.large-photo {
+  background-image: url(/img/000007190025.jpg);
+  background-size: cover;
+  background-position: center;
+}
 
 .overview {
   background-color: #f1d3d3;
@@ -180,22 +230,22 @@ body {
   animation-delay: 750ms;
 }
 
-#story-hero2 {
-  background-image: url(/img/000007230011.jpg);
+#story-hero-2 {
+  background-image: url(/img/000007210011.jpg);
   background-size: cover;
   height: 100%;
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   width: 48vw;
   border-radius: 0;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   margin-top: 0;
-  transform: translateX(100%);
+  transform: translateX(-100%);
 
-  animation-name: slidein;
+  animation-name: slideinright;
   animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-delay: 750ms;
@@ -220,7 +270,8 @@ body {
 .hidetext {
   position: absolute;
 }
-*/ .headline {
+
+.headline {
   transform: translateY(-250);
 }
 
@@ -250,30 +301,87 @@ footer {
   background-color: #efe8d8;
 }
 
-/* .f1 {
-  font-size: 11vmax;
-} */
+.bg-ana {
+  background-color: #dcd1b4;
+}
 
-.marquee {
+.text-ana {
+  color: #b56434;
+  color: #2f3924;
+}
+
+.bg-ana-brown {
+  background-color: #b56434;
+}
+
+.bg-ana-yellow {
+  background-color: #f0cf61;
+  background-color: #ecd48c;
+}
+
+.bg-ana-green {
+  background-color: #2f3924;
+}
+
+/* .marquee {
   font-size: 4em;
-
   overflow: hidden;
   background-color: #c07b42;
-
-  /* background: linear-gradient(
-    45deg,
-    rgba(255, 193, 7, 1),
-    rgb(183, 21, 64, 1),
-    rgba(255, 193, 7, 1)
-  );
-  background-size: 300% 300%;
-  -webkit-animation: gradient 15s ease infinite;
-  animation: gradient 15s ease infinite; */
-}
+} */
 
 .caption {
   color: #000;
   font-family: "Zeit-Extralight";
+  font-style: italic;
+}
+
+.caption a,
+.caption a:link {
+  color: #fff !important;
+  text-decoration: underline;
+  padding-left: 1px;
+}
+
+.caption-header {
+  color: #fff;
+  font-family: "Zeit-Extralight";
+  font-style: italic;
+  z-index: 10;
+}
+
+.caption-header a,
+.caption-header a:link {
+  color: #fff !important;
+  text-decoration: underline;
+  padding-left: 1px;
+}
+
+.caption-photo {
+  color: #fff;
+  font-family: "Zeit-Extralight";
+  font-style: italic;
+}
+
+.caption-photo a,
+.caption-photo a:link {
+  color: #fff !important;
+  text-decoration: underline;
+  padding-left: 1px;
+}
+
+.copy {
+  margin-bottom: 1em;
+  font-size: 1.5vw;
+}
+
+.photo-pair {
+  height: 50vw !important;
+}
+
+.photo-pair img {
+  max-width: 100%;
+  width: auto;
+  height: 70%;
 }
 
 .roster-block {
@@ -312,7 +420,7 @@ footer {
   grid-column-gap: 50px;
   grid-template-columns: repeat(3, minmax(100px, 415px));
   grid-template-columns: repeat(3, calc(25vw - 20px));
-  grid-template-columns: repeat(5, minmax(100px, calc(20vw - 10px)));
+  grid-template-columns: repeat(5, minmax(100px, 20vw));
   grid-template-rows: 650px;
   grid-template-rows: 35vw;
   grid-template-rows: 24vw;
@@ -328,7 +436,7 @@ footer {
   user-select: none;
   min-height: 100vh;*/
   justify-content: center;
-  grid-column-gap: 20px;
+  grid-column-gap: 2vw;
 }
 
 .roster.active {
@@ -370,18 +478,8 @@ footer {
   display: flex;
 }
 
-.roster-card a:hover {
-  cursor: pointer;
-  text-shadow: 2px 2px #fff;
-  transition: 0.2s ease-in-out;
-}
-
 .roster-card-1 {
   transition: 0.2s ease-in-out;
-}
-
-.roster-card-1 a:hover {
-  color: #e54b4b;
 }
 
 .roster-card-1:hover {
@@ -402,15 +500,15 @@ footer {
 }
 
 .roster-card-2:hover {
-  box-shadow: 8px 8px #a6cfe2;
+  box-shadow: 8px 8px #e3e3e3;
   transform: translateY(-8px);
   transition: 0.2s ease-in-out;
-  background-color: #f1d3d3;
+  background-color: #ff8fa4;
 }
 
 .roster-card-2:hover h1,
 .roster-card-2:hover p {
-  color: #a6cfe2 !important;
+  color: #e3e3e3;
   transition: 0.2s ease-in-out;
 }
 
@@ -422,7 +520,7 @@ footer {
   box-shadow: 8px 8px #f0cf61;
   transform: translateY(-8px);
   transition: 0.2s ease-in-out;
-  background-color: #3d2314;
+  background-color: #b56434;
 }
 
 .roster-card-3:hover h1,
@@ -438,15 +536,15 @@ footer {
 }
 
 .roster-card-4:hover {
-  box-shadow: 8px 8px #fff;
+  box-shadow: 8px 8px #f3bfa9;
   transform: translateY(-8px);
   transition: 0.2s ease-in-out;
-  background-color: black;
+  background-color: #d1e9e3;
 }
 
 .roster-card-4:hover h1,
 .roster-card-4:hover p {
-  color: #fff;
+  color: #f3bfa9;
   transition: 0.2s ease-in-out;
 }
 
@@ -456,15 +554,15 @@ footer {
 }
 
 .roster-card-5:hover {
-  box-shadow: 8px 8px #fff;
+  box-shadow: 8px 8px #e2b7c1;
   transform: translateY(-8px);
   transition: 0.2s ease-in-out;
-  background-color: black;
+  background-color: #ff9966;
 }
 
 .roster-card-5:hover h1,
 .roster-card-5:hover p {
-  color: #fff;
+  color: #e2b7c1;
   transition: 0.2s ease-in-out;
 }
 
@@ -475,6 +573,75 @@ footer {
   position: relative;
   color: #fff;
 }
+
+
+
+.char1:hover {
+  color: rgba(156, 39, 176, 0.7);
+  transition: color 0s;
+}
+
+.char2:hover {
+  color: rgba(0, 0, 0, 0.8);
+  transition: color 0s;
+}
+
+.char3:hover {
+  color: rgb(0, 83, 151);
+  transition: color 0s;
+}
+
+.char4:hover {
+  color: rgba(246, 170, 61);
+  transition: color 0s;
+}
+
+.char5:hover {
+  color: rgb(229, 75, 75);
+  transition: color 0s;
+}
+
+.char6:hover {
+  color: rgba(156, 39, 176, 0.7);
+  transition: color 0s;
+}
+
+.char7:hover {
+  color: rgb(243, 201, 221);
+  transition: color 0s;
+}
+
+.char8:hover {
+  color: rgb(0, 83, 151);
+  transition: color 0s;
+}
+
+.char9:hover {
+  color: rgba(246, 170, 61);
+  transition: color 0s;
+}
+
+.char10:hover {
+  color: rgb(229, 75, 75);
+  transition: color 0s;
+}
+
+.char11:hover {
+  color: rgba(246, 170, 61);
+  transition: color 0s;
+}
+
+.char12:hover {
+  color: rgb(229, 75, 75);
+  transition: color 0s;
+}
+
+.char13:hover {
+  color: rgba(156, 39, 176, 0.7);
+  transition: color 0s;
+}
+
+
 
 @keyframes moveLeft {
   0% {
@@ -540,6 +707,15 @@ footer {
 @keyframes slidein {
   from {
     transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideinright {
+  from {
+    transform: translateX(-100%);
   }
   to {
     transform: translateX(0);
@@ -625,12 +801,6 @@ footer {
     position: relative;
     left: 0;
   }
-
-  /* .roster {
-    display: flex;
-    flex-direction: column;
-
-  } */
 
   .roster-name {
     font-size: 2em !important;

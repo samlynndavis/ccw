@@ -18,7 +18,7 @@ header.top {
 }
 
 header.nav-up {
-  top: -45px;
+  top: -54px;
 }
 
 header.nav-down {
@@ -70,16 +70,21 @@ header#navigation {
   transition: 200ms ease-in;
 }
 
-
-
 .nav-item {
   margin-left: 16px;
   margin-right: 16px;
   position: relative;
-  
 }
 
-.nav-item::after {
+.nav-item:first-child {
+  font-family: "Matahari-Bold";
+}
+
+.nav-item:hover {
+  font-family: "Matahari-Bold";
+}
+
+.nav-item:first-child::after {
   background-color: #fff;
   content: ' ';
   display: block;
@@ -98,20 +103,18 @@ header#navigation {
   transition: all 0.2s ease-out;
 }
 
-.nav-item:hover::after {
+.nav-item:first-child:hover::after {
   transform: scaleX(1);
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   -ms-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  /* animation: colorChange 0.8s forwards */
-  
+  animation: colorChange 0.8s forwards  
 }
 
 .nav-link {
   color: #fff;
-  /* text-transform: uppercase; */
   letter-spacing: 0.05em;
 }
 
@@ -179,7 +182,7 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    background-color: #f1d3d3;
+    background-color: #000;
     height: 50%;
     text-align: center;
     position: fixed;
@@ -198,11 +201,10 @@ ul {
   }
 
   #mobile-nav a {
-    font-family: 'Matahari';
+    font-family: 'Matahari-Regular';
     text-transform: uppercase;
-    color: #8eb69b;
-    /* -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: white; */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
     letter-spacing: 2px;
   }
 
