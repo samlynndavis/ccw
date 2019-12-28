@@ -183,13 +183,20 @@ var containerScene = new ScrollMagic.Scene({
 
 
 var toggleMenu = $('.hamburger');
-var menu = $('#mobile-nav');
+var closeMenu = $('.close');
+var menu = $('#mobile-nav-wrapper');
 var listItems = $('ul#mobile-nav li');
 var timeline = new TimelineMax({ paused: true, reversed: true });
-timeline.from(menu, 0.3, { y: "0%", ease: Power4.out, delay: 0.2});
-// timeline.staggerFrom(listItems, 1, { opacity: "0", delay: 1});
+timeline.from(menu, 0.5, { y: "0%", ease: Power4.easeOut});
+// timeline.staggerFromTo(listItems, 1, { opacity: "0", delay: 1});
+// timeline.staggerTo(".nav-link", 1.5, { opacity: 1, ease: Power4.easeOut}, 0.15 );
 
 toggleMenu.on('click', function() {
   $(this).toggleClass('on');
   timeline.reversed() ? timeline.play() : timeline.reverse();
+});
+
+closeMenu.on('click', function() {
+  $(menu).toggleClass('on');
+  timeline.play() ? timeline.reversed() : timeline.play();
 });

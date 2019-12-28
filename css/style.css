@@ -753,6 +753,15 @@ footer {
 }
 
 @media screen and (max-width: 500px) {
+
+  .vid {
+    display: none;
+  }
+  
+  .hero {
+    display: none;
+  }
+
   .roster-block {
     display: none;
   }
@@ -797,12 +806,12 @@ footer {
   .intro-text {
     font-size: 7vmax;
     color: #fff;
-    text-align: center;
-    font-family: "Matahari";
-    text-transform: uppercase;
-    color: transparent;
+    text-align: left;
+    font-family: "Matahari-Black";
+    /* text-transform: uppercase; */
+    /* color: transparent;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-color: white; */
     letter-spacing: 2px;
   }
 
