@@ -12,12 +12,12 @@ barba.init({
 
       // gsap.set(".hidetext", { y: "100%" });
       gsap.set("body", { opacity: 0});
-      // gsap.set("header", { y: "-50px"});
+      gsap.set("#desktop", { y: "-50px"});
 
 		  timeline
 		  .to("body", { duration: 1.5, opacity: 1, ease: Power4.easeOut, delay: 0.5})
-      .staggerFrom(".hidetext", 2, { opacity: 0.5, y: "110%", ease: Power4.easeOut}, 0.15 )
-      // .to("header", { duration: 1, y: "0px", ease: Power4.easeOut, delay: 0.8}, 0)
+      .staggerFrom(".hidetext", 1.5, { opacity: 0.5, y: "110%", ease: Power4.easeOut}, 0.15 )
+      .to("#desktop", { duration: 0.5, y: "0px", ease: Power4.easeOut, delay: 3}, 0 )
         });
       }
     }
@@ -164,22 +164,32 @@ grabber.addEventListener('mouseup', () => {
 //   console.log(walk);
 // });
 
-$(document).ready(function(){
-	$('#nav-icon').click(function(){
-		$('#mobile-nav').toggleClass('open');
-	});
-});
-
+// $(document).ready(function(){
+// 	$('#nav-icon').click(function(){
+// 		$('#mobile-nav').toggleClass('open');
+// 	});
+// });
 
 var controller = new ScrollMagic.Controller();
 
-var blockTween = new TweenMax.from('#overview', 1, {
-  opacity: "0", y: "50%"
-});
+var overviewTween = new TweenMax.from('#overview', 2, { opacity: "0", y: "20%", ease: Power4.easeOut, delay: 0.2}); 
 
 var containerScene = new ScrollMagic.Scene({
   triggerElement: '#intro'
 })
-.setTween(blockTween)
+.setTween(overviewTween)
 .addIndicators()
 .addTo(controller);
+
+
+var toggleMenu = $('.hamburger');
+var menu = $('#mobile-nav');
+var listItems = $('ul#mobile-nav li');
+var timeline = new TimelineMax({ paused: true, reversed: true });
+timeline.from(menu, 0.3, { y: "0%", ease: Power4.out, delay: 0.2});
+// timeline.staggerFrom(listItems, 1, { opacity: "0", delay: 1});
+
+toggleMenu.on('click', function() {
+  $(this).toggleClass('on');
+  timeline.reversed() ? timeline.play() : timeline.reverse();
+});

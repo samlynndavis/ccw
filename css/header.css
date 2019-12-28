@@ -195,10 +195,10 @@ ul {
     transition: 250ms ease-in-out;
   }
   
-  #mobile-nav.open {
+  /* #mobile-nav.open {
     transform: translateY(0);
     transition: 250ms ease-in-out;
-  }
+  } */
 
   #mobile-nav a {
     font-family: 'Matahari-Regular';
@@ -206,6 +206,7 @@ ul {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
     letter-spacing: 2px;
+    color: transparent;
   }
 
 
