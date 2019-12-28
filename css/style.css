@@ -252,28 +252,30 @@ a {
 }
 
 .hero {
-  color: #c9b7b7;
-  color: #fff;
-
-  background: url(/img/000007230009.jpg);
+ background: url(/img/000007230009.jpg);
   background-position: center;
   background-size: cover;
 }
 
-/* .hidetext-container {
+.hero:hover {
+  cursor: url(/img/whitedown1.webp), auto !important;
+}
+
+.hidetext-container {
   position: relative;
   overflow: hidden;
-  height: 250px;
-  font-size: 200px;
-} */
+  height: 15vw;
+  font-size: 7vw;
+  margin: 0;
+}
 
 .hidetext {
   position: absolute;
 }
 
-.headline {
+/* .headline {
   transform: translateY(-250);
-}
+} */
 
 footer {
   background-color: #f1d3d3;
