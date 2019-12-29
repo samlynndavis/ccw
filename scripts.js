@@ -181,41 +181,6 @@ var containerScene = new ScrollMagic.Scene({
 .addIndicators()
 .addTo(controller);
 
-
-
-// When the DOM is ready
-$(function() {
-  
-  // Init ScrollMagic Controller
-  var scrollMagicController = new ScrollMagic();
-  
-  // Animation will be ignored and replaced by scene value in this example
-  var tween = TweenMax.staggerFromTo('.roster-card', 0.5,
-    {
-    	scale: 1,
-    },
-    {
-      backgroundColor: 'rgb(255, 39, 46)',
-      scale: 5,
-      rotation: 360
-    },
-    0.4
-);
-  
-  // Create the Scene and trigger when visible
-  var scene = new ScrollScene({
-    triggerElement: '#roster',
-    duration: 300 /* How many pixels to scroll / animate */
-  })
-  .setTween(tween)
-  .addTo(scrollMagicController);
-  
-  // Add debug indicators fixed on right side
-   scene.addIndicators();
-  
-});
-
-
 var toggleMenu = $('.hamburger');
 var closeMenu = $('.close');
 var menu = $('#mobile-nav-wrapper');
@@ -223,8 +188,6 @@ var listItems = $('ul#mobile-nav li');
 var timeline = new TimelineMax({ paused: true, reversed: true });
 
 timeline.from(menu, 0.8, { opacity: "1", y: "0%", ease: Power4.easeInOut});
-// timeline.staggerFromTo(listItems, 1, { opacity: "0", delay: 1});
-// timeline.staggerTo(".nav-link", 1.5, { opacity: 1, ease: Power4.easeOut}, 0.15 );
 
 toggleMenu.on('click', function() {
   $(menu).toggleClass('on');
