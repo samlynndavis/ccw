@@ -645,6 +645,9 @@ footer {
   transition: color 0s;
 }
 
+.contact ul li {
+  margin-bottom: 1vw;
+}
 
 
 @keyframes moveLeft {
@@ -750,6 +753,10 @@ footer {
   .roster-block-mobile {
     display: none;
   }
+
+  #mobile-nav-wrapper {
+    display:none;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -757,7 +764,7 @@ footer {
   .vid {
     display: none;
   }
-  
+
   .hero {
     display: none;
   }

@@ -192,7 +192,7 @@ ul {
     width: 100vw;
     z-index: 100;
 
-    transform: translateY(100%);
+    transform: translateY(110%);
     /* transition: 250ms ease-in-out; */
   }
   
@@ -208,6 +208,3 @@ ul {
     color: #f1d3d3;
     };
   }
-
-
-}

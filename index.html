@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/header.css" />
   </head>
-  <body class="w-100 sans-serif">
+  <body class="w-100 sans-serif bg-no10">
     <main data-barba="wrapper">
         <div data-barba="container">
           <div class="vh-100 w-100">
@@ -98,14 +98,23 @@
               Salvage One. A vibrant and endless showroom filled with recycled art, furniture and relics of the past.              
             </p>
           </div>
-          <div class=" vid flex justify-end items-end">
+          <div class="w-100 flex justify-center ph4 pv6 vh-100 bg-white">
+            <!-- <div class="large-photo w-50 flex justify-center items-center"></div> -->
+            <div class="w-50 pa4 flex flex-column justify-between">
+              <p class="f2 zeit-heavy photo-caption black">Each creative woman in front of the camera claimed their own unique space in a sea of color and design.</p>
+              <div class=" vid flex justify-end items-end pa4">
+                <video class="w-100" poster="https://smdvs.com/assets/img/title.png" id="backvid" playsinline autoplay muted loop>
+                  <source src="https://smdvs.com/assets/videos/untitled.webm" type="video/webm">
+                </video>
+              </div>
+              <p class="f2 zeit-heavy photo-caption white">Filling this three-story wonderland with that singular Chicago reverb you just know - if you know.</p>
+          </div>
+        </div>
+          <!-- <div class=" vid flex justify-end items-end">
             <video class="w-100" poster="https://smdvs.com/assets/img/title.png" id="backvid" playsinline autoplay muted loop>
               <source src="https://smdvs.com/assets/videos/untitled.webm" type="video/webm">
             </video>
-            <p class="absolute tr photo-caption flex measure lh-headline zeit-heavy f1 pa4 cream">
-              Each creative woman in front of the camera claimed their own unique space in a sea of color and design. filling this three-story wonderland with that singular Chicago reverb you just know - if you know.              
-            </p>
-          </div>
+          </div> -->
           <!-- <div class="overview pa3 pa5-ns min-vh-100 flex items-center">
             <h2 class="overview-title pv4 f4 zeit-heavy black-70">Overview</h2>
             <p class="overview-text measure lh-headline zeit-heavy f2 tc pa5 flex">
@@ -191,8 +200,8 @@
               </div>
 </div>
           </div> -->
-          <div class="roster-block w-100">
-            <div class="roster w-100 pv6">
+          <div class="roster-block flex w-100 vh-100">
+            <div id="roster" class="roster w-100 pv6">
               <a href="/liz.html" class="roster-card">
                 <div class="roster-card roster-card-1 w-100 bg-white pl2 flex flex-column ba b--dark-gray">
                   <h1 class="roster-name zeit-heavy ma0 pr3 pv2 dark-gray">Mia<br />Gholar</h1>
@@ -231,9 +240,9 @@
             </div>
           </div>
           </article>
-          <footer class="pa4 pa5-l flex w-100 white">
+          <footer class="flex pa4 pa5-l flex w-100 white bg-black">
             <div class="artists mb4-l w-50 flex flex-wrap items-center">
-              <h1 class="fl w-100 pv0 f6 fw6 ttu tracked mb4 montserrat">The Artists</h1>
+              <h1 class="f2 w-100 f2 tracked matahari-black">Talk To Us</h1>
               <article class="fl w-50 dib-ns w-auto-ns mr4-m mr5-l pr2 pr0-ns lh-copy">
                 <h4 class="f5 f4-l fw6 zeit-extra">Jessica Levin</h4>
                 <span class="f7 f6-l db">Photographer + Creative Director</span>
@@ -265,6 +274,42 @@
               </div>
               </article>
               </div>
+              <div class="flex w-50 justify-end">
+                <div class="flex flex-column w-25 matahari-black">
+                  <h6>Explore</h6>
+                  <ul class="pt2 flex flex-column matahari-regular f5">
+                    <li class="">
+                      <a class="nav-link" href="/">home</a>
+                    </li>
+                    <li class="">
+                      <a class="nav-link" href="/">the artists</a>
+                    </li>
+        <li class="">
+                      <a class="nav-link" href="/">the women</a>
+                    </li>
+        <li class="">
+                      <a class="nav-link" href="/">something else</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="contact flex flex-column w-25 matahari-black">
+                  <h6>Drop Us A Line</h6>
+                  <ul class=" pt2 flex flex-column matahari-regular f5">
+                    <li class="">
+                      <a class="nav-link" href="/">jessicawlevin@gmail.com</a>
+                    </li>
+                    <li class="">
+                      <a class="nav-link" href="/">sam@smdvs.com</a>
+                    </li>
+        <li class="">
+                      <a class="nav-link" href="/">the women</a>
+                    </li>
+        <li class="">
+                      <a class="nav-link" href="/">something else</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
           </footer>
           <div id="mobile-nav-wrapper" class="mobile-nav pa4 flex flex-column">
             <h1 class="no12 close tr matahari-regular">Close</h1>
@@ -282,6 +327,7 @@
                 <a class="nav-link" href="/">something else</a>
               </li>
             </ul>
+            
           </div>
     </main>
   </body>
@@ -291,10 +337,11 @@
     <script src="jquery.lettering.js"></script>
     <!-- <script src="in-view.js"></script> -->
     <script src="barba.js"></script>
+    <script src="/animation.gsap.js"></script>
     <script src="gsap.js"></script>
     <!-- <script src="imagesloaded.js"></script> -->
-    <script src="/ScrollMagic.js"></script>
     <script src="/TweenMax.min.js"></script>
+    <script src="/ScrollMagic.js"></script>
     <script src="/debug.addIndicators.js"></script>
     <script src="/animation.gsap.js"></script>
     <script src="scripts.js"></script>
