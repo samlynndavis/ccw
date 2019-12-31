@@ -178,23 +178,23 @@ var containerScene = new ScrollMagic.Scene({
   triggerElement: '#intro'
 })
 .setTween(overviewTween)
-.addIndicators()
+// .addIndicators()
 .addTo(controller);
 
-var toggleMenu = $('.hamburger');
-var closeMenu = $('.close');
-var menu = $('#mobile-nav-wrapper');
-var listItems = $('ul#mobile-nav li');
-var timeline = new TimelineMax({ paused: true, reversed: true });
+// var toggleMenu = $('.hamburger');
+// var closeMenu = $('.close');
+// var menu = $('#mobile-nav-wrapper');
+// var listItems = $('ul#mobile-nav li');
+// var timeline = new TimelineMax({ paused: true, reversed: true });
 
-timeline.from(menu, 0.8, { opacity: "1", y: "0%", ease: Power4.easeInOut});
+// timeline.from(menu, 0.8, { opacity: "1", y: "0%", ease: Power4.easeInOut});
 
-toggleMenu.on('click', function() {
-  $(menu).toggleClass('on');
-  timeline.reversed() ? timeline.play() : timeline.reverse();
-});
+// toggleMenu.on('click', function() {
+//   $(menu).toggleClass('on');
+//   timeline.reversed() ? timeline.play() : timeline.reverse();
+// });
 
-closeMenu.on('click', function() {
-  $(menu).toggleClass('on');
-  timeline.play() ? timeline.reversed() : timeline.play();
-});
+// closeMenu.on('click', function() {
+//   $(menu).toggleClass('on');
+//   timeline.play() ? timeline.reversed() : timeline.play();
+// });
