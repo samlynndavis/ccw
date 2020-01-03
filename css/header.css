@@ -39,6 +39,7 @@ header#navigation {
   fill: #fff;
   transition: 200ms ease-in;
 }
+
 .email {
   width: 25px;
   height: 25px;
@@ -110,7 +111,7 @@ header#navigation {
   -o-transition: all 0.2s ease-out;
   -ms-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  animation: colorChange 0.8s forwards  
+  animation: colorChange 0.8s forwards
 }
 
 .nav-link {
@@ -129,7 +130,7 @@ ul {
 @media screen and (max-width: 1024px) {
 
   header.desktop {
-    display:none !important;
+    display: none !important;
   }
 
   .hamburger {
@@ -143,32 +144,33 @@ ul {
     height: 50px;
     opacity: 1;
   }
-  
+
   .hamburger span {
-      display: block;
-      width: 80%;
-      height: 1px;
-      background-color: #fff;
+    display: block;
+    width: 80%;
+    height: 1px;
+    background-color: #fff;
   }
 
   .hamburger span:nth-child(1) {
     width: 80%;
   }
-  
+
   .hamburger span:nth-child(2) {
     width: 60%;
   }
-  
+
   .hamburger span:nth-child(3) {
-    width: 40%;;
+    width: 40%;
+    ;
   }
-  
+
   header.mobile {
-      display: flex;
-      justify-content: space-around;
-      height: 70px;
-      position: fixed;
-      background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    height: 70px;
+    position: fixed;
+    background-color: transparent;
   }
 
   header.mobile.nav-up {
@@ -195,7 +197,7 @@ ul {
     transform: translateY(110%);
     /* transition: 250ms ease-in-out; */
   }
-  
+
   #mobile-nav-wrapper.on {
     transform: translateY(0);
     /* transition: 250ms ease-in-out; */
@@ -206,5 +208,7 @@ ul {
     -webkit-text-stroke-color: white; */
     letter-spacing: 2px;
     color: #f1d3d3;
-    };
   }
+
+  ;
+}
