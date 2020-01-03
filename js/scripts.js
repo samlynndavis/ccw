@@ -10,13 +10,13 @@ barba.init({
             }
           });
 
-      // gsap.set(".hidetext", { y: "100%" });
+      gsap.set(".hidetext", { opacity: 0, y: "110%"});
       gsap.set("body", { opacity: 0});
       gsap.set("#desktop", { y: "-50px"});
 
 		  timeline
 		  .to("body", { duration: 1.5, opacity: 1, ease: Power4.easeOut, delay: 0.5})
-      .staggerFrom(".hidetext", 1.5, { opacity: 1, y: "110%", ease: Power4.easeOut}, 0.15 )
+      .to(".hidetext", 1.5, { opacity: 1, y: "0%", ease: Power4.easeOut}, 0.15 )
       .to("#desktop", { duration: 0.5, y: "0px", ease: Power4.easeOut, delay: 3}, 0 )
         });
       }
@@ -26,24 +26,6 @@ barba.init({
 });
 
 $(".photo-caption").lettering('lines').children('span').lettering('words').children('span').lettering();
-
-(function($) {
-  var $window = $(window),
-      $overview = $('#overview');
-
-  function resize() {
-      if ($window.width() < 500) {
-          return $overview.removeClass('photo-caption');
-      }
-
-      return $overview.addClass('photo-caption');
-      
-  }
-
-  $window
-      .resize(resize)
-      .trigger('resize');
-})(jQuery);
 
 // function makeMarquee () {
 //   const title = ' From Chicago With Love |'
@@ -198,7 +180,7 @@ var containerScene = new ScrollMagic.Scene({
   triggerElement: '#intro'
 })
 .setTween(overviewTween)
-// .addIndicators()
+.addIndicators()
 .addTo(controller);
 
 // var toggleMenu = $('.hamburger');
@@ -207,7 +189,7 @@ var containerScene = new ScrollMagic.Scene({
 // var listItems = $('ul#mobile-nav li');
 // var timeline = new TimelineMax({ paused: true, reversed: true });
 
-// timeline.from(menu, 0.8, { opacity: "1", y: "0%", ease: Power4.easeInOut});
+// timeline.to(menu, 0.8, { opacity: "1", y: "0%", ease: Power4.easeInOut});
 
 // toggleMenu.on('click', function() {
 //   $(menu).toggleClass('on');

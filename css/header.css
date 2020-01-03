@@ -60,13 +60,13 @@ header#navigation {
 
 .instagram:hover path,
 .instagram:hover polygon {
-  fill: #232946;
+  fill: #f1d3d3;
   transition: 200ms ease-in;
 }
 
 .email:hover path,
 .email:hover polygon {
-  fill: #232946;
+  fill: #f1d3d3;
   transition: 200ms ease-in;
 }
 

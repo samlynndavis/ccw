@@ -144,8 +144,8 @@ a {
   transition-delay: 1s;
 }
 
-.large-photo {
-  background-image: url(/img/000007190025.jpg);
+.large-photo-anna {
+  background-image: url(/img/000007130021.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -204,6 +204,16 @@ a {
 .intro {
   background-color: #f1d3d3;
   margin: 4vw 0 4vw 0;
+}
+
+.social > svg {
+  height: 40px;
+  width: 40px;
+}
+
+.social > svg:hover path,
+.social > svg:hover polygon {
+  fill: #2f3924 !important;
 }
 
 #drag-image {
@@ -285,6 +295,48 @@ a {
   animation-delay: 750ms;
 }
 
+#story-hero-mia {
+  background-image: url(/img/000085190005.jpg);
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  border-radius: 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  margin-top: 0;
+  /* transform: translateX(-100%); */
+
+  /* animation-name: slideinright;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 750ms; */
+}
+
+#story-hero-mia-right {
+  background-image: url(/img/GRI086.jpg);
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  border-radius: 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  margin-top: 0;
+  /* transform: translateX(-100%); */
+
+  /* animation-name: slideinright;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 750ms; */
+}
+
 .hero {
  background: url(/img/000007140034.jpg);
   background-position: center;
@@ -344,10 +396,27 @@ footer {
 
 .bg-ana {
   background-color: #dcd1b4;
+  background-color: #ddc7c2;
+}
+
+.bg-mia {
+  background-color: #e44b4b;
 }
 
 .text-ana {
   color: #424635;
+}
+
+.text-mia {
+  color: #d1e9e3;
+}
+
+.bg-mia-grey {
+  background-color: #cfcfcf;
+}
+
+.bg-mia-black {
+  background-color: #000;
 }
 
 .bg-ana-brown {
@@ -703,8 +772,8 @@ footer {
   transition: 0.2s ease;
 }
 
-.photo:hover > .caption-photo,
-.photo:hover + .caption-photo {
+.image-caption-overlay:hover > .caption-photo,
+.image-caption-overlay:hover + .caption-photo {
   opacity: 1;
   transition: 0.2s ease;
 }
@@ -796,9 +865,14 @@ footer {
   }
 }
 
-@media screen and (min-width: 700px) {
-  .story-hero-portait {
+@media screen and (min-width: 600px) {
+  .story-hero-portrait {
     display: none;
+  }
+
+  .large-copy p {
+    font-size: 2vw;
+
   }
 }
 
@@ -841,7 +915,7 @@ footer {
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
 
   .caption-photo {
     font-size: 2vw
@@ -920,8 +994,17 @@ footer {
     font-size: 0.75em;
   }
 
-  .photo-pair {
-    height: 80vw !important;
+  .right-side-copy {
+    padding: 1rem;
+  }
+
+  .right-side-copy > div {
+    width: 100%;
+  }
+
+  .right-side-copy > div.photo {
+    height: auto !important;
+    padding: 1rem;
   }
 
   .large-single-image > div {
@@ -1088,11 +1171,6 @@ footer {
     width: 100vw;
 }
 
-.large-copy-split > p {
-  font-size: 4vw;
-  line-height: 7vw;
-}
-
 .question-image-copy-split {
   flex-direction: column;
 }
@@ -1123,5 +1201,11 @@ footer {
   .roster-title {
     color: #404040;
     font-size: 0.75em;
+  }
+}
+
+@media screen and (max-width: 600px), screen and (max-height: 600px) {
+  .image-caption-overlay {
+    display: none;
   }
 }
