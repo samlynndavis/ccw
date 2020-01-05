@@ -13,8 +13,21 @@ body {
   background-color: #fff;
 }
 
+.reveal {
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: #000;
+  position: fixed;
+}
+
 a {
   font-style: normal;
+}
+
+a:link,
+a:visited {
+  color: #000;
 }
 
 @font-face {
@@ -197,8 +210,8 @@ a {
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  font-size: 3vmax;
-  z-index: 2;
+  font-size: 4vmax;
+  z-index: 1;
   color: #fff;
 }
 
@@ -208,7 +221,7 @@ a {
 
 .intro {
   background-color: #f1d3d3;
-  margin: 4vw 0 4vw 0;
+  /* margin: 4vw 0 4vw 0; */
 }
 
 .social>svg {
@@ -231,14 +244,14 @@ a {
   background-size: cover;
   width: auto;
   z-index: 1;
-  left: 50%;
+  left: 40%;
   margin-top: 0;
 }
 
 #drag-image:hover {
-  z-index: 3;
   cursor: grab;
   cursor: -webkit-grab;
+  z-index: 3;
 }
 
 #drag-image.active {
@@ -369,7 +382,8 @@ a {
   background-size: cover;
 }
 
-.hero:hover {
+.hero:hover,
+.intro:hover {
   cursor: url(/img/whitedown1.webp), auto !important;
 }
 

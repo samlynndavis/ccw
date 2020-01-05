@@ -1,29 +1,79 @@
-// barba.init({
-//   transitions: [
-//     {
-//       name: "switch",
-//       once({ current, next, trigger }) {
-//         return new Promise(resolve => {
-//           const timeline = gsap.timeline({
-//             onComplete() {
-//               resolve();
-//             }
-//           });
+barba.init({
+    transitions: [{
+        name: "switch",
+        once({
+            current,
+            next,
+            trigger
+        }) {
+            return new Promise(resolve => {
+                const timeline = gsap.timeline({
+                    onComplete() {
+                        resolve();
+                    }
+                });
 
-//       gsap.set(".hidetext", { opacity: 0, y: "110%"});
-//       gsap.set("body", { opacity: 0});
-//       gsap.set("#desktop", { y: "-50px"});
+                gsap.set(".reveal-text", {
+                    opacity: 0
+                }, 0)
+                gsap.set(".reveal-text-two", {
+                    opacity: 0
+                }, 0)
+                gsap.set(".reveal", {
+                    opacity: 1,
+                    y: "0%"
+                }, 0)
+                gsap.set(".hidetext", {
+                    opacity: 0,
+                    y: "110%"
+                });
+                gsap.set(".home", {
+                    y: "20%"
+                }, 0);
+                gsap.set("#desktop", {
+                    y: "-100px"
+                });
 
-// 		  timeline
-// 		  .to("body", { duration: 1.5, opacity: 1, ease: Power4.easeOut, delay: 0.5})
-//       .to(".hidetext", 1.5, { opacity: 1, y: "0%", ease: Power4.easeOut}, 0.15 )
-//       .to("#desktop", { duration: 0.5, y: "0px", ease: Power4.easeOut, delay: 1}, 0 )
-//         });
-//       }
-//     }
-//   ],
-//   debug: true
-// });
+                timeline
+                    .to(".reveal-text", {
+                        duration: 2,
+                        opacity: "1",
+                        ease: Power4.easeInOut,
+                    }, 0)
+                    .to(".reveal-text-two", {
+                        duration: 2,
+                        opacity: "1",
+                        ease: Power4.easeInOut,
+                        delay: 1.5
+                    }, 0)
+                    .to(".reveal", {
+                        duration: 1.5,
+                        y: "-100%",
+                        ease: Power4.easeInOut,
+                        delay: 3
+                    }, 0)
+                    .to(".home", {
+                        duration: 1.5,
+                        y: "0%",
+                        ease: Power4.easeInOut,
+                        delay: 2.9
+                    }, 0)
+                    .to(".hidetext", 1.5, {
+                        opacity: 1,
+                        y: "0%",
+                        ease: Power4.easeOut
+                    }, 0.15)
+                    .to("#desktop", {
+                        duration: 0.8,
+                        y: "0px",
+                        ease: Power4.easeOut,
+                        delay: 4
+                    }, 0)
+            });
+        }
+    }],
+    debug: true
+});
 
 
 $(".photo-caption").lettering('lines').children('span').lettering('words').children('span').lettering();
@@ -67,65 +117,65 @@ function hasScrolled() {
     lastScrollTop = st;
 }
 
-// dragElement(document.getElementById("drag-image"));
+dragElement(document.getElementById("drag-image"));
 
-// function dragElement(elmnt) {
-//   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-//   if (document.getElementById(elmnt.id + "header")) {
-//     // if present, the header is where you move the DIV from:
-//     document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-//   } else {
-//     // otherwise, move the DIV from anywhere inside the DIV:
-//     elmnt.onmousedown = dragMouseDown;
-//   }
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
 
-//   function dragMouseDown(e) {
-//     e = e || window.event;
-//     e.preventDefault();
-//     // get the mouse cursor position at startup:
-//     pos3 = e.clientX;
-//     pos4 = e.clientY;
-//     document.onmouseup = closeDragElement;
-//     // call a function whenever the cursor moves:
-//     document.onmousemove = elementDrag;
-//   }
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
 
-//   function elementDrag(e) {
-//     e = e || window.event;
-//     e.preventDefault();
-//     // calculate the new cursor position:
-//     pos1 = pos3 - e.clientX;
-//     pos2 = pos4 - e.clientY;
-//     pos3 = e.clientX;
-//     pos4 = e.clientY;
-//     // set the element's new position:
-//     elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-//     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-//   }
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
 
-//   function closeDragElement() {
-//     // stop moving when mouse button is released:
-//     document.onmouseup = null;
-//     document.onmousemove = null;
-//   }
-// }
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
 
-// const grabber = document.querySelector('#drag-image');
+const grabber = document.querySelector('#drag-image');
 
-// grabber.addEventListener('mousedown', () => {
-//   isDown = true;
-//   grabber.classList.add('active');
-// });
+grabber.addEventListener('mousedown', () => {
+  isDown = true;
+  grabber.classList.add('active');
+});
 
-// grabber.addEventListener('mouseleave', () => {
-//   isDown = false;
-//   grabber.classList.remove('active');
-// });
+grabber.addEventListener('mouseleave', () => {
+  isDown = false;
+  grabber.classList.remove('active');
+});
 
-// grabber.addEventListener('mouseup', () => {
-//   isDown = false;
-//   grabber.classList.remove('active');
-// });
+grabber.addEventListener('mouseup', () => {
+  isDown = false;
+  grabber.classList.remove('active');
+});
 
 // const slider = document.querySelector('.roster');
 // let isDown = false;
@@ -164,29 +214,10 @@ function hasScrolled() {
 // 	});
 // });
 
-// var controller = new ScrollMagic.Controller();
+var Scrollbar = window.Scrollbar;
 
-// var overviewTween = new TweenMax.from('#overview', 2, { opacity: "0", y: "20%", ease: Power4.easeOut, delay: 0.2}); 
+Scrollbar.init(document.querySelector('#my-scrollbar'));
 
-// var containerScene = new ScrollMagic.Scene({
-//   triggerElement: '#intro'
-// })
-// .setTween(overviewTween)
-// .addIndicators()
-// .addTo(controller);
-
-// var controller = new ScrollMagic.Controller();
-
-// const fade = document.querySelectorAll('.fade-up');
-
-// var fadeTween = new TweenMax.from(fade, 2, { opacity: "0", y: "20%", ease: Power4.easeOut, delay: 0.2}); 
-
-// var fadeScene = new ScrollMagic.Scene({
-//   triggerElement: fade
-// })
-// .setTween(fadeTween)
-// .addIndicators()
-// .addTo(controller);
 
 // init controller
 var controller = new ScrollMagic.Controller();
@@ -195,7 +226,7 @@ var controller = new ScrollMagic.Controller();
 $('.fade-up').each(function () {
 
     // build a tween
-    var tween = TweenMax.from($(this), 1, {
+    var fadeTween = TweenMax.from($(this), 1, {
         opacity: "0",
         ease: Power4.out
     });
@@ -204,10 +235,36 @@ $('.fade-up').each(function () {
     var scene = new ScrollMagic.Scene({
             triggerElement: this
         })
-        .setTween(tween) // trigger a TweenMax.to tween
+        .setTween(fadeTween) // trigger a TweenMax.to tween
         .addTo(controller);
 
 });
+
+var rosterTween = new TweenMax.from('#roster', 1, {
+    opacity: "0",
+    ease: Power4.easeInOut
+});
+
+// var overviewTween = new TweenMax.from('#overview', 2, {
+//     opacity: "0",
+//     y: "20%",
+//     ease: Power4.easeOut,
+//     delay: 0.2
+// });
+
+var containerScene = new ScrollMagic.Scene({
+        triggerElement: '#roster'
+    })
+    .setTween(rosterTween)
+    // .addIndicators()
+    .addTo(controller);
+
+// var introScene = new ScrollMagic.Scene({
+//         triggerElement: '#intro'
+//     })
+//     .setTween(overviewTween)
+//     .addIndicators()
+//     .addTo(controller);
 
 // var toggleMenu = $('.hamburger');
 // var closeMenu = $('.close');

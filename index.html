@@ -23,8 +23,11 @@
   <link rel="stylesheet" href="css/header.css" />
 </head>
 
-<body class="w-100 sans-serif bg-no10">
-  <main data-barba="wrapper">
+<body id="my-scrollbar" class="w-100 sans-serif bg-no10">
+  <div class="reveal flex items-center justify-center">
+    <p class="reveal-text f1 pink zeit-heavy">From Chicago, <span class="reveal-text-two">With Love...</span></p>
+  </div>
+  <main class="home" data-barba="wrapper">
     <div data-barba="container">
       <div class="vh-100 w-100">
         <header id="desktop" style="background-color: transparent;" class="desktop w-100 flex pv4 items-center">
@@ -40,14 +43,18 @@
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="/">the artists</a>
+                    <!-- <ul>
+                      <li>Jessica Levin</li>
+                      <li>Sam Lynn Davis</li>
+                    </ul> -->
                   </li>
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                     <a class="nav-link" href="/">something else</a>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
             </div>
-            <div class="w-25 ph4">
+            <!-- <div class="w-25 ph4">
               <ul class="flex justify-end">
                 <li><a href="/" class="nav-link ph2"><svg class="instagram" height="100px" width="100px"
                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" x="0px" y="0px">
@@ -72,7 +79,7 @@
                     </svg></a></li>
 
               </ul>
-            </div>
+            </div> -->
           </nav>
         </header>
         <header class="mobile pa3">
@@ -89,27 +96,21 @@
           </div>
           </nav>
         </header>
-        <div class=" hero flex flex-column justify-end pa4 vh-100 w-100 cream cover">
-          <div class=" hidetext-container flex items-end">
-            <h1 class="hidetext ma0 matahari-black">
-              From
-            </h1>
-          </div>
-          <div class=" hidetext-container flex items-end">
-            <h1 class="hidetext ma0 matahari-black">
-              <span>Chicago</span>
-            </h1>
-          </div>
-          <div class=" hidetext-container flex items-end">
-            <h1 class="hidetext ma0 matahari-black">
-              <span>With Love</span>
-            </h1>
-          </div>
+        <div id="intro" class="intro pa3 pa5-ns min-vh-100 flex items-center">
+          <p class="intro-text measure lh-headline ph2 pv4">
+            From Chicago <br />With Love
+          </p>
+          <img id="drag-image" src="/img/spacer.png">
+          <img id="intro-image" src="/img/spacer.png">
+          <!-- <h6 class="overview-title montserrat ttu fw6 mb3 dark-gray">Overview</h6> -->
+          <p id="overview" class="overview-text photo-caption flex measure lh-copy zeit-heavy f1 tc pv5 ph3">
+            From Chicago, With Love              
+          </p>
         </div>
         <div class="hero-2 flex flex-column justify-center items-center pa4 min-vh-100 w-100 cream cover">
-          <div class="bio flex flex-column items-center justify-center vh-100 f3 pa3 pa5-ns zeit-extra">
+          <div class="bio fade-up flex flex-column items-center justify-center vh-100 f3 pa3 pa5-ns zeit-extra">
             <p class="measure lh-copy pa3 black">
-              We shot five Chicago-based artists at one of the most diversely curated spots in the city, Salvage One, a
+              We shot five Chicago-based artists at one of the most diversely curated spots in the city, <a class="photo-caption zeit-heavy underline" href="https://salvageone.com/" target="_blank">Salvage One</a>, a
               vibrant and endless showroom filled with recycled art, furniture and relics of the past.
             </p>
             <p class="measure lh-copy pa3 black">
@@ -225,9 +226,9 @@
               <li class="">
                 <a class="nav-link" href="/">the women</a>
               </li>
-              <li class="">
+              <!-- <li class="">
                 <a class="nav-link" href="/">something else</a>
-              </li>
+              </li> -->
             </ul>
 
           </div>
@@ -235,6 +236,7 @@
 </body>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="/js/smooth-scrollbar.js"></script>
 <script src="/js/gsap.js"></script>
 <script src="/js/TweenMax.min.js"></script>
 <script src="/js/ScrollMagic.js"></script>
@@ -243,7 +245,7 @@
 <script src="/js/jquery.lettering-0.6.1.min.js"></script>
 <script src="/js/jquery.lettering.js"></script>
 <script src="/js/barba.js"></script>
-<script src="/js/scripts2.js"></script>
+<script src="/js/scripts.js"></script>
 
 <script>
   $(".photo-caption").lettering('lines').children('span').lettering('words').children('span').lettering();
