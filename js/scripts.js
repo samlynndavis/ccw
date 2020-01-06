@@ -50,13 +50,13 @@ barba.init({
                         duration: 1.5,
                         y: "-100%",
                         ease: Power4.easeInOut,
-                        delay: 3
+                        delay: 3.5
                     }, 0)
                     .to(".home", {
                         duration: 1.5,
                         y: "0%",
                         ease: Power4.easeInOut,
-                        delay: 2.9
+                        delay: 3.4
                     }, 0)
                     .to(".hidetext", 1.5, {
                         opacity: 1,
@@ -67,13 +67,66 @@ barba.init({
                         duration: 0.8,
                         y: "0px",
                         ease: Power4.easeOut,
-                        delay: 4
+                        delay: 4.5
                     }, 0)
             });
         }
     }],
     debug: true
 });
+
+gsap.set(".about", {
+    y: "100%"
+})
+gsap.set("#close", {
+    opacity: 0
+})
+gsap.set(".blurb", {
+    y: "10%",
+    opacity: 0
+})
+
+var closeAbout = $('#close');
+var openAbout = $('#about');
+var main = $('main');
+
+var timeline = new TimelineMax({
+    paused: true,
+    reversed: true,
+});
+
+timeline
+    // .to( "main", 0.3, {
+    //     opacity: 0,
+    // }, 0)
+    .to(".about", 1, {
+        y: "0%",
+        ease: Power4.easeInOut
+    })
+    .to(".blurb", 1, {
+        y: "0%",
+        opacity: 1,
+        ease: Power4.easeInOut,
+        delay: 0.5
+    }, 0)
+    .to("#close", 0.5, {
+        opacity: 1,
+        ease: Power4.easeInOut,
+        delay: 0.8,
+    }, 0);
+
+$(document).on('click', "#about", function () {
+    $(".about").addClass('active');
+    $("body").addClass('noscroll');
+    timeline.reversed() ? timeline.play() : timeline.reverse();
+});
+
+$(document).on('click', "#close", function () {
+    timeline.reversed() ? timeline.play() : timeline.reverse();
+    $("#teambio").removeClass('active');
+    $("body").removeClass('noscroll');
+});
+
 
 
 $(".photo-caption").lettering('lines').children('span').lettering('words').children('span').lettering();
@@ -120,61 +173,64 @@ function hasScrolled() {
 dragElement(document.getElementById("drag-image"));
 
 function dragElement(elmnt) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elmnt.id + "header")) {
-    // if present, the header is where you move the DIV from:
-    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-  } else {
-    // otherwise, move the DIV from anywhere inside the DIV:
-    elmnt.onmousedown = dragMouseDown;
-  }
+    var pos1 = 0,
+        pos2 = 0,
+        pos3 = 0,
+        pos4 = 0;
+    if (document.getElementById(elmnt.id + "header")) {
+        // if present, the header is where you move the DIV from:
+        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+    } else {
+        // otherwise, move the DIV from anywhere inside the DIV:
+        elmnt.onmousedown = dragMouseDown;
+    }
 
-  function dragMouseDown(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // get the mouse cursor position at startup:
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
-  }
+    function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+    }
 
-  function elementDrag(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // calculate the new cursor position:
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    // set the element's new position:
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-  }
+    function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // calculate the new cursor position:
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // set the element's new position:
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    }
 
-  function closeDragElement() {
-    // stop moving when mouse button is released:
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
+    function closeDragElement() {
+        // stop moving when mouse button is released:
+        document.onmouseup = null;
+        document.onmousemove = null;
+    }
 }
 
 const grabber = document.querySelector('#drag-image');
 
 grabber.addEventListener('mousedown', () => {
-  isDown = true;
-  grabber.classList.add('active');
+    isDown = true;
+    grabber.classList.add('active');
 });
 
 grabber.addEventListener('mouseleave', () => {
-  isDown = false;
-  grabber.classList.remove('active');
+    isDown = false;
+    grabber.classList.remove('active');
 });
 
 grabber.addEventListener('mouseup', () => {
-  isDown = false;
-  grabber.classList.remove('active');
+    isDown = false;
+    grabber.classList.remove('active');
 });
 
 // const slider = document.querySelector('.roster');
@@ -258,6 +314,13 @@ var containerScene = new ScrollMagic.Scene({
     .setTween(rosterTween)
     // .addIndicators()
     .addTo(controller);
+
+// var leftPin = new ScrollMagic.Scene({
+//         triggerElement : '#left-image'
+//     })
+//     .setPin('#left-image')
+//     .addIndicators() 
+//     .addTo(controller);
 
 // var introScene = new ScrollMagic.Scene({
 //         triggerElement: '#intro'

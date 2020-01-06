@@ -104,13 +104,13 @@ header#navigation {
   position: relative;
 }
 
-.nav-item:first-child {
+/* .nav-item:first-child {
   font-family: "Matahari-Bold";
 }
 
 .nav-item:hover {
   font-family: "Matahari-Bold";
-}
+} */
 
 .nav-item::after {
   background-color: #fff;

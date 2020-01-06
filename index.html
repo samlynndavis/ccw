@@ -16,6 +16,9 @@
   <link rel="shortcut icon" href="/" />
 
   <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://webfonts.fontstand.com/WF-049020-26e109d5ea85ad3c7fcc1476c4eba130.css" type="text/css"/>
+  <link rel="stylesheet" href="https://webfonts.fontstand.com/WF-049020-8f5c4287e1141856f0697ab34d839064.css" type="text/css"/>
+  <link rel="stylesheet" href="https://webfonts.fontstand.com/WF-049020-2d05c55c72837dfac96212a7f5b46867.css" type="text/css"/>
   <link href="https://fonts.googleapis.com/css?family=Cormorant&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <link rel="stylesheet" href="css/tachyons.min.css" />
@@ -24,8 +27,27 @@
 </head>
 
 <body id="my-scrollbar" class="w-100 sans-serif bg-no10">
+  <div id="teambio" class="about bg-black vh-100 w-100 flex flex-column white justify-between items-center pa6">
+    <div class="flex items-end justify-end w-100 white">
+      <span><a id="close" href="#">Close</a></span>
+    </div>
+    <div class="blurb flex pa4">
+      <div class="flex flex-column pa4 w-50">
+        <h1 class="f2 zeit-extra">Jessica Levin</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur voluptatum libero sapiente eveniet
+          architecto cumque laudantium enim eos quisquam. Laudantium quisquam obcaecati aspernatur? Perspiciatis veniam
+          praesentium id in vero saepe!</p>
+      </div>
+      <div class="flex flex-column pa4 w-50">
+        <h1 class="f2 zeit-extra">Sam Lynn Davis</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique dolore nostrum, ex nesciunt quasi debitis
+          pariatur, perferendis sint repellendus porro veniam! Voluptatibus maxime amet quos aliquid nesciunt ipsum
+          corporis quibusdam.</p>
+      </div>
+    </div>
+  </div>
   <div class="reveal flex items-center justify-center">
-    <p class="reveal-text f1 pink zeit-heavy">From Chicago, <span class="reveal-text-two">With Love...</span></p>
+    <p class="reveal-text f1 pink zeit-heavy">From Chicago, <span class="reveal-text-two">With Love</span></p>
   </div>
   <main class="home" data-barba="wrapper">
     <div data-barba="container">
@@ -42,7 +64,7 @@
                     <a class="nav-link" href="/">the women</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/">the artists</a>
+                    <a id="about" class="nav-link" href="#">the artists</a>
                     <!-- <ul>
                       <li>Jessica Levin</li>
                       <li>Sam Lynn Davis</li>
@@ -104,21 +126,23 @@
           <img id="intro-image" src="/img/spacer.png">
           <!-- <h6 class="overview-title montserrat ttu fw6 mb3 dark-gray">Overview</h6> -->
           <p id="overview" class="overview-text photo-caption flex measure lh-copy zeit-heavy f1 tc pv5 ph3">
-            From Chicago, With Love              
+            From Chicago, With Love
           </p>
         </div>
         <div class="hero-2 flex flex-column justify-center items-center pa4 min-vh-100 w-100 cream cover">
-          <div class="bio fade-up flex flex-column items-center justify-center vh-100 f3 pa3 pa5-ns zeit-extra">
+          <div class="bio fade-up flex flex-column items-center justify-center vh-100 f2 pa5 pa5-ns zeit-heavy">
             <p class="measure lh-copy pa3 black">
-              We shot five Chicago-based artists at one of the most diversely curated spots in the city, <a class="photo-caption zeit-heavy underline" href="https://salvageone.com/" target="_blank">Salvage One</a>, a
+              We shot five Chicago-based artists at one of the most diversely curated spots in the city, <a
+                class="photo-caption zeit-heavy underline" href="https://salvageone.com/" target="_blank">Salvage
+                One</a>, a
               vibrant and endless showroom filled with recycled art, furniture and relics of the past.
             </p>
             <p class="measure lh-copy pa3 black">
               Each woman in front of the camera claimed their own unique space in a sea of color and design, filling
-              this three-story wonderland with that singular Chicago reverb you just <span class="zeit">know</span> - if
+              this three-story wonderland with that singular Chicago reverb you just <span class="grifinito">know</span> - if
               you know.
             </p>
-            <p class="measure lh-copy zeit-heavy pa3 black photo-caption">
+            <p class="measure lh-copy zeit grifinito-bold pa3 black photo-caption">
               We got to know more about the creative process behind each artist, what makes them tick, and what moves
               them to do what they do.
             </p>
@@ -237,7 +261,7 @@
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="/js/smooth-scrollbar.js"></script>
-<script src="/js/gsap.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.0.4/dist/gsap.min.js"></script>
 <script src="/js/TweenMax.min.js"></script>
 <script src="/js/ScrollMagic.js"></script>
 <script src="/js/animation.gsap.js"></script>
@@ -246,9 +270,5 @@
 <script src="/js/jquery.lettering.js"></script>
 <script src="/js/barba.js"></script>
 <script src="/js/scripts.js"></script>
-
-<script>
-  $(".photo-caption").lettering('lines').children('span').lettering('words').children('span').lettering();
-</script>
 
 </html>
