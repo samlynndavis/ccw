@@ -1,3 +1,11 @@
+$(document).ready(function () {
+    $("body").addClass('noscroll');
+});
+
+// var Scrollbar = window.Scrollbar;
+
+// Scrollbar.init(document.querySelector('#my-scrollbar'));
+
 barba.init({
     transitions: [{
         name: "switch",
@@ -9,10 +17,10 @@ barba.init({
             return new Promise(resolve => {
                 const timeline = gsap.timeline({
                     onComplete() {
+                        $("body").removeClass('noscroll');
                         resolve();
                     }
                 });
-
                 gsap.set(".reveal-text", {
                     opacity: 0
                 }, 0)
@@ -23,10 +31,10 @@ barba.init({
                     opacity: 1,
                     y: "0%"
                 }, 0)
-                gsap.set(".hidetext", {
-                    opacity: 0,
-                    y: "110%"
-                });
+                // gsap.set(".hidetext", {
+                //     opacity: 0,
+                //     y: "110%"
+                // });
                 gsap.set(".home", {
                     y: "20%"
                 }, 0);
@@ -58,11 +66,11 @@ barba.init({
                         ease: Power4.easeInOut,
                         delay: 3.4
                     }, 0)
-                    .to(".hidetext", 1.5, {
-                        opacity: 1,
-                        y: "0%",
-                        ease: Power4.easeOut
-                    }, 0.15)
+                    // .to(".hidetext", 1.5, {
+                    //     opacity: 1,
+                    //     y: "0%",
+                    //     ease: Power4.easeOut
+                    // }, 0.15)
                     .to("#desktop", {
                         duration: 0.8,
                         y: "0px",
@@ -82,7 +90,7 @@ gsap.set("#close", {
     opacity: 0
 })
 gsap.set(".blurb", {
-    y: "10%",
+    y: "40%",
     opacity: 0
 })
 
@@ -93,20 +101,20 @@ var main = $('main');
 var timeline = new TimelineMax({
     paused: true,
     reversed: true,
+    onReverseComplete: function () {
+        $("#teambio").removeClass('active');
+        $("body").removeClass('noscroll');
+    }
 });
 
 timeline
-    // .to( "main", 0.3, {
-    //     opacity: 0,
-    // }, 0)
     .to(".about", 1, {
         y: "0%",
         ease: Power4.easeInOut
     })
     .to(".blurb", 1, {
-        y: "0%",
         opacity: 1,
-        ease: Power4.easeInOut,
+        ease:Power4.easeInOut,
         delay: 0.5
     }, 0)
     .to("#close", 0.5, {
@@ -123,13 +131,8 @@ $(document).on('click', "#about", function () {
 
 $(document).on('click', "#close", function () {
     timeline.reversed() ? timeline.play() : timeline.reverse();
-    $("#teambio").removeClass('active');
-    $("body").removeClass('noscroll');
 });
 
-
-
-$(".photo-caption").lettering('lines').children('span').lettering('words').children('span').lettering();
 
 // Hide Header on on scroll down
 var didScroll;
@@ -169,6 +172,8 @@ function hasScrolled() {
 
     lastScrollTop = st;
 }
+
+//Drag intro image around screen
 
 dragElement(document.getElementById("drag-image"));
 
@@ -216,6 +221,8 @@ function dragElement(elmnt) {
     }
 }
 
+//toggle 'grab" and 'grabbing' cursors on mousedown and leave
+
 const grabber = document.querySelector('#drag-image');
 
 grabber.addEventListener('mousedown', () => {
@@ -232,6 +239,8 @@ grabber.addEventListener('mouseup', () => {
     isDown = false;
     grabber.classList.remove('active');
 });
+
+//Roster Slider
 
 // const slider = document.querySelector('.roster');
 // let isDown = false;
@@ -269,10 +278,6 @@ grabber.addEventListener('mouseup', () => {
 // 		$('#mobile-nav').toggleClass('open');
 // 	});
 // });
-
-var Scrollbar = window.Scrollbar;
-
-Scrollbar.init(document.querySelector('#my-scrollbar'));
 
 
 // init controller
@@ -315,13 +320,6 @@ var containerScene = new ScrollMagic.Scene({
     // .addIndicators()
     .addTo(controller);
 
-// var leftPin = new ScrollMagic.Scene({
-//         triggerElement : '#left-image'
-//     })
-//     .setPin('#left-image')
-//     .addIndicators() 
-//     .addTo(controller);
-
 // var introScene = new ScrollMagic.Scene({
 //         triggerElement: '#intro'
 //     })
@@ -329,20 +327,33 @@ var containerScene = new ScrollMagic.Scene({
 //     .addIndicators()
 //     .addTo(controller);
 
-// var toggleMenu = $('.hamburger');
-// var closeMenu = $('.close');
-// var menu = $('#mobile-nav-wrapper');
+var openMenu = $('.hamburger');
+var closeMenu = $('.close');
+var menu = $('#mobile-nav-wrapper');
 // var listItems = $('ul#mobile-nav li');
-// var timeline = new TimelineMax({ paused: true, reversed: true });
+var timelineMobile = new TimelineMax({ 
+    paused: true, 
+    reversed: true,
+    onReverseComplete: function () {
+        $(menu).removeClass('on');
+        $("body").addClass('noscroll');
+    }
+    
+ });
 
-// timeline.to(menu, 0.8, { opacity: "1", y: "0%", ease: Power4.easeInOut});
+gsap.set("#mobile-nav-wrapper", {
+    y: "100%"
+})
 
-// toggleMenu.on('click', function() {
-//   $(menu).toggleClass('on');
-//   timeline.reversed() ? timeline.play() : timeline.reverse();
-// });
+timelineMobile
+    .to(menu, 1, { y: "0%", ease: Power4.easeInOut});
 
-// closeMenu.on('click', function() {
-//   $(menu).toggleClass('on');
-//   timeline.play() ? timeline.reversed() : timeline.play();
-// });
+$(document).on('click', ".hamburger", function () {
+  $(menu).toggleClass('on');
+  $("body").addClass('noscroll');
+  timelineMobile.reversed() ? timelineMobile.play() : timelineMobile.reverse();
+});
+  
+$(document).on('click', ".close", function () {
+    timelineMobile.reversed() ? timelineMobile.play() : timelineMobile.reverse();
+});
