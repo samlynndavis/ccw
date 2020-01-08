@@ -1,87 +1,88 @@
-$(document).ready(function () {
-    $("body").addClass('noscroll');
-});
-
 // var Scrollbar = window.Scrollbar;
 
 // Scrollbar.init(document.querySelector('#my-scrollbar'));
 
-barba.init({
-    transitions: [{
-        name: "switch",
-        once({
-            current,
-            next,
-            trigger
-        }) {
-            return new Promise(resolve => {
-                const timeline = gsap.timeline({
-                    onComplete() {
-                        $("body").removeClass('noscroll');
-                        resolve();
-                    }
-                });
-                gsap.set(".reveal-text", {
-                    opacity: 0
-                }, 0)
-                gsap.set(".reveal-text-two", {
-                    opacity: 0
-                }, 0)
-                gsap.set(".reveal", {
-                    opacity: 1,
-                    y: "0%"
-                }, 0)
-                // gsap.set(".hidetext", {
-                //     opacity: 0,
-                //     y: "110%"
-                // });
-                gsap.set(".home", {
-                    y: "20%"
-                }, 0);
-                gsap.set("#desktop", {
-                    y: "-100px"
-                });
+// $(document).ready(function () {
+//     $("body").addClass('noscroll');
+// });
 
-                timeline
-                    .to(".reveal-text", {
-                        duration: 2,
-                        opacity: "1",
-                        ease: Power4.easeInOut,
-                    }, 0)
-                    .to(".reveal-text-two", {
-                        duration: 2,
-                        opacity: "1",
-                        ease: Power4.easeInOut,
-                        delay: 1.5
-                    }, 0)
-                    .to(".reveal", {
-                        duration: 1.5,
-                        y: "-100%",
-                        ease: Power4.easeInOut,
-                        delay: 3.5
-                    }, 0)
-                    .to(".home", {
-                        duration: 1.5,
-                        y: "0%",
-                        ease: Power4.easeInOut,
-                        delay: 3.4
-                    }, 0)
-                    // .to(".hidetext", 1.5, {
-                    //     opacity: 1,
-                    //     y: "0%",
-                    //     ease: Power4.easeOut
-                    // }, 0.15)
-                    .to("#desktop", {
-                        duration: 0.8,
-                        y: "0px",
-                        ease: Power4.easeOut,
-                        delay: 4.5
-                    }, 0)
-            });
-        }
-    }],
-    debug: true
-});
+// barba.init({
+//     transitions: [{
+//         name: "switch",
+//         once({
+//             current,
+//             next,
+//             trigger
+//         }) {
+//             return new Promise(resolve => {
+//                 const timeline = gsap.timeline({
+//                     onComplete() {
+//                         $("body").removeClass('noscroll');
+//                         resolve();
+//                     }
+//                 });
+//                 gsap.set(".reveal-text", {
+//                     opacity: 0
+//                 }, 0)
+//                 gsap.set(".reveal-text-two", {
+//                     opacity: 0
+//                 }, 0)
+//                 gsap.set(".reveal", {
+//                     opacity: 1,
+//                     y: "0%"
+//                 }, 0)
+//                 // gsap.set(".hidetext", {
+//                 //     opacity: 0,
+//                 //     y: "110%"
+//                 // });
+//                 gsap.set(".home", {
+//                     y: "20%"
+//                 }, 0);
+//                 gsap.set("#desktop", {
+//                     y: "-100px"
+//                 });
+
+//                 timeline
+//                     .to(".reveal-text", {
+//                         duration: 2,
+//                         opacity: "1",
+//                         ease: Power4.easeInOut,
+//                     }, 0)
+//                     .to(".reveal-text-two", {
+//                         duration: 2,
+//                         opacity: "1",
+//                         ease: Power4.easeInOut,
+//                         delay: 1.5
+//                     }, 0)
+//                     .to(".reveal", {
+//                         duration: 1.5,
+//                         y: "-100%",
+//                         ease: Power4.easeInOut,
+//                         delay: 3.5
+//                     }, 0)
+//                     .to(".home", {
+//                         duration: 1.5,
+//                         y: "0%",
+//                         ease: Power4.easeInOut,
+//                         delay: 3.4
+//                     }, 0)
+//                     // .to(".hidetext", 1.5, {
+//                     //     opacity: 1,
+//                     //     y: "0%",
+//                     //     ease: Power4.easeOut
+//                     // }, 0.15)
+//                     .to("#desktop", {
+//                         duration: 0.8,
+//                         y: "0px",
+//                         ease: Power4.easeOut,
+//                         delay: 4.5
+//                     }, 0)
+//             });
+//         }
+//     }],
+//     views: [],
+//     debug: true
+// });
 
 gsap.set(".about", {
     y: "100%"
@@ -96,14 +97,15 @@ gsap.set(".blurb", {
 
 var closeAbout = $('#close');
 var openAbout = $('#about');
-var main = $('main');
 
 var timeline = new TimelineMax({
     paused: true,
     reversed: true,
+    onComplete: function () {        
+        $("body").addClass('noscroll');
+    },
     onReverseComplete: function () {
         $("#teambio").removeClass('active');
-        $("body").removeClass('noscroll');
     }
 });
 
@@ -125,11 +127,11 @@ timeline
 
 $(document).on('click', "#about", function () {
     $(".about").addClass('active');
-    $("body").addClass('noscroll');
     timeline.reversed() ? timeline.play() : timeline.reverse();
 });
 
 $(document).on('click', "#close", function () {
+    $("body").removeClass('noscroll');
     timeline.reversed() ? timeline.play() : timeline.reverse();
 });
 

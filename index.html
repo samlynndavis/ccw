@@ -16,16 +16,16 @@
   <link rel="shortcut icon" href="/" />
 
   <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Cormorant&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://webfonts.fontstand.com/WF-049020-2d05c55c72837dfac96212a7f5b46867.css" type="text/css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <link rel="stylesheet" href="css/tachyons.min.css" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/header.css" />
 </head>
 
-<body id="my-scrollbar" class="w-100 sans-serif bg-no10">
+<body class="w-100 sans-serif bg-no10">
   <div id="teambio" class="about bg-black vh-100 w-100 flex flex-column white justify-between items-center pa6">
-    <!-- <div class="flex items-end justify-end w-100 white">
+    <div class="flex items-end justify-end w-100 white">
       <a id="close" href="#"><svg class="close" height='100px' width='100px' xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" preserveAspectRatio="none" x="0px" y="0px"
             viewBox="0 0 100 100">
@@ -40,21 +40,7 @@
               <use xlink:href="#a"></use>
             </g>
           </svg></a>
-    </div> -->
-    <a id="close" href="#"><svg class="close" height='100px' width='100px' xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" preserveAspectRatio="none" x="0px" y="0px"
-        viewBox="0 0 100 100">
-        <defs>
-          <g id="a">
-            <path
-              d=" M 80 14.35 L 50 44.35 20 14.35 14.35 20 44.35 50 14.35 80 20 85.65 50 55.65 80 85.65 85.65 80 55.65 50 85.65 20 80 14.35 Z">
-            </path>
-          </g>
-        </defs>
-        <g transform="matrix( 1, 0, 0, 1, 0,0) ">
-          <use xlink:href="#a"></use>
-        </g>
-      </svg></a>
+    </div>
     <div class="flex pa4">
       <div class="blurb flex flex-column pa4 w-50">
         <h1 class="f2 zeit-heavy pink">Jessica Levin</h1>
@@ -76,7 +62,7 @@
                     d="M57.8,50c0-4.2-3.5-7.7-7.8-7.7c-4.2,0-7.7,3.5-7.7,7.7s3.5,7.8,7.7,7.8C54.2,57.8,57.8,54.2,57.8,50z">
                   </path>
                 </svg></span>
-              <h6>Jessica's Email</h6>
+              <h6>Email Jessica</h6>
             </a>
             <a class="pv1 flex items-center" href="/">
               <span><svg class="instagram pr2" height="100px" width="100px" xmlns="http://www.w3.org/2000/svg"
@@ -114,7 +100,7 @@
                     d="M57.8,50c0-4.2-3.5-7.7-7.8-7.7c-4.2,0-7.7,3.5-7.7,7.7s3.5,7.8,7.7,7.8C54.2,57.8,57.8,54.2,57.8,50z">
                   </path>
                 </svg></span>
-              <h6>Sam's Email</h6>
+              <h6>Email Sam</h6>
             </a>
             <a class="pv1 flex items-center" href="/">
               <span><svg class="instagram pr2" height="100px" width="100px" xmlns="http://www.w3.org/2000/svg"
@@ -135,9 +121,9 @@
       </div>
     </div>
   </div>
-  <div class="reveal flex items-center justify-center">
-    <p class="reveal-text f1 pink zeit-heavy">From Chicago, <span class="reveal-text-two">With Love</span></p>
-  </div>
+  <!-- <div class="reveal flex items-center justify-center">
+    <p class="reveal-text f1 pink grifinito">From Chicago, <span class="reveal-text-two">With Love</span></p>
+  </div> -->
   <header id="desktop" style="background-color: transparent;" class="desktop w-100 flex pv4 items-center">
     <nav class="fw4 w-100 f6 flex ph4 items-center justify-between tracked">
       <div class="w-75 items-center flex">
@@ -147,7 +133,7 @@
               <a class="nav-link" href="/">home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/">the women</a>
+              <a class="nav-link" href="#roster">the women</a>
             </li>
             <li class="nav-item">
               <a id="about" class="nav-link" href="#">the artists</a>
@@ -197,9 +183,8 @@
     </div>
     </nav>
   </header>
-  <main class="home" data-barba="wrapper">
-    <div data-barba="container">
-      <div class="vh-100 w-100">
+  <main class="home w-100" data-barba="wrapper">
+    <article data-barba="container">
         <div id="intro" class="intro pa3 pa5-ns min-vh-100 flex items-center">
           <p class="intro-text measure lh-headline ph2 pv4">
             From Chicago <br />With Love
@@ -207,28 +192,29 @@
           <img id="drag-image" src="/img/spacer.png">
           <img id="intro-image" src="/img/spacer.png">
           <!-- <h6 class="overview-title montserrat ttu fw6 mb3 dark-gray">Overview</h6> -->
-          <p id="overview" class="overview-text photo-caption flex measure lh-copy zeit-heavy f1 tc pv5 ph3">
+          <p id="overview" class="overview-text photo-caption flex measure lh-copy grifinito f1 tc pv5 ph3">
             From Chicago, With Love
           </p>
         </div>
         <div class="hero-2 flex flex-column justify-center items-center pa4 min-vh-100 w-100 cream cover">
-          <div class="bio fade-up flex flex-column items-center justify-center vh-100 f3 pa5 pa5-ns zeit-heavy">
+          <div class="bio w-75 fade-up flex flex-column items-center justify-center vh-100 f2 pa5 pa5-ns grifinito">
             <p class="measure lh-copy pa3 black">
               We shot five Chicago-based artists at one of the most diversely curated spots in the city, <a
-                class="photo-caption zeit-heavy underline" href="https://salvageone.com/" target="_blank">Salvage
+                class="photo-caption underline" href="https://salvageone.com/" target="_blank">Salvage
                 One</a>, a
               vibrant and endless showroom filled with recycled art, furniture and relics of the past.
             </p>
             <p class="measure lh-copy pa3 black">
               Each woman in front of the camera claimed their own unique space in a sea of color and design, filling
-              this three-story wonderland with that singular Chicago reverb you just <span class="zeit">know</span> - if
+              this three-story wonderland with that singular Chicago reverb you just know - if
               you know.
             </p>
-            <p class="measure lh-copy zeit grifinito-bold pa3 black photo-caption">
+            <p class="measure lh-copy grifinito pa3 black photo-caption">
               We got to know more about the creative process behind each artist, what makes them tick, and what moves
               them to do what they do.
             </p>
           </div>
+        </div>
           <div class="roster-block-mobile w-100">
             <div class="roster-mobile w-100 pv6">
               <a href="/laura.html" class="roster-card">
@@ -318,27 +304,81 @@
                 </div>
               </a>
             </div>
-          </div>
-          </article>
-          <div id="mobile-nav-wrapper" class="mobile-nav pa4 flex flex-column">
-            <h1 class="no12 close tr matahari-regular">Close</h1>
-            <ul id="mobile-nav" class="flex flex-column matahari-regular f2">
-              <li class="">
-                <a class="nav-link" href="/">home</a>
-              </li>
-              <li class="">
-                <a class="nav-link" href="/">the artists</a>
-              </li>
-              <li class="">
-                <a class="nav-link" href="/">the women</a>
-              </li>
-              <!-- <li class="">
-                <a class="nav-link" href="/">something else</a>
-              </li> -->
-            </ul>
-
-          </div>
+          </div>          
+    </article>
   </main>
+
+  <div id="mobile-nav-wrapper" class="mobile-nav pa4 flex flex-column">
+    <h1 class="no12 close tr matahari-regular">Close</h1>
+    <ul id="mobile-nav" class="flex flex-column matahari-regular f2">
+      <li class="">
+        <a class="nav-link" href="/">home</a>
+      </li>
+      <li class="">
+        <a class="nav-link" href="/">the artists</a>
+      </li>
+      <li class="">
+        <a class="nav-link" href="/">the women</a>
+      </li>
+      <li class="">
+        <a class="nav-link" href="/">something else</a>
+      </li>
+    </ul>
+  </div>
+
+  <footer class="pa4 pa5-l flex w-100 white">
+    <div class="mb4-l w-50 flex flex-wrap items-center">
+      <h1 class="fl w-100 pv0 f6 fw6 ttu tracked mb4 montserrat">The Artists</h1>
+      <article class="fl w-50 dib-ns w-auto-ns mr4-m mr5-l pr2 pr0-ns lh-copy">
+        <h4 class="f5 f4-l fw6 zeit">Jessica Levin</h4>
+        <span class="f7 f6-l db">Photographer + Creative Director</span>
+        <span class="f7 f6-l ">Chicago, IL </span>
+        <a class="f6 db fw6 pv3 link white dim montserrat" href="mailto:jessicawlevin@gmail.com">
+          jessicawlevin@gmail.com
+        </a>
+        <div class="db dtc-ns black-70 tc tr-ns v-mid">
+        <a href="/" class="link dib mr3 black-70" title="Impossible Labs on Facebook">
+          <svg class="instagram" height="100px" width="100px" fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" x="0px" y="0px"><title>Solid_Justify </title><g><path d="M12.583,8.2705a4.23,4.23,0,1,0,4.23,4.23A4.2336,4.2336,0,0,0,12.583,8.2705Z"></path><path d="M18.4844,2H6.6816A4.6033,4.6033,0,0,0,2.083,6.5986V18.4014A4.6033,4.6033,0,0,0,6.6816,23H18.4844a4.6033,4.6033,0,0,0,4.5986-4.5986V6.5986A4.6033,4.6033,0,0,0,18.4844,2ZM18.5,7.5a1,1,0,1,1,1-1A1,1,0,0,1,18.5,7.5ZM12.583,17.73a5.23,5.23,0,1,1,5.23-5.23A5.2349,5.2349,0,0,1,12.583,17.73Z"></path></g></svg>
+        </a>
+        <a href="/" class="link dib mr3 black-70">
+          <svg class="email" height="100px" width="100px" fill="#000000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><path d="M50,1.6C23.1,1.6,1.2,23.4,1.2,50.4S23.1,99.1,50,99.1s48.8-21.8,48.8-48.8S76.9,1.6,50,1.6z M72.1,50v6.1  c0,4-3.2,7.2-7.2,7.2c-3,0-5.6-1.8-6.6-4.4c-2.2,2-5.1,3.4-8.3,3.4c-6.7,0-12.1-5.5-12.1-12.2S43.3,37.9,50,37.9  c6.7,0,12.2,5.4,12.2,12.1v6.1c0,1.5,1.2,2.7,2.7,2.7s2.7-1.2,2.7-2.7V50c0-9.7-8-17.7-17.7-17.7c-9.7,0-17.7,8-17.7,17.7  c0,9.7,8,17.7,17.7,17.7h10c1.2,0,2.2,1,2.2,2.2s-1,2.2-2.2,2.2H50c-12.2,0-22.1-9.9-22.1-22.1c0-12.2,9.9-22.1,22.1-22.1  S72.1,37.8,72.1,50z"></path><path d="M57.8,50c0-4.2-3.5-7.7-7.8-7.7c-4.2,0-7.7,3.5-7.7,7.7s3.5,7.8,7.7,7.8C54.2,57.8,57.8,54.2,57.8,50z"></path></svg>
+        </a>
+      </div>
+      </article>
+      <article class="fl w-50 dib-ns w-auto-ns mr4-m mr5-l pl2 pl0-ns lh-copy">
+        <h4 class="f5 f4-l fw6 zeit">Sam Lynn Davis</h4>
+        <span class="f7 f6-l db">
+          Photographer + Filmmaker
+        </span>
+        <span class="f7 f6-l di">
+          Chicago, IL
+        </span>
+        <a class="f6 db fw6 pv3 link white dim montserrat " href="mailto:hello@smdvs.com">
+          hello@smdvs.com
+        </a>
+        <div class="db dtc-ns black-70 tc tr-ns v-mid">
+        <a href="/" class="link dib mr3 black-70" title="Impossible Labs on Facebook">
+          <svg class="instagram" height="100px" width="100px" fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" x="0px" y="0px"><title>Solid_Justify </title><g><path d="M12.583,8.2705a4.23,4.23,0,1,0,4.23,4.23A4.2336,4.2336,0,0,0,12.583,8.2705Z"></path><path d="M18.4844,2H6.6816A4.6033,4.6033,0,0,0,2.083,6.5986V18.4014A4.6033,4.6033,0,0,0,6.6816,23H18.4844a4.6033,4.6033,0,0,0,4.5986-4.5986V6.5986A4.6033,4.6033,0,0,0,18.4844,2ZM18.5,7.5a1,1,0,1,1,1-1A1,1,0,0,1,18.5,7.5ZM12.583,17.73a5.23,5.23,0,1,1,5.23-5.23A5.2349,5.2349,0,0,1,12.583,17.73Z"></path></g></svg>
+        </a>
+        <a href="/" class="link dib mr3 black-70">
+          <svg class="email" height="100px" width="100px" fill="#000000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><path d="M50,1.6C23.1,1.6,1.2,23.4,1.2,50.4S23.1,99.1,50,99.1s48.8-21.8,48.8-48.8S76.9,1.6,50,1.6z M72.1,50v6.1  c0,4-3.2,7.2-7.2,7.2c-3,0-5.6-1.8-6.6-4.4c-2.2,2-5.1,3.4-8.3,3.4c-6.7,0-12.1-5.5-12.1-12.2S43.3,37.9,50,37.9  c6.7,0,12.2,5.4,12.2,12.1v6.1c0,1.5,1.2,2.7,2.7,2.7s2.7-1.2,2.7-2.7V50c0-9.7-8-17.7-17.7-17.7c-9.7,0-17.7,8-17.7,17.7  c0,9.7,8,17.7,17.7,17.7h10c1.2,0,2.2,1,2.2,2.2s-1,2.2-2.2,2.2H50c-12.2,0-22.1-9.9-22.1-22.1c0-12.2,9.9-22.1,22.1-22.1  S72.1,37.8,72.1,50z"></path><path d="M57.8,50c0-4.2-3.5-7.7-7.8-7.7c-4.2,0-7.7,3.5-7.7,7.7s3.5,7.8,7.7,7.8C54.2,57.8,57.8,54.2,57.8,50z"></path></svg>
+        </a>
+      </div>
+      </article>
+      </div>
+    <section class="flex w-50 items-center justify-center">
+      
+      <div class="mb4 mb0-ns fl w-100 white">
+        <p class="fw6 mb2 pb2 f2 mt0 ttu zeit-light">
+          Let's keep in touch
+        </p>
+        <input placeholder="Email address" class="mw-100 w-100 w5-ns f5 input-reset ba b--black-20 pv3 ph4 border-box">
+        <input type="submit" class="input-reset w-100 w-auto-ns bg-black-80 white f5 pv2 pv3-ns ph4 ba b--black-80 bg-hover-mid-gray">
+      </div>
+    </section>
+  </div>
+  </footer>
+
 </body>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -356,5 +396,89 @@
 <script>
 $(".photo-caption").lettering('lines').children('span').lettering('words').children('span').lettering();
 </script>
+
+<!-- <script>
+$(document).ready(function () {
+    $("body").addClass('noscroll');
+});
+
+barba.init({
+    transitions: [{
+        name: "switch",
+        once({
+            current,
+            next,
+            trigger
+        }) {
+            return new Promise(resolve => {
+                const timeline = gsap.timeline({
+                    onComplete() {
+                        $("body").removeClass('noscroll');
+                        resolve();
+                    }
+                });
+                gsap.set(".reveal-text", {
+                    opacity: 0
+                }, 0)
+                gsap.set(".reveal-text-two", {
+                    opacity: 0
+                }, 0)
+                gsap.set(".reveal", {
+                    opacity: 1,
+                    y: "0%"
+                }, 0)
+                // gsap.set(".hidetext", {
+                //     opacity: 0,
+                //     y: "110%"
+                // });
+                gsap.set(".home", {
+                    y: "20%"
+                }, 0);
+                gsap.set("#desktop", {
+                    y: "-100px"
+                });
+
+                timeline
+                    .to(".reveal-text", {
+                        duration: 2,
+                        opacity: "1",
+                        ease: Power4.easeInOut,
+                    }, 0)
+                    .to(".reveal-text-two", {
+                        duration: 2,
+                        opacity: "1",
+                        ease: Power4.easeInOut,
+                        delay: 1.5
+                    }, 0)
+                    .to(".reveal", {
+                        duration: 1.5,
+                        y: "-100%",
+                        ease: Power4.easeInOut,
+                        delay: 3.5
+                    }, 0)
+                    .to(".home", {
+                        duration: 1.5,
+                        y: "0%",
+                        ease: Power4.easeInOut,
+                        delay: 3.4
+                    }, 0)
+                    // .to(".hidetext", 1.5, {
+                    //     opacity: 1,
+                    //     y: "0%",
+                    //     ease: Power4.easeOut
+                    // }, 0.15)
+                    .to("#desktop", {
+                        duration: 0.8,
+                        y: "0px",
+                        ease: Power4.easeOut,
+                        delay: 4.5
+                    }, 0)
+            });
+        }
+    }],
+    views: [],
+    debug: true
+});
+</script> -->
 
 </html>
