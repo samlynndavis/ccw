@@ -4,7 +4,7 @@ html {
 
 body,
 button {
-  cursor: url(/img/pink_cursor.png), auto !important;
+  cursor: url(/img/red_cursor.png), auto !important;
 }
 
 body {
@@ -46,6 +46,10 @@ body.noscroll {
 
 a {
   font-style: normal;
+}
+
+a:hover {
+  cursor: pointer;
 }
 
 a:link,
@@ -160,6 +164,10 @@ a:visited {
   font-family: "Matahari-Black";
 }
 
+.chicago {
+  color: #dd5a54;
+}
+
 .story-title {
   z-index: 10;
   opacity: 0;
@@ -187,9 +195,13 @@ a:visited {
   transition-delay: 1s;
 }
 
+.bio {
+  z-index: 3;
+}
+
 .bio:hover,
 .roster:hover {
-  cursor: url(/img/pink_cursor.png), auto !important;
+  cursor: url(/img/red_cursor.png), auto !important;
 }
 
 .large-photo-anna {
@@ -231,16 +243,16 @@ a:visited {
   object-fit: cover;
 }
 
-.overview {
-  background-color: #f1d3d3;
+.blurb > div {
+  font-variant: small-caps;
 }
 
 .overview-text {
   left: 0;
   right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 10vw;
+  /* margin-left: auto;
+  margin-right: auto; */
+  font-size: 15vw;
   z-index: 1;
   color: #fff;
 }
@@ -249,19 +261,25 @@ a:visited {
   transform: rotate(-90deg) translateY(-40px);
 }
 
-.intro {
-  background-color: #f1d3d3;
-  /* margin: 4vw 0 4vw 0; */
+.social > svg.email,
+.social > svg.instagram {
+  height: 30px;
+  width: 30px;
 }
 
-.social>svg {
-  height: 40px;
-  width: 40px;
+.social > svg.instagram path,
+.social > svg.instagram polygon,
+.social > svg.email path,
+.social > svg.email polygon {
+  stroke: transparent;
+  fill: #fff;
 }
 
-.social>svg:hover path,
-.social>svg:hover polygon {
-  fill: #2f3924 !important;
+.social > svg.instagram:hover path,
+.social > svg.instagram:hover polygon,
+.social > svg.email:hover path,
+.social > svg.email:hover polygon {
+  fill: #000;
 }
 
 #drag-image {
@@ -281,7 +299,7 @@ a:visited {
 #drag-image:hover {
   cursor: grab;
   cursor: -webkit-grab;
-  z-index: 3;
+  z-index: 2;
 }
 
 #drag-image.active {
@@ -301,7 +319,25 @@ a:visited {
   z-index: 1;
 }
 
-#story-hero {
+.left-slide {
+  /* transform: translateX(-100%); */
+
+  animation-name: slideinLeft;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 750ms;
+}
+
+.right-slide {
+  /* transform: translateX(100%); */
+
+  animation-name: slideinRight;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 750ms;
+}
+
+/* #story-hero-anna {
   background-image: url(/img/000007230011.jpg);
   background-size: cover;
   height: 100%;
@@ -314,36 +350,41 @@ a:visited {
   -moz-background-size: cover;
   background-size: cover;
   margin-top: 0;
-  transform: translateX(100%);
+} */
 
-  animation-name: slidein;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-delay: 750ms;
+#story-hero-liz{
+  background-image: url(/img/000007230011.jpg);
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  border-radius: 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  margin-top: 0;
 }
 
-#story-hero-2 {
+#story-hero-anna-left {
   background-image: url(/img/000007100013.jpg);
   background-size: cover;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  width: 48vw;
+  width: 50%;
   border-radius: 0;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   margin-top: 0;
-  transform: translateX(-100%);
 
-  animation-name: slideinright;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-delay: 750ms;
+  transform: translateX(-100%);
 }
 
-#story-hero-mia {
+#story-hero-mia-left {
   background-image: url(/img/000007080009.jpg);
   background-size: cover;
   height: 100%;
@@ -356,7 +397,8 @@ a:visited {
   -moz-background-size: cover;
   background-size: cover;
   margin-top: 0;
-  /* transform: translateX(-100%); */
+
+  transform: translateX(-100%);
 
   /* animation-name: slideinright;
   animation-duration: 1s;
@@ -377,7 +419,8 @@ a:visited {
   -moz-background-size: cover;
   background-size: cover;
   margin-top: 0;
-  /* transform: translateX(-100%); */
+
+  transform: translateX(100%);
 
   /* animation-name: slideinright;
   animation-duration: 1s;
@@ -400,10 +443,32 @@ a:visited {
   margin-top: 0;
   transform: translateX(-100%);
 
-  animation-name: slideinright;
+  /*animation-name: slideinright;
   animation-duration: 1s;
   animation-fill-mode: forwards;
-  animation-delay: 750ms;
+  animation-delay: 750ms;*/
+}
+
+#story-hero-anna-right {
+  background-image: url(/img/full-size-backgrounds_cooks-1400x1000.jpg);
+  background-size: cover;
+  background-position: 50% 10%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  border-radius: 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  margin-top: 0;
+
+  transform: translateX(100%);
+
+  /*animation-name: slideinright;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 750ms;*/
 }
 
 .hero {
@@ -418,18 +483,18 @@ a:visited {
   cursor: url(/img/whitedown1.webp), auto !important;
 }
 
-.hidetext-container {
+/* .hidetext-container {
   position: relative;
   overflow: hidden;
   height: 15vw;
-  font-size: 7vw;
+  font-size: 15vw;
   margin: 0;
 }
 
 .hidetext {
   position: absolute;
   text-shadow: 5px 5px 10px rgba(21, 21, 21, 0.2);
-}
+} */
 
 /* .headline {
   transform: translateY(-250);
@@ -439,6 +504,10 @@ a:visited {
   -moz-font-feature-settings: "swsh";
   -webkit-font-feature-settings: "swsh";
   font-feature-settings: "swsh";
+}
+
+.bg-blue {
+  background-color: #bccece;
 }
 
 .bg-no10 {
@@ -911,6 +980,16 @@ a:visited {
   background-size: cover;
 }
 
+@keyframes colorChange {
+  0% {
+    background: #fff
+  }
+
+  100% {
+    background: #dd5a54
+  }
+}
+
 @keyframes moveLeft {
   0% {
     transform: translateX(0);
@@ -987,7 +1066,7 @@ a:visited {
   }
 }
 
-@keyframes slideinright {
+@keyframes slideinRight {
   from {
     transform: translateX(-100%);
   }
@@ -997,7 +1076,7 @@ a:visited {
   }
 }
 
-@keyframes slideinleft {
+@keyframes slideinLeft {
   from {
     transform: translateX(100%);
   }
@@ -1061,7 +1140,7 @@ a:visited {
   }
 
   .overview-text {
-    font-size: 6vw;
+    font-size: 18vw;
   }
 
   .group-wrapper {
@@ -1157,7 +1236,8 @@ a:visited {
     background-size: cover;
     background-position: center */
     min-height: 100vh;
-    background-color: #f1d3d3;
+    /* background-color: #f1d3d3; */
+    /* margin: 4vw 0 4vw 0; */
     margin: 0;
   }
 

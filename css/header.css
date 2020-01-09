@@ -29,52 +29,32 @@ header#navigation {
   background-color: transparent;
 }
 
-/* .menu-desktop > ul > li {
-  display: flex;
-  flex-direction: column;
-  line-height: 40px;
+.about > svg {
+  fill: transparent;
+  stroke: #dd5a54;
 }
-
-.menu-desktop > ul > li > ul > li {
-  display: none;
-  transition: 0.5s ease;
-}
-
-.menu-desktop > ul > li > ul {
-  position: absolute;
-  opacity: 0;
-  transition: 0.5s ease;
-}
-
-.menu-desktop > ul > li > ul {
-  position: absolute;
-  opacity: 1;
-  transition: 0.5s ease;
-}
-
-.menu-desktop > ul > li:hover a + ul > li {
-  display: block;
-} */
 
 .instagram {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
 }
 
 .instagram path,
 .instagram polygon {
-  fill: #fff;
+  fill: transparent;
+  stroke: #dd5a54;
   transition: 200ms ease-in;
 }
 
 .email {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
 }
 
 .email path,
 .email polygon {
-  fill: #fff;
+  fill: #dd5a54;
+  transition: 200ms ease-in;
 }
 
 .woman {
@@ -90,24 +70,32 @@ svg.close {
   fill: #fff;
   height: 25px;
   width: 25px;
+
+  transition: 0.2s ease-in-out;
+}
+
+svg.close:hover {
+  fill: #dd5a54;
+  transition: 0.2s ease-in-out;
 }
 
 .close {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 4em;
+  margin: 4em;
 }
 
 .instagram:hover path,
 .instagram:hover polygon {
-  fill: #f1d3d3;
+  stroke: transparent;
+  fill: #dd5a54;
   transition: 200ms ease-in;
 }
 
 .email:hover path,
 .email:hover polygon {
-  fill: #f1d3d3;
+  fill: #fff;
   transition: 200ms ease-in;
 }
 
@@ -116,14 +104,6 @@ svg.close {
   margin-right: 16px;
   position: relative;
 }
-
-/* .nav-item:first-child {
-  font-family: "Matahari-Bold";
-}
-
-.nav-item:hover {
-  font-family: "Matahari-Bold";
-} */
 
 .nav-item::after {
   background-color: #fff;
@@ -154,8 +134,11 @@ svg.close {
   animation: colorChange 0.8s forwards
 }
 
-.nav-link {
-  color: #404040;
+.nav-link,
+a.nav-link ,
+a.nav-link:link,
+a.navlink:visited {
+  color: #fff;
   letter-spacing: 0.05em;
 }
 
