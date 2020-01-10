@@ -1,11 +1,7 @@
-// var Scrollbar = window.Scrollbar;
-
-// Scrollbar.init(document.querySelector('#my-scrollbar'));
-
-const runScripts = () => {    
-
-    const closeAbout = $('#close');
+const runScripts = () => {
     const openAbout = $('#about');
+    const closeAbout = $('#close');
+
     
     gsap.set(".about", {y: "100%"})
     gsap.set("#close", {opacity: 0})
@@ -190,10 +186,7 @@ const runScripts = () => {
     $('.fade-up').each(function () {
     
         // build a tween
-        var fadeTween = TweenMax.from($(this), 1, {
-            opacity: "0",
-            ease: Power4.easeInout
-        });
+        var fadeTween = TweenMax.from($(this), 1.5, {opacity: "0", ease: Power4.easeInout});
     
         // build a scene
         var scene = new ScrollMagic.Scene({
@@ -261,17 +254,20 @@ const runScripts = () => {
         timelineMobile.reversed() ? timelineMobile.play() : timelineMobile.reverse();
     });
     
-    var options = {
-        animate: true,
-        patternWidth: 100,
-        patternHeight: 100,
-        grainOpacity: 0.05,
-        grainDensity: 1,
-        grainWidth: 1,
-        grainHeight: 1
-    };
+    // var options = {
+    //     animate: true,
+    //     patternWidth: 100,
+    //     patternHeight: 100,
+    //     grainOpacity: 0.05,
+    //     grainDensity: 1,
+    //     grainWidth: 1,
+    //     grainHeight: 1
+    // };
     
-    grained('#grain', options);
+    // grained('#grain', options);
+
+    // var Scrollbar = window.Scrollbar;
+    // Scrollbar.init(document.querySelector('#my-scrollbar'));
 }
 runScripts();
 

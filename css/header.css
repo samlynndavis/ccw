@@ -150,7 +150,17 @@ ul {
   list-style-type: none;
 }
 
-@media screen and (max-width: 1024px) {
+/* @media screen and (min-width: 768px), screen and (max-width: 1024px) {
+  .story-hero-panel {
+    height: auto;
+  }
+
+  .story-hero {
+    height: 50vh;
+  }
+} */
+
+@media screen and (max-width: 1200px) {
 
   header.desktop {
     display: none !important;
