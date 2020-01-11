@@ -23,12 +23,12 @@
   <link rel="stylesheet" href="css/header.css" />
 </head>
 
-<body class="w-100 sans-serif bg-blue">
+<body class="w-100 sans-serif bg-blue home">
 
   
 <div class="playlist">
   <a href="https://open.spotify.com/playlist/6mbdJwQKpsDABQQRGPilk1?si=EclwufMKRmCG1B8mNvKHCg" target="_blank">
-    <span>playlist</span>
+    <span class="grifinito f3">playlist</span>
   </a>
 </div>
 
@@ -106,45 +106,40 @@
     </div>
   </div>
 
-  <div class="reveal flex items-center justify-center">
+  <!-- <div class="reveal flex items-center justify-center">
     <p class="reveal-text f1 cream grifinito">From Chicago, <span class="reveal-text-two">With Love</span></p>
-  </div>
+  </div> -->
 
-  <header id="desktop" style="background-color: transparent;" class="desktop w-100 flex pv4 items-center">
-    <nav class="fw4 w-100 flex ph4 items-center justify-between tracked f4 fw4 montserrat">
-      <div class="w-75 items-center flex">
-        <div class="menu-desktop">
-          <ul class="nav-list flex f4 fw4 montserrat ph2 self-start">
+  <header id="desktop" class="desktop w-100 flex items-center">
+    <nav class="fw4 w-100 flex ph4 tracked f4 fw4 montserrat">
+      <ul class="nav-list flex f4 fw4 montserrat ph2 self-start">
             <li class="nav-item">
               <a class="nav-link" href="/">home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#roster">the women</a>
+            <li class="nav-item"><a class="nav-link flex flex-column">the women</a>
+              <ul class="nav-link">
+                <li><a class="nav-item-child anna-link" href="/anna-michal.html">Anna-Michal Paul</a></li>
+                <li><a class="nav-item-child liz-link" href="/liz.html">Elizabeth de la Piedra</a></li>
+                <li><a class="nav-item-child laura-link" href="/laura.html">Laura Sophia Cardozo</a></li>
+                <li><a class="nav-item-child mia-link" href="/mia.html">Mia Gholar</a></li>
+                <li><a class="nav-item-child nev-link" href="/nev.html">Nev Rosales</a></li>
+              </ul>
             </li>
             <li class="nav-item">
               <a id="about" class="nav-link">the artists</a>
             </li>
           </ul>
-        </div>
-      </div>
     </nav>
-    <div class="flex ph5">
-      <div style="border-top: 1px solid rgba(255,255,255, 1);" class="pb2 w-100"></div>
-    </div>
+    
   </header>
   
   <header class="mobile pa3">
     <nav class="w-100 flex items-center" style="justify-content: space-between;"></nav>
-    <!-- <div class="intro-title ph3 f5 zeit-heavy white">
-                    <p>CCW</p>
-                </div> -->
-    <div id="nav-icon">
       <div class="hamburger items-center pv3 ph2">
         <span></span>
         <span></span>
         <span></span>
       </div>
-    </div>
     </nav>
   </header>
 
@@ -177,9 +172,7 @@
               vibrant and endless showroom filled with recycled art, furniture and relics of the past.
             </p>
             <p class="lh-copy pv3">
-              Each woman in front of the camera claimed their own unique space in a sea of color and design, filling
-              this three-story wonderland with that singular Chicago reverb you just <span style="text-decoration-color: #dd5a54;" class="underline">know</span> - if
-              you know.
+              Each woman in front of the camera claimed their own unique space in a sea of color and design, filling this three-story wonderland with that singular Chicago reverb you can just feel.
             </p>
             <p class="lh-copy pv3 photo-caption">
               We got to know more about the creative process behind each artist, what makes them tick, and what moves
@@ -194,9 +187,7 @@
               vibrant and endless showroom filled with recycled art, furniture and relics of the past.
             </p>
             <p class="lh-copy pv3">
-              Each woman in front of the camera claimed their own unique space in a sea of color and design, filling
-              this three-story wonderland with that singular Chicago reverb you just <span style="text-decoration-color: #dd5a54;" class="underline">know</span> - if
-              you know.
+              Each woman in front of the camera claimed their own unique space in a sea of color and design, filling this three-story wonderland with that singular Chicago reverb you can just feel.
             </p>
             <p class="lh-copy pv3 photo-caption">
               We got to know more about the creative process behind each artist, what makes them tick, and what moves
@@ -223,7 +214,7 @@
                   <p class="roster-title pv3 f6 ph2 fw4 pl0 ttu montserrat">Multidisciplinary Artist</p>
                 </div>
               </a>
-              <a class="roster-card" href="/liz.html">
+              <a href="/liz.html" class="roster-card">
                 <div class="roster-card-liz bg-white pl2 w-100 flex flex-column">
                   <h1 class="roster-name zeit-heavy ma0 pr3 pv2 dark-gray">Elizabeth<br />De La Piedra</h1>
                   <div class="roster-image w-100"
@@ -268,7 +259,7 @@
                   <p class="roster-title pv3 f6 ph2 fw4 pl0 ttu montserrat">Multidisciplinary Artist</p>
                 </div>
               </a>
-              <a class="roster-card" href="/liz.html">
+              <a href="/liz.html" class="roster-card">
                 <div class="roster-card roster-card-liz w-100 bg-white pl2 flex flex-column">
                   <h1 class="roster-name zeit-heavy ma0 pr3 pv2 dark-gray">Elizabeth<br />De La Piedra</h1>
                   <div class="roster-image w-100"
@@ -284,8 +275,8 @@
                   <p class="roster-title pv3 ph2 f6 fw4 pl0 ttu montserrat">Graphic Designer + Chalk Artist</p>
                 </div>
               </a>
-              <a class="bookmark flex flex-column items-center justify-center">
-              </a>
+              <div class="bookmark flex flex-column items-center justify-center">
+              </div>
               <a href="/nev.html" class="roster-card">
                 <div class="roster-card roster-card-nev w-100 bg-white pl2 flex flex-column">
                   <h1 class="roster-name zeit-heavy ma0 pr3 pv2 dark-gray">Nev<br />Rosales</h1>
@@ -320,8 +311,13 @@
       <div style="border-top: 1px solid rgba(255,255,255, 1);" class="footer-line pb2 w-100"></div>
     </div>
     <div class="footer-text flex f7 ttu justify-between ph5 helvetica fw4 pv2">
-      <p>Copyright &copy 2020 Whitney Magazine. All Rights Reserved.</p>
-      <p>Site by SMDVS</p>
+      <div class="flex">
+        <p>Copyright &copy 2020 Whitney Magazine. All Rights Reserved.</p>
+      </div>
+      <div class="flex">
+          <p>Site by SMDVS</p>
+          <a href="#" id="toTop" style="visibility: hidden;"><span title="Go to top"><svg class="toTop" height='100px' width='100px' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve"><g><polygon points="53,77.6 53,28.9 72.6,45.7 76.5,41.1 50,18.4 23.5,41.1 27.4,45.7 47,28.9 47,77.6  "></polygon></g></svg></span></a> 
+      </div>
     </div>
   </footer>
 
@@ -352,7 +348,7 @@
 
 <script>$(".photo-caption").lettering('lines').children('span').lettering('words').children('span').lettering();</script>
 
-<script>
+<!-- <script>
 
 $(document).ready(function () {
 $("body").addClass('noscroll');
@@ -385,10 +381,116 @@ timeline
     .to("#desktop", {duration: 1, y: "0%", ease: Power4.easeOut, delay: 6}, 0)
     .to(".overview-text-top", {duration: 1.5, opacity: 1, y: "0%", ease: Power4.easeOut, delay: 5.2}, 0)
     .to(".overview-text-bottom", {duration: 1.5, opacity: 1, y: "0%", ease: Power4.easeOut, delay: 5.2}, 0)
-    .to(".footer-line", {duration: 2, scaleX:1, ease:Power4.easeInOut, delay: 5.7}, 0)
+    .to(".footer-line", {duration: 1, scaleX:1, ease:Power4.easeInOut, delay: 5.7}, 0)
     .to(".footer-desktop", {duration: 1, opacity: 1, y: "0%", ease: Power4.easeOut, delay: 6}, 0)
-    .to(".playlist span", {duration: 1.5, x: "0%", ease: Power4.easeInOut,})
+    .to(".playlist span", {duration: 1.5, x: "0%", ease: Power4.easeInOut, delay: 6}, 0)
   });
-</script>
+</script> -->
+
+<script>
+dragElement(document.getElementById("drag-image"));
+    
+    function dragElement(elmnt) {
+        var pos1 = 0,
+            pos2 = 0,
+            pos3 = 0,
+            pos4 = 0;
+        if (document.getElementById(elmnt.id + "header")) {
+            // if present, the header is where you move the DIV from:
+            document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+        } else {
+            // otherwise, move the DIV from anywhere inside the DIV:
+            elmnt.onmousedown = dragMouseDown;
+        }
+    
+        function dragMouseDown(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // get the mouse cursor position at startup:
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            document.onmouseup = closeDragElement;
+            // call a function whenever the cursor moves:
+            document.onmousemove = elementDrag;
+        }
+    
+        function elementDrag(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // calculate the new cursor position:
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            // set the element's new position:
+            elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+            elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+        }
+    
+        function closeDragElement() {
+            // stop moving when mouse button is released:
+            document.onmouseup = null;
+            document.onmousemove = null;
+        }
+    }
+    
+    //toggle 'grab" and 'grabbing' cursors on mousedown and leave
+    
+    const grabber = document.querySelector('#drag-image');
+    
+    grabber.addEventListener('mousedown', () => {
+        isDown = true;
+        grabber.classList.add('active');
+    });
+    
+    grabber.addEventListener('mouseleave', () => {
+        isDown = false;
+        grabber.classList.remove('active');
+    });
+    
+    grabber.addEventListener('mouseup', () => {
+        isDown = false;
+        grabber.classList.remove('active');
+    });
+    
+    //Roster Slider
+    
+    // const slider = document.querySelector('.roster');
+    // let isDown = false;
+    // let startX;
+    // let scrollLeft;
+    
+    // slider.addEventListener('mousedown', (e) => {
+    //   isDown = true;
+    //   slider.classList.add('active');
+    //   startX = e.pageX - slider.offsetLeft;
+    //   scrollLeft = slider.scrollLeft;
+    // });
+    
+    // slider.addEventListener('mouseleave', () => {
+    //   isDown = false;
+    //   slider.classList.remove('active');
+    // });
+    
+    // slider.addEventListener('mouseup', () => {
+    //   isDown = false;
+    //   slider.classList.remove('active');
+    // });
+    
+    // slider.addEventListener('mousemove', (e) => {
+    //   if(!isDown) return;
+    //   e.preventDefault();
+    //   const x = e.pageX - slider.offsetLeft;
+    //   const walk = x - startX;
+    //   slider.scrollLeft = scrollLeft - walk;
+    //   console.log(walk);
+    // });
+    
+    // $(document).ready(function(){
+    // 	$('#nav-icon').click(function(){
+    // 		$('#mobile-nav').toggleClass('open');
+    // 	});
+    // });
+    </script>
 
 </html>
