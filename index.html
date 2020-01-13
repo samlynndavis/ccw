@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="css/header.css" />
 </head>
 
-<body class="w-100 sans-serif bg-blue home">
+<body class="w-100 sans-serif bg-blue homepage">
 
   
 <div class="playlist">
@@ -118,11 +118,11 @@
             </li>
             <li class="nav-item"><a class="nav-link flex flex-column">the women</a>
               <ul class="nav-link">
-                <li><a class="nav-item-child anna-link" href="/anna-michal.html">Anna-Michal Paul</a></li>
+                <div><li><a class="nav-item-child anna-link" href="/anna-michal.html">Anna-Michal Paul</a></li>
                 <li><a class="nav-item-child liz-link" href="/liz.html">Elizabeth de la Piedra</a></li>
                 <li><a class="nav-item-child laura-link" href="/laura.html">Laura Sophia Cardozo</a></li>
                 <li><a class="nav-item-child mia-link" href="/mia.html">Mia Gholar</a></li>
-                <li><a class="nav-item-child nev-link" href="/nev.html">Nev Rosales</a></li>
+                <li><a class="nav-item-child nev-link" href="/nev.html">Nev Rosales</a></li></div>
               </ul>
             </li>
             <li class="nav-item">
@@ -143,7 +143,7 @@
     </nav>
   </header>
 
-  <main id="grain" class="home w-100">
+  <main class="home w-100">
     <article>
 
         <div id="intro" class="intro pa3 pa5-ns min-vh-100 flex flex-column justify-center items-start">
@@ -315,11 +315,12 @@
         <p>Copyright &copy 2020 Whitney Magazine. All Rights Reserved.</p>
       </div>
       <div class="flex">
-          <p>Site by SMDVS</p>
-          <a href="#" id="toTop" style="visibility: hidden;"><span title="Go to top"><svg class="toTop" height='100px' width='100px' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve"><g><polygon points="53,77.6 53,28.9 72.6,45.7 76.5,41.1 50,18.4 23.5,41.1 27.4,45.7 47,28.9 47,77.6  "></polygon></g></svg></span></a> 
+          <p>Site by SMDVS</p> 
       </div>
     </div>
   </footer>
+
+  <a href="#" id="toTop" style="visibility: hidden;"><span title="Go to top"><svg class="toTop" height='100px' width='100px' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve"><g><polygon points="53,77.6 53,28.9 72.6,45.7 76.5,41.1 50,18.4 23.5,41.1 27.4,45.7 47,28.9 47,77.6  "></polygon></g></svg></span></a>
 
   <footer class="footer-mobile pt4 flex flex-column w-100 white">
     <div class="flex ph5">
@@ -343,7 +344,6 @@
 <script src="/js/debug.addIndicators.js"></script>
 <script src="/js/jquery.lettering-0.6.1.min.js"></script>
 <script src="/js/jquery.lettering.js"></script>
-<!-- <script src="/js/barba.js"></script> -->
 <script src="/js/scripts.js"></script>
 
 <script>$(".photo-caption").lettering('lines').children('span').lettering('words').children('span').lettering();</script>
@@ -359,16 +359,18 @@ $("body").removeClass('noscroll');
 }
 });
 
+const playMe = document.querySelector(".playlist");
+
 gsap.set(".overview-text-top", {opacity: 0, y: "40%"}, 0)
 gsap.set(".overview-text-bottom", {opacity: 0, y: "-40%"}, 0)
 gsap.set(".reveal-text", {opacity: 0}, 0)
 gsap.set(".reveal-text-two", {opacity: 0}, 0)
-gsap.set(".reveal", {opacity: 1, y: "0%"}, 0)
+gsap.set(".reveal", {opacity: 1, yPercent: 0}, 0)
 // gsap.set(".hidetext", {opacity: 0, y: "110%"});
 gsap.set(".home", { y: "20%"}, 0);
 gsap.set("#desktop", {y: "-100%"});
 gsap.set(".footer-desktop", {y: "120%"});
-gsap.set(".playlist span", {x: "200%"});
+gsap.set(playMe, {x: "200%"});
 gsap.set(".footer-line", {scaleX:0, transformOrigin: "left"});
 
 
@@ -381,13 +383,13 @@ timeline
     .to("#desktop", {duration: 1, y: "0%", ease: Power4.easeOut, delay: 6}, 0)
     .to(".overview-text-top", {duration: 1.5, opacity: 1, y: "0%", ease: Power4.easeOut, delay: 5.2}, 0)
     .to(".overview-text-bottom", {duration: 1.5, opacity: 1, y: "0%", ease: Power4.easeOut, delay: 5.2}, 0)
-    .to(".footer-line", {duration: 1, scaleX:1, ease:Power4.easeInOut, delay: 5.7}, 0)
+    .to(".footer-line", {duration: 2, scaleX:1, ease:Power4.easeInOut, delay: 6}, 0)
     .to(".footer-desktop", {duration: 1, opacity: 1, y: "0%", ease: Power4.easeOut, delay: 6}, 0)
-    .to(".playlist span", {duration: 1.5, x: "0%", ease: Power4.easeInOut, delay: 6}, 0)
+    .to(playMe, {duration: 2, x: "0%", clearProps: "all", ease: Power4.easeInOut, delay: 6}, 0)
   });
 </script> -->
 
-<script>
+<!-- <script>
 dragElement(document.getElementById("drag-image"));
     
     function dragElement(elmnt) {
@@ -491,6 +493,6 @@ dragElement(document.getElementById("drag-image"));
     // 		$('#mobile-nav').toggleClass('open');
     // 	});
     // });
-    </script>
+    </script> -->
 
 </html>

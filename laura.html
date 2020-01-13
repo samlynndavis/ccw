@@ -103,9 +103,7 @@
   <header id="desktop" class="desktop w-100 flex items-center text-laura">
     <nav class="fw4 w-100 flex ph4 tracked f4 fw4 montserrat">
       <ul class="nav-list flex f4 fw4 montserrat ph2 self-start">
-            <li class="nav-item">
-              <a class="nav-link" href="/">home</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="/">home</a></li>
             <li class="nav-item"><a class="nav-link flex flex-column">the women</a>
               <ul class="nav-link">
                 <li><a class="nav-item-child anna-link" href="/anna-michal.html">Anna-Michal Paul</a></li>
@@ -230,7 +228,7 @@
             </div>
         </div>        
 
-        <div class="w-100 gallery">
+        <!-- <div class="w-100 gallery js-flickity" data-flickity-options='{ "cellAlign": "left", "contain": true, "wrapAround": true, "imagesLoaded": true, "percentPosition": false, "pageDots": false }'>
 
           <img src="/img/000007090035.jpg">
           <img src="/img/000007130007.jpg">
@@ -240,7 +238,7 @@
           <img src="/img/000007120006.jpg">
           <img src="/img/000007120006.jpg">
           
-        </div>
+        </div> -->
 
         <div class="flex items-center justify-center pa4 social">
           <ul class="flex">
@@ -347,27 +345,6 @@
   }
 
   makeMarquee()
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", function(event) {
- 
- var gallery = document.querySelector('.gallery');
- var flkty = new Flickity( gallery, {
-   imagesLoaded: true,
-   percentPosition: false,
-   cellAlign: 'left',
-   pageDots: false,
-   wrapAround: true
- } );
- var button = document.querySelector('.button--resize');
-
- button.addEventListener( 'click', function() {
-   gallery.classList.toggle( 'is-expanded' );
-   flkty.resize();
- });
-
-});
 </script>
 
 </html>

@@ -16,6 +16,7 @@
     <link rel="shortcut icon" href="/" />
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/flickity.css">
     <link rel="stylesheet" href="https://webfonts.fontstand.com/WF-049020-2d05c55c72837dfac96212a7f5b46867.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="css/tachyons.min.css" />
@@ -129,8 +130,8 @@
         </nav>
       </header>
 
-    <main >
-        <article class="w-100">
+    <main class="w-100">
+        <article>
             <div class="story-hero w-100 vh-100 flex items-end bg-mia">
                 <img class="story-hero-panel story-hero-mia-left w-50" src="/img/spacer.png">
                 <img class="story-hero-panel story-hero-mia-right w-50" src="/img/spacer.png">
@@ -257,6 +258,18 @@
                 </ul>
             </div>
 
+            <div class="w-100 gallery js-flickity" data-flickity-options='{ "cellAlign": "left", "contain": true, "wrapAround": true, "imagesLoaded": true, "percentPosition": false, "setGallerySize": false, "pageDots": false }'>
+
+              <img class="gallery-cell" src="/img/000007130007.jpg">
+              <img class="gallery-cell" src="/img/000007090035.jpg">
+              <img class="gallery-cell" src="/img/000007130001.jpg">
+              <img class="gallery-cell" src="/img/000007130012.jpg">
+              <img class="gallery-cell" src="/img/000007130013.jpg">
+              <img class="gallery-cell" src="/img/000007120006.jpg">
+              <img class="gallery-cell" src="/img/000007120006.jpg">
+              
+            </div>
+
         </article>
     </main>
 
@@ -311,14 +324,15 @@
 </body>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="/js/jquery.lettering-0.6.1.min.js"></script>
-<script src="/js/gsap.js"></script>
+<script src="/js/flickity.pkgd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.0.4/dist/gsap.min.js"></script>
 <script src="/js/TweenMax.min.js"></script>
 <script src="/js/ScrollMagic.js"></script>
 <script src="/js/animation.gsap.js"></script>
 <script src="/js/debug.addIndicators.js"></script>
+<script src="/js/jquery.lettering-0.6.1.min.js"></script>
+<script src="/js/jquery.lettering.js"></script>
 <!-- <script src="/js/barba.js"></script> -->
-<script src="/js/imagesloaded.js"></script>
 <script src="/js/scripts.js"></script>
 
 <script>

@@ -107,6 +107,14 @@ svg.close:hover {
 
 .nav-item-child {
   position: relative;
+  color: #fff;
+  transition: all 0.2s ease-out;
+}
+
+.nav-item-child:hover {
+  /* color: #bccece; */
+  transition: all 0.2s ease-out;
+
 }
 
 .nav-item::after {
@@ -143,14 +151,15 @@ svg.close:hover {
   background-color: #fff;
   content: ' ';
   display: block;
-  height: 2px;
+  height: 50%;
   opacity: 1;
   position: absolute;
-  /* z-index: -1; */
+  z-index: -1;
   width: calc(100% - 10px);
   transform: scaleX(0);
   transform-origin: 0% 50%;
-  bottom: -2px;
+  bottom: 0;
+  right: -8px;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
@@ -158,6 +167,26 @@ svg.close:hover {
   transition: all 0.2s ease-out;
   padding: 0 5px;
   transform-origin: left;
+}
+
+.laura-link:hover::after {
+  transform: scaleX(1);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  /* animation: colorChangeLaura 0.8s forwards */
+}
+
+.anna-link:hover::after {
+  transform: scaleX(1);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  /* animation: colorChangeAnna 0.8s forwards */
 }
 
 .nav-link,
@@ -169,12 +198,13 @@ a.navlink:visited {
 }
 
 ul.nav-link  {
-  background-image: linear-gradient(to bottom, transparent 10%, black 10%);
+  background-image: linear-gradient(to bottom, transparent 10%, #d9baad 10%);
   padding: 2vw 1vw 1vw 1vw;
   /* margin-top: 1vw; */
+  z-index: -1;
 }
 
-a.anna-link {
+/* a.anna-link {
   color: #ecd48c;
 }
 
@@ -192,7 +222,7 @@ a.mia-link {
 
 a.nev-link {
   color: #d5514f;
-}
+}*/
 
 #navigation-2 {
   background-color: #000;
@@ -338,4 +368,24 @@ li {
    clear: both;
    width: 100%;
  } */
+
+ @keyframes colorChangeLaura {
+  0% {
+    background: #fff
+  }
+
+  100% {
+    background: #ffefe5
+  }
+}
+
+@keyframes colorChangeAnna {
+  0% {
+    background: #424635
+  }
+
+  100% {
+    background: #424635
+  }
+}
 

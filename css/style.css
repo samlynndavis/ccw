@@ -225,6 +225,7 @@ a:visited {
 
 .large-photo-nev {
   background-image: url(/img/000007140034.jpg);
+  background-image: url(/img/000007140034.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -324,7 +325,7 @@ a:visited {
 #drag-image:hover {
   cursor: grab;
   cursor: -webkit-grab;
-  z-index: 2;
+  z-index: 3;
 }
 
 #drag-image.active {
@@ -501,6 +502,7 @@ a:visited {
 
 .story-hero-nev-left{
   background-image: url(/img/000007120010b.jpg);
+  background-image: url(/img/000007120010b.jpg);
   background-size: cover;
   background-position: 50% 10%;
   height: 100%;
@@ -522,7 +524,7 @@ a:visited {
 }
 
 .story-hero-nev-right{
-  background-image: url(/img/Heem_Jan_Davidsz._de-Festoon_with_Flowers_and_Fruit.jpg);
+  background-image: url(/img/bg_nev.jpg);
   background-size: cover;
   background-position: 50% 10%;
   height: 100%;
@@ -680,14 +682,23 @@ footer {
   bottom: 0;
   margin-bottom: 1vw;
 
-  transition: 0.5s ease;
+  /* transition: 0.5s ease; */
 }
 
-footer.hide {
+/* footer.hide {
   transform: translateY(100%);
   opacity: 0;
 
   transition: 0.5s ease;
+} */
+
+footer.bottom {
+  position: relative;
+  bottom: 0;
+  margin-bottom: 1vw;
+  opacity: 1 !important;
+
+  /* transition: 0.5s ease; */
 }
 
 .alternate {
@@ -710,9 +721,11 @@ footer.hide {
 
 .bg-nev {
   background-color: #f4ecc5;
+  background-color: #f4ecc5;
 }
 
 .bg-nev-cream {
+  background-color: #fedccc;
   background-color: #fedccc;
 }
 
@@ -736,7 +749,7 @@ footer.hide {
   color: #f1d3d3;
 }
 
-.bg-ana {
+.bg-anna {
   background-color: #dcd1b4;
   background-color: #ddc7c2;
 }
@@ -749,12 +762,13 @@ footer.hide {
   background-color: #c0c2ce;
 }
 
-.text-ana {
+.text-anna {
   color: #424635;
 }
 
 .text-nev {
   color: #d5514f;
+  color: #bd7133;
 }
 
 .text-mia {
@@ -781,11 +795,11 @@ footer.hide {
   background-color: #000;
 }
 
-.bg-ana-brown {
+.bg-anna-brown {
   background-color: #b56434;
 }
 
-.bg-ana-yellow {
+.bg-anna-yellow {
   background-color: #f0cf61;
   background-color: #ecd48c;
   /* background-color: #dcd1b4; */
@@ -875,9 +889,19 @@ footer.hide {
   padding-right: 2rem;
 }
 
+.gallery {
+  height: 1000px;
+}
+
+.gallery-cell {
+  width: 66%;
+  height: 100%;
+  margin-right: 10px;
+}
+
 .gallery img {
   display: block;
-  height: 45vh;
+  /* height: 45vh; */
   width: auto;
   margin-right: 10px;
 }
@@ -1086,11 +1110,13 @@ footer.hide {
 
 .roster-card-nev {
   transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
   /* width: calc(25vw - 20px); */
   background-color: #f4ecc5;
 }
 
 .roster-card-nev:hover {
+  box-shadow: 8px 8px #d5514f;
   box-shadow: 8px 8px #d5514f;
   transform: translateY(-8px);
   transition: 0.2s ease-in-out;
@@ -1101,11 +1127,14 @@ footer.hide {
 .roster-card-nev:hover p {
   color: #d5514f;
   transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .roster-card-nev h1,
 .roster-card-nev p {
   color: #d5514f;
+  color: #d5514f;
+  transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
 
@@ -1222,7 +1251,7 @@ footer.hide {
 #toTop {
   /* display: none; Hidden by default */
   position: fixed; /* Fixed/sticky position */
-  bottom: 55px; /* Place the button at the bottom of the page */
+  bottom: 60px; /* Place the button at the bottom of the page */
   right: 60px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
