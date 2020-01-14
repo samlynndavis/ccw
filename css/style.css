@@ -1490,6 +1490,10 @@ footer.bottom {
 
 @media screen and (max-width: 1024px) {
 
+  #toTop {
+    display: none;
+  }
+
   .splitter-title {
     color: #000;
   }
