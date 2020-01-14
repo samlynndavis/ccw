@@ -1496,6 +1496,8 @@ footer.bottom {
 
 @media screen and (max-width: 1024px) {
 
+  
+
   .single-image-desktop,
   .split-image-desktop {
     display: none;
@@ -1558,7 +1560,8 @@ footer.bottom {
   }
 
   .caption-photo {
-    font-size: 2vw
+    font-size: 2vw;
+    opacity: 1 !important;
   }
 
   .bio-mobile {
