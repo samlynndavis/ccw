@@ -282,7 +282,7 @@ ul {
 
   header.mobile {
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     height: 70px;
     position: fixed;
     background-color: transparent;

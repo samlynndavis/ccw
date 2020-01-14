@@ -123,14 +123,12 @@
     
   </header>
   
-  <header class="mobile pa3">
-    <nav class="w-100 flex items-center" style="justify-content: space-between;"></nav>
-      <div class="hamburger items-center pv3 ph2">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
+  <header class="mobile pa3 mobile pa3 items-end justify-end">
+    <div class="hamburger items-center pv3 ph2">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
 
   <main class="w-100">
@@ -196,26 +194,6 @@
           </div>
         </div>
 
-        <div class="large-copy-split w-100 flex flex-column ph3 photo-pair pv6 justify-center items-center">
-          <img src="/img/000007140030.jpg" class="splitter">
-          <div class="large-copy w-50 ph4 self-start ">
-            <blockquote>
-              <p class="splitter-title f1 lh-copy text-nev">Describe your process of creating in a few words.</p>
-            </blockquote>
-          </div>
-          <div class="top-copy w-50 ph4 self-end">
-            <p class="lh-copy copy relative">Most of the time ideas come in unexpected moments. When I'm washing the dishes, driving, or getting ready to go somewhere. I'm so thankful for those moments.</p>
-          </div>
-        </div>
-
-        <div class="w-100 flex pv6">
-          <div class="w-100 flex flex-column justify-center photo photo-pair items-center bg-black">
-            <img src="/img/000007120006.jpg">
-            <span class="pt3 f6 caption-photo">photo by <a href="https://www.instagram.com/jessicawlevin" rel="noopener"
-                target="_blank">Jessica Levin</a></span>
-          </div>
-        </div>       
-
         <div class="image-copy-split-small w-100 min-vh-100 flex ph3 pt4 pb6 items-center justify-center">
           <div class="flex justify-center w-25 pb4">
             <iframe src="https://open.spotify.com/embed/album/1Olr7SVW0PsZzCVkRc3SHM" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
@@ -232,6 +210,14 @@
           </div>
         </div>
 
+        <div class="w-100 flex pv6">
+          <div class="w-100 flex flex-column justify-center photo photo-pair items-center bg-black">
+            <img src="/img/000007120006.jpg">
+            <span class="pt3 f6 caption-photo">photo by <a href="https://www.instagram.com/jessicawlevin" rel="noopener"
+                target="_blank">Jessica Levin</a></span>
+          </div>
+        </div>       
+
         <div class="image-caption-overlay w-100 flex ph4 pt6 pb2 flex-column">
           <div class="photo large-photo-nev w-100 min-vh-100 flex justify-center items-center">
             <!-- <div class="w-80 pa4">
@@ -242,6 +228,18 @@
           </div>
           <span class="pt3 f6 tc caption-photo">photo by <a href="https://www.instagram.com/jessicawlevin"
               rel="noopener" target="_blank">Jessica Levin</a></span>
+        </div>
+
+        <div class="large-copy-split w-100 flex flex-column ph3 photo-pair pv6 justify-center items-center">
+          <img src="/img/000007140030.jpg" class="splitter">
+          <div class="large-copy w-50 ph4 self-start ">
+            <blockquote>
+              <p class="splitter-title f1 lh-copy text-nev">Describe your process of creating in a few words.</p>
+            </blockquote>
+          </div>
+          <div class="top-copy w-50 ph4 self-end">
+            <p class="lh-copy copy relative">Most of the time ideas come in unexpected moments. When I'm washing the dishes, driving, or getting ready to go somewhere. I'm so thankful for those moments.</p>
+          </div>
         </div>
 
         <div class="flex items-center justify-center pa4 social">
@@ -295,15 +293,20 @@
   <footer class="footer-desktop pt4 flex flex-column w-100">
     <div class="flex ph5">
       <div class="marquee f3 bg-white pv2">
-          <span></span>
+          <span class="pv0"></span>
       </div>
     </div> 
     <div class="flex ph5">
-      <div style="border-top: 1px solid #d5514f;" class="footer-line pb2 w-100"></div>
+      <div style="border-top: 1px solid #bd7133;" class="footer-line pb2 w-100"></div>
     </div>
     <div class="footer-text flex f7 ttu justify-between ph5 helvetica fw4 pv2">
-      <p>Copyright &copy 2020 Whitney Magazine. All Rights Reserved.</p>
-      <p>Site by SMDVS</p>
+      <div class="flex">
+        <p>Copyright &copy 2020 Whitney Magazine. All Rights Reserved.</p>
+      </div>
+      <div class="flex">
+          <p>Site by SMDVS</p>
+          <a href="#" id="toTop" style="visibility: hidden;"><span title="Go to top"><svg class="toTop" height='100px' width='100px' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve"><g><polygon points="53,77.6 53,28.9 72.6,45.7 76.5,41.1 50,18.4 23.5,41.1 27.4,45.7 47,28.9 47,77.6  "></polygon></g></svg></span></a> 
+      </div>
     </div>
   </footer>
 
