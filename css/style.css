@@ -1495,8 +1495,10 @@ footer.bottom {
 
 
 @media screen and (max-width: 1024px) {
-
   
+  body {
+    overflow-x: hidden;
+  }
 
   .single-image-desktop,
   .split-image-desktop {
