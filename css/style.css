@@ -1443,6 +1443,12 @@ footer.bottom {
 }
 
 @media screen and (min-width: 1025px) {
+
+  .single-image-mobile,
+  .split-image-mobile {
+    display: none;
+  }
+
   .story-hero-portrait {
     display: none;
   }
@@ -1489,6 +1495,11 @@ footer.bottom {
 
 
 @media screen and (max-width: 1024px) {
+
+  .single-image-desktop,
+  .split-image-desktop {
+    display: none;
+  }
 
   #toTop {
     display: none;
