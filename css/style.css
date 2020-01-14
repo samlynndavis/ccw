@@ -1513,7 +1513,7 @@ footer.bottom {
 
   .splitter {
     position: relative;
-    padding: 3em;
+    padding: 3em 0;
     align-items: flex-start;
   }
 
