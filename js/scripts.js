@@ -67,6 +67,7 @@ const runScripts = () => {
     
     $(window).scroll(function (event) {
         didScroll = true;
+        console.log(didScroll);
     });
     
     setInterval(function () {
@@ -88,12 +89,10 @@ const runScripts = () => {
         if (st > lastScrollTop && st > navbarHeight) {
             // Scroll Down
             $('header').removeClass('nav-down').addClass('nav-up');
-            // $('footer').addClass('hide');
         } else {
             // Scroll Up
             if (st + $(window).height() < $(document).height()) {
                 $('header').removeClass('nav-up').addClass('nav-down');
-                // $('footer').removeClass('hide');
             }
         }
     
@@ -316,11 +315,11 @@ function scrollFunction() {
 };
 
 
-// // When the user clicks on the button, scroll to the top of the document
-// mybutton.addEventListener("click", function () {
-//   document.body.scrollTop = 0; // For Safari
-//   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-// });
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", function () {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+});
 
 $(document).ready(function() {
     if($('body').hasClass('homepage')){
@@ -342,52 +341,56 @@ runScripts();
 // document.getElementById('toTop').className+= " rest";
 
 
-// const pushFooter = () => {
+window.onscroll = function() {
+    pushFooter();
+    console.log($(window).scrollTop());
+};
 
-// // const footerBottom = document.body.classList.contains("homepage");
-// const footerTicker = document.querySelector(".footer-desktop");
+const pushFooter = () => {
 
-// const footerTween = new TimelineMax({ 
-//     paused: true, 
-//     reversed: true,
-//     onComplete: function () {
-//         $(footerTicker).addClass('bottom')
-//     },
-//     // onReverseComplete: function () {
-//     //     $(footerTicker).removeClass('bottom')        
-//     // }    
-//     });
+const footerBottom = document.body.classList.contains("homepage");
+const footerTicker = document.querySelector(".footer-desktop");
 
-
-
-//  footerTween
-//     .to(footerTicker, 1, { y: "100%", opacity: "0", clearProps: "all", ease: Power4.easeInOut})
-
-//     if ($(document).scrollTop() > 100) {
-//         footerTween.play();
-//     } else {
-//         if ($(document).scrollTop() === 0) {
-//             footerTween.reverse();
-             
-//         }
-//     }
-// };
+const footerTweenOut = new TimelineMax({ 
+    paused: true, 
+    reversed: true,
+    onComplete: function () {
+        $(footerTicker).addClass('bottom')
+    },
+    // onReverseComplete: function () {
+    //     $(footerTicker).removeClass('bottom')        
+    // }    
+    });
 
 
 
-// window.onscroll = function() {
-//     pushFooter();
-// };
+ footerTweenOut
+    .to(footerTicker, 1, { y: "100%", opacity: "0", clearProps: "all", ease: Power4.easeInOut})
 
-// const footerMove = () => {
-// if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-//     footerTween.reversed() ? footerTween.play() : footerTween.reverse();
-// } else {
-//     if (document.body.scrollTop === 0 || document.document.scrollTop === 0) {
-//         footerTween.reversed() ? footerTween.play() : footerTween.reverse(); 
-//     }
-// }
-// };
+const footerTweenIn = new TimelineMax({ 
+    paused: true, 
+    reversed: false,
+    onComplete: function () {
+        $(footerTicker).removeClass('bottom')
+    }    
+    });
+
+footerTweenIn
+    .to(footerTicker, 1, { y: "0%", opacity: "1", clearProps: "all", ease: Power4.easeInOut})
+
+
+    if ($(document).scrollTop() > 0) {
+        $(footerTicker).addClass('hide')
+} else {
+    if ($(document).scrollTop() === 0) {
+        $(footerTicker).removeClass('hide').removeClass('bottom')
+    }
+}
+
+    if ($(document).scrollTop() > 500) {
+        $(footerTicker).addClass('bottom').removeClass('hide')
+}
+};
 
     // let didScroll;
     // let lastScrollTop = 0;

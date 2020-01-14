@@ -594,34 +594,23 @@ a:visited {
 rgb(0, 0, 0);
 
 content: ' ';
-
 display: block;
-
 height: 45%;
-
 opacity: 1;
-
 position: absolute;
-
 z-index: -1;
-
 width: calc(101% + 0px);
-
 bottom: 25px;
-
 right: 3px;
-
 -webkit-transition: all 0.2s ease-out;
-
 -moz-transition: all 0.2s ease-out;
-
 -o-transition: all 0.2s ease-out;
-
 -ms-transition: all 0.2s ease-out;
 
 transition: all 0.2s ease-out;
 
 transform-origin: 50% 50%;
+
 }
 
 
@@ -682,15 +671,15 @@ footer {
   bottom: 0;
   margin-bottom: 1vw;
 
-  /* transition: 0.5s ease; */
+  transition: 0.5s ease;
 }
 
-/* footer.hide {
+footer.hide {
   transform: translateY(100%);
   opacity: 0;
 
   transition: 0.5s ease;
-} */
+}
 
 footer.bottom {
   position: relative;
@@ -698,7 +687,7 @@ footer.bottom {
   margin-bottom: 1vw;
   opacity: 1 !important;
 
-  /* transition: 0.5s ease; */
+  transition: 0.5s ease;
 }
 
 .alternate {
@@ -805,7 +794,7 @@ footer.bottom {
   /* background-color: #dcd1b4; */
 }
 
-.bg-ana-green {
+.bg-anna-green {
   background-color: #2f3924;
   background-color: #424635;
 }
@@ -1255,8 +1244,8 @@ footer.bottom {
 #toTop {
   /* display: none; Hidden by default */
   position: fixed; /* Fixed/sticky position */
-  bottom: 60px; /* Place the button at the bottom of the page */
-  right: 60px; /* Place the button 30px from the right */
+  bottom: 13px; /* Place the button 17px from the bottom of the page */
+  right: 150px; /* Place the button 150px from the right */
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
@@ -1496,6 +1485,10 @@ footer.bottom {
 
 @media screen and (max-width: 1024px) {
   
+  .image-caption-overlay {
+    display: none;
+  }
+
   body {
     overflow-x: hidden;
   }
