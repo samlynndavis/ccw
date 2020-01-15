@@ -282,7 +282,11 @@ a:visited {
   transform: rotate(-90deg) translateY(-40px);
 }
 
-.social>svg.email,
+.socail>svg:hover {
+  transform: translateY(2px);
+}
+
+.social>svg.website,
 .social>svg.instagram {
   height: 30px;
   width: 30px;
@@ -290,21 +294,21 @@ a:visited {
 
 .social>svg.instagram path,
 .social>svg.instagram polygon,
-.social>svg.email path,
-.social>svg.email polygon {
+.social>svg.website path,
+.social>svg.website polygon {
   stroke: transparent;
-  fill: #fff;
+  fill: #000;
 }
 
 .social>svg.instagram:hover path,
 .social>svg.instagram:hover polygon,
-.social>svg.email:hover path,
-.social>svg.email:hover polygon {
-  fill: #000;
+.social>svg.website:hover path,
+.social>svg.website:hover polygon {
+  fill: rgb(145, 145, 145);
 }
 
 .splitter {
-  z-index: -2;
+  z-index: 1;
   position: absolute;
 }
 
@@ -613,6 +617,30 @@ transform-origin: 50% 50%;
 
 }
 
+.test-liz::after {
+  background-color:
+  #fff0f2;
+
+content: ' ';
+display: block;
+height: 45%;
+opacity: 1;
+position: absolute;
+z-index: -1;
+width: calc(101% + 0px);
+bottom: 25px;
+right: 3px;
+-webkit-transition: all 0.2s ease-out;
+-moz-transition: all 0.2s ease-out;
+-o-transition: all 0.2s ease-out;
+-ms-transition: all 0.2s ease-out;
+
+transition: all 0.2s ease-out;
+
+transform-origin: 50% 50%;
+
+}
+
 
 .intro:hover {
   cursor: url(/img/whitedown1.webp), auto !important;
@@ -670,15 +698,16 @@ footer {
   position: fixed;
   bottom: 0;
   margin-bottom: 1vw;
+  opacity: 1;
 
-  transition: 0.5s ease;
+  transition: 1s ease;
 }
 
 footer.hide {
   transform: translateY(100%);
   opacity: 0;
 
-  transition: 0.5s ease;
+  transition: 0.3s ease;
 }
 
 footer.bottom {
@@ -687,7 +716,7 @@ footer.bottom {
   margin-bottom: 1vw;
   opacity: 1 !important;
 
-  transition: 0.5s ease;
+  transition: 1s ease;
 }
 
 .alternate {
@@ -751,6 +780,14 @@ footer.bottom {
   background-color: #c0c2ce;
 }
 
+.liz-purple {
+  background-color: #bea1a5;
+}
+
+.liz-bg-green {
+  background-color: #89937a;
+}
+
 .text-anna {
   color: #424635;
 }
@@ -769,7 +806,11 @@ footer.bottom {
 }
 
 .text-liz {
-  color: #ffffff;
+  color: #fff0f2;
+}
+
+.text-liz-sec {
+  color: #aa9786;
 }
 
 .bg-mia-grey {
@@ -1001,7 +1042,7 @@ footer.bottom {
 
 .roster-card {
   display: flex;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  /* border: 1px solid rgba(255, 255, 255, 0.25); */
 }
 
 .roster-card-mia {
@@ -1918,4 +1959,28 @@ screen and (max-height: 600px) {
   #intro-image {
     display: none;
   }
+}
+
+.right-side {
+  font-size: 5vw;
+}
+
+.left-side {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+
+  background-color: #fff0f2;
+  color: #c0c2ce;
+}
+
+
+/* .liz-wrapper {
+  overflow: auto;
+} */
+
+.splitter-question,
+.splitter-answer {
+  z-index: 2;
 }

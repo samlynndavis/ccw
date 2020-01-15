@@ -43,7 +43,7 @@ header#navigation {
 .instagram polygon {
   fill: transparent;
   stroke: #dd5a54;
-  transition: 200ms ease-in;
+  /* transition: 200ms ease-in; */
 }
 
 .email {
@@ -90,7 +90,7 @@ svg.close:hover {
 .instagram:hover polygon {
   stroke: transparent;
   fill: #dd5a54;
-  transition: 200ms ease-in;
+  /* transition: 200ms ease-in; */
 }
 
 .email:hover path,

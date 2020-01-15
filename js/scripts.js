@@ -1,23 +1,4 @@
 const runScripts = () => {
-
-    // document.addEventListener("DOMContentLoaded", function(event) {
- 
-    //     var gallery = document.querySelector('.gallery');
-    //     var flkty = new Flickity( gallery, {
-    //       imagesLoaded: true,
-    //       percentPosition: false,
-    //       cellAlign: 'left',
-    //       pageDots: false,
-    //       wrapAround: true
-    //     } );
-    //     var button = document.querySelector('.button--resize');
-       
-    //     button.addEventListener( 'click', function() {
-    //       gallery.classList.toggle( 'is-expanded' );
-    //       flkty.resize();
-    //     });
-       
-    //    });
        
     const aboutReveal = () => {
 
@@ -173,10 +154,10 @@ const runScripts = () => {
     var controller = new ScrollMagic.Controller();
     
     // loop through all elements
-    $('.fade-up').each(function () {
+    $('.fade').each(function () {
     
         // build a tween
-        var fadeTween = TweenMax.from($(this), 1.2, {opacity: "0", ease: Power4.easeInout});
+        var fadeTween = TweenMax.from($(this), 0.7, {opacity: "0", ease: Power4.easeInOut});
     
         // build a scene
         var scene = new ScrollMagic.Scene({
@@ -186,6 +167,68 @@ const runScripts = () => {
             .addTo(controller);
     
     });
+
+    // var controller = new ScrollMagic.Controller();
+    var bgLiz = new TimelineMax();
+
+    var bgLizTween = bgLiz.to(".liz-home", {backgroundColor: "#fff0f2", ease: Linear.easeNone})
+                          .to(".large-copy-liz p", {css:{color: "#000"}, ease: Linear.easeNone})
+                          .to(".top-copy-liz", {css:{color: "#c0c2ce"}, ease: Linear.easeNone})
+                          .to(".social-liz", {css:{color: "#c0c2ce"}, ease: Linear.easeNone })
+                          .to(".marquee span", {css:{color: "#bea1a5"}, ease: Linear.easeNone})
+                          .to(".footer-desktop", {css:{color: "#bea1a5"}, ease: Linear.easeNone})
+                          .to(".caption-photo", {css:{color: "#bea1a5"}, ease: Linear.easeNone})
+
+    var bgLizScene = new ScrollMagic.Scene({triggerElement: ".color-split", duration: 1000})    
+    .setTween(bgLiz)
+    // .setPin("#target", {pushFollowers: false})
+    // .addIndicators() // add indicators (requires plugin)
+    .addTo(controller);
+
+    var lizSlide = new TimelineMax();
+
+    var lizSlideTween = lizSlide.from(".liz-right", {x:"110%", ease: Linear.easeNone}, 0)
+                                .from(".liz-left", {x:"-110%", ease: Linear.easeNone}, 0)
+                                .from(".large-copy-split-liz", {opacity: 0, ease: Linear.easeNone}, 0)
+
+    var lizSlideScene = new ScrollMagic.Scene({triggerElement: ".large-copy-split", duration: 500})    
+    .setTween(lizSlide)
+    // .setPin("#target", {pushFollowers: false})
+    // .addIndicators() // add indicators (requires plugin)
+    .addTo(controller);
+
+    // build tween
+    var timelineSplitter = new TimelineMax();
+
+        // var tween1 = timelineSplitter
+        var splitterTween = timelineSplitter.from(".splitter", 1, {opacity: 0, x:-50, ease: Power4.easeInOut})
+                                            .from(".splitter-question", 1, {opacity: 0, ease: Power4.easeInOut}, 0)
+                                            .from(".splitter-answer", 1, {opacity: 0, ease: Power4.easeInOut}, 0)
+
+        timelineSplitter.add(splitterTween)
+
+    // build scene
+    var splitterScene = new ScrollMagic.Scene({triggerElement: ".split-image-desktop"})
+                    .setTween(timelineSplitter)
+                    // .setPin("#target", {pushFollowers: false})
+                    // .addIndicators() // add indicators (requires plugin)
+                    .addTo(controller);
+
+    const homepageFade = () => {
+
+    var bgHome = new TimelineMax
+                        
+    var bgHomeTween = bgHome
+                        .to(".homepage", { backgroundColor: "#dd5a54", ease: Linear.easeNone })                        
+                        .to(".salvage", { css:{textDecorationColor: "#000"}, ease: Linear.easeNone })                        
+
+    var bgHomeScene = new ScrollMagic.Scene({triggerElement: ".bio", offset: -50, duration: 500})
+    .setTween(bgHomeTween)
+    // .setPin("#target", {pushFollowers: false})
+    // .addIndicators() // add indicators (requires plugin)
+    .addTo(controller);
+    }
+
 
     const rosterFade = () => {
 
@@ -291,6 +334,26 @@ const runScripts = () => {
     
     // grained('#grain', options);
 
+const pushFooter = () => {
+
+    const footerBottom = document.body.classList.contains("homepage");
+    
+    const footerTicker = document.querySelector(".footer-desktop");
+    
+        if ($(document).scrollTop() > 5) {
+            $(footerTicker).addClass('hide')
+    } else {
+        if ($(document).scrollTop() === 0) {
+            $(footerTicker).addClass('normal').removeClass('hide').removeClass('bottom')
+        }
+    }
+    
+        if ($(document).scrollTop() > 500) {
+            $(footerTicker).addClass('bottom').removeClass('hide')
+    }
+    };
+        
+
     // var Scrollbar = window.Scrollbar;
 
     // Scrollbar.init(document.querySelector('#my-scrollbar'));
@@ -302,6 +365,7 @@ mybutton = document.getElementById("toTop");
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {
     scrollFunction();
+    pushFooter();
 };
 
 function scrollFunction() {
@@ -324,6 +388,7 @@ mybutton.addEventListener("click", function () {
 $(document).ready(function() {
     if($('body').hasClass('homepage')){
       rosterFade();
+      homepageFade();
     }
     if ($("#drag-image").length > 0) {
         dragImage();
@@ -339,98 +404,6 @@ runScripts();
 // const footerArrow = document.body.classList.contains("homepage");
 
 // document.getElementById('toTop').className+= " rest";
-
-
-window.onscroll = function() {
-    pushFooter();
-    console.log($(window).scrollTop());
-};
-
-const pushFooter = () => {
-
-const footerBottom = document.body.classList.contains("homepage");
-const footerTicker = document.querySelector(".footer-desktop");
-
-const footerTweenOut = new TimelineMax({ 
-    paused: true, 
-    reversed: true,
-    onComplete: function () {
-        $(footerTicker).addClass('bottom')
-    },
-    // onReverseComplete: function () {
-    //     $(footerTicker).removeClass('bottom')        
-    // }    
-    });
-
-
-
- footerTweenOut
-    .to(footerTicker, 1, { y: "100%", opacity: "0", clearProps: "all", ease: Power4.easeInOut})
-
-const footerTweenIn = new TimelineMax({ 
-    paused: true, 
-    reversed: false,
-    onComplete: function () {
-        $(footerTicker).removeClass('bottom')
-    }    
-    });
-
-footerTweenIn
-    .to(footerTicker, 1, { y: "0%", opacity: "1", clearProps: "all", ease: Power4.easeInOut})
-
-
-    if ($(document).scrollTop() > 0) {
-        $(footerTicker).addClass('hide')
-} else {
-    if ($(document).scrollTop() === 0) {
-        $(footerTicker).removeClass('hide').removeClass('bottom')
-    }
-}
-
-    if ($(document).scrollTop() > 500) {
-        $(footerTicker).addClass('bottom').removeClass('hide')
-}
-};
-
-    // let didScroll;
-    // let lastScrollTop = 0;
-    // let delta = 5;
-    // // let navbarHeight = $('header').outerHeight();
-    
-    // $(window).scroll(function (event) {
-    //     didScroll = true;
-    // });
-    
-    // setInterval(function () {
-    //     if (didScroll) {
-    //         hasScrolled();
-    //         didScroll = false;
-    //     }
-    // }, 250);
-    
-    // function hasScrolled() {
-    //     let st = $(this).scrollTop();
-    
-    //     // Make sure they scroll more than delta
-    //     if (Math.abs(lastScrollTop - st) <= delta)
-    //         return;
-    
-    //     // If they scrolled down and are past the navbar, add class .nav-up.
-    //     // This is necessary so you never see what is "behind" the navbar.
-    //     if (st > lastScrollTop && st > navbarHeight) {
-    //         // Scroll Down
-    //         $('header').removeClass('nav-down').addClass('nav-up');
-    //         // $('footer').addClass('hide');
-    //     } else {
-    //         // Scroll Up
-    //         if (st + $(window).height() < $(document).height()) {
-    //             $('header').removeClass('nav-up').addClass('nav-down');
-    //             // $('footer').removeClass('hide');
-    //         }
-    //     }
-    
-    //     lastScrollTop = st;
-    // }
 
        // //Roster Slider
     
