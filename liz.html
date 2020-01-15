@@ -191,16 +191,7 @@
           </div>
         </div>
         <div class="right-side f1 tc pa3 w-50 text-liz">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam culpa fugit aspernatur dolore id officiis
-            voluptatibus placeat provident laudantium. Ipsum sint nemo cum aliquam similique nisi iste voluptas enim
-            maxime!Vero deleniti, quaerat molestiae accusamus itaque aperiam, fuga explicabo assumenda culpa, libero in
-            sunt. Nostrum in dolore maxime incidunt totam suscipit. Quia, deserunt delectus? Quas earum commodi dolore.
-            Blanditiis, hic.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam culpa fugit aspernatur dolore id officiis
-            voluptatibus placeat provident laudantium. Ipsum sint nemo cum aliquam similique nisi iste voluptas enim
-            maxime!Vero deleniti, quaerat molestiae accusamus itaque aperiam, fuga explicabo assumenda culpa, libero in
-            sunt. Nostrum in dolore maxime incidunt totam suscipit. Quia, deserunt delectus? Quas earum commodi dolore.
-            Blanditiis, hic.</p>
+          <p>Elizabeth De La Piedra is a child of the world. Born in Peru, raised in Australia and currently based in Chicago, Liz expresses herself through a broad spectrum of creativity, namely photography where she simultaneously creates and captures the cultural zeitgeist through her colorful lens.</p>
         </div>
       </div>
 
@@ -286,13 +277,13 @@
               target="_blank">Jessica Levin</a></span>
         </div>
         <div class="flex flex-column items-center large-copy-split-liz justify-center tc">
-          <div class="large-copy large-copy-liz ph4 pb2">
+          <div class="large-copy large-copy-liz ph4 pb4">
             <blockquote>
               <p class="f1 lh-headline white">Describe your process of creating in a few words.</p>
             </blockquote>
           </div>
           <div class="top-copy top-copy-liz ph4">
-            <p class="lh-headline copy">I try to be kind to my ideas and develop the ones that stick.</p>
+            <p style="line-height: 2.5vw;" class="lh-headline copy">I try to be kind to my ideas and develop the ones that stick.</p>
           </div>
         </div>
         <div class="w-50 photo liz-right flex flex-column items-center pl2 pr4">
@@ -302,7 +293,7 @@
         </div>
       </div>
 
-      <div class="question-image-copy-split w-100 min-vh-100 flex ph3 pt4 pb6 items-center justify-center">
+      <!-- <div class="question-image-copy-split w-100 min-vh-100 flex ph3 pt4 pb6 items-center justify-center">
         <div class="flex w-50 flex-column justify-between">
           <div class="large-copy-liz w-100 ph4">
             <blockquote>
@@ -318,7 +309,7 @@
           <span class="pt3 f6 caption-photo">photo by <a href="https://www.instagram.com/jessicawlevin" rel="noopener"
               target="_blank">Jessica Levin</a></span>
         </div>
-      </div>
+      </div> -->
 
       <div class="question-image-copy-split w-100 flex flex-column pt4 pb6 items-center justify-center">
         <div class="large-copy-liz tc w-100 f1 ph4 bg-liz">
@@ -327,25 +318,22 @@
               most?</p>
           </blockquote>
         </div>
-        <div class="flex min-vh-100">
-          <div class="personal-liz tc vh-100 f1 bg-black w-50 overflow-y-hidden">
-              <p class="pa4"></p>
+        <div class="flex liz-wrapper">
+          <div class="right-side-liz bg-black f1 tc pa3 w-50 text-liz">
+            <p></p>
           </div>
-          <div class="right-side-liz f1 tc w-50 text-liz">
-            <div>
-              <img src="/img/000007120021.jpg">
-            </div>
+          <div class="left-side left-side-liz tc vh-100 f1 bg-black w-50 flex items-center justify-center overflow-y-hidden">
+            <div class="flex items-center justify-center w-50">
+              
+            <img class="pic-1" src="/img/000007120021.jpg">
+            <img class="pic-2" src="/img/000007120036.jpg">
+            <img class="pic-3" src="/img/000007120036.jpg">
+            <img class="pic-4" src="/img/000007120034.jpg">
+          </div>
+          </div>
           </div>
         </div>
 
-      </div>
-
-      <div class="w-100 flex pv6">
-        <div class="w-100 flex flex-column justify-center photo photo-pair items-center bg-ana-green">
-          <img src="/img/000007120033.jpg">
-          <span class="pt3 f6 caption-photo">photo by <a href="https://www.instagram.com/samlynndavis" rel="noopener"
-              target="_blank">Sam Lynn Davis</a></span>
-        </div>
       </div>
 
       <!-- <div class="image-caption-overlay w-100 flex ph4 pt6 pb2 flex-column">
@@ -505,14 +493,14 @@
 </script>
 
 <script>
-  function personalLeft() {
+  function personalRight() {
     const title = ' Personal narratives and culture.'
-    const marqueeText = new Array(50).fill(title).join('')
+    const marqueeText = new Array(30).fill(title).join('')
 
-    document.querySelector('.personal-liz p').innerHTML = marqueeText
+    document.querySelector('.right-side-liz p').innerHTML = marqueeText
   }
 
-  personalLeft()
+  personalRight()
 </script>
 
 </html>

@@ -1970,6 +1970,10 @@ screen and (max-height: 600px) {
 }
 
 .right-side {
+  font-size: 7vw;
+}
+
+.right-side-liz {
   font-size: 5vw;
 }
 
@@ -1999,4 +2003,12 @@ screen and (max-height: 600px) {
   position: sticky;
   top: 0;
   align-self: flex-start;
+}
+
+.left-side img {
+  position: absolute;
+
+  max-width: 100%;
+  width: auto;
+  height: 50%;
 }

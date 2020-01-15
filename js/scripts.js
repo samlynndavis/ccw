@@ -170,15 +170,55 @@ const runScripts = () => {
 
     const lizTweens = () => {
 
-    // var controller = new ScrollMagic.Controller();
+    var controller = new ScrollMagic.Controller();
+
+    var bgLeftScrollT1 = new TimelineMax();
+    var bgLeftScrollT2 = new TimelineMax();
+    var bgLeftScrollT3 = new TimelineMax();
+    var bgRightScrollT1 = new TimelineMax();
+
+    bgLeftScrollT1.to(".right-side-liz", {backgroundColor: "#bea1a5", ease: Linear.easeNone})
+
+    bgLeftScrollT2.to(".right-side-liz", {backgroundColor: "#c0c2ce", ease: Linear.easeNone})
+    
+    bgLeftScrollT3.to(".right-side-liz", {backgroundColor: "#fff", ease: Linear.easeNone})
+
+    bgRightScrollT1.to(".left-side-liz", {backgroundColor: "#c0c2ce", ease: Linear.easeNone})
+
+  
+
+    var bgLeftScene0 = new ScrollMagic.Scene({triggerElement: ".right-side-liz", duration: 400})    
+    .setTween(bgLeftScrollT1)
+    // .setPin("#target", {pushFollowers: false})
+    .addIndicators() // add indicators (requires plugin)
+    .addTo(controller);
+
+    var bgLeftScene1 = new ScrollMagic.Scene({triggerElement: ".right-side-liz", offset: 600, duration: 400})    
+    .setTween(bgLeftScrollT2)
+    // .setPin("#target", {pushFollowers: false})
+    .addIndicators() // add indicators (requires plugin)
+    .addTo(controller);
+
+    var bgLeftScene2 = new ScrollMagic.Scene({triggerElement: ".right-side-liz", offset: 1200, duration: 400})    
+    .setTween(bgLeftScrollT3)
+    // .setPin("#target", {pushFollowers: false})
+    .addIndicators() // add indicators (requires plugin)
+    .addTo(controller);
+
+    var bgRightScene = new ScrollMagic.Scene({triggerElement: ".right-side-liz", duration: 2000})    
+    .setTween(bgRightScrollT1)
+    // .setPin("#target", {pushFollowers: false})
+    .addIndicators() // add indicators (requires plugin)
+    .addTo(controller);
+
     var bgLiz = new TimelineMax();
 
     var bgLizTween = bgLiz.to(".liz-home", {backgroundColor: "#fff0f2", ease: Linear.easeNone})
                           .to(".large-copy-liz p", {css:{color: "#000"}, ease: Linear.easeNone})
                           .to(".top-copy-liz", {css:{color: "#c0c2ce"}, ease: Linear.easeNone})
                           .to(".social-liz", {css:{color: "#c0c2ce"}, ease: Linear.easeNone })
-                          .to(".marquee span", {css:{color: "#bea1a5"}, ease: Linear.easeNone})
-                          .to(".footer-desktop", {css:{color: "#bea1a5"}, ease: Linear.easeNone})
+                          .to(".marquee span", {css:{color: "#c0c2ce"}, ease: Linear.easeNone})
+                          .to(".footer-desktop", {css:{color: "#c0c2ce"}, ease: Linear.easeNone})
                           .to(".caption-photo", {css:{color: "#bea1a5"}, ease: Linear.easeNone})
 
     var bgLizScene = new ScrollMagic.Scene({triggerElement: ".color-split", duration: 1000})    
@@ -189,11 +229,11 @@ const runScripts = () => {
 
     var lizSlide = new TimelineMax();
 
-    var lizSlideTween = lizSlide.from(".liz-right", {x:"110%", ease: Linear.easeNone}, 0)
-                                .from(".liz-left", {x:"-110%", ease: Linear.easeNone}, 0)
-                                .from(".large-copy-split-liz", {opacity: 0, ease: Linear.easeNone}, 0)
+    var lizSlideTween = lizSlide.from(".liz-right", 1.5, {x:"110%", ease: Power4.easeInOut}, 0)
+                                .from(".liz-left", 1.5,  {x:"-110%", ease: Power4.easeInOut}, 0)
+                                .from(".large-copy-split-liz", 1.5, {opacity: 0, ease: Linear.easeNone, delay: .5}, 0)
 
-    var lizSlideScene = new ScrollMagic.Scene({triggerElement: ".large-copy-split", duration: 500})    
+    var lizSlideScene = new ScrollMagic.Scene({triggerElement: ".large-copy-split", offset: -100})    
     .setTween(lizSlide)
     // .setPin("#target", {pushFollowers: false})
     // .addIndicators() // add indicators (requires plugin)
@@ -218,6 +258,7 @@ const runScripts = () => {
                     // .setPin("#target", {pushFollowers: false})
                     // .addIndicators() // add indicators (requires plugin)
                     .addTo(controller);
+
 
     const homepageFade = () => {
 
