@@ -316,7 +316,7 @@ a:visited {
   background-position: 52% 43%;
   background-image: url(/img/000007230011.jpg);
   height: calc(100vh - 316px);
-  min-height: calc(960px - 316px);
+  min-height: calc(120vh - 316px);
   max-height: calc(1400px - 316px);
   position: absolute;
   background-size: cover;
