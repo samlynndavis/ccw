@@ -1983,12 +1983,20 @@ screen and (max-height: 600px) {
   color: #c0c2ce;
 }
 
-
-/* .liz-wrapper {
-  overflow: auto;
-} */
-
 .splitter-question,
 .splitter-answer {
   z-index: 2;
+}
+
+.personal-liz p {
+  font-size: 5vw;
+  background-color: #000;
+  color: #c0c2ce;
+}
+
+.right-side-liz {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
 }
