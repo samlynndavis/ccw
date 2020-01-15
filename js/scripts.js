@@ -190,25 +190,25 @@ const runScripts = () => {
     var bgLeftScene0 = new ScrollMagic.Scene({triggerElement: ".right-side-liz", duration: 400})    
     .setTween(bgLeftScrollT1)
     // .setPin("#target", {pushFollowers: false})
-    .addIndicators() // add indicators (requires plugin)
+    // .addIndicators() // add indicators (requires plugin)
     .addTo(controller);
 
     var bgLeftScene1 = new ScrollMagic.Scene({triggerElement: ".right-side-liz", offset: 600, duration: 400})    
     .setTween(bgLeftScrollT2)
     // .setPin("#target", {pushFollowers: false})
-    .addIndicators() // add indicators (requires plugin)
+    // .addIndicators() // add indicators (requires plugin)
     .addTo(controller);
 
     var bgLeftScene2 = new ScrollMagic.Scene({triggerElement: ".right-side-liz", offset: 1200, duration: 400})    
     .setTween(bgLeftScrollT3)
     // .setPin("#target", {pushFollowers: false})
-    .addIndicators() // add indicators (requires plugin)
+    // .addIndicators() // add indicators (requires plugin)
     .addTo(controller);
 
     var bgRightScene = new ScrollMagic.Scene({triggerElement: ".right-side-liz", duration: 2000})    
     .setTween(bgRightScrollT1)
     // .setPin("#target", {pushFollowers: false})
-    .addIndicators() // add indicators (requires plugin)
+    // .addIndicators() // add indicators (requires plugin)
     .addTo(controller);
 
     var bgLiz = new TimelineMax();
