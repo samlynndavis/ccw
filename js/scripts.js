@@ -222,10 +222,10 @@ const runScripts = () => {
                         .to(".homepage", { backgroundColor: "#dd5a54", ease: Linear.easeNone })                        
                         .to(".salvage", { css:{textDecorationColor: "#000"}, ease: Linear.easeNone })                        
 
-    var bgHomeScene = new ScrollMagic.Scene({triggerElement: ".bio", duration: 1000})
+    var bgHomeScene = new ScrollMagic.Scene({triggerElement: ".bio", offset: -50, duration: "40%"})
     .setTween(bgHomeTween)
     // .setPin("#target", {pushFollowers: false})
-    // .addIndicators() // add indicators (requires plugin)
+    .addIndicators() // add indicators (requires plugin)
     .addTo(controller);
     }
 
