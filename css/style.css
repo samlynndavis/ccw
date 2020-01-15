@@ -1515,6 +1515,14 @@ footer.bottom {
     padding-bottom: 6vw;
   }
 
+  .bio-mobile {
+    display: none;
+  }
+
+  .bio {
+    display: block !important;
+  }
+
 }
 
 @media screen and (min-width: 1400px) {
