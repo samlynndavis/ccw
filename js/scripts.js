@@ -168,6 +168,8 @@ const runScripts = () => {
     
     });
 
+    const lizTweens = () => {
+
     // var controller = new ScrollMagic.Controller();
     var bgLiz = new TimelineMax();
 
@@ -196,6 +198,9 @@ const runScripts = () => {
     // .setPin("#target", {pushFollowers: false})
     // .addIndicators() // add indicators (requires plugin)
     .addTo(controller);
+    }
+
+
 
     // build tween
     var timelineSplitter = new TimelineMax();
@@ -222,12 +227,25 @@ const runScripts = () => {
                         .to(".homepage", { backgroundColor: "#dd5a54", ease: Linear.easeNone })                        
                         .to(".salvage", { css:{textDecorationColor: "#000"}, ease: Linear.easeNone })                        
 
-    var bgHomeScene = new ScrollMagic.Scene({triggerElement: ".bio", offset: -50, duration: "40%"})
+    var bgHomeScene = new ScrollMagic.Scene({triggerElement: ".bio", offset: -50, duration: "60%"})
     .setTween(bgHomeTween)
     // .setPin("#target", {pushFollowers: false})
     // .addIndicators() // add indicators (requires plugin)
     .addTo(controller);
+
+    var bgHomeReverse = new TimelineMax
+
+    var bgHomeReverseTween = bgHomeReverse
+        .to(".homepage", 1, { backgroundColor: "#bccece", ease: Power4.easeInOut })
+
+    var bgHomeReverseScene = new ScrollMagic.Scene({ triggerElement: "#roster", offset: -50})
+        .setTween(bgHomeReverseTween)
+        // .setPin("#target", {pushFollowers: false})
+        // .addIndicators() // add indicators (requires plugin)
+        .addTo(controller);
     }
+
+
 
 
     const rosterFade = () => {
@@ -389,6 +407,9 @@ $(document).ready(function() {
     if($('body').hasClass('homepage')){
       rosterFade();
       homepageFade();
+    }
+    if($('body').hasClass('liz-home')) {
+        lizTweens();
     }
     if ($("#drag-image").length > 0) {
         dragImage();
