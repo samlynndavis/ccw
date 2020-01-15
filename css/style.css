@@ -1985,6 +1985,8 @@ screen and (max-height: 600px) {
 
   background-color: #fff0f2;
   color: #c0c2ce;
+
+  font-size: 5rem;
 }
 
 .splitter-question,
