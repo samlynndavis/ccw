@@ -168,23 +168,22 @@ const runScripts = () => {
     
     });
 
-    // var bgAnna = new TimelineMax();
+    var bgAnna = new TimelineMax();
                         
-    // var bgAnnaTween1 = bgAnna.to(".anna-home", { backgroundColor: "#a3512f", ease: Linear.easeNone })                     
-    // var bgAnnaTween2 = bgAnna.to(".anna-home", { backgroundColor: "#ecd48c", ease: Linear.easeNone })                     
-    // // var copyAnnaTween = bgAnna.from(".large-copy-anna-solo", { opacity: 0, ease: Linear.easeNone})                    
+    var bgAnnaTween1 = bgAnna.to(".anna-home", { backgroundColor: "#a3512f", ease: Linear.easeNone})                     
+    var bgAnnaTween2 = bgAnna.to(".anna-home",  { backgroundColor: "#ecd48c", ease: Linear.easeNone})               
 
-    // var bgAnnaScene0 = new ScrollMagic.Scene({triggerElement: ".large-copy-anna-solo", duration: 400})
-    // .setTween(bgAnnaTween1)
-    // // .setPin("#target", {pushFollowers: false})
+    var bgAnnaScene0 = new ScrollMagic.Scene({triggerElement: ".large-copy-anna-solo"})
+    .setTween(bgAnnaTween1)
+    // .setPin("#target", {pushFollowers: false})
     // .addIndicators() // add indicators (requires plugin)
-    // .addTo(controller);
+    .addTo(controller);
 
-    // var bgLeftScene1 = new ScrollMagic.Scene({triggerElement: ".large-copy-anna-solo", duration: 500})    
-    // .setTween(bgAnnaTween2)
-    // // .setPin("#target", {pushFollowers: false})
-    // // .addIndicators() // add indicators (requires plugin)
-    // .addTo(controller);
+    var bgLeftScene1 = new ScrollMagic.Scene({triggerElement: ".large-copy-anna-solo"})    
+    .setTween(bgAnnaTween2)
+    // .setPin("#target", {pushFollowers: false})
+    // .addIndicators() // add indicators (requires plugin)
+    .addTo(controller);
 
     var bgHomeReverse = new TimelineMax();
 
@@ -254,36 +253,47 @@ const runScripts = () => {
     // .addIndicators() // add indicators (requires plugin)
     .addTo(controller);
 
-    // var picT0 = new TimelineMax();
+
+
+    var picT0 = new TimelineMax();
     var picT1 = new TimelineMax();
     var picT2 = new TimelineMax();
-    // var picT3 = new TimelineMax();
+    var picT3 = new TimelineMax();
 
-    // picT0.to(".pic-0", {css:{className:'+=hide'}})
+    picT0.to(".pic-0", {css:{className:'+=hide'}})
 
     picT1.to(".pic-1", {css:{className:'+=show'}})
     
     picT2.to(".pic-2", {css:{className:'+=show'}})
 
+    picT3.to(".pic-3", {css:{className:'+=show'}})
+
   
 
-    // var picScene0 = new ScrollMagic.Scene({triggerElement: ".right-side-liz", offset: 900})    
-    // .setTween(picT0)
-    // // .setPin("#target", {pushFollowers: false})
+    var picScene0 = new ScrollMagic.Scene({triggerElement: ".right-side-liz", offset: 900})    
+    .setTween(picT0)
+    // .setPin("#target", {pushFollowers: false})
     // .addIndicators() // add indicators (requires plugin)
-    // .addTo(controller);
+    .addTo(controller);
 
-    var picScene1 = new ScrollMagic.Scene({triggerElement: ".right-side-liz", offset: 1000})    
+    var picScene1 = new ScrollMagic.Scene({triggerElement: ".right-side-liz", offset: 900})    
     .setTween(picT1)
     // .setPin("#target", {pushFollowers: false})
-    .addIndicators() // add indicators (requires plugin)
+    // .addIndicators() // add indicators (requires plugin)
     .addTo(controller);
 
-    var picScene2 = new ScrollMagic.Scene({triggerElement: ".right-side-liz", offset: 1500})    
+    var picScene2 = new ScrollMagic.Scene({triggerElement: ".right-side-liz", offset: 1200})    
     .setTween(picT2)
     // .setPin("#target", {pushFollowers: false})
-    .addIndicators() // add indicators (requires plugin)
+    // .addIndicators() // add indicators (requires plugin)
     .addTo(controller);
+
+    var picScene3 = new ScrollMagic.Scene({triggerElement: ".right-side-liz", offset: 1500})    
+    .setTween(picT3)
+    // .setPin("#target", {pushFollowers: false})
+    // .addIndicators() // add indicators (requires plugin)
+    .addTo(controller);
+
 
     var bgLiz = new TimelineMax();
 
@@ -303,11 +313,11 @@ const runScripts = () => {
 
     var lizSlide = new TimelineMax();
 
-    var lizSlideTween = lizSlide.from(".liz-right", 1.5, {x:"110%", ease: Power4.easeInOut}, 0)
-                                .from(".liz-left", 1.5,  {x:"-110%", ease: Power4.easeInOut}, 0)
-                                .from(".large-copy-split-liz", 1.5, {opacity: 0, ease: Linear.easeNone, delay: .5}, 0)
+    var lizSlideTween = lizSlide.from(".liz-right", 1, {x:"110%", ease: Power4.easeInOut}, 0)
+                                .from(".liz-left", 1,  {x:"-110%", ease: Power4.easeInOut}, 0)
+                                .from(".large-copy-split-liz", 1, {opacity: 0, ease: Linear.easeNone, delay: .5}, 0)
 
-    var lizSlideScene = new ScrollMagic.Scene({triggerElement: ".large-copy-split", offset: -100, reverse:false})    
+    var lizSlideScene = new ScrollMagic.Scene({triggerElement: ".large-copy-split-liz-desktop", offset: -200, reverse:false})    
     .setTween(lizSlide)
     // .setPin("#target", {pushFollowers: false})
     // .addIndicators() // add indicators (requires plugin)
@@ -526,9 +536,6 @@ $(document).ready(function() {
       homepageFade();
     }
     if($('body').hasClass('liz-home'))  {
-        lizTweens();
-    }
-    if($('body').hasClass('anna-home'))  {
         lizTweens();
     }
     if (!$('body').hasClass('homepage')){
