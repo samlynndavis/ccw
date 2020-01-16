@@ -254,43 +254,35 @@ const runScripts = () => {
     // .addIndicators() // add indicators (requires plugin)
     .addTo(controller);
 
-    var picT0 = new TimelineMax();
+    // var picT0 = new TimelineMax();
     var picT1 = new TimelineMax();
     var picT2 = new TimelineMax();
-    var picT3 = new TimelineMax();
+    // var picT3 = new TimelineMax();
 
-    picT0.to(".pic-0", 1, {opacity: 0, ease: Linear.easeNone})
+    // picT0.to(".pic-0", {css:{className:'+=hide'}})
 
-    picT1.to(".pic-1", 1, {opacity: 0, ease: Linear.easeNone})
+    picT1.to(".pic-1", {css:{className:'+=show'}})
     
-    picT2.to(".pic-2", 1, {opacity: 0, ease: Linear.easeNone})
-
-    picT3.to(".pic-3", 1, {opacity: 0, ease: Linear.easeNone})
+    picT2.to(".pic-2", {css:{className:'+=show'}})
 
   
 
-    var picScene0 = new ScrollMagic.Scene({triggerElement: ".right-side-liz", duration: 300})    
-    .setTween(picT0)
-    // .setPin("#target", {pushFollowers: false})
+    // var picScene0 = new ScrollMagic.Scene({triggerElement: ".right-side-liz", offset: 900})    
+    // .setTween(picT0)
+    // // .setPin("#target", {pushFollowers: false})
     // .addIndicators() // add indicators (requires plugin)
-    .addTo(controller);
+    // .addTo(controller);
 
-    var picScene1 = new ScrollMagic.Scene({triggerElement: ".right-side-liz", offset: 1000, duration: 600})    
+    var picScene1 = new ScrollMagic.Scene({triggerElement: ".right-side-liz", offset: 1000})    
     .setTween(picT1)
     // .setPin("#target", {pushFollowers: false})
-    // .addIndicators() // add indicators (requires plugin)
+    .addIndicators() // add indicators (requires plugin)
     .addTo(controller);
 
-    var picScene2 = new ScrollMagic.Scene({triggerElement: ".right-side-liz", offset: 1500, duration: 600})    
+    var picScene2 = new ScrollMagic.Scene({triggerElement: ".right-side-liz", offset: 1500})    
     .setTween(picT2)
     // .setPin("#target", {pushFollowers: false})
-    // .addIndicators() // add indicators (requires plugin)
-    .addTo(controller);
-
-    var picScene3 = new ScrollMagic.Scene({triggerElement: ".right-side-liz", duration: 2000})    
-    .setTween(picT3)
-    // .setPin("#target", {pushFollowers: false})
-    // .addIndicators() // add indicators (requires plugin)
+    .addIndicators() // add indicators (requires plugin)
     .addTo(controller);
 
     var bgLiz = new TimelineMax();

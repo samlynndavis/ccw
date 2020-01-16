@@ -2045,3 +2045,11 @@ screen and (max-height: 600px) {
   width: auto;
   height: 50%;
 }
+
+.hide {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
