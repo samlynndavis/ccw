@@ -218,7 +218,7 @@ a:visited {
 }
 
 .large-photo-anna {
-  background-image: url(/img/000007130021.jpg);
+  background-image: url(/img/000007100004.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -770,6 +770,9 @@ footer.bottom {
 .bg-anna {
   background-color: #dcd1b4;
   background-color: #ddc7c2;
+  background-color: #e3b79a;
+  background-color: #ecd48c;
+  background-color: #e6e6e6;
 }
 
 .bg-mia {
@@ -789,7 +792,7 @@ footer.bottom {
 }
 
 .text-anna {
-  color: #424635;
+  color: #652b22;
 }
 
 .text-nev {
@@ -838,6 +841,12 @@ footer.bottom {
 .bg-anna-green {
   background-color: #2f3924;
   background-color: #424635;
+  background-color: #636447;
+  background-color: #90ae85;
+}
+
+.bg-anna-rust {
+  background-color: #652b22;
 }
 
 .marquee {
@@ -1523,6 +1532,18 @@ footer.bottom {
     display: block !important;
   }
 
+  .question-image-copy-split-mobile {
+    display: none;
+  }
+
+  .large-copy-split-mobile {
+    display: none;
+  }
+
+  .liz-wrapper-mobile {
+    display: none;
+  }
+
 }
 
 @media screen and (min-width: 1400px) {
@@ -1533,6 +1554,14 @@ footer.bottom {
 
 
 @media screen and (max-width: 1024px) {
+
+  .large-copy-split-liz-desktop {
+    display: none;
+  }
+
+  .liz-wrapper {
+    display: none;
+  }
   
   .image-caption-overlay {
     display: none;

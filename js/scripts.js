@@ -168,6 +168,49 @@ const runScripts = () => {
     
     });
 
+    // var bgAnna = new TimelineMax();
+                        
+    // var bgAnnaTween1 = bgAnna.to(".anna-home", { backgroundColor: "#a3512f", ease: Linear.easeNone })                     
+    // var bgAnnaTween2 = bgAnna.to(".anna-home", { backgroundColor: "#ecd48c", ease: Linear.easeNone })                     
+    // // var copyAnnaTween = bgAnna.from(".large-copy-anna-solo", { opacity: 0, ease: Linear.easeNone})                    
+
+    // var bgAnnaScene0 = new ScrollMagic.Scene({triggerElement: ".large-copy-anna-solo", duration: 400})
+    // .setTween(bgAnnaTween1)
+    // // .setPin("#target", {pushFollowers: false})
+    // .addIndicators() // add indicators (requires plugin)
+    // .addTo(controller);
+
+    // var bgLeftScene1 = new ScrollMagic.Scene({triggerElement: ".large-copy-anna-solo", duration: 500})    
+    // .setTween(bgAnnaTween2)
+    // // .setPin("#target", {pushFollowers: false})
+    // // .addIndicators() // add indicators (requires plugin)
+    // .addTo(controller);
+
+    var bgHomeReverse = new TimelineMax();
+
+    var bgHomeReverseTween = bgHomeReverse
+        .to(".homepage", 1, { backgroundColor: "#fff", ease: Power4.easeInOut })
+
+    var bgHomeReverseScene = new ScrollMagic.Scene({ triggerElement: "#roster", offset: -50})
+        .setTween(bgHomeReverseTween)
+        // .setPin("#target", {pushFollowers: false})
+        // .addIndicators() // add indicators (requires plugin)
+        .addTo(controller);
+
+    // var controller = new ScrollMagic.Controller();
+
+    // var annaCopyT1 = new TimelineMax();
+
+    // annaCopyT1.from(".large-copy-anna-solo", {opacity: 0, ease: Linear.easeNone})
+
+  
+
+    // var annaCopyScene = new ScrollMagic.Scene({triggerElement: ".large-copy-anna-solo", duration: 300})    
+    // .setTween(annaCopyT1)
+    // // .setPin("#target", {pushFollowers: false})
+    // .addIndicators() // add indicators (requires plugin)
+    // .addTo(controller);
+
     const lizTweens = () => {
 
     var controller = new ScrollMagic.Controller();
@@ -187,19 +230,19 @@ const runScripts = () => {
 
   
 
-    var bgLeftScene0 = new ScrollMagic.Scene({triggerElement: ".right-side-liz", duration: 400})    
+    var bgLeftScene0 = new ScrollMagic.Scene({triggerElement: ".right-side-liz", duration: 300})    
     .setTween(bgLeftScrollT1)
     // .setPin("#target", {pushFollowers: false})
     // .addIndicators() // add indicators (requires plugin)
     .addTo(controller);
 
-    var bgLeftScene1 = new ScrollMagic.Scene({triggerElement: ".right-side-liz", offset: 600, duration: 400})    
+    var bgLeftScene1 = new ScrollMagic.Scene({triggerElement: ".right-side-liz", offset: 1000, duration: 600})    
     .setTween(bgLeftScrollT2)
     // .setPin("#target", {pushFollowers: false})
     // .addIndicators() // add indicators (requires plugin)
     .addTo(controller);
 
-    var bgLeftScene2 = new ScrollMagic.Scene({triggerElement: ".right-side-liz", offset: 1200, duration: 400})    
+    var bgLeftScene2 = new ScrollMagic.Scene({triggerElement: ".right-side-liz", offset: 1500, duration: 600})    
     .setTween(bgLeftScrollT3)
     // .setPin("#target", {pushFollowers: false})
     // .addIndicators() // add indicators (requires plugin)
@@ -207,6 +250,45 @@ const runScripts = () => {
 
     var bgRightScene = new ScrollMagic.Scene({triggerElement: ".right-side-liz", duration: 2000})    
     .setTween(bgRightScrollT1)
+    // .setPin("#target", {pushFollowers: false})
+    // .addIndicators() // add indicators (requires plugin)
+    .addTo(controller);
+
+    var picT0 = new TimelineMax();
+    var picT1 = new TimelineMax();
+    var picT2 = new TimelineMax();
+    var picT3 = new TimelineMax();
+
+    picT0.to(".pic-0", 1, {opacity: 0, ease: Linear.easeNone})
+
+    picT1.to(".pic-1", 1, {opacity: 0, ease: Linear.easeNone})
+    
+    picT2.to(".pic-2", 1, {opacity: 0, ease: Linear.easeNone})
+
+    picT3.to(".pic-3", 1, {opacity: 0, ease: Linear.easeNone})
+
+  
+
+    var picScene0 = new ScrollMagic.Scene({triggerElement: ".right-side-liz", duration: 300})    
+    .setTween(picT0)
+    // .setPin("#target", {pushFollowers: false})
+    // .addIndicators() // add indicators (requires plugin)
+    .addTo(controller);
+
+    var picScene1 = new ScrollMagic.Scene({triggerElement: ".right-side-liz", offset: 1000, duration: 600})    
+    .setTween(picT1)
+    // .setPin("#target", {pushFollowers: false})
+    // .addIndicators() // add indicators (requires plugin)
+    .addTo(controller);
+
+    var picScene2 = new ScrollMagic.Scene({triggerElement: ".right-side-liz", offset: 1500, duration: 600})    
+    .setTween(picT2)
+    // .setPin("#target", {pushFollowers: false})
+    // .addIndicators() // add indicators (requires plugin)
+    .addTo(controller);
+
+    var picScene3 = new ScrollMagic.Scene({triggerElement: ".right-side-liz", duration: 2000})    
+    .setTween(picT3)
     // .setPin("#target", {pushFollowers: false})
     // .addIndicators() // add indicators (requires plugin)
     .addTo(controller);
@@ -233,7 +315,7 @@ const runScripts = () => {
                                 .from(".liz-left", 1.5,  {x:"-110%", ease: Power4.easeInOut}, 0)
                                 .from(".large-copy-split-liz", 1.5, {opacity: 0, ease: Linear.easeNone, delay: .5}, 0)
 
-    var lizSlideScene = new ScrollMagic.Scene({triggerElement: ".large-copy-split", offset: -100})    
+    var lizSlideScene = new ScrollMagic.Scene({triggerElement: ".large-copy-split", offset: -100, reverse:false})    
     .setTween(lizSlide)
     // .setPin("#target", {pushFollowers: false})
     // .addIndicators() // add indicators (requires plugin)
@@ -241,7 +323,7 @@ const runScripts = () => {
     }
 
 
-
+const splitImageCopy = () => {
     // build tween
     var timelineSplitter = new TimelineMax();
 
@@ -253,11 +335,13 @@ const runScripts = () => {
         timelineSplitter.add(splitterTween)
 
     // build scene
-    var splitterScene = new ScrollMagic.Scene({triggerElement: ".split-image-desktop"})
+    var splitterScene = new ScrollMagic.Scene({triggerElement: ".split-image-desktop", reverse:false})
                     .setTween(timelineSplitter)
                     // .setPin("#target", {pushFollowers: false})
                     // .addIndicators() // add indicators (requires plugin)
                     .addTo(controller);
+            
+}
 
 
     const homepageFade = () => {
@@ -268,16 +352,16 @@ const runScripts = () => {
                         .to(".homepage", { backgroundColor: "#dd5a54", ease: Linear.easeNone })                        
                         .to(".salvage", { css:{textDecorationColor: "#000"}, ease: Linear.easeNone })                        
 
-    var bgHomeScene = new ScrollMagic.Scene({triggerElement: ".bio", offset: -50, duration: "60%"})
+    var bgHomeScene = new ScrollMagic.Scene({triggerElement: ".bio", duration: "60%"})
     .setTween(bgHomeTween)
     // .setPin("#target", {pushFollowers: false})
-    // .addIndicators() // add indicators (requires plugin)
+    .addIndicators() // add indicators (requires plugin)
     .addTo(controller);
 
     var bgHomeReverse = new TimelineMax
 
     var bgHomeReverseTween = bgHomeReverse
-        .to(".homepage", 1, { backgroundColor: "#bccece", ease: Power4.easeInOut })
+        .to(".homepage", 1, { backgroundColor: "#fff", ease: Power4.easeInOut })
 
     var bgHomeReverseScene = new ScrollMagic.Scene({ triggerElement: "#roster", offset: -50})
         .setTween(bgHomeReverseTween)
@@ -449,8 +533,14 @@ $(document).ready(function() {
       rosterFade();
       homepageFade();
     }
-    if($('body').hasClass('liz-home')) {
+    if($('body').hasClass('liz-home'))  {
         lizTweens();
+    }
+    if($('body').hasClass('anna-home'))  {
+        lizTweens();
+    }
+    if (!$('body').hasClass('homepage')){
+        splitImageCopy();
     }
     if ($("#drag-image").length > 0) {
         dragImage();
