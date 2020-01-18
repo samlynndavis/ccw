@@ -24,9 +24,10 @@ body.noscroll {
 .reveal {
   width: 100vw;
   height: 100vh;
-  z-index: 100;
+  z-index: 1000;
   background-color: #000;
-  position: fixed;
+  position: absolute;
+  overflow: hidden;
 }
 
 .about {
@@ -646,22 +647,37 @@ transform-origin: 50% 50%;
   cursor: url(/img/whitedown1.webp), auto !important;
 }
 
-/* .hidetext-container {
+.hidetext-container {
   position: relative;
   overflow: hidden;
-  height: 15vw;
-  font-size: 15vw;
+  height: 25vw;
+  font-size: 25vw;
   margin: 0;
 }
 
 .hidetext {
-  position: absolute;
-  text-shadow: 5px 5px 10px rgba(21, 21, 21, 0.2);
-} */
+  /* position: absolute; */
+  /* text-shadow: 5px 5px 10px rgba(21, 21, 21, 0.2); */
+  font-size: 25vw;
+}
+
+.hidetext-two {
+  font-size: 25vw;
+}
 
 /* .headline {
   transform: translateY(-250);
 } */
+
+.hidetext .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.hidetext-two .letter {
+  display: inline-block;
+  line-height: 1em;
+}
 
 .playlist span{
   background-color: #efe8d8;

@@ -1,4 +1,31 @@
 const runScripts = () => {
+
+
+    // // Wrap every letter in a span
+    // var textWrapper = document.querySelector('.hidetext');
+    // textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    // anime.timeline({ loop: false })
+    //     .add({
+    //         targets: '.hidetext .letter',
+    //         translateY: ["1.1em", 0],
+    //         easing: "easeInOutQuad",
+    //         duration: 1000,
+    //         delay: (el, i) => 50 * (i + 1)
+    //     });
+
+    // var textWrapper2 = document.querySelector('.hidetext-two');
+    // textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    // anime.timeline({ loop: false })
+    //     .add({
+    //         targets: '.hidetext-two .letter',
+    //         translateY: ["1.1em", 0],
+    //         easing: "easeInOutQuad",
+    //         duration: 1000,
+    //         delay: (el, i) => 50 * (i + 1)
+    //     });
+        
        
     const aboutReveal = () => {
 
@@ -168,33 +195,33 @@ const runScripts = () => {
     
     });
 
-    var bgAnna = new TimelineMax();
+    // var bgAnna = new TimelineMax();
                         
-    var bgAnnaTween1 = bgAnna.to(".anna-home", { backgroundColor: "#a3512f", ease: Linear.easeNone})                     
-    var bgAnnaTween2 = bgAnna.to(".anna-home",  { backgroundColor: "#ecd48c", ease: Linear.easeNone})               
+    // var bgAnnaTween1 = bgAnna.to(".anna-home", { backgroundColor: "#a3512f", ease: Linear.easeNone})                     
+    // var bgAnnaTween2 = bgAnna.to(".anna-home",  { backgroundColor: "#ecd48c", ease: Linear.easeNone})               
 
-    var bgAnnaScene0 = new ScrollMagic.Scene({triggerElement: ".large-copy-anna-solo"})
-    .setTween(bgAnnaTween1)
-    // .setPin("#target", {pushFollowers: false})
+    // var bgAnnaScene0 = new ScrollMagic.Scene({triggerElement: ".large-copy-anna-solo", duration: 400})
+    // .setTween(bgAnnaTween1)
+    // // .setPin("#target", {pushFollowers: false})
     // .addIndicators() // add indicators (requires plugin)
-    .addTo(controller);
+    // .addTo(controller);
 
-    var bgLeftScene1 = new ScrollMagic.Scene({triggerElement: ".large-copy-anna-solo"})    
-    .setTween(bgAnnaTween2)
-    // .setPin("#target", {pushFollowers: false})
+    // var bgLeftScene1 = new ScrollMagic.Scene({triggerElement: ".large-copy-anna-solo", duration: 800})    
+    // .setTween(bgAnnaTween2)
+    // // .setPin("#target", {pushFollowers: false})
     // .addIndicators() // add indicators (requires plugin)
-    .addTo(controller);
+    // .addTo(controller);
 
-    var bgHomeReverse = new TimelineMax();
+    // var bgHomeReverse = new TimelineMax();
 
-    var bgHomeReverseTween = bgHomeReverse
-        .to(".homepage", 1, { backgroundColor: "#fff", ease: Power4.easeInOut })
+    // var bgHomeReverseTween = bgHomeReverse
+    //     .to(".homepage", 1, { backgroundColor: "#fff", ease: Power4.easeInOut })
 
-    var bgHomeReverseScene = new ScrollMagic.Scene({ triggerElement: "#roster", offset: -50})
-        .setTween(bgHomeReverseTween)
-        // .setPin("#target", {pushFollowers: false})
-        // .addIndicators() // add indicators (requires plugin)
-        .addTo(controller);
+    // var bgHomeReverseScene = new ScrollMagic.Scene({ triggerElement: "#roster", offset: -50})
+    //     .setTween(bgHomeReverseTween)
+    //     // .setPin("#target", {pushFollowers: false})
+    //     // .addIndicators() // add indicators (requires plugin)
+    //     .addTo(controller);
 
     // var controller = new ScrollMagic.Controller();
 
@@ -313,11 +340,11 @@ const runScripts = () => {
 
     var lizSlide = new TimelineMax();
 
-    var lizSlideTween = lizSlide.from(".liz-right", 1, {x:"110%", ease: Power4.easeInOut}, 0)
-                                .from(".liz-left", 1,  {x:"-110%", ease: Power4.easeInOut}, 0)
-                                .from(".large-copy-split-liz", 1, {opacity: 0, ease: Linear.easeNone, delay: .5}, 0)
+    var lizSlideTween = lizSlide.from(".liz-right", {x:"110%", ease: Power4.easeInOut}, 0)
+                                .from(".liz-left", {x:"-110%", ease: Power4.easeInOut}, 0)
+                                .from(".large-copy-split-liz", 1, {opacity: 0, ease: Linear.easeNone}, 0)
 
-    var lizSlideScene = new ScrollMagic.Scene({triggerElement: ".large-copy-split-liz-desktop", offset: -200, reverse:false})    
+    var lizSlideScene = new ScrollMagic.Scene({triggerElement: ".large-copy-split-liz-desktop", duration: 1500})    
     .setTween(lizSlide)
     // .setPin("#target", {pushFollowers: false})
     // .addIndicators() // add indicators (requires plugin)
@@ -346,31 +373,31 @@ const splitImageCopy = () => {
 }
 
 
-    const homepageFade = () => {
+    // const homepageFade = () => {
 
-    var bgHome = new TimelineMax
+    // var bgHome = new TimelineMax
                         
-    var bgHomeTween = bgHome
-                        .to(".homepage", { backgroundColor: "#dd5a54", ease: Linear.easeNone })                        
-                        .to(".salvage", { css:{textDecorationColor: "#000"}, ease: Linear.easeNone })                        
+    // var bgHomeTween = bgHome
+    //                     .to(".homepage", { backgroundColor: "#dd5a54", ease: Linear.easeNone })                        
+    //                     .to(".salvage", { css:{textDecorationColor: "#000"}, ease: Linear.easeNone })                        
 
-    var bgHomeScene = new ScrollMagic.Scene({triggerElement: ".bio", duration: "60%"})
-    .setTween(bgHomeTween)
-    // .setPin("#target", {pushFollowers: false})
-    .addIndicators() // add indicators (requires plugin)
-    .addTo(controller);
+    // var bgHomeScene = new ScrollMagic.Scene({triggerElement: ".bio", duration: "60%"})
+    // .setTween(bgHomeTween)
+    // // .setPin("#target", {pushFollowers: false})
+    // // .addIndicators() // add indicators (requires plugin)
+    // .addTo(controller);
 
-    var bgHomeReverse = new TimelineMax
+    // var bgHomeReverse = new TimelineMax
 
-    var bgHomeReverseTween = bgHomeReverse
-        .to(".homepage", 1, { backgroundColor: "#fff", ease: Power4.easeInOut })
+    // var bgHomeReverseTween = bgHomeReverse
+    //     .to(".homepage", 1, { backgroundColor: "#fff", ease: Power4.easeInOut })
 
-    var bgHomeReverseScene = new ScrollMagic.Scene({ triggerElement: "#roster", offset: -50})
-        .setTween(bgHomeReverseTween)
-        // .setPin("#target", {pushFollowers: false})
-        // .addIndicators() // add indicators (requires plugin)
-        .addTo(controller);
-    }
+    // var bgHomeReverseScene = new ScrollMagic.Scene({ triggerElement: "#roster", offset: -50})
+    //     .setTween(bgHomeReverseTween)
+    //     // .setPin("#target", {pushFollowers: false})
+    //     // .addIndicators() // add indicators (requires plugin)
+    //     .addTo(controller);
+    // }
 
 
 
