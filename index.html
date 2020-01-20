@@ -32,7 +32,7 @@
   </a>
 </div>
 
-  <div id="teambio" class="about bg-black vh-100 w-100 flex flex-column white justify-between items-center pa6">
+  <div id="teambio grain" class="grain about bg-black vh-100 w-100 flex flex-column white justify-between items-center pa6">
     <div class="flex items-end justify-end w-100 white">
       <a id="close" href="#"><svg class="close" height='100px' width='100px' xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" preserveAspectRatio="none" x="0px" y="0px"
@@ -115,12 +115,12 @@
     </div>
   </div> -->
 
-  <div class="reveal flex flex-column justify-around pa4">
-    <div class="hidetext-container flex justify-center items-center">
-    <p class="reveal-text f1 cream grifinito hidetext">From Chicago,</p>
+  <div class="reveal flex items-center justify-center pa4">
+    <div class="flex justify-center items-center">
+    <p class="reveal-text f1 cream grifinito">From Chicago,</p>
     </div>
-    <div class="hidetext-container flex justify-center items-center">
-    <p class="reveal-text f1 cream grifinito hidetext">With <span class="chicago">Love</span></p>
+    <div class="flex justify-center items-center">
+    <p class="reveal-text-two f1 cream grifinito">With <span class="chicago">Love</span></p>
     </div>
   </div>
 
@@ -353,9 +353,7 @@
 
 </body>
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="/js/grained.min.js"></script>
-<!-- <script src="/js/smooth-scrollbar.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.0.4/dist/gsap.min.js"></script>
 <script src="/js/TweenMax.min.js"></script>
 <script src="/js/ScrollMagic.js"></script>
@@ -383,141 +381,35 @@ $("body").removeClass('noscroll');
 // gsap.set(".hidetext", {y: "100%"});
 gsap.set(".overview-text-top", {opacity: 0, y: "40%"}, 0)
 gsap.set(".overview-text-bottom", {opacity: 0, y: "-40%"}, 0)
-// gsap.set(".reveal-text", {opacity: 0}, 0)
-// gsap.set(".reveal-text-two", {opacity: 0}, 0)
+gsap.set(".reveal-text", {opacity: 0}, 0)
+gsap.set(".reveal-text-two", {opacity: 0}, 0)
 gsap.set(".reveal", {opacity: 1, yPercent: 0}, 0);
 gsap.set(".home", { y: "20%"}, 0);
 gsap.set("#desktop", {y: "-100%"});
 gsap.set(".footer-desktop", {y: "120%"});
 gsap.set(".playlist", {x: "200%"});
 gsap.set(".footer-line", {scaleX:0, transformOrigin: "left"});
-gsap.set(".chicago", {css:{color: "#fff"}});
+gsap.set(".chicago", {css:{color: "#efe8d8"}});
 
 
 timeline
     // .to(".hidetext", 1.5, {y: "0%", ease: Power4.easeOut, delay: 0.5}, 0)
-    // .to(".reveal", 2, {css:{backgroundColor: "#bccece"}, ease: Power4.easeOut, delay: 4}, 0)
-    .to(".chicago", 1, {css:{color: "#dd5a54"}, ease: Power4.easeOut, delay: 2}, 0)
-    // .to(".reveal-text", {duration: 2, opacity: "1", ease: Power4.easeInOut,}, 0)
-    // .to(".reveal-text-two", {duration: 2, opacity: "1", ease: Power4.easeInOut, delay: 1.5}, 0)
-    .to(".reveal-text", {duration: 1.5, y: "100%", ease: Power4.easeInOut, delay: 5.5}, 0)
-    .to(".reveal-text-two", {duration: 1.5, y: "100%", ease: Power4.easeInOut, delay: 5.5}, 0)
-    .to(".hidetext-container", {duration: 1.5, y: "100%", ease: Power4.easeInOut, delay: 5.5}, 0)
+    .to(".reveal-text", {duration: 2, opacity: "1", ease: Power4.easeInOut, delay: 1}, 0)
+    .to(".reveal-text-two", {duration: 2, opacity: "1", ease: Power4.easeInOut, delay: 2.5}, 0)
+    .to(".chicago", {duration: 2, css:{color: "#dd5a54"}, ease: Power4.easeOut, delay: 4.5}, 0)
+    // .to(".reveal", 2, {css:{backgroundColor: "#bccece"}, ease: Power4.easeOut, delay: 5.5}, 0)
+    .to(".reveal-text", {duration: 1.5, y: "400%", ease: Power4.easeInOut, delay: 5.5}, 0)
+    .to(".reveal-text-two", {duration: 1.5, y: "400%", ease: Power4.easeInOut, delay: 5.5}, 0)
+    // .to(".hidetext-container", {duration: 1.5, y: "100%", ease: Power4.easeInOut, delay: 5.5}, 0)
     .to(".reveal", {duration: 1.5, y: "-100%", ease: Power4.easeInOut, delay: 5.5}, 0)
     .to(".home", {duration: 1.5, y: "0%", ease: Power4.easeInOut, delay: 5.4}, 0)
-    .to("#desktop", {duration: 1, y: "0%", ease: Power4.easeOut, delay: 8}, 0)
-    .to(".overview-text-top", {duration: 1.5, opacity: 1, y: "0%", ease: Power4.easeOut, delay: 8}, 0)
-    .to(".overview-text-bottom", {duration: 1.5, opacity: 1, y: "0%", ease: Power4.easeOut, delay: 8}, 0)
-    .to(".footer-line", {duration: 1.5, scaleX:1, ease:Power4.easeInOut, delay: 9}, 0)
-    .to(".footer-desktop", {duration: 1, opacity: 1, y: "0%", ease: Power4.easeOut, delay: 8, clearProps: 'all'}, 0)
-    .to(".playlist", {duration: 2, x: "0%", clearProps: "all", ease: Power4.easeInOut, delay: 8}, 0)
+    .to("#desktop", {duration: 1, y: "0%", ease: Power4.easeOut, delay: 7}, 0)
+    .to(".overview-text-top", {duration: 1, opacity: 1, y: "0%", ease: Power4.easeOut, delay: 7}, 0)
+    .to(".overview-text-bottom", {duration: 1, opacity: 1, y: "0%", ease: Power4.easeOut, delay: 7}, 0)
+    .to(".footer-line", {duration: 1.5, scaleX:1, ease:Power4.easeInOut, delay: 7}, 0)
+    .to(".footer-desktop", {duration: 1, opacity: 1, y: "0%", ease: Power4.easeOut, delay: 7, clearProps: 'all'}, 0)
+    .to(".playlist", {duration: 2, x: "0%", clearProps: "all", ease: Power4.easeInOut, delay: 7}, 0)
   });
 </script>
-
-<!-- <script>
-// dragElement(document.getElementById("drag-image"));
-    
-//     function dragElement(elmnt) {
-//         var pos1 = 0,
-//             pos2 = 0,
-//             pos3 = 0,
-//             pos4 = 0;
-//         if (document.getElementById(elmnt.id + "header")) {
-//             // if present, the header is where you move the DIV from:
-//             document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-//         } else {
-//             // otherwise, move the DIV from anywhere inside the DIV:
-//             elmnt.onmousedown = dragMouseDown;
-//         }
-    
-//         function dragMouseDown(e) {
-//             e = e || window.event;
-//             e.preventDefault();
-//             // get the mouse cursor position at startup:
-//             pos3 = e.clientX;
-//             pos4 = e.clientY;
-//             document.onmouseup = closeDragElement;
-//             // call a function whenever the cursor moves:
-//             document.onmousemove = elementDrag;
-//         }
-    
-//         function elementDrag(e) {
-//             e = e || window.event;
-//             e.preventDefault();
-//             // calculate the new cursor position:
-//             pos1 = pos3 - e.clientX;
-//             pos2 = pos4 - e.clientY;
-//             pos3 = e.clientX;
-//             pos4 = e.clientY;
-//             // set the element's new position:
-//             elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-//             elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-//         }
-    
-//         function closeDragElement() {
-//             // stop moving when mouse button is released:
-//             document.onmouseup = null;
-//             document.onmousemove = null;
-//         }
-//     }
-    
-//     //toggle 'grab" and 'grabbing' cursors on mousedown and leave
-    
-//     const grabber = document.querySelector('#drag-image');
-    
-//     grabber.addEventListener('mousedown', () => {
-//         isDown = true;
-//         grabber.classList.add('active');
-//     });
-    
-//     grabber.addEventListener('mouseleave', () => {
-//         isDown = false;
-//         grabber.classList.remove('active');
-//     });
-    
-//     grabber.addEventListener('mouseup', () => {
-//         isDown = false;
-//         grabber.classList.remove('active');
-//     });
-    
-    //Roster Slider
-    
-    // const slider = document.querySelector('.roster');
-    // let isDown = false;
-    // let startX;
-    // let scrollLeft;
-    
-    // slider.addEventListener('mousedown', (e) => {
-    //   isDown = true;
-    //   slider.classList.add('active');
-    //   startX = e.pageX - slider.offsetLeft;
-    //   scrollLeft = slider.scrollLeft;
-    // });
-    
-    // slider.addEventListener('mouseleave', () => {
-    //   isDown = false;
-    //   slider.classList.remove('active');
-    // });
-    
-    // slider.addEventListener('mouseup', () => {
-    //   isDown = false;
-    //   slider.classList.remove('active');
-    // });
-    
-    // slider.addEventListener('mousemove', (e) => {
-    //   if(!isDown) return;
-    //   e.preventDefault();
-    //   const x = e.pageX - slider.offsetLeft;
-    //   const walk = x - startX;
-    //   slider.scrollLeft = scrollLeft - walk;
-    //   console.log(walk);
-    // });
-    
-    // $(document).ready(function(){
-    // 	$('#nav-icon').click(function(){
-    // 		$('#mobile-nav').toggleClass('open');
-    // 	});
-    // });
-    </script> -->
 
 </html>

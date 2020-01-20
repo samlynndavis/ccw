@@ -2,10 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
-body,
+/* body,
 button {
   cursor: url(/img/red_cursor.png), auto !important;
-}
+} */
 
 body {
   min-height: 100vh;
@@ -195,7 +195,8 @@ a:visited {
   transition: 0.2s ease-in-out;
 }
 
-.reveal-text {
+.reveal-text,
+.reveal-text-two {
   font-size: 10vw;
 }
 
@@ -213,10 +214,10 @@ a:visited {
   z-index: 3;
 }
 
-.bio:hover,
+/* .bio:hover,
 .roster:hover {
   cursor: url(/img/red_cursor.png), auto !important;
-}
+} */
 
 .large-photo-anna {
   background-image: url(/img/000007100004.jpg);
@@ -382,6 +383,33 @@ a:visited {
   background-size: cover;
   margin-top: 0;
 } */
+
+.stick-image {
+  position: sticky;
+  top: 0;
+}
+
+.large-copy p {
+  position: relative;
+}
+
+large-copy-text {
+  position: relative;
+}
+
+.large-copy-text::after {
+  content: '';
+  height: 1px;
+  background-color: #fff;
+  width: calc(100% + 0px);
+  display: block;
+  bottom: 10px;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  transform-origin: 0% 50%;
+  transform: scaleX(0);
+}
 
 .story-hero-liz {
   background-image: url(/img/000007230011.jpg);
@@ -650,15 +678,15 @@ transform-origin: 50% 50%;
 .hidetext-container {
   position: relative;
   overflow: hidden;
-  height: 25vw;
-  font-size: 25vw;
+  height: 15vw;
+  font-size: 15vw;
   margin: 0;
 }
 
 .hidetext {
   /* position: absolute; */
   /* text-shadow: 5px 5px 10px rgba(21, 21, 21, 0.2); */
-  font-size: 25vw;
+  font-size: 15vw;
 }
 
 .hidetext-two {

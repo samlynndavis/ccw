@@ -1,30 +1,20 @@
 const runScripts = () => {
 
-
+    // const textReveal = () => {
     // // Wrap every letter in a span
-    // var textWrapper = document.querySelector('.hidetext');
+    // var textWrapper = document.querySelector('.top-copy-liz');
     // textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
     // anime.timeline({ loop: false })
     //     .add({
-    //         targets: '.hidetext .letter',
-    //         translateY: ["1.1em", 0],
+    //         targets: '.top-copy-liz .letter',
+    //         opacity: [0, 1],
     //         easing: "easeInOutQuad",
-    //         duration: 1000,
-    //         delay: (el, i) => 50 * (i + 1)
+    //         duration: 500,
+    //         delay: (el, i) => 20 * (i + 1)
     //     });
 
-    // var textWrapper2 = document.querySelector('.hidetext-two');
-    // textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-    // anime.timeline({ loop: false })
-    //     .add({
-    //         targets: '.hidetext-two .letter',
-    //         translateY: ["1.1em", 0],
-    //         easing: "easeInOutQuad",
-    //         duration: 1000,
-    //         delay: (el, i) => 50 * (i + 1)
-    //     });
+    // }
         
        
     const aboutReveal = () => {
@@ -195,47 +185,36 @@ const runScripts = () => {
     
     });
 
-    // var bgAnna = new TimelineMax();
-                        
-    // var bgAnnaTween1 = bgAnna.to(".anna-home", { backgroundColor: "#a3512f", ease: Linear.easeNone})                     
-    // var bgAnnaTween2 = bgAnna.to(".anna-home",  { backgroundColor: "#ecd48c", ease: Linear.easeNone})               
+    var lizSlide = new TimelineMax();
 
-    // var bgAnnaScene0 = new ScrollMagic.Scene({triggerElement: ".large-copy-anna-solo", duration: 400})
-    // .setTween(bgAnnaTween1)
-    // // .setPin("#target", {pushFollowers: false})
+    var lizSlideTween = lizSlide.from(".slide-right", {x:"110%", ease: Power4.easeInOut}, 0)
+                                .from(".slide-left", {x:"-110%", ease: Power4.easeInOut}, 0)
+
+    var lizSlideScene = new ScrollMagic.Scene({triggerElement: ".large-copy-split-desktop", duration: 500})    
+    .setTween(lizSlide)
+    // .setPin("#target", {pushFollowers: false})
     // .addIndicators() // add indicators (requires plugin)
-    // .addTo(controller);
+    .addTo(controller);
 
-    // var bgLeftScene1 = new ScrollMagic.Scene({triggerElement: ".large-copy-anna-solo", duration: 800})    
-    // .setTween(bgAnnaTween2)
-    // // .setPin("#target", {pushFollowers: false})
-    // .addIndicators() // add indicators (requires plugin)
-    // .addTo(controller);
+    const splitImageCopy = () => {
+        // build tween
+        var timelineSplitter = new TimelineMax();
 
-    // var bgHomeReverse = new TimelineMax();
+            // var tween1 = timelineSplitter
+            var splitterTween = timelineSplitter.from(".splitter", 1, {opacity: 0, x:-50, ease: Power4.easeInOut})
+                                                .from(".splitter-question", 1, {opacity: 0, ease: Power4.easeInOut}, 0)
+                                                .from(".splitter-answer", 1, {opacity: 0, ease: Power4.easeInOut}, 0)
 
-    // var bgHomeReverseTween = bgHomeReverse
-    //     .to(".homepage", 1, { backgroundColor: "#fff", ease: Power4.easeInOut })
+            timelineSplitter.add(splitterTween)
 
-    // var bgHomeReverseScene = new ScrollMagic.Scene({ triggerElement: "#roster", offset: -50})
-    //     .setTween(bgHomeReverseTween)
-    //     // .setPin("#target", {pushFollowers: false})
-    //     // .addIndicators() // add indicators (requires plugin)
-    //     .addTo(controller);
-
-    // var controller = new ScrollMagic.Controller();
-
-    // var annaCopyT1 = new TimelineMax();
-
-    // annaCopyT1.from(".large-copy-anna-solo", {opacity: 0, ease: Linear.easeNone})
-
-  
-
-    // var annaCopyScene = new ScrollMagic.Scene({triggerElement: ".large-copy-anna-solo", duration: 300})    
-    // .setTween(annaCopyT1)
-    // // .setPin("#target", {pushFollowers: false})
-    // .addIndicators() // add indicators (requires plugin)
-    // .addTo(controller);
+        // build scene
+        var splitterScene = new ScrollMagic.Scene({triggerElement: ".split-image-desktop", reverse:false})
+                        .setTween(timelineSplitter)
+                        // .setPin("#target", {pushFollowers: false})
+                        // .addIndicators() // add indicators (requires plugin)
+                        .addTo(controller);
+                
+    }
 
     const lizTweens = () => {
 
@@ -330,76 +309,14 @@ const runScripts = () => {
                           .to(".social-liz", {css:{color: "#c0c2ce"}, ease: Linear.easeNone })
                           .to(".marquee span", {css:{color: "#c0c2ce"}, ease: Linear.easeNone})
                           .to(".footer-desktop", {css:{color: "#c0c2ce"}, ease: Linear.easeNone})
-                          .to(".caption-photo", {css:{color: "#bea1a5"}, ease: Linear.easeNone})
+                          .to(".caption-photo, .caption-photo a", {css:{color: "#bea1a5"}, ease: Linear.easeNone})
 
     var bgLizScene = new ScrollMagic.Scene({triggerElement: ".color-split", duration: 1000})    
     .setTween(bgLiz)
     // .setPin("#target", {pushFollowers: false})
     // .addIndicators() // add indicators (requires plugin)
     .addTo(controller);
-
-    var lizSlide = new TimelineMax();
-
-    var lizSlideTween = lizSlide.from(".liz-right", {x:"110%", ease: Power4.easeInOut}, 0)
-                                .from(".liz-left", {x:"-110%", ease: Power4.easeInOut}, 0)
-                                .from(".large-copy-split-liz", 1, {opacity: 0, ease: Linear.easeNone}, 0)
-
-    var lizSlideScene = new ScrollMagic.Scene({triggerElement: ".large-copy-split-liz-desktop", duration: 1500})    
-    .setTween(lizSlide)
-    // .setPin("#target", {pushFollowers: false})
-    // .addIndicators() // add indicators (requires plugin)
-    .addTo(controller);
     }
-
-
-const splitImageCopy = () => {
-    // build tween
-    var timelineSplitter = new TimelineMax();
-
-        // var tween1 = timelineSplitter
-        var splitterTween = timelineSplitter.from(".splitter", 1, {opacity: 0, x:-50, ease: Power4.easeInOut})
-                                            .from(".splitter-question", 1, {opacity: 0, ease: Power4.easeInOut}, 0)
-                                            .from(".splitter-answer", 1, {opacity: 0, ease: Power4.easeInOut}, 0)
-
-        timelineSplitter.add(splitterTween)
-
-    // build scene
-    var splitterScene = new ScrollMagic.Scene({triggerElement: ".split-image-desktop", reverse:false})
-                    .setTween(timelineSplitter)
-                    // .setPin("#target", {pushFollowers: false})
-                    // .addIndicators() // add indicators (requires plugin)
-                    .addTo(controller);
-            
-}
-
-
-    // const homepageFade = () => {
-
-    // var bgHome = new TimelineMax
-                        
-    // var bgHomeTween = bgHome
-    //                     .to(".homepage", { backgroundColor: "#dd5a54", ease: Linear.easeNone })                        
-    //                     .to(".salvage", { css:{textDecorationColor: "#000"}, ease: Linear.easeNone })                        
-
-    // var bgHomeScene = new ScrollMagic.Scene({triggerElement: ".bio", duration: "60%"})
-    // .setTween(bgHomeTween)
-    // // .setPin("#target", {pushFollowers: false})
-    // // .addIndicators() // add indicators (requires plugin)
-    // .addTo(controller);
-
-    // var bgHomeReverse = new TimelineMax
-
-    // var bgHomeReverseTween = bgHomeReverse
-    //     .to(".homepage", 1, { backgroundColor: "#fff", ease: Power4.easeInOut })
-
-    // var bgHomeReverseScene = new ScrollMagic.Scene({ triggerElement: "#roster", offset: -50})
-    //     .setTween(bgHomeReverseTween)
-    //     // .setPin("#target", {pushFollowers: false})
-    //     // .addIndicators() // add indicators (requires plugin)
-    //     .addTo(controller);
-    // }
-
-
 
 
     const rosterFade = () => {
@@ -432,32 +349,6 @@ const splitImageCopy = () => {
         //     .addIndicators()
         //     .addTo(controller);
     }
-    
-    // var rosterTween = new TweenMax.from('#roster', 1, {
-    //     opacity: "0",
-    //     ease: Power4.easeInOut
-    // });
-    
-    // // var overviewTween = new TweenMax.from('#overview', 2, {
-    // //     opacity: "0",
-    // //     y: "20%",
-    // //     ease: Power4.easeOut,
-    // //     delay: 0.2
-    // // });
-    
-    // var containerScene = new ScrollMagic.Scene({
-    //         triggerElement: '#roster'
-    //     })
-    //     .setTween(rosterTween)
-    //     // .addIndicators()
-    //     .addTo(controller);
-    
-    // var introScene = new ScrollMagic.Scene({
-    //         triggerElement: '#intro'
-    //     })
-    //     .setTween(overviewTween)
-    //     .addIndicators()
-    //     .addTo(controller);
 
     const mobileMenu = () => {
     
