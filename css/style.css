@@ -214,11 +214,6 @@ a:visited {
   z-index: 3;
 }
 
-/* .bio:hover,
-.roster:hover {
-  cursor: url(/img/red_cursor.png), auto !important;
-} */
-
 .large-photo-anna {
   background-image: url(/img/000007100004.jpg);
   background-size: cover;
@@ -397,7 +392,7 @@ large-copy-text {
   position: relative;
 }
 
-.large-copy-text::after {
+.scale-line::after {
   content: '';
   height: 1px;
   background-color: #fff;
@@ -1040,8 +1035,8 @@ footer.bottom {
   grid-template-rows: 24vw;
   grid-template-rows: repeat(2, 35vw);
   align-content: center;
-  cursor: pointer;
-  cursor: -webkit-pointer;
+  /* cursor: pointer;
+  cursor: -webkit-pointer; */
   transform: scale(0.98);
   transition: 250ms ease;
   position: relative;
@@ -2097,3 +2092,50 @@ screen and (max-height: 600px) {
 .show {
   visibility: visible;
 }
+
+.repeatbg {
+  overflow: hidden;
+  min-height: 500vh;
+  position: relative;    
+  display: flex;
+  justify-content: center;
+  padding: 1vw;
+}
+
+.repeatbg > p {
+  position: absolute;
+  font-size: 12vw;
+  z-index: -1;
+  text-transform: uppercase;
+}
+
+.process__piece {
+  position: absolute;
+  transform: perspective(300px) rotateX(30deg);
+}
+
+.process__piece {
+  height: 40vw;
+  width: 40vw;
+}
+
+.process__piece path {
+  fill: #e44b4b;
+  stroke: white;
+  stroke-width: 0.75px;
+}
+
+.process__piece:nth-child(1) {
+  transform: 0px 25px;
+  z-index: -1;
+  transition: 0.4s ease;
+  transition-delay: 1s;
+}
+
+.process__piece:nth-child(2) {
+  translate: 0px 50px;
+  z-index: -2;
+  transition: 0.4s ease;
+  transition-delay: 1s;
+}
+

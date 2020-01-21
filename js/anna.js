@@ -7,19 +7,31 @@ var bgAnnaReverse = new TimelineMax();
 var textAnna2 = new TimelineMax();
 var scaleLine = new TimelineMax();
 var stickImg = new TimelineMax();
-
-gsap.set(scaleLineRule, {scaleX:0, transformOrigin: "left"});
                     
 var bgAnnaTween0 = bgAnna0.to(".anna-home", { backgroundColor: "#652b22", ease: Linear.easeNone})   
 var textAnnaTween1 = textAnna.to(".top-copy", { color: "#fff", ease: Linear.easeNone})  
 var textAnnaTween2 = textAnna2.from(".large-copy-anna-solo", {opacity: 0, ease: Linear.easeNone})
-var scaleLineRule = CSSRulePlugin.getRule(".large-copy-text:after");
-var scaleLineTween = scaleLine.to(scaleLineRule, { duration: 1, cssRule: {scaleX: 1}, ease: Power4.easeInOut})        
+
+$('.scale-line').each(function () {
+
+    gsap.set(scaleLineRule, {scaleX:0, transformOrigin: "left"});
+    var scaleLineRule = CSSRulePlugin.getRule(".scale-line:after");
+    
+    // build a tween
+    var scaleLineTween = scaleLine.to($(this.scaleLineRule), { duration: 1, cssRule: {scaleX: 1}, ease: Power4.easeInOut})
+
+    var scaleLineScene = new ScrollMagic.Scene({triggerElement: this})    
+.setTween(scaleLineTween)
+// .setPin("#target", {pushFollowers: false})
+// .addIndicators() // add indicators (requires plugin)
+.addTo(controller);
+
+});       
 
 var bgAnnaScene0 = new ScrollMagic.Scene({triggerElement: ".large-copy-anna-solo", duration: 200})
 .setTween(bgAnnaTween0)
 // .setPin("#target", {pushFollowers: false})
-.addIndicators() // add indicators (requires plugin)
+// .addIndicators() // add indicators (requires plugin)
 .addTo(controller);
 
 var textAnnaScene1 = new ScrollMagic.Scene({triggerElement: ".large-copy-anna-solo", duration: 200})    
@@ -34,15 +46,9 @@ var textAnnaScene2 = new ScrollMagic.Scene({triggerElement: ".large-copy-anna-so
 // .addIndicators() // add indicators (requires plugin)
 .addTo(controller);
 
-var scaleLineScene = new ScrollMagic.Scene({triggerElement: ".large-copy-text"})    
-.setTween(scaleLineTween)
-// .setPin("#target", {pushFollowers: false})
-// .addIndicators() // add indicators (requires plugin)
-.addTo(controller);
-
 var stickScene = new ScrollMagic.Scene({triggerElement: ".stick-image", offset: 350, duration: 3500})
 .setPin(".stick-image", {pushFollowers: false})
-.addIndicators({name: "Sticky Image"}) // add indicators (requires plugin)
+// .addIndicators({name: "Sticky Image"}) // add indicators (requires plugin)
 .addTo(controller);
 
 var bgStickScrollT1 = new TimelineMax();
@@ -67,19 +73,19 @@ bgStickScrollT4.to(".anna-home", {backgroundColor: "#ecd48c", ease: Linear.easeN
 var bgStickScene0 = new ScrollMagic.Scene({triggerElement: ".repeatbg", offset: 500, duration: 500})    
 .setTween(bgStickScrollT1)
 // .setPin("#target", {pushFollowers: false})
-.addIndicators() // add indicators (requires plugin)
+// .addIndicators() // add indicators (requires plugin)
 .addTo(controller);
 
 var bgStickScene1 = new ScrollMagic.Scene({triggerElement: ".repeatbg", offset: 1800, duration: 500})    
 .setTween(bgStickScrollT2)
 // .setPin("#target", {pushFollowers: false})
-.addIndicators() // add indicators (requires plugin)
+// .addIndicators() // add indicators (requires plugin)
 .addTo(controller);
 
 var bgStickScene2 = new ScrollMagic.Scene({triggerElement: ".repeatbg", offset: 2800, duration: 500})    
 .setTween(bgStickScrollT3)
 // .setPin("#target", {pushFollowers: false})
-.addIndicators() // add indicators (requires plugin)
+// .addIndicators() // add indicators (requires plugin)
 .addTo(controller);
 
 var bgRightScene = new ScrollMagic.Scene({triggerElement: ".repeatbg", offset: 3300, duration: 500})    
@@ -113,8 +119,8 @@ picT0.to(".pic-0", {css:{className:'+=hide'}})
 
 picT1.to(".pic-1", {css:{className:'+=show'}})
 
-picT2.to(".pic-2", {css:{className:'+=show'}})
-     .to(".pic-1", {css:{className:'+=hide'}})
+picT2.to(".pic-2", {css:{className:'+=show'}}, 0)
+     .to(".pic-1", {css:{className:'+=hide'}}, 0)
 
 picT3.to(".pic-3", {css:{className:'+=show'}}, 0)
      .to(".pic-2", {css:{className:'+=hide'}}, 0)
