@@ -1,7 +1,7 @@
 
   const timeline = gsap.timeline();
 
-  gsap.set(".process.main path", {fill:"#FFD1A9", stroke:"#FFD1A9"})
+  gsap.set(".process.main path", {fill:"#C23B22", stroke:"#C23B22"})
 
 var processTween = timeline
                       .to(".process.main path", { duration: 2, fill:"#201f1d", ease: Power4.easeInOut, delay:1})
