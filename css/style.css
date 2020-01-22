@@ -2109,33 +2109,74 @@ screen and (max-height: 600px) {
   text-transform: uppercase;
 }
 
-.process__piece {
+.process {
   position: absolute;
+  height: 60vw;
+  width: 60vw;
   transform: perspective(300px) rotateX(30deg);
+  opacity: 0;
+  will-change: transform;
 }
 
-.process__piece {
-  height: 40vw;
-  width: 40vw;
+.process.main path {
+  fill: #fff;
 }
 
-.process__piece path {
+.process.main {
+  opacity: 1;
+}
+
+.process path {
   fill: #e44b4b;
   stroke: white;
-  stroke-width: 0.75px;
+  stroke-width: 0.5px;
 }
 
-.process__piece:nth-child(1) {
-  transform: 0px 25px;
+.process:nth-child(1) {
   z-index: -1;
-  transition: 0.4s ease;
-  transition-delay: 1s;
 }
 
-.process__piece:nth-child(2) {
-  translate: 0px 50px;
+.process:nth-child(2) {
   z-index: -2;
-  transition: 0.4s ease;
-  transition-delay: 1s;
+}
+
+.process:nth-child(3) {
+  z-index: -3;
+}
+
+.process:nth-child(4) {
+  z-index: -4;
+}
+
+.process:nth-child(5) {
+  z-index: -5;
+}
+
+.process:nth-child(6) {
+  z-index: -6;
+}
+
+.process:nth-child(7) {
+  z-index: -7;
+}
+
+.process:nth-child(8) {
+  z-index: -8;
+}
+
+.process:nth-child(9) {
+  z-index: -9;
+}
+
+.process:nth-child(10) {
+  z-index: -10;
+}
+
+.process:nth-child(11) {
+  z-index: -11;
+}
+
+.process:nth-child(12) {
+  z-index: -12;
 }
 
