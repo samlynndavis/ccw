@@ -772,6 +772,10 @@ footer.bottom {
   background: #ffefe5;
 }
 
+.bg-laura-black {
+  background: #201f1d;
+}
+
 .text-laura {
   color: #1fc8a9;
 }
@@ -784,6 +788,18 @@ footer.bottom {
 .bg-nev-cream {
   background-color: #fedccc;
   background-color: #fedccc;
+}
+
+.bg-nev-black {
+  background-color: #1C1C1C;
+}
+
+.bg-nev-yellow {
+  background-color: #FFE001;
+}
+
+.bg-nev-green {
+  background-color: #675118;
 }
 
 .bg-no10 {
@@ -815,7 +831,7 @@ footer.bottom {
 }
 
 .bg-mia {
-  background-color: #e44b4b;
+  background-color: #201f1d;
 }
 
 .bg-liz {
@@ -837,10 +853,11 @@ footer.bottom {
 .text-nev {
   color: #d5514f;
   color: #bd7133;
+  color: #FFB606;
 }
 
 .text-mia {
-  color: #d1e9e3;
+  color: #FFD1A9;
 }
 
 .hero-text-liz {
@@ -2055,9 +2072,9 @@ screen and (max-height: 600px) {
   color: #c0c2ce;
 }
 
-.left-side p {
+/* .left-side p {
   font-size: 5vw;
-}
+} */
 
 .splitter-question,
 .splitter-answer {
@@ -2127,8 +2144,7 @@ screen and (max-height: 600px) {
 }
 
 .process path {
-  fill: #e44b4b;
-  stroke: white;
+  stroke: #FFD1A9;
   stroke-width: 0.5px;
 }
 

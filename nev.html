@@ -153,6 +153,23 @@
           </div>
         </div>
 
+        <div class="flex liz-wrapper pb6">
+          <div style="background-color: #f4ecc5;" class="left-side tc vh-100 f1 bg-black w-50 overflow-y-hidden pa3">
+            <div>
+              <p style="font-size: 8vw; color: #FFB700; line-height: 6.1vw;"></p>
+            </div>
+          </div>
+          <div style="background-color: #FFB606;" class="right-side tc pa3 w-50 text-liz">
+            <p style="font-size: 8vw; color: #1C1C1C;">With Cuban and Guatemalan roots, Chicago darling Nev Rosales blends her deep Latina soul with slick beats and elegant vocals, winding you into an atmosphere far above the clouds.</p>
+          </div>
+        </div>
+  
+        <div class="flex liz-wrapper-mobile pb5">
+          <div class="right-side f1 tc pa3 w-100 text-liz">
+            <p>With Cuban and Guatemalan roots, Chicago darling Nev Rosales blends her deep Latina soul with slick beats and elegant vocals, winding you into an atmosphere far above the clouds.</p>
+          </div>
+        </div>
+
         <div class="large-copy-split w-100 flex flex-column ph3 pv6 justify-between items-start">
           <div class="large-copy w-50 ph4">
             <blockquote>
@@ -182,12 +199,12 @@
         </div>
 
         <div class="color-split w-100 flex pv6">
-          <div class="w-50 flex flex-column justify-center items-center photo photo-pair bg-black">
+          <div class="w-50 flex flex-column justify-center items-center photo photo-pair bg-nev-green">
             <img src="/img/000007140019.jpg">
             <span class="pt3 f6 caption-photo">photo by <a href="https://www.instagram.com/jessicawlevin" rel="noopener"
                 target="_blank">Jessica Levin</a></span>
           </div>
-          <div class="w-50 flex flex-column justify-center photo photo-pair items-center bg-black">
+          <div class="w-50 flex flex-column justify-center photo photo-pair items-center bg-nev-black">
             <img src="/img/000007140021.jpg">
             <span class="pt3 f6 caption-photo">photo by <a href="https://www.instagram.com/jessicawlevin" rel="noopener"
                 target="_blank">Jessica Levin</a></span>
@@ -252,19 +269,7 @@
           <div class="top-copy w-50 ph4 self-end">
             <p class="lh-copy copy relative">Most of the time ideas come in unexpected moments. When I'm washing the dishes, driving, or getting ready to go somewhere. I'm so thankful for those moments.</p>
           </div>
-        </div>
-
-        <div class="image-caption-overlay w-100 flex ph4 pt6 pb2 flex-column">
-          <div class="photo large-photo-nev w-100 min-vh-100 flex justify-center items-center">
-            <!-- <div class="w-80 pa4">
-              <p class="f1 tc lh-copy photo photo-caption cream">I love working with my hands. I love making
-                things that are not only nice to look at, but pleasing to touch. It’s really therapeutic too. I always
-                say it’s like a really slow painting. Each stitch is one small stroke.</p>
-            </div> -->
-          </div>
-          <span class="pt3 f6 tc caption-photo">photo by <a href="https://www.instagram.com/jessicawlevin"
-              rel="noopener" target="_blank">Jessica Levin</a></span>
-        </div>        
+        </div>       
 
         <div class="flex items-center justify-center pa4 social">
           <div class="flex justify-between">
@@ -319,7 +324,7 @@
       </div>
     </div> 
     <div class="flex ph5">
-      <div style="border-top: 1px solid #bd7133;" class="footer-line pb2 w-100"></div>
+      <div style="border-top: 1px solid #FFB606;" class="footer-line pb2 w-100"></div>
     </div>
     <div class="footer-text flex f7 ttu justify-between ph5 helvetica fw4 pv2">
       <div class="flex">
@@ -331,14 +336,14 @@
 
           .fil0 {fill:#000000}
          
-        </style></defs><g><polygon class="fil0" points="670,584 423,263 176,584 "></polygon></g></svg></span></a> 
+        </style></defs><g><polygon style="fill:#FFB606;" class="fil0" points="670,584 423,263 176,584 "></polygon></g></svg></span></a> 
     </div>
     </div>
   </footer>
 
   <footer class="footer-mobile pt4 flex flex-column w-100 white">
     <div class="flex ph5">
-      <div style="border-top: 1px solid #bd7133;" class="pb2 w-100"></div>
+      <div style="border-top: 1px solid #FFB606;" class="pb2 w-100"></div>
     </div>
     <div class="footer-text flex f7 ttu justify-between ph5 helvetica fw4 pv2">
       <p>&copy 2020 Whitney Magazine. All Rights Reserved.</p>
@@ -372,6 +377,17 @@
   }
 
   makeMarquee()
+</script>
+
+<script>
+  function repeatLeft() {
+    const title = '<p>  Most of the time ideas come in unexpected moments.</p>'
+    const marqueeText = new Array(30).fill(title).join('')
+
+    document.querySelector('.left-side p').innerHTML = marqueeText
+  }
+
+  repeatLeft()
 </script>
 
 </html>

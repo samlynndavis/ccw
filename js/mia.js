@@ -1,10 +1,10 @@
 
   const timeline = gsap.timeline();
 
-  gsap.set(".process.main path", {fill:"#fff"})  
+  gsap.set(".process.main path", {fill:"#FFD1A9", stroke:"#FFD1A9"})
 
 var processTween = timeline
-                      .to(".process.main path", { duration: 2, fill:"#e44b4b", ease: Power4.easeInOut, delay:1})
+                      .to(".process.main path", { duration: 2, fill:"#201f1d", ease: Power4.easeInOut, delay:1})
                       .to(".process:nth-child(1)", {duration: 2, opacity: 1, translateY:"25px", ease: Power4.easeInOut, delay:2}, 0)
                       .to(".process:nth-child(2)", {duration: 2, opacity: 1, translateY:"50px", ease: Power4.easeInOut, delay:2}, 0)
                       .to(".process:nth-child(3)", {duration: 2, opacity: 1, translateY:"75px", ease: Power4.easeInOut, delay:2}, 0)
@@ -20,7 +20,7 @@ var processTween = timeline
 
 var controller = new ScrollMagic.Controller();
 
-var processScene = new ScrollMagic.Scene({ triggerElement: ".process.main", offset:-300, duration: 1000 })
+var processScene = new ScrollMagic.Scene({ triggerElement: ".process.main", offset:-400, duration: 1000 })
   .setTween(processTween)
   // .setPin("#target", {pushFollowers: false})
   .addIndicators() // add indicators (requires plugin)

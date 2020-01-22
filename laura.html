@@ -155,6 +155,23 @@
           </div>
         </div>
 
+        <div class="flex liz-wrapper pb6">
+          <div style="background-color: #FFEFE5;" class="left-side tc vh-100 f1 bg-black w-50 overflow-y-hidden pa3">
+            <div>
+              <p style="font-size: 8vw; color: #FFB700; line-height: 6.1vw;"></p>
+            </div>
+          </div>
+          <div style="background-color: #1fc8a9;" class="right-side tc pa3 w-50 text-liz">
+            <p style="font-size: 8vw; color: #FFEFE5;">Colombian-born Laura Sofia Cardozo is a Renaissance woman. Impacting not only Chicago, but cities across the country, her delicate intersection of art and social justice breeds powerful energy and creates space to uplift the community vanguard she protects.</p>
+          </div>
+        </div>
+  
+        <div class="flex liz-wrapper-mobile pb5">
+          <div class="right-side f1 tc pa3 w-100 text-liz">
+            <p>Colombian-born Laura Sofia Cardozo is a Renaissance woman. Impacting not only Chicago, but cities across the country, her delicate intersection of art and social justice breeds powerful energy and creates space to uplift the community vanguard she protects.</p>
+          </div>
+        </div>
+
         <div class="large-copy-split w-100 flex flex-column ph3 photo-pair pv6 justify-center items-center">
           <!-- <img src="/img/000007140030.jpg" class="splitter"> -->
           <div class="large-copy w-50 ph4 self-start ">
@@ -173,7 +190,7 @@
             <span class="pt3 f6 caption-photo">photo by <a href="https://www.instagram.com/jessicawlevin" rel="noopener"
                 target="_blank">Jessica Levin</a></span>
           </div>
-          <div class="w-50 flex flex-column justify-center photo photo-pair items-center bg-black">
+          <div class="w-50 flex flex-column justify-center photo photo-pair items-center bg-laura-black">
             <img src="/img/000007130013.jpg">
             <span class="pt3 f6 caption-photo">photo by <a href="https://www.instagram.com/jessicawlevin" rel="noopener"
                 target="_blank">Jessica Levin</a></span>
@@ -379,6 +396,17 @@
   }
 
   makeMarquee()
+</script>
+
+<script>
+  function repeatLeft() {
+    const title = '<p>  Dream, Strategize, Do.</p>'
+    const marqueeText = new Array(30).fill(title).join('')
+
+    document.querySelector('.left-side p').innerHTML = marqueeText
+  }
+
+  repeatLeft()
 </script>
 
 </html>
