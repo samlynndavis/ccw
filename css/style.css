@@ -552,7 +552,7 @@ large-copy-text {
 }
 
 .story-hero-nev-right{
-  background-image: url(/img/bg_nev.jpg);
+  background-image: url(/img/bg_nev_4.jpg);
   background-size: cover;
   background-position: 50% 10%;
   height: 100%;
@@ -783,11 +783,6 @@ footer.bottom {
 .bg-nev {
   background-color: #f4ecc5;
   background-color: #f4ecc5;
-}
-
-.bg-nev-cream {
-  background-color: #fedccc;
-  background-color: #fedccc;
 }
 
 .bg-nev-black {
@@ -2195,4 +2190,59 @@ screen and (max-height: 600px) {
 .process:nth-child(12) {
   z-index: -12;
 }
+
+.strip {
+  position:absolute;
+  display:inline-block;
+  font-size:10vw;
+  padding:0rem 2rem;
+  background-color:#000;
+  /* color:#fff; */
+  /* text-transform:uppercase;
+  font-style:italic; */
+  font-weight:700;
+  width: auto;
+ }
+
+ .strip.-one {
+  top:37%;
+  transform:translateX(-30vw) rotate(-20deg);
+  z-index:9
+ }
+ .strip.-two {
+  top:20%;
+  right:0;
+  transform:translateX(-20vw) rotate(12deg)
+ }
+ .strip.-three {
+  top:75%;
+  transform:translateX(-14vw) rotate(4deg)
+ }
+ .strip.-four {
+  top:55%;
+  transform:translateX(10vw) rotate(-10deg)
+ }
+ .strip.-five {
+  top:5%;
+  transform:translateX(-5vw) rotate(-10deg)
+ }
+ .strip.-six {
+  top:15%;
+  right:0;
+  transform:translateX(2vw) rotate(-5deg)
+ }
+ .strip.-seven {
+  top:45%;
+  transform:translateX(5vw) rotate(-10deg)
+ }
+ .strip.-eight {
+  top:85%;
+  left:0;
+  transform:translateX(-10vw) rotate(10deg)
+ }
+ .strip.-nine {
+  top:82.5%;
+  right:0;
+  transform:translateX(5vw) rotate(-3deg)
+ }
 
