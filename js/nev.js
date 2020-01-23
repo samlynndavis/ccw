@@ -27,11 +27,13 @@
    // };
 
 const stickerScroll = () => {
- var controller = new ScrollMagic.Controller();
+//  var controller = new ScrollMagic.Controller();
 
  const stickerMove = new gsap.timeline({
+  paused: true,
+  reversed: true,
    defaults: {
-     delay: 0.5
+     delay: 0.2
    }
  });
 
@@ -82,12 +84,25 @@ const stickerScroll = () => {
        ease: Power4.easeInOut
      }, 0)
 
-     var stickerScene = new ScrollMagic.Scene({triggerElement: "#strips", offset: 300})    
-    .setTween(stickerMove)
-    // .setPin("#target", {pushFollowers: false})
-    .addIndicators() // add indicators (requires plugin)
-    .addTo(controller);
+     $(".nev-sticker").mouseenter(function(){
+      stickerMove.play()
+     });
 
-  }
+     $(".nev-sticker").mouseleave(function(){
+      stickerMove.reverse();
+     });
+
+    }
+     
+    //  $(".nev-sticker").addEventListener("mouseout", mouseOut);
+    
+
+  //    var stickerScene = new ScrollMagic.Scene({triggerElement: "#strips", offset: 300})    
+  //   .setTween(stickerMove)
+  //   // .setPin("#target", {pushFollowers: false})
+  //   .addIndicators() // add indicators (requires plugin)
+  //   .addTo(controller);
+
+  // }
 
   stickerScroll();
