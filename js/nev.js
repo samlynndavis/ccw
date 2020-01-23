@@ -31,7 +31,7 @@ const stickerScroll = () => {
 
  const stickerMove = new gsap.timeline({
    defaults: {
-     delay: 1
+     delay: 0.5
    }
  });
 
