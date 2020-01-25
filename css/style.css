@@ -135,11 +135,12 @@ a:visited {
   font-style: normal;
 }
 
-.grifinito-light { /* replace with your selector */
-	font-family: "Grifinito M Light";
+.grifinito-italic { /* replace with your selector */
+	font-family: "Grifinito M Medium Italic";
 	font-weight: normal;
 	font-style: normal;
 }
+
 
 
 .zeit {
@@ -776,8 +777,24 @@ footer.bottom {
   background: #201f1d;
 }
 
+.bg-laura-green {
+  background-color: #1fc8a9;
+}
+
+.bg-laura-yellow {
+  background-color: #FFB700;
+}
+
 .text-laura {
   color: #1fc8a9;
+}
+
+.text-laura-yellow {
+  color: #FFB700;
+}
+
+.text-laura-cream {
+  color: #FFEFE5;
 }
 
 .bg-nev {
@@ -791,6 +808,10 @@ footer.bottom {
 
 .bg-nev-yellow {
   background-color: #FFE001;
+}
+
+.bg-nev-yorange {
+  background-color: #FFB606;
 }
 
 .bg-nev-green {
@@ -822,7 +843,7 @@ footer.bottom {
   background-color: #ddc7c2;
   background-color: #e3b79a;
   background-color: #ecd48c;
-  /* background-color: #e6e6e6; */
+  background-color: #e9a808;
 }
 
 .bg-mia {
@@ -843,6 +864,10 @@ footer.bottom {
 
 .text-anna {
   color: #652b22;
+}
+
+.text-anna-green {
+  color: #8a8423;
 }
 
 .text-nev {
@@ -869,10 +894,19 @@ footer.bottom {
 
 .bg-mia-grey {
   background-color: #cfcfcf;
+  background-color: #201f1d;
 }
 
 .bg-mia-blue {
   background-color: #bfdaea;
+}
+
+.bg-mia-blush {
+  background-color: #FFD1A9;
+}
+
+.bg-mia-red {
+  background-color: #C23B22;
 }
 
 .bg-mia-black {
@@ -881,6 +915,10 @@ footer.bottom {
 
 .bg-anna-brown {
   background-color: #b56434;
+}
+
+.bg-anna-cream {
+  background-color: #ecd48c;
 }
 
 .bg-anna-yellow {
@@ -894,6 +932,7 @@ footer.bottom {
   background-color: #424635;
   background-color: #636447;
   background-color: #90ae85;
+  background-color: #8a8423;
 }
 
 .bg-anna-rust {
@@ -1572,7 +1611,7 @@ footer.bottom {
   }
 
   main {
-    padding-bottom: 6vw;
+    padding-bottom: 4vw;
   }
 
   .bio-mobile {
@@ -2131,7 +2170,7 @@ screen and (max-height: 600px) {
 }
 
 .process.main path {
-  fill: #fff;
+  fill: #C23B22;
 }
 
 .process.main {
@@ -2140,6 +2179,7 @@ screen and (max-height: 600px) {
 
 .process path {
   stroke: #C23B22;
+  fill: #FFD1A9;
   stroke-width: 0.5px;
 }
 
@@ -2246,3 +2286,89 @@ screen and (max-height: 600px) {
   transform:translateX(5vw) rotate(-3deg)
  }
 
+ .item__img {
+   background-image: url(/img/000007080004.jpg);
+   background-position: center;
+   background-size: cover;
+
+   top: 0;
+   right: 0;
+
+ }
+
+ .comm-left.small {
+   width: 50%;
+ }
+
+ svg.question_mia {
+   width: 15vw;
+   height: 15vw;
+
+   animation: rotation 10s infinite linear;
+
+ }
+
+ svg.question_mia path {
+   fill: #C23B22;
+ }
+
+ @keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+/* .blur {
+	-webkit-filter: url("#blur");
+	filter: url("../mia.html#blur");
+} */
+
+svg.question_laura {
+  width: 10vw;
+  height: 10vw;
+
+  animation: rotation 10s infinite linear;
+}
+
+/* svg.question_laura path {
+  fill: #FFB700;
+} */
+
+.question_laura {
+  bottom: 60px;
+  left: 110px;
+}
+/* svg.question_laura path {
+  padding: 5px;
+  overflow: hidden;
+
+  background: linear-gradient(
+    45deg,
+    #FFB700,
+    #1fc8a9
+  );
+  background-size: 300% 300%;
+  -webkit-animation: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+} */

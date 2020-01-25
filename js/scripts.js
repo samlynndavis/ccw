@@ -178,7 +178,7 @@ const runScripts = () => {
     
         // build a scene
         var scene = new ScrollMagic.Scene({
-                triggerElement: this
+                triggerElement: this, reverse: false
             })
             .setTween(fadeTween) // trigger a TweenMax.to tween
             .addTo(controller);
@@ -451,7 +451,6 @@ mybutton.addEventListener("click", function () {
 $(document).ready(function() {
     if($('body').hasClass('homepage')){
       rosterFade();
-      homepageFade();
     }
     if($('body').hasClass('liz-home'))  {
         lizTweens();

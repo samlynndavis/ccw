@@ -33,7 +33,6 @@ const stickerScroll = () => {
   paused: true,
   reversed: true,
    defaults: {
-     delay: 0.2
    }
  });
 
