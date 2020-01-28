@@ -166,6 +166,76 @@ const runScripts = () => {
     });
 
 }    
+
+const dragImage2 = () => {
+    // Drag intro image around screen
+    
+    dragElement(document.getElementById("drag-image-2"));
+    
+    function dragElement(elmnt) {
+        var pos1 = 0,
+            pos2 = 0,
+            pos3 = 0,
+            pos4 = 0;
+        if (document.getElementById(elmnt.id + "header")) {
+            // if present, the header is where you move the DIV from:
+            document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+        } else {
+            // otherwise, move the DIV from anywhere inside the DIV:
+            elmnt.onmousedown = dragMouseDown;
+        }
+    
+        function dragMouseDown(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // get the mouse cursor position at startup:
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            document.onmouseup = closeDragElement;
+            // call a function whenever the cursor moves:
+            document.onmousemove = elementDrag;
+        }
+    
+        function elementDrag(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // calculate the new cursor position:
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            // set the element's new position:
+            elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+            elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+        }
+    
+        function closeDragElement() {
+            // stop moving when mouse button is released:
+            document.onmouseup = null;
+            document.onmousemove = null;
+        }
+    }
+    
+    //toggle 'grab" and 'grabbing' cursors on mousedown and leave
+    
+    const grabber = document.querySelector('#drag-image-2');
+    
+    grabber.addEventListener('mousedown', () => {
+        isDown = true;
+        grabber.classList.add('active');
+    });
+    
+    grabber.addEventListener('mouseleave', () => {
+        isDown = false;
+        grabber.classList.remove('active');
+    });
+    
+    grabber.addEventListener('mouseup', () => {
+        isDown = false;
+        grabber.classList.remove('active');
+    });
+
+}  
     
     // init controller
     var controller = new ScrollMagic.Controller();
@@ -208,7 +278,7 @@ const runScripts = () => {
             timelineSplitter.add(splitterTween)
 
         // build scene
-        var splitterScene = new ScrollMagic.Scene({triggerElement: ".split-image-desktop", reverse:false})
+        var splitterScene = new ScrollMagic.Scene({triggerElement: ".split-image-desktop", duration: 500, reverse:false})
                         .setTween(timelineSplitter)
                         // .setPin("#target", {pushFollowers: false})
                         // .addIndicators() // add indicators (requires plugin)
@@ -460,7 +530,10 @@ $(document).ready(function() {
     }
     if ($("#drag-image").length > 0) {
         dragImage();
-    } else {
+    } else if ($("#drag-image-2").length > 0) {
+        dragImage2();
+    }
+      else {
         console.log('NOT HERE');  
     }
   });

@@ -34,12 +34,12 @@ var processScene = new ScrollMagic.Scene({ triggerElement: ".process.main", offs
   gsap.set(".question-spin-mia", {y:"10%", opacity: 0})
 
   var commTween = commSlide
-                        .to(".comm-left", {duration: 2, x:"0%", ease: Power4.easeOut}, 0)
-                        .to(".item__img", {duration: 2.5, x:"0%", ease: Power4.easeOut, delay: 0.1}, 0)
-                        .to(".comm-left p", {duration: 4, opacity: 1, y:"0%", ease: Power4.easeOut, delay: 0.1}, 0)
-                        .to(".question-spin-mia", {duration: 2, opacity: 1, y:"0%", ease: Power4.easeOut, delay: 3}, 0)
+                        .to(".comm-left", {duration: 2, x:"0%", ease: Power4.easeOut, delay: 1}, 0)
+                        .to(".item__img", {duration: 2.5, x:"0%", ease: Power4.easeOut, delay: 1.1}, 0)
+                        .to(".comm-left p", {duration: 4, opacity: 1, y:"0%", ease: Power4.easeOut, delay: 1.1}, 0)
+                        .to(".question-spin-mia", {duration: 2, opacity: 1, y:"0%", ease: Power4.easeOut, delay: 0.5}, 0)
 
-                        var commScene = new ScrollMagic.Scene({ triggerElement: ".comm-left", offset: -100, reverse: false})
+                        var commScene = new ScrollMagic.Scene({ triggerElement: ".comm-left", offset: -200, reverse: false})
                         .setTween(commTween)
                         // .setPin("#target", {pushFollowers: false})
                         // .addIndicators() // add indicators (requires plugin)
@@ -51,16 +51,12 @@ var processScene = new ScrollMagic.Scene({ triggerElement: ".process.main", offs
   gsap.set(".commslide-right", {x:"100%"})
   gsap.set(".comm-img", {y:"300%", opacity: 0})
   gsap.set(".commslide-left p", {y:"300%", opacity: 0})
-  gsap.set(".commslide-right p", {opacity: 0})
-  // gsap.set(".question-spin", {y:"10%", opacity: 0})
 
   var commTween2 = commSlide2
                         .to(".commslide-left", {duration: 2, x:"0%", ease: Power4.easeOut}, 0)
                         .to(".commslide-right", {duration: 2, x:"0%", ease: Power4.easeOut}, 0)
-                        .to(".commslide-right p", {duration: 3, opacity: 1, ease: Power4.easeOut, delay: 0.8}, 0)
-                        .to(".comm-img", {duration: 3, y:"0%", opacity: 1, ease: Power4.easeOut, delay: 0.5}, 0)
+                        .to(".comm-img", {duration: 3, y:"0%", opacity: 1, ease: Power4.easeOut, delay: 0.2}, 0)
                         .to(".commslide-left p", {duration: 3, opacity: 1, y:"0%", ease: Power4.easeOut, delay: 0.5}, 0)
-                        .to(".question-spin", {duration: 2, opacity: 1, y:"0%", ease: Power4.easeOut, delay: 3}, 0)
 
                         var commScene = new ScrollMagic.Scene({ triggerElement: ".commslide-left", offset: -100, reverse: false})
                         .setTween(commTween2)
@@ -77,7 +73,7 @@ var bgMiaTween = bgMia
                     .to(".mia-home", {duration: 2, css:{backgroundColor: "#FFD1A9"}})
                     .to(".top-copy p", {css:{color: "#C23B22" }})
 
-var miaScene = new ScrollMagic.Scene({ triggerElement: ".process-pieces", offset: -50, duration: 200, reverse: true})
+var miaScene = new ScrollMagic.Scene({ triggerElement: ".process-pieces", offset: -50, duration: 200, reverse: false})
 .setTween(bgMiaTween)
 // .setPin("#target", {pushFollowers: false})
 // .addIndicators() // add indicators (requires plugin)
@@ -89,7 +85,7 @@ var bgMiaTween2 = bgMia2
                     .to(".mia-home", {duration: 2, css:{backgroundColor: "#201f1d"}})
                     .to(".top-copy p", {css:{color: "#C23B22" }})
 
-var miaScene2 = new ScrollMagic.Scene({ triggerElement: ".commslide-left", offset: 400, duration: 200, reverse: true})
+var miaScene2 = new ScrollMagic.Scene({ triggerElement: ".commslide-left", offset: 800, duration: 200, reverse: true})
 .setTween(bgMiaTween2)
 // .setPin("#target", {pushFollowers: false})
 // .addIndicators() // add indicators (requires plugin)

@@ -141,6 +141,10 @@ a:visited {
 	font-style: normal;
 }
 
+.cormo {
+  font-family: 'Cormorant', serif;
+}
+
 
 
 .zeit {
@@ -181,6 +185,12 @@ a:visited {
 
 .footer-desktop {
   padding-top: 0;
+
+  opacity: 0;
+  animation-name: fadein;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 800ms;
 }
 
 .story-title {
@@ -335,6 +345,34 @@ a:visited {
   cursor: -webkit-grabbing;
 }
 
+#drag-image-2 {
+  background-position: 52% 43%;
+  background-image: url(/img/000007100005.jpg);
+  height: calc(50vw - 316px);
+  min-height: calc(20vw - 316px);
+  max-height: calc(1400px - 316px);
+  position: absolute;
+  background-size: cover;
+  width: auto;
+  z-index: 2;
+  left: 20%;
+  top: 30%;
+  margin-top: 0;
+
+  border: 1px solid white;
+}
+
+#drag-image-2:hover {
+  cursor: grab;
+  cursor: -webkit-grab;
+  z-index: 2;
+}
+
+#drag-image-2.active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+
 #intro-image {
   background-position: 52% 43%;
   background-image: url(/img/000007230011.jpg);
@@ -389,9 +427,15 @@ a:visited {
   position: relative;
 }
 
-large-copy-text {
-  position: relative;
+.large-copy-text:hover {
+  z-index: 3;
 }
+
+.top-copy:hover {
+  z-index: 3;
+}
+
+
 
 .scale-line::after {
   content: '';
@@ -531,7 +575,6 @@ large-copy-text {
 
 .story-hero-nev-left{
   background-image: url(/img/000007120010b.jpg);
-  background-image: url(/img/000007120010b.jpg);
   background-size: cover;
   background-position: 50% 10%;
   height: 100%;
@@ -553,7 +596,7 @@ large-copy-text {
 }
 
 .story-hero-nev-right{
-  background-image: url(/img/bg_nev_4.jpg);
+  background-image: url(/img/bg_nev.jpg);
   background-size: cover;
   background-position: 50% 10%;
   height: 100%;
@@ -839,11 +882,8 @@ footer.bottom {
 }
 
 .bg-anna {
-  background-color: #dcd1b4;
-  background-color: #ddc7c2;
-  background-color: #e3b79a;
   background-color: #ecd48c;
-  background-color: #e9a808;
+  background-color: #e7ded5;
 }
 
 .bg-mia {
@@ -867,7 +907,15 @@ footer.bottom {
 }
 
 .text-anna-green {
-  color: #8a8423;
+  color: #93926d;
+}
+
+.text-anna-brown {
+  color: #e3b79a;
+}
+
+.text-anna-yellow {
+  color: #fdd630;
 }
 
 .text-nev {
@@ -914,25 +962,21 @@ footer.bottom {
 }
 
 .bg-anna-brown {
-  background-color: #b56434;
+  background-color: #d0b298;
 }
 
 .bg-anna-cream {
   background-color: #ecd48c;
+  background-color: #e7ded5;
 }
 
 .bg-anna-yellow {
   background-color: #f0cf61;
   background-color: #ecd48c;
-  /* background-color: #dcd1b4; */
 }
 
 .bg-anna-green {
-  background-color: #2f3924;
-  background-color: #424635;
-  background-color: #636447;
-  background-color: #90ae85;
-  background-color: #8a8423;
+  background-color: #93926d;
 }
 
 .bg-anna-rust {
@@ -943,6 +987,12 @@ footer.bottom {
   font-size: 3vw;
   overflow: hidden;
   background-color: transparent;
+
+  opacity: 0;
+  animation-name: fadein;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 800ms;
 }
 
 .caption {
@@ -2341,34 +2391,32 @@ svg.question_laura {
   bottom: 60px;
   left: 110px;
 }
-/* svg.question_laura path {
-  padding: 5px;
-  overflow: hidden;
 
-  background: linear-gradient(
-    45deg,
-    #FFB700,
-    #1fc8a9
-  );
-  background-size: 300% 300%;
-  -webkit-animation: gradient 15s ease infinite;
-  animation: gradient 15s ease infinite;
+.anna-ball span {
+  height: 30vw;
+  width: 30vw;
+  position: absolute;
+  border-radius: 07151986%;
+  background-color: #FFB700;
+  background-color: #fdd630;
 
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  top: 150px;
+  left: 130px;
+
+  animation: pulse 20s infinite linear;
+
+  box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
+.anna-vid {
+  height: calc(40vw - 316px);
+  min-height: calc(20vw - 316px);
+  position: absolute;
+  width: auto;
+  z-index: 2;
+  left: 70%;
+  top: 10%;
 
-  50% {
-    background-position: 100% 50%;
-  }
+  border: 1px solid white;
 
-  100% {
-    background-position: 0% 50%;
-  }
-} */
+}

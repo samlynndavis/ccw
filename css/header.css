@@ -198,7 +198,7 @@ a.navlink:visited {
 }
 
 ul.nav-link  {
-  background-image: linear-gradient(to bottom, transparent 10%, #d9baad 10%);
+  background-image: linear-gradient(to bottom, transparent 10%, #0f0f0f  10%);
   padding: 2vw 1vw 1vw 1vw;
   /* margin-top: 1vw; */
   z-index: -1;
