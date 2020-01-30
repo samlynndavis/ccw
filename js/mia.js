@@ -47,18 +47,18 @@ var processScene = new ScrollMagic.Scene({ triggerElement: ".process.main", offs
 
   const commSlide2 = gsap.timeline();
 
-  gsap.set(".commslide-left", {x:"-100%"})
-  gsap.set(".commslide-right", {x:"100%"})
-  gsap.set(".comm-img", {y:"300%", opacity: 0})
-  gsap.set(".commslide-left p", {y:"300%", opacity: 0})
+  // gsap.set(".title-reveal", {y:"100%"})
+  // gsap.set(".footer-line", {css:{scaleX:0}})
+  gsap.set(".mia-question", {x:"10%", opacity: 0})
+  // gsap.set(".commslide-left p", {y:"300%", opacity: 0})
 
   var commTween2 = commSlide2
-                        .to(".commslide-left", {duration: 2, x:"0%", ease: Power4.easeOut}, 0)
-                        .to(".commslide-right", {duration: 2, x:"0%", ease: Power4.easeOut}, 0)
-                        .to(".comm-img", {duration: 3, y:"0%", opacity: 1, ease: Power4.easeOut, delay: 0.2}, 0)
-                        .to(".commslide-left p", {duration: 3, opacity: 1, y:"0%", ease: Power4.easeOut, delay: 0.5}, 0)
+                        // .to(".title-reveal", {duration: 1.5, y:"0%", ease: Power4.easeOut, delay:1.6}, 0)
+                        // .to(".footer-line", {duration: 3, css:{scaleX:1, transformOrigin: "left"}, ease: Power4.easeOut}, 0)
+                        .to(".mia-question", {duration: 3, x:"0%", opacity: 1, ease: Power4.easeOut, delay: 0.2}, 0)
+                        // .to(".commslide-left p", {duration: 3, opacity: 1, y:"0%", ease: Power4.easeOut, delay: 0.5}, 0)
 
-                        var commScene = new ScrollMagic.Scene({ triggerElement: ".commslide-left", offset: -100, reverse: false})
+                        var commScene = new ScrollMagic.Scene({ triggerElement: ".mia-question-wrapper", offset: 100, reverse: false})
                         .setTween(commTween2)
                         // .setPin("#target", {pushFollowers: false})
                         // .addIndicators() // add indicators (requires plugin)
@@ -82,10 +82,10 @@ var miaScene = new ScrollMagic.Scene({ triggerElement: ".process-pieces", offset
 const bgMia2 = gsap.timeline();
 
 var bgMiaTween2 = bgMia2
-                    .to(".mia-home", {duration: 2, css:{backgroundColor: "#201f1d"}})
+                    .to(".mia-home", {duration: 2, css:{backgroundColor: "#C23B22"}})
                     .to(".top-copy p", {css:{color: "#C23B22" }})
 
-var miaScene2 = new ScrollMagic.Scene({ triggerElement: ".commslide-left", offset: 800, duration: 200, reverse: true})
+var miaScene2 = new ScrollMagic.Scene({ triggerElement: ".color-split", offset: 200, duration: 200, reverse: true})
 .setTween(bgMiaTween2)
 // .setPin("#target", {pushFollowers: false})
 // .addIndicators() // add indicators (requires plugin)

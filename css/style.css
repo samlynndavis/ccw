@@ -14,6 +14,8 @@ body {
 
   overflow: auto;
   overflow-x: hidden;
+
+  /* cursor: none; */
 }
 
 body.noscroll {
@@ -28,10 +30,24 @@ body.noscroll {
   background-color: #000;
   position: absolute;
   overflow: hidden;
+
+  top: 0;
+  left: 0;
 }
 
+.reveal-cover {
+  width: 100vw;
+  height: 100vh;
+  z-index: 1004;
+  background-color: transparent;
+  position: absolute;
+  overflow: hidden;
+
+  top: 0;
+  left: 0;
+}
 .about {
-  z-index: 100;
+  z-index: 1005;
   position: fixed;
   top: 0;
   left: 0;
@@ -48,6 +64,7 @@ body.noscroll {
 
 a {
   font-style: normal;
+  cursor:none;
 }
 
 a:hover {
@@ -282,8 +299,12 @@ a:visited {
   /* margin-left: auto;
   margin-right: auto; */
   font-size: 15vw;
-  z-index: 1;
+  z-index: 1001;
   color: #fff;
+}
+
+.overview-title {
+  z-index: 1001
 }
 
 .overview-title {
@@ -337,7 +358,7 @@ a:visited {
 #drag-image:hover {
   cursor: grab;
   cursor: -webkit-grab;
-  z-index: 3;
+  z-index: 1002;
 }
 
 #drag-image.active {
@@ -347,7 +368,7 @@ a:visited {
 
 #drag-image-2 {
   background-position: 52% 43%;
-  background-image: url(/img/000007100005.jpg);
+  background-image: url(/img/000007100018.jpg);
   height: calc(50vw - 316px);
   min-height: calc(20vw - 316px);
   max-height: calc(1400px - 316px);
@@ -359,7 +380,7 @@ a:visited {
   top: 30%;
   margin-top: 0;
 
-  border: 1px solid white;
+  /* border: 1px solid white; */
 }
 
 #drag-image-2:hover {
@@ -433,22 +454,6 @@ a:visited {
 
 .top-copy:hover {
   z-index: 3;
-}
-
-
-
-.scale-line::after {
-  content: '';
-  height: 1px;
-  background-color: #fff;
-  width: calc(100% + 0px);
-  display: block;
-  bottom: 10px;
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  transform-origin: 0% 50%;
-  transform: scaleX(0);
 }
 
 .story-hero-liz {
@@ -660,6 +665,11 @@ a:visited {
   animation-fill-mode: forwards;
   animation-delay: 750ms;*/
 }
+.nev-img-left {
+  background-image: url(/img/000007130036.jpg);
+  background-position: center;
+  background-size: cover;
+}
 
 .test::after {
   background-color:
@@ -853,12 +863,17 @@ footer.bottom {
   background-color: #FFE001;
 }
 
+.bg-nev-red {
+  background-color: #ba201e;
+}
+
 .bg-nev-yorange {
   background-color: #FFB606;
 }
 
 .bg-nev-green {
   background-color: #675118;
+  background-color: #95ac7d;
 }
 
 .bg-no10 {
@@ -914,14 +929,24 @@ footer.bottom {
   color: #e3b79a;
 }
 
+.text-anna-pale {
+  color: #e9eecd;
+}
+
 .text-anna-yellow {
   color: #fdd630;
 }
 
 .text-nev {
-  color: #d5514f;
-  color: #bd7133;
+  color: #fff
+}
+
+.text-nev-yellow {
   color: #FFB606;
+}
+
+.text-nev-green {
+  color: #95ac7d;
 }
 
 .text-mia {
@@ -979,11 +1004,16 @@ footer.bottom {
   background-color: #93926d;
 }
 
+.bg-anna-pale {
+  background-color: #e9eecd;
+}
+
 .bg-anna-rust {
   background-color: #652b22;
 }
 
 .marquee {
+  width: 100vw;
   font-size: 3vw;
   overflow: hidden;
   background-color: transparent;
@@ -993,6 +1023,21 @@ footer.bottom {
   animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-delay: 800ms;
+}
+
+.nev-influences {
+  font-size: 3vw;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.nev-influences span {
+  animation: moveLeft 300s infinite linear;
+  white-space: nowrap;
+  display: block;
+  position: relative;
+
+  display: flex;
 }
 
 .caption {
@@ -1435,7 +1480,7 @@ footer.bottom {
   /* display: none; Hidden by default */
   position: fixed; /* Fixed/sticky position */
   bottom: 13px; /* Place the button 17px from the bottom of the page */
-  right: 150px; /* Place the button 150px from the right */
+  right: 155px; /* Place the button 150px from the right */
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
@@ -1613,7 +1658,7 @@ footer.bottom {
   }
 
   .overview-text {
-    z-index: 2;
+    z-index: 1001;
   }
 
   .roster-block-mobile {
@@ -2416,7 +2461,44 @@ svg.question_laura {
   z-index: 2;
   left: 70%;
   top: 10%;
+}
 
-  border: 1px solid white;
+.mia-ball span {
+    height: 10vw;
+    width: 10vw;
+    position: absolute;
+    border-radius: 07151986%;
+    background-color: #C23B22;
+  
+    top: 150px;
+    left: 130px;
+  
+    animation: pulse 20s infinite linear;
+  
+    box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+}
 
+.line-reveal {
+  transform: scaleX(0);
+}
+
+.cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+.cursor--small {
+  width: 5px;
+  height: 5px;
+  left: -2.5px;
+  top: -2.5px;
+  border-radius: 50%;
+  z-index: 11000;
+  background: #fff;
+}
+.cursor--canvas {
+  width: 100vw;
+  height: 100vh;
+  z-index: 12000;
 }

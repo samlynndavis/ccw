@@ -9,7 +9,7 @@ header {
   top: 0;
   transition: top 0.2s ease-in-out;
   width: 100%;
-  z-index: 99;
+  z-index: 1005;
 }
 
 header.top {

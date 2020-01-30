@@ -115,13 +115,7 @@
     </div>
   </div> -->
 
-  <div class="reveal flex items-center justify-center pa4">
-    <div class="flex justify-center items-center">
-    <p class="reveal-text f1 cream grifinito">From Chicago,</p>
-    </div>
-    <div class="flex justify-center items-center">
-    <p class="reveal-text-two f1 cream grifinito">With <span class="chicago">Love</span></p>
-    </div>
+  <div class="reveal-cover flex items-center justify-center pa4">
   </div>
 
   <header id="desktop" class="desktop w-100 flex items-center">
@@ -161,6 +155,8 @@
     <article>
 
         <div id="intro" class="intro pa3 pa5-ns min-vh-100 flex flex-column justify-center items-start">
+          <div class="reveal">
+          </div>
           <p class="intro-text grifinito measure ph2 pv2">
             From<span class="chicago">&nbspChicago</span>,
           </p>
@@ -188,7 +184,7 @@
             <p class="lh-copy pv3">
               Each woman in front of the camera claimed their own unique space in a sea of color and design, filling this three-story wonderland with that singular Chicago reverb you can just feel.
             </p>
-            <p class="lh-copy pv5 photo-caption tc">
+            <p class="lh-copy pv5 photo-caption">
               We got to know more about the creative process behind each artist, what makes them tick, and what moves
               them to do what they do.
             </p>
@@ -379,12 +375,13 @@ $("body").removeClass('noscroll');
 // const playMe = document.querySelector(".playlist");
 
 // gsap.set(".hidetext", {y: "100%"});
-gsap.set(".overview-text-top", {opacity: 0, y: "40%"}, 0)
-gsap.set(".overview-text-bottom", {opacity: 0, y: "-40%"}, 0)
-gsap.set(".reveal-text", {opacity: 0}, 0)
-gsap.set(".reveal-text-two", {opacity: 0}, 0)
+gsap.set(".overview-text-top", {opacity: 0}, 0)
+gsap.set(".overview-text-bottom", {opacity: 0}, 0)
+// gsap.set(".reveal-text", {opacity: 0}, 0)
+// gsap.set(".reveal-text-two", {opacity: 0}, 0)
 gsap.set(".reveal", {opacity: 1, yPercent: 0}, 0);
-gsap.set(".home", { y: "20%"}, 0);
+gsap.set(".reveal-cover", {opacity: 1, yPercent: 0}, 0);
+// gsap.set(".home", { y: "20%"}, 0);
 gsap.set("#desktop", {y: "-100%"});
 gsap.set(".footer-desktop", {y: "120%"});
 gsap.set(".playlist", {x: "200%"});
@@ -394,20 +391,21 @@ gsap.set(".chicago", {css:{color: "#efe8d8"}});
 
 timeline
     // .to(".hidetext", 1.5, {y: "0%", ease: Power4.easeOut, delay: 0.5}, 0)
-    .to(".reveal-text", {duration: 2, opacity: "1", ease: Power4.easeInOut, delay: 1}, 0)
-    .to(".reveal-text-two", {duration: 2, opacity: "1", ease: Power4.easeInOut, delay: 2.5}, 0)
+    // .to(".reveal-text", {duration: 2, opacity: "1", ease: Power4.easeInOut, delay: 1}, 0)
+    // .to(".reveal-text-two", {duration: 2, opacity: "1", ease: Power4.easeInOut, delay: 2.5}, 0)
     .to(".chicago", {duration: 2, css:{color: "#dd5a54"}, ease: Power4.easeOut, delay: 4.5}, 0)
     // .to(".reveal", 2, {css:{backgroundColor: "#bccece"}, ease: Power4.easeOut, delay: 5.5}, 0)
-    .to(".reveal-text", {duration: 1.5, y: "400%", ease: Power4.easeInOut, delay: 5.5}, 0)
-    .to(".reveal-text-two", {duration: 1.5, y: "400%", ease: Power4.easeInOut, delay: 5.5}, 0)
+    // .to(".reveal-text", {duration: 1.5, y: "400%", ease: Power4.easeInOut, delay: 5.5}, 0)
+    // .to(".reveal-text-two", {duration: 1.5, y: "400%", ease: Power4.easeInOut, delay: 5.5}, 0)
     // .to(".hidetext-container", {duration: 1.5, y: "100%", ease: Power4.easeInOut, delay: 5.5}, 0)
     .to(".reveal", {duration: 1.5, y: "-100%", ease: Power4.easeInOut, delay: 5.5}, 0)
-    .to(".home", {duration: 1.5, y: "0%", ease: Power4.easeInOut, delay: 5.4}, 0)
+    .to(".reveal-cover", {duration: 1.5, y: "-100%", ease: Power4.easeInOut, delay: 5.5}, 0)
+    // .to(".home", {duration: 1.5, y: "0%", ease: Power4.easeInOut, delay: 5.4}, 0)
     .to("#desktop", {duration: 1, y: "0%", ease: Power4.easeOut, delay: 7}, 0)
-    .to(".overview-text-top", {duration: 1, opacity: 1, y: "0%", ease: Power4.easeOut, delay: 7}, 0)
-    .to(".overview-text-bottom", {duration: 1, opacity: 1, y: "0%", ease: Power4.easeOut, delay: 7}, 0)
+    .to(".overview-text-top", {duration: 3, opacity: 1, y: "0%", ease: Power4.easeOut, delay: 1, clearProps: 'all'}, 0)
+    .to(".overview-text-bottom", {duration: 3, opacity: 1, y: "0%", ease: Power4.easeOut, delay: 2.5, clearProps: 'all'}, 0)
     .to(".footer-line", {duration: 1.5, scaleX:1, ease:Power4.easeInOut, delay: 7}, 0)
-    .to(".footer-desktop", {duration: 1, opacity: 1, y: "0%", ease: Power4.easeOut, delay: 7, clearProps: 'all'}, 0)
+    .to(".footer-desktop", {duration: 0.5, y: "0%", ease: Power4.easeOut, delay: 7, clearProps: 'all'}, 0)
     .to(".playlist", {duration: 2, x: "0%", clearProps: "all", ease: Power4.easeInOut, delay: 7}, 0)
   });
 </script>
