@@ -375,7 +375,7 @@ a:visited {
   position: absolute;
   background-size: cover;
   width: auto;
-  z-index: 2;
+  z-index: 1;
   left: 20%;
   top: 30%;
   margin-top: 0;
@@ -386,7 +386,7 @@ a:visited {
 #drag-image-2:hover {
   cursor: grab;
   cursor: -webkit-grab;
-  z-index: 2;
+  z-index: 3;
 }
 
 #drag-image-2.active {
@@ -448,12 +448,12 @@ a:visited {
   position: relative;
 }
 
-.large-copy-text:hover {
-  z-index: 3;
+.large-copy-text {
+  z-index: 2;
 }
 
-.top-copy:hover {
-  z-index: 3;
+.top-copy {
+  z-index: 2;
 }
 
 .story-hero-liz {
@@ -953,6 +953,10 @@ footer.bottom {
   color: #FFD1A9;
 }
 
+.text-mia-red {
+  color: #C23B22;
+}
+
 .hero-text-liz {
   color: #c0c2ce
 }
@@ -1094,8 +1098,8 @@ footer.bottom {
 
 .copy {
   margin-bottom: 1em;
-  font-size: 2.5vw;
-  line-height: 4vw;
+  font-size: 1.5vw;
+  line-height: 3vw;
 }
 
 .photo-pair {
@@ -2454,13 +2458,17 @@ svg.question_laura {
 }
 
 .anna-vid {
-  height: calc(40vw - 316px);
+  height: calc(49vw - 316px);
   min-height: calc(20vw - 316px);
   position: absolute;
   width: auto;
   z-index: 2;
   left: 70%;
   top: 10%;
+}
+
+.anna-vid:hover {
+  z-index: 3;
 }
 
 .mia-ball span {

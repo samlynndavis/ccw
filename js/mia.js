@@ -58,7 +58,7 @@ var processScene = new ScrollMagic.Scene({ triggerElement: ".process.main", offs
                         .to(".mia-question", {duration: 3, x:"0%", opacity: 1, ease: Power4.easeOut, delay: 0.2}, 0)
                         // .to(".commslide-left p", {duration: 3, opacity: 1, y:"0%", ease: Power4.easeOut, delay: 0.5}, 0)
 
-                        var commScene = new ScrollMagic.Scene({ triggerElement: ".mia-question-wrapper", offset: 100, reverse: false})
+                        var commScene = new ScrollMagic.Scene({ triggerElement: ".mia-question-wrapper", offset: 400, reverse: false})
                         .setTween(commTween2)
                         // .setPin("#target", {pushFollowers: false})
                         // .addIndicators() // add indicators (requires plugin)
