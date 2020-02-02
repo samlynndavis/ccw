@@ -105,3 +105,57 @@ const stickerScroll = () => {
   // }
 
   stickerScroll();
+
+
+var controller = new ScrollMagic.Controller();
+
+const nevScroll = gsap.timeline();
+
+gsap.set(".large-copy p", {css:{opacity: "0"}})
+
+
+var nevTween = nevScroll
+                    .to(".nev-home", { duration: 0.4, css:{backgroundColor: "#ba201e"}, ease: Power4.easeInOut}, 0)
+                    .to(".large-copy p", { duration: 0.4, css:{color: "#FFB606", opacity: "1"}, ease: Power4.easeInOut}, 0)
+
+
+var nevScene = new ScrollMagic.Scene({ triggerElement: ".large-copy-split"})
+.setTween(nevTween)
+// .setPin("#target", {pushFollowers: false})
+// .addIndicators() // add indicators (requires plugin)
+.addTo(controller);
+
+
+const nevInfluence = gsap.timeline();
+
+
+var nevTween2 = nevInfluence
+                    .staggerFromTo(".influence-wrapper .large-copy p:nth-child(1)", 1, {opacity: 0, x:"-100%"}, {css:{opacity: 1, x:"0"}, ease: Power4.easeInOut}, 1)
+                    .staggerFromTo(".influence-wrapper .large-copy p:nth-child(2)", 1, {opacity: 0, x:"100%"}, {css:{opacity: 1, x:"0"}, ease: Power4.easeInOut})
+                    .staggerFromTo(".influence-wrapper .large-copy p:nth-child(3)", 1, {opacity: 0, x:"-100%"}, {css:{opacity: 1, x:"0"}, ease: Power4.easeInOut})
+                    .staggerFromTo(".influence-wrapper .large-copy p:nth-child(4)", 1, {opacity: 0, x:"100%"}, {css:{opacity: 1, x:"0"}, ease: Power4.easeInOut})
+var nevScene2 = new ScrollMagic.Scene({ triggerElement: ".influence-wrapper", duration: 500})
+.setTween(nevTween2)
+// .setPin("#target", {pushFollowers: false})
+// .addIndicators() // add indicators (requires plugin)
+.addTo(controller);
+
+
+const nevEars = gsap.timeline();
+
+gsap.set('.ears', {css:{x:"-50%", opacity: 0, color: "#FFb606"}});
+gsap.set('.ears-2', {css:{x:"50%", opacity: 0, color: "#FFb606"}});
+
+
+var nevTween3 = nevEars
+                    .to('.ears', 1, {css:{x:"0%", opacity: 1}, ease: Power4.easeInOut}, 0)
+                    .to('.ears-2', 1, {css:{x:"0%", opacity: 1}, ease: Power4.easeInOut}, 0)
+                    .to('.nev-home', 1, {css:{backgroundColor:"#95ac7d"}, ease: Power4.easeInOut}, 0)
+
+var nevScene3 = new ScrollMagic.Scene({ triggerElement: ".nev-music", offset:200, duration: 300})
+.setTween(nevTween3)
+// .setPin("#target", {pushFollowers: false})
+// .addIndicators() // add indicators (requires plugin)
+.addTo(controller);
+
+

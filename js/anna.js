@@ -42,6 +42,7 @@ var bgAnnaTween1 = bgAnna1
                         .to(".footer-desktop", {css:{color: "#e3b79a"}, ease: Linear.easeNone})
                         .to(".footer-text", {css:{color: "#e3b79a"}, ease: Linear.easeNone})
                         .to(".footer-line", {css:{borderColor: "#e3b79a"}, ease: Linear.easeNone})                        
+                        .to(".smdvs path", {css:{fill: "#e3b79a"}, ease: Linear.easeNone})                        
                         .to(".caption-photo, .caption-photo a", {css:{color: "#bea1a5"}, ease: Linear.easeNone})
 
 var bgAnnaScene1 = new ScrollMagic.Scene({triggerElement: ".large-copy-split-desktop", duration: 1000})    

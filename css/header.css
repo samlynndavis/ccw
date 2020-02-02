@@ -4,12 +4,17 @@ a {
 
 header {
   background-color: transparent;
-  height: 70px;
+  height: 60px;
   position: fixed;
   top: 0;
   transition: top 0.2s ease-in-out;
   width: 100%;
-  z-index: 1005;
+  z-index: 1004;
+}
+
+nav {
+  font-family: 'Cormorant', serif;
+  font-size: 1.5vw;
 }
 
 header.top {
@@ -29,9 +34,24 @@ header#navigation {
   background-color: transparent;
 }
 
+.tagline {
+  justify-content: space-between;
+  width: 120px;
+}
+
 .about > svg {
   fill: transparent;
   stroke: #dd5a54;
+}
+
+.smdvs {
+  width: 70px;
+  height: auto;
+}
+
+.smdvs path,
+.smdvs polygon {
+  fill: white;
 }
 
 .instagram {
@@ -112,7 +132,6 @@ svg.close:hover {
 }
 
 .nav-item-child:hover {
-  /* color: #bccece; */
   transition: all 0.2s ease-out;
 
 }
@@ -121,7 +140,7 @@ svg.close:hover {
   background-color: #fff;
   content: ' ';
   display: block;
-  height: 2px;
+  height: 1px;
   opacity: 1;
   position: absolute;
   z-index: -1;
@@ -148,7 +167,29 @@ svg.close:hover {
 }
 
 .nav-item-child::after {
-  background-color: #fff;
+  /* background-color: #fff; */
+  content: ' ';
+  display: block;
+  height: 50%;
+  opacity: 1;
+  position: absolute;
+  z-index: -1;
+  width: calc(100% - 10px);
+  transform: scaleX(0);
+  transform-origin: 0% 50%;
+  bottom: 0;
+  right: -8px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  padding: 0 5px;
+  transform-origin: left;
+}
+
+.laura-link::after {
+  background-color: #1fc8a9;
   content: ' ';
   display: block;
   height: 50%;
@@ -176,7 +217,63 @@ svg.close:hover {
   -o-transition: all 0.2s ease-out;
   -ms-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  /* animation: colorChangeLaura 0.8s forwards */
+
+  animation: colorChangeLaura 0.8s forwards
+}
+
+.liz-link::after {
+  background-color: #c0c2ce;
+  content: ' ';
+  display: block;
+  height: 50%;
+  opacity: 1;
+  position: absolute;
+  z-index: -1;
+  width: calc(100% - 10px);
+  transform: scaleX(0);
+  transform-origin: 0% 50%;
+  bottom: 0;
+  right: -8px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  padding: 0 5px;
+  transform-origin: left;
+}
+
+.liz-link:hover::after {
+  transform: scaleX(1);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+
+  animation: colorChangeLiz 0.8s forwards
+}
+
+.anna-link::after {
+  background-color: #c0c2ce;
+  content: ' ';
+  display: block;
+  height: 50%;
+  opacity: 1;
+  position: absolute;
+  z-index: -1;
+  width: calc(100% - 10px);
+  transform: scaleX(0);
+  transform-origin: 0% 50%;
+  bottom: 0;
+  right: -8px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  padding: 0 5px;
+  transform-origin: left;
 }
 
 .anna-link:hover::after {
@@ -186,7 +283,74 @@ svg.close:hover {
   -o-transition: all 0.2s ease-out;
   -ms-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  /* animation: colorChangeAnna 0.8s forwards */
+
+  animation: colorChangeAnna 0.8s forwards
+}
+
+.mia-link::after {
+  background-color: #e3b79a;
+  content: ' ';
+  display: block;
+  height: 50%;
+  opacity: 1;
+  position: absolute;
+  z-index: -1;
+  width: calc(100% - 10px);
+  transform: scaleX(0);
+  transform-origin: 0% 50%;
+  bottom: 0;
+  right: -8px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  padding: 0 5px;
+  transform-origin: left;
+}
+
+.mia-link:hover::after {
+  transform: scaleX(1);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+
+  animation: colorChangeMia 0.8s forwards
+}
+
+.nev-link::after {
+  background-color: #FFB606;
+  content: ' ';
+  display: block;
+  height: 50%;
+  opacity: 1;
+  position: absolute;
+  z-index: -1;
+  width: calc(100% - 10px);
+  transform: scaleX(0);
+  transform-origin: 0% 50%;
+  bottom: 0;
+  right: -8px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  padding: 0 5px;
+  transform-origin: left;
+}
+
+.nev-link:hover::after {
+  transform: scaleX(1);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+
+  animation: colorChangeNev 0.8s forwards
 }
 
 .nav-link,
@@ -198,9 +362,8 @@ a.navlink:visited {
 }
 
 ul.nav-link  {
-  background-image: linear-gradient(to bottom, transparent 10%, #0f0f0f  10%);
-  padding: 2vw 1vw 1vw 1vw;
-  /* margin-top: 1vw; */
+  background-image: linear-gradient(to bottom, transparent 15%, #0f0f0f 10%);;
+  padding: 3vw 1vw 1vw 1vw;
   z-index: -1;
 }
 
@@ -371,21 +534,52 @@ li {
 
  @keyframes colorChangeLaura {
   0% {
-    background: #fff
+    background: #1fc8a9
   }
 
   100% {
-    background: #ffefe5
+    background: #1fc8a9
+  }
+}
+
+@keyframes colorChangeLiz {
+  0% {
+    background: #c0c2ce
+  }
+
+  100% {
+    background: #c0c2ce
   }
 }
 
 @keyframes colorChangeAnna {
   0% {
-    background: #424635
+    background: #e3b79a
   }
 
   100% {
-    background: #424635
+    background: #e3b79a
   }
 }
+
+@keyframes colorChangeMia {
+  0% {
+    background: #C23B22
+  }
+
+  100% {
+    background: #C23B22
+  }
+}
+
+@keyframes colorChangeNev {
+  0% {
+    background: #FFB606
+  }
+
+  100% {
+    background: #FFB606
+  }
+}
+
 

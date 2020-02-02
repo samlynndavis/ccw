@@ -1,21 +1,4 @@
-const runScripts = () => {
-
-    // const textReveal = () => {
-    // // Wrap every letter in a span
-    // var textWrapper = document.querySelector('.top-copy-liz');
-    // textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-    // anime.timeline({ loop: false })
-    //     .add({
-    //         targets: '.top-copy-liz .letter',
-    //         opacity: [0, 1],
-    //         easing: "easeInOutQuad",
-    //         duration: 500,
-    //         delay: (el, i) => 20 * (i + 1)
-    //     });
-
-    // }
-        
+const runScripts = () => {        
        
     const aboutReveal = () => {
 
@@ -410,7 +393,8 @@ const dragImage2 = () => {
                           .to(".social-liz", {css:{color: "#c0c2ce"}, ease: Linear.easeNone })
                           .to(".marquee span", {css:{color: "#c0c2ce"}, ease: Linear.easeNone})
                           .to(".footer-desktop", {css:{color: "#c0c2ce"}, ease: Linear.easeNone})
-                          .to(".footer-line-liz", {css:{borderColor: "#c0c2ce"}, ease: Linear.easeNone})
+                          .to(".smdvs path", {css:{fill: "#c0c2ce"}, ease: Linear.easeNone})
+                          .to(".footer-line", {css:{borderColor: "#c0c2ce"}, ease: Linear.easeNone})
                           .to(".caption-photo, .caption-photo a", {css:{color: "#bea1a5"}, ease: Linear.easeNone})
 
     var bgLizScene = new ScrollMagic.Scene({triggerElement: ".color-split", duration: 1000})    
@@ -549,6 +533,34 @@ mybutton.addEventListener("click", function () {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 });
+
+var controller = new ScrollMagic.Controller();
+
+const lizInfluences = gsap.timeline();
+
+gsap.set(".influence.main path", {fill:"#c0c2ce", stroke:"#c0c2ce"})
+
+var lizInfluenceTween = lizInfluences
+                      .to(".influence.main path", { duration: 2, fill:"#c0c2ce", ease: Power4.easeInOut, delay:2})
+                      .to(".influence:nth-child(1)", {duration: 2, opacity: 1, translateY:"25px", ease: Power4.easeInOut, delay:2}, 0)
+                      .to(".influence:nth-child(2)", {duration: 2, opacity: 1, translateY:"50px", ease: Power4.easeInOut, delay:2}, 0)
+                      .to(".influence:nth-child(3)", {duration: 2, opacity: 1, translateY:"75px", ease: Power4.easeInOut, delay:2}, 0)
+                      .to(".influence:nth-child(4)", {duration: 2, opacity: 1, translateY:"100px", ease: Power4.easeInOut, delay:2}, 0)
+                      .to(".influence:nth-child(5)", {duration: 2, opacity: 1, translateY:"125px", ease: Power4.easeInOut, delay:2}, 0)
+                      .to(".influence:nth-child(6)", {duration: 2, opacity: 1, translateY:"150px", ease: Power4.easeInOut, delay:2}, 0)
+                      .to(".influence:nth-child(7)", {duration: 2, opacity: 1, translateY:"175px", ease: Power4.easeInOut, delay:2}, 0)
+                      .to(".influence:nth-child(8)", {duration: 2, opacity: 1, translateY:"200px", ease: Power4.easeInOut, delay:2}, 0)
+                      .to(".influence:nth-child(9)", {duration: 2, opacity: 1, translateY:"225px", ease: Power4.easeInOut, delay:2}, 0)
+                      .to(".influence:nth-child(10)", {duration: 2, opacity: 1, translateY:"250px", ease: Power4.easeInOut, delay:2}, 0)
+                      .to(".influence:nth-child(11)", {duration: 2, opacity: 1, translateY:"275px", ease: Power4.easeInOut, delay:2}, 0)
+                      .to(".influence:nth-child(12)", {duration: 2, opacity: 1, translateY:"300px", ease: Power4.easeInOut, delay:2}, 0)
+
+                      var lizInfluenceScene = new ScrollMagic.Scene({ triggerElement: ".influence.main", offset: -100, duration: 1000 })
+                      .setTween(lizInfluenceTween)
+                      // .setPin("#target", {pushFollowers: false})
+                      // .addIndicators() // add indicators (requires plugin)
+                      .addTo(controller);
+                    
 
 // // set the starting position of the cursor outside of the screen
 // let clientX = -100;

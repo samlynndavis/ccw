@@ -17,6 +17,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://webfonts.fontstand.com/WF-049020-2d05c55c72837dfac96212a7f5b46867.css" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=Cormorant&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <link rel="stylesheet" href="css/tachyons.min.css" />
   <link rel="stylesheet" href="css/style.css" />
@@ -32,7 +33,7 @@
   </a>
 </div>
 
-  <div id="teambio grain" class="grain about bg-black vh-100 w-100 flex flex-column white justify-between items-center pa6">
+  <div id="teambio" class="about bg-about vh-100 w-100 flex flex-column white justify-between items-center pa6">
     <div class="flex items-end justify-end w-100 white">
       <a id="close" href="#"><svg class="close" height='100px' width='100px' xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" preserveAspectRatio="none" x="0px" y="0px"
@@ -110,8 +111,8 @@
   </div>
 
   <header id="desktop" class="desktop w-100 flex items-center">
-    <nav class="fw4 w-100 flex ph4 tracked f4 fw4 montserrat">
-      <ul class="nav-list flex f4 fw4 montserrat ph2 self-start">
+    <nav class="w-100 flex ph4">
+      <ul class="nav-list flex ph2 self-start">
             <li class="nav-item">
               <a class="nav-link" href="/">home</a>
             </li>
@@ -168,14 +169,14 @@
           <div class="bio w-100 fade flex flex-column justify-center min-vh-100 f1 pv4 ph7 grifinito">
             <p class="lh-copy pv3">
               We shot five Chicago-based artists at one of the most diversely curated spots in the city, <a
-              style="color: #efe8d8; text-decoration-color: #dd5a54;" class="photo-caption underline salvage" href="https://salvageone.com/" target="_blank">Salvage
+              style="color: #efe8d8; text-decoration-color: #dd5a54;" class="photo-caption salvage relative" href="https://salvageone.com/" target="_blank">Salvage
               One</a>, a
               vibrant and endless showroom filled with recycled art, furniture and relics of the past.
             </p>
             <p class="lh-copy pv3">
               Each woman in front of the camera claimed their own unique space in a sea of color and design, filling this three-story wonderland with that singular Chicago reverb you can just feel.
             </p>
-            <p class="lh-copy pv5 photo-caption">
+            <p class="lh-copy pv3t photo-caption">
               We got to know more about the creative process behind each artist, what makes them tick, and what moves
               them to do what they do.
             </p>
@@ -315,8 +316,13 @@
       <div class="flex">
         <p>Copyright &copy 2020 Whitney Magazine. All Rights Reserved.</p>
       </div>
-      <div class="flex">
-        <p>Site by SMDVS</p>
+      <div class="flex tagline">
+        <p>Site by</p>
+        <a class="flex" href="#">
+          <svg class="smdvs" width="572" height="75" viewBox="0 0 572 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M60.192 74.44C100.8 74.44 108.96 62.152 108.96 49.48V48.136C108.96 33.64 99.168 26.92 71.328 26.152L56.928 25.768C45.888 25.48 43.104 24.04 43.104 21.448V21.256C43.104 18.856 44.736 17.512 53.472 17.512C62.976 17.512 64.128 20.968 64.416 23.272H106.272V22.792C106.272 10.504 97.344 0.327997 59.04 0.327997H46.848C12.288 0.327997 1.536 8.584 1.536 22.024V22.888C1.536 34.12 7.68 44.488 37.056 45.544L52.128 46.024C64.416 46.504 65.376 48.712 65.376 51.112V51.4C65.376 53.992 62.88 56.392 54.432 56.392C44.448 56.392 43.104 51.784 43.104 48.712H0.384V49.48C0.384 58.696 4.32 74.44 47.616 74.44H60.192ZM112.57 73H148.762V37.672L167.866 73H185.242L204.442 37.672V73H240.73V1.576H194.938L177.466 33.352L160.666 1.576H112.57V73ZM246.726 73H303.942C347.814 73 357.51 56.104 357.51 38.344V35.368C357.51 16.936 344.742 1.576 303.942 1.576H246.726V73ZM283.206 23.752H297.798C318.15 23.752 319.782 32.488 319.782 36.712V37.288C319.782 41.512 318.438 50.92 297.798 50.92H283.206V23.752ZM435.768 73L467.16 1.576H429.336L410.712 45.64L391.032 1.576H349.656L383.64 73H435.768ZM522.473 74.44C563.081 74.44 571.241 62.152 571.241 49.48V48.136C571.241 33.64 561.449 26.92 533.609 26.152L519.209 25.768C508.169 25.48 505.385 24.04 505.385 21.448V21.256C505.385 18.856 507.017 17.512 515.753 17.512C525.257 17.512 526.409 20.968 526.697 23.272H568.553V22.792C568.553 10.504 559.625 0.327997 521.321 0.327997H509.129C474.569 0.327997 463.817 8.584 463.817 22.024V22.888C463.817 34.12 469.961 44.488 499.337 45.544L514.409 46.024C526.697 46.504 527.657 48.712 527.657 51.112V51.4C527.657 53.992 525.161 56.392 516.713 56.392C506.729 56.392 505.385 51.784 505.385 48.712H462.665V49.48C462.665 58.696 466.601 74.44 509.897 74.44H522.473Z" fill="black"/>
+            </svg></a>
+          
         <a id="toTop" style="visibility: hidden;"><span title="Go to top"><svg class="toTop" height='100px' width='100px'  fill="#000000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;" viewBox="0 0 847 847" x="0px" y="0px" fill-rule="evenodd" clip-rule="evenodd"><defs><style type="text/css">
 
           .fil0 {fill:#000000}
@@ -374,7 +380,7 @@ gsap.set(".reveal", {opacity: 1, yPercent: 0}, 0);
 gsap.set(".reveal-cover", {opacity: 1, yPercent: 0}, 0);
 // gsap.set(".home", { y: "20%"}, 0);
 gsap.set("#desktop", {y: "-100%"});
-gsap.set(".footer-desktop", {y: "120%"});
+gsap.set(".footer-text", {opacity: 0});
 gsap.set(".playlist", {x: "200%"});
 gsap.set(".footer-line", {scaleX:0, transformOrigin: "left"});
 gsap.set(".chicago", {css:{color: "#efe8d8"}});
@@ -395,8 +401,8 @@ timeline
     .to("#desktop", {duration: 1, y: "0%", ease: Power4.easeOut, delay: 7}, 0)
     .to(".overview-text-top", {duration: 3, opacity: 1, y: "0%", ease: Power4.easeOut, delay: 1, clearProps: 'all'}, 0)
     .to(".overview-text-bottom", {duration: 3, opacity: 1, y: "0%", ease: Power4.easeOut, delay: 2.5, clearProps: 'all'}, 0)
-    .to(".footer-line", {duration: 1.5, scaleX:1, ease:Power4.easeInOut, delay: 7}, 0)
-    .to(".footer-desktop", {duration: 0.5, y: "0%", ease: Power4.easeOut, delay: 7, clearProps: 'all'}, 0)
+    .to(".footer-line", {duration: 1.5, scaleX:1, ease:Power4.easeInOut, delay: 6.5}, 0)
+    .to(".footer-text", {duration: 0.5, opacity: 1, ease: Power4.easeOut, delay: 7, clearProps: 'all'}, 0)
     .to(".playlist", {duration: 2, x: "0%", clearProps: "all", ease: Power4.easeInOut, delay: 7}, 0)
   });
 </script>
