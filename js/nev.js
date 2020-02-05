@@ -122,22 +122,23 @@ var nevTween = nevScroll
 var nevScene = new ScrollMagic.Scene({ triggerElement: ".large-copy-split"})
 .setTween(nevTween)
 // .setPin("#target", {pushFollowers: false})
-// .addIndicators() // add indicators (requires plugin)
+.addIndicators() // add indicators (requires plugin)
 .addTo(controller);
 
 
-const nevInfluence = gsap.timeline();
+const nevInfluence = new TimelineMax();
 
 
 var nevTween2 = nevInfluence
-                    .staggerFromTo(".influence-wrapper .large-copy p:nth-child(1)", 1, {opacity: 0, x:"-100%"}, {css:{opacity: 1, x:"0"}, ease: Power4.easeInOut}, 1)
-                    .staggerFromTo(".influence-wrapper .large-copy p:nth-child(2)", 1, {opacity: 0, x:"100%"}, {css:{opacity: 1, x:"0"}, ease: Power4.easeInOut})
-                    .staggerFromTo(".influence-wrapper .large-copy p:nth-child(3)", 1, {opacity: 0, x:"-100%"}, {css:{opacity: 1, x:"0"}, ease: Power4.easeInOut})
-                    .staggerFromTo(".influence-wrapper .large-copy p:nth-child(4)", 1, {opacity: 0, x:"100%"}, {css:{opacity: 1, x:"0"}, ease: Power4.easeInOut})
-var nevScene2 = new ScrollMagic.Scene({ triggerElement: ".influence-wrapper", duration: 500})
+                    .fromTo(".influences p:nth-child(1)", 1, {opacity: 0, x:"-100%"}, {css:{opacity: 1, x:"0"}, ease: Power4.easeInOut})
+                    .fromTo(".influences p:nth-child(2)", 1, {opacity: 0, x:"100%"}, {css:{opacity: 1, x:"0"}, ease: Power4.easeInOut})
+                    .fromTo(".influences p:nth-child(3)", 1, {opacity: 0, x:"-100%"}, {css:{opacity: 1, x:"0"}, ease: Power4.easeInOut})
+                    .fromTo(".influences p:nth-child(4)", 1, {opacity: 0, x:"100%"}, {css:{opacity: 1, x:"0"}, ease: Power4.easeInOut})
+
+var nevScene2 = new ScrollMagic.Scene({ triggerElement: ".influences-wrapper", triggerHook: "0", duration: "400%"})
 .setTween(nevTween2)
-// .setPin("#target", {pushFollowers: false})
-// .addIndicators() // add indicators (requires plugin)
+.setPin(".influences-wrapper", {pushFollowers: true})
+.addIndicators() // add indicators (requires plugin)
 .addTo(controller);
 
 
@@ -150,12 +151,12 @@ gsap.set('.ears-2', {css:{x:"50%", opacity: 0, color: "#FFb606"}});
 var nevTween3 = nevEars
                     .to('.ears', 1, {css:{x:"0%", opacity: 1}, ease: Power4.easeInOut}, 0)
                     .to('.ears-2', 1, {css:{x:"0%", opacity: 1}, ease: Power4.easeInOut}, 0)
-                    .to('.nev-home', 1, {css:{backgroundColor:"#95ac7d"}, ease: Power4.easeInOut}, 0)
+                    .to('.nev-home', 1, {css:{backgroundColor:"#95ac7d"}, ease: Power4.easeInOut, delay: 0.1}, 0)
 
 var nevScene3 = new ScrollMagic.Scene({ triggerElement: ".nev-music", offset:200, duration: 300})
 .setTween(nevTween3)
 // .setPin("#target", {pushFollowers: false})
-// .addIndicators() // add indicators (requires plugin)
+.addIndicators() // add indicators (requires plugin)
 .addTo(controller);
 
 

@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="css/tachyons.min.css" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/header.css" />
+  
 </head>
 
 <body class="w-100 sans-serif bg-blue homepage fade">
@@ -107,8 +108,8 @@
     </div>
   </div>
 
-  <div class="reveal-cover flex items-center justify-center pa4">
-  </div>
+  <!-- <div class="reveal-cover flex items-center justify-center pa4">
+  </div> -->
 
   <header id="desktop" class="desktop w-100 flex items-center">
     <nav class="w-100 flex ph4">
@@ -166,10 +167,10 @@
         </div>
 
         <div class="flex flex-column justify-center items-center pa4 min-vh-100 w-100 white cover">
-          <div class="bio w-100 fade flex flex-column justify-center min-vh-100 f1 pv4 ph7 grifinito">
+          <div class="bio w-100 fade flex flex-column justify-center min-vh-100 tc f1 pv4 ph7 cormo">
             <p class="lh-copy pv3">
               We shot five Chicago-based artists at one of the most diversely curated spots in the city, <a
-              style="color: #efe8d8; text-decoration-color: #dd5a54;" class="photo-caption salvage relative" href="https://salvageone.com/" target="_blank">Salvage
+              style="color: #dd5a54; text-decoration-color: #dd5a54;" class="photo-caption salvage relative" href="https://salvageone.com/" target="_blank">Salvage
               One</a>, a
               vibrant and endless showroom filled with recycled art, furniture and relics of the past.
             </p>
@@ -181,10 +182,10 @@
               them to do what they do.
             </p>
           </div>
-          <div class="bio-mobile w-100 flex flex-column justify-center min-vh-100 f2 pa7 grifinito">
+          <div class="bio-mobile w-100 flex flex-column justify-center min-vh-100 tc pa7 cormo">
             <p class="lh-copy pv3">
               We shot five Chicago-based artists at one of the most diversely curated spots in the city, <a
-              style="color: #efe8d8; text-decoration-color: #dd5a54;" class="photo-caption underline" href="https://salvageone.com/" target="_blank">Salvage
+              style="color: #dd5a54; text-decoration-color: #dd5a54;" class="photo-caption underline" href="https://salvageone.com/" target="_blank">Salvage
               One</a>, a
               vibrant and endless showroom filled with recycled art, furniture and relics of the past.
             </p>
@@ -242,6 +243,47 @@
               </a>
             </div>
           </div>
+
+          <!-- <div class="app grifinito">
+            <div class="grid g3">
+                <div class="grid g3" style="display: flex;">
+                    <a aria-label="link-3" target="_blank" rel="noopener" draggable="false" class="link w-inline-block">
+                        <h1 class="h1">Laura Sophia Cardozo</h1>
+                        <div class="text">Artist + Community Builder</div>
+                        <img class="content__img" src="/img/000007080021.jpg" alt="img1">
+                    </a>
+                    <div class="div-block">
+                        <img src="img/slash.svg" alt="slash" class="image">
+                    </div>
+                    <a aria-label="link-3" target="_blank" rel="noopener" draggable="false" class="link w-inline-block">
+                        <h1 class="h1">california</h1>
+                        <div class="text">city lights</div>
+                        <img class="content__img" src="/img/000007080021.jpg" alt="img2">
+                    </a>
+                    <a aria-label="link-3" target="_blank" rel="noopener" draggable="false" class="link w-inline-block">
+                        <h1 class="h1">los angeles</h1>
+                        <div class="text">ranger pickup</div>
+                        <img class="content__img" src="/img/000007080021.jpg" alt="img1">
+                    </a>
+                    <div class="div-block">
+                        <img src="img/slash.svg" alt="slash" class="image">
+                    </div>
+                    <a aria-label="link-3" target="_blank" rel="noopener" draggable="false" class="link w-inline-block">
+                        <h1 class="h1">california</h1>
+                        <div class="text">city lights</div>
+                        <img class="content__img" src="/img/000007080021.jpg" alt="img2">
+                    </a>
+                    <div class="div-block">
+                        <img src="img/slash.svg" alt="slash" class="image">
+                    </div>
+                    <a aria-label="link-3" target="_blank" rel="noopener" draggable="false" class="link w-inline-block">
+                        <h1 class="h1">california</h1>
+                        <div class="text">city lights</div>
+                        <img class="content__img" src="/img/000007080021.jpg" alt="img2">
+                    </a>
+                </div>
+            </div>
+          </div> -->
 
           <div id="roster" class="roster-block flex w-100 min-vh-100">
             <div class="roster w-100 pv6">
@@ -354,9 +396,33 @@
 <script src="/js/debug.addIndicators.js"></script>
 <script src="/js/jquery.lettering-0.6.1.min.js"></script>
 <script src="/js/jquery.lettering.js"></script>
+<!-- <script src="js/three.min.js"></script>
+<script src="js/TweenLite.min.js"></script>
+<script src="js/Math.js"></script>
+<script src="js/EffectShell.js"></script>
+<script src="js/StretchEffect.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script> -->
 <script src="/js/scripts.js"></script>
 
 <script>$(".photo-caption").lettering('lines').children('span').lettering('words').children('span').lettering();</script>
+
+<!-- <script>
+  const container = document.body
+  const itemsWrapper = document.querySelector('.grid')
+
+  // Preload images
+  const preloadImages = () => {
+      return new Promise((resolve, reject) => {
+          imagesLoaded(document.querySelectorAll('img'), resolve);
+      });
+  };
+  // And then..
+  preloadImages().then(() => {
+      // Remove the loader
+      // document.body.classList.remove('loading');
+      const effect = new StretchEffect(container, itemsWrapper)
+});
+</script> -->
 
 <script>
 
@@ -369,42 +435,33 @@ $("body").removeClass('noscroll');
 }
 });
 
-// const playMe = document.querySelector(".playlist");
 
-// gsap.set(".hidetext", {y: "100%"});
 gsap.set(".overview-text-top", {opacity: 0}, 0)
 gsap.set(".overview-text-bottom", {opacity: 0}, 0)
-// gsap.set(".reveal-text", {opacity: 0}, 0)
-// gsap.set(".reveal-text-two", {opacity: 0}, 0)
 gsap.set(".reveal", {opacity: 1, yPercent: 0}, 0);
 gsap.set(".reveal-cover", {opacity: 1, yPercent: 0}, 0);
-// gsap.set(".home", { y: "20%"}, 0);
 gsap.set("#desktop", {y: "-100%"});
 gsap.set(".footer-text", {opacity: 0});
 gsap.set(".playlist", {x: "200%"});
 gsap.set(".footer-line", {scaleX:0, transformOrigin: "left"});
 gsap.set(".chicago", {css:{color: "#efe8d8"}});
+gsap.set(".tagline", {css:{opacity: 0}});
+
 
 
 timeline
-    // .to(".hidetext", 1.5, {y: "0%", ease: Power4.easeOut, delay: 0.5}, 0)
-    // .to(".reveal-text", {duration: 2, opacity: "1", ease: Power4.easeInOut, delay: 1}, 0)
-    // .to(".reveal-text-two", {duration: 2, opacity: "1", ease: Power4.easeInOut, delay: 2.5}, 0)
     .to(".chicago", {duration: 2, css:{color: "#dd5a54"}, ease: Power4.easeOut, delay: 4.5}, 0)
-    // .to(".reveal", 2, {css:{backgroundColor: "#bccece"}, ease: Power4.easeOut, delay: 5.5}, 0)
-    // .to(".reveal-text", {duration: 1.5, y: "400%", ease: Power4.easeInOut, delay: 5.5}, 0)
-    // .to(".reveal-text-two", {duration: 1.5, y: "400%", ease: Power4.easeInOut, delay: 5.5}, 0)
-    // .to(".hidetext-container", {duration: 1.5, y: "100%", ease: Power4.easeInOut, delay: 5.5}, 0)
     .to(".reveal", {duration: 1.5, y: "-100%", ease: Power4.easeInOut, delay: 5.5}, 0)
     .to(".reveal-cover", {duration: 1.5, y: "-100%", ease: Power4.easeInOut, delay: 5.5}, 0)
-    // .to(".home", {duration: 1.5, y: "0%", ease: Power4.easeInOut, delay: 5.4}, 0)
     .to("#desktop", {duration: 1, y: "0%", ease: Power4.easeOut, delay: 7}, 0)
-    .to(".overview-text-top", {duration: 3, opacity: 1, y: "0%", ease: Power4.easeOut, delay: 1, clearProps: 'all'}, 0)
-    .to(".overview-text-bottom", {duration: 3, opacity: 1, y: "0%", ease: Power4.easeOut, delay: 2.5, clearProps: 'all'}, 0)
+    .to(".overview-text-top", {duration: 3, opacity: 1, ease: Power4.easeOut, delay: 1, clearProps: 'all'}, 0)
+    .to(".overview-text-bottom", {duration: 3, opacity: 1, ease: Power4.easeOut, delay: 2.5, clearProps: 'all'}, 0)
     .to(".footer-line", {duration: 1.5, scaleX:1, ease:Power4.easeInOut, delay: 6.5}, 0)
     .to(".footer-text", {duration: 0.5, opacity: 1, ease: Power4.easeOut, delay: 7, clearProps: 'all'}, 0)
-    .to(".playlist", {duration: 2, x: "0%", clearProps: "all", ease: Power4.easeInOut, delay: 7}, 0)
-  });
+    .to(".playlist", {duration: 2, x: "0%", clearProps: "all", ease: Power4.easeInOut, delay: 6.5}, 0)
+    .to(".tagline", {duration: 2, opacity: 1, ease: Power4.easeInOut, delay: 8}, 0)
+});
+
 </script>
 
 </html>

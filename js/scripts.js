@@ -6,9 +6,9 @@ const runScripts = () => {
     const closeAbout = $('#close');
 
     
-    gsap.set(".about", {y: "100%"})
+    gsap.set(".about", {opacity: 0})
     gsap.set("#close", {opacity: 0})
-    gsap.set(".blurb", {y: "40%", opacity: 0})
+    // gsap.set(".blurb", {y: "20%", opacity: 0})
     
     const timeline = new TimelineMax({
         paused: true,
@@ -22,7 +22,7 @@ const runScripts = () => {
     });
     
     timeline
-        .to(".about", 1, {y: "0%", ease: Power4.easeInOut})
+        .to(".about", 0.5, {opacity: 1, ease: Power4.easeInOut})
         .to(".blurb", 1, {opacity: 1, ease:Power4.easeInOut, delay: 0.5}, 0)
         .to("#close", 0.5, {opacity: 1, ease: Power4.easeInOut, delay: 0.8}, 0);
     
@@ -31,9 +31,9 @@ const runScripts = () => {
         timeline.reversed() ? timeline.play() : timeline.reverse();
     });
     
-    $(document).on('click', "#close", function () {
-        $("body").removeClass('noscroll');
+    $(document).on('click', "#close", function () {        
         timeline.reversed() ? timeline.play() : timeline.reverse();
+        $("body").removeClass('noscroll');
     });
     }
 
@@ -231,7 +231,7 @@ const dragImage2 = () => {
     
         // build a scene
         var scene = new ScrollMagic.Scene({
-                triggerElement: this, reverse: false
+                triggerElement: this, offset: -50, reverse: false
             })
             .setTween(fadeTween) // trigger a TweenMax.to tween
             .addTo(controller);
@@ -268,6 +268,33 @@ const dragImage2 = () => {
     
     });
 
+    var slideStart = new TimelineMax();
+    var slideEnd = new TimelineMax();
+
+    gsap.set(".start-right p", {x:"30%", opacity: 0})
+    gsap.set(".start-left p", {x:"-30%", opacity: 0})
+
+    var slideStartTween = slideStart
+                            // .to(".liz-home", {backgroundColor: "#000", ease: Linear.noEase})
+                            .to(".start-left p", {duration: 0.8, x:"0%", opacity: 1, ease:Power4.easeOut}, 0)
+                            .to(".start-right p", {duration: 0.8, x:"0%", opacity: 1, ease:Power4.easeOut}, 0)
+
+    var slideEndTween = slideEnd
+                        .to(".liz-home", {backgroundColor: "#fff", ease: Linear.noEase}, 0)
+                        .to(".liz-start p", {color: "#000", ease: Linear.noEase}, 0)
+
+    var slideStartScene = new ScrollMagic.Scene({triggerElement: ".liz-start", triggerHook: "0.5"})    
+    .setTween(slideStartTween)
+    // .setPin(".liz-start", {pushFollowers: true})
+    .addIndicators() // add indicators (requires plugin)
+    .addTo(controller);
+
+    var slideEndScene = new ScrollMagic.Scene({triggerElement: ".liz-start", offset: 650})    
+    .setTween(slideEndTween)
+    // .setPin("#target", {pushFollowers: false})
+    .addIndicators() // add indicators (requires plugin)
+    .addTo(controller);
+
 
     var lizSlide = new TimelineMax();
 
@@ -295,7 +322,7 @@ const dragImage2 = () => {
         var splitterScene = new ScrollMagic.Scene({triggerElement: ".split-image-desktop", duration: 500, reverse:false})
                         .setTween(timelineSplitter)
                         // .setPin("#target", {pushFollowers: false})
-                        // .addIndicators() // add indicators (requires plugin)
+                        .addIndicators({name: 'test', indent: 500}) // add indicators (requires plugin)
                         .addTo(controller);
                 
     }
@@ -400,7 +427,7 @@ const dragImage2 = () => {
     var bgLizScene = new ScrollMagic.Scene({triggerElement: ".color-split", duration: 1000})    
     .setTween(bgLiz)
     // .setPin("#target", {pushFollowers: false})
-    // .addIndicators() // add indicators (requires plugin)
+    .addIndicators() // add indicators (requires plugin)
     .addTo(controller);
     }
 
@@ -422,7 +449,7 @@ const dragImage2 = () => {
         // });
         
         var containerScene = new ScrollMagic.Scene({
-                triggerElement: '#roster'
+                triggerElement: '#roster', reverse: false
             })
             .setTween(rosterTween)
             // .addIndicators()

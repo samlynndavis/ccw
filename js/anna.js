@@ -51,8 +51,6 @@ var bgAnnaScene1 = new ScrollMagic.Scene({triggerElement: ".large-copy-split-des
 // .addIndicators() // add indicators (requires plugin)
 .addTo(controller);
 
-var controller = new ScrollMagic.Controller();
-
 var processAnna = new TimelineMax();
  
 gsap.set("#drag-image-2", {scaleX: 0.7, x:"200%", opacity: 0})
@@ -72,6 +70,37 @@ var processAnnaTween = processAnna
 
 var processAnnaScene = new ScrollMagic.Scene({triggerElement: ".anna-process", offset: 50, reverse: false})
 .setTween(processAnnaTween)
+// .setPin("#target", {pushFollowers: false})
+// .addIndicators() // add indicators (requires plugin)
+.addTo(controller);
+
+var handsAnna = new TimelineMax();
+ 
+// gsap.set(".hands p", {y:"-10%", opacity: 0})
+gsap.set(".hands img", {x:"-50%", opacity: 0})
+                    
+var handsAnnaTween = handsAnna
+                              .to(".anna-home", {duration: 1, backgroundColor: "#e3b79a", ease: Linear.easeNone}, 0)
+                              .to(".hands p", {duration: 1, color:"#e9eecd", ease: Linear.easeNone}, 0)
+                              .to(".hands img", {duration: 2, x:"0%", opacity: 1, ease: Power4.easeOut}, 0)
+                         
+
+
+var handsAnnaScene = new ScrollMagic.Scene({triggerElement: ".hands", offset: 100})
+.setTween(handsAnnaTween)
+// .setPin("#target", {pushFollowers: false})
+// .addIndicators() // add indicators (requires plugin)
+.addTo(controller);
+
+var bgAnna = new TimelineMax();
+                    
+var bgAnnaTween = bgAnna
+                              .to(".anna-home", {duration: 1, backgroundColor: "#e9eecd", ease: Linear.easeNone})
+                         
+
+
+var bgAnnaScene = new ScrollMagic.Scene({triggerElement: ".anna-single", offset: 800, duration: 400})
+.setTween(bgAnnaTween)
 // .setPin("#target", {pushFollowers: false})
 // .addIndicators() // add indicators (requires plugin)
 .addTo(controller);

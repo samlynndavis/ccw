@@ -14,7 +14,7 @@ header {
 
 nav {
   font-family: 'Cormorant', serif;
-  font-size: 1.5vw;
+  font-size: 1.5rem;
 }
 
 header.top {
@@ -255,7 +255,7 @@ svg.close:hover {
 }
 
 .anna-link::after {
-  background-color: #c0c2ce;
+  background-color: #e3b79a;
   content: ' ';
   display: block;
   height: 50%;
@@ -288,7 +288,7 @@ svg.close:hover {
 }
 
 .mia-link::after {
-  background-color: #e3b79a;
+  background-color: #C23B22;
   content: ' ';
   display: block;
   height: 50%;

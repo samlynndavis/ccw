@@ -46,6 +46,7 @@ body.noscroll {
   top: 0;
   left: 0;
 }
+
 .about {
   z-index: 1005;
   position: fixed;
@@ -56,6 +57,8 @@ body.noscroll {
   visibility: hidden;
 
   overflow: hidden;
+
+  background-color: #e3b79a;
 }
 
 .about.active {
@@ -64,7 +67,7 @@ body.noscroll {
 
 a {
   font-style: normal;
-  cursor:none;
+  cursor: none;
 }
 
 a:hover {
@@ -77,22 +80,36 @@ a:visited {
 }
 
 @font-face {
-  font-family: "Matahari-Regular";
-  src: url("/css/fonts/Fontspring-DEMO-matahari-400regular.otf") format("opentype");
+  font-family: "Druk Bold";
+  src: url("/css/fonts/Druk\ Bold.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Matahari-Black";
-  src: url("/css/fonts/Fontspring-DEMO-matahari-900black.otf") format("opentype");
+  font-family: "Druk Super";
+  src: url("/css/fonts/Druk\ Super.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Matahari-Bold";
-  src: url("/css/fonts/Fontspring-DEMO-matahari-700bold.otf") format("opentype");
+  font-family: "Druk Wide Super";
+  src: url("/css/fonts/Druk\ Wide\ Super.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Druk XCond Italic Super";
+  src: url("/css/fonts/Druk\ XCond\ Super\ Italic.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Druk XXCond Super";
+  src: url("/css/fonts/Druk\ XXCond\ Super.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -145,6 +162,18 @@ a:visited {
   font-style: normal;
 }
 
+.druk-cond-super {
+  font-family: "Druk XXCond Super";
+}
+
+.druk-wide-super {
+  font-family: "Druk Wide Super";
+}
+
+.druk-cond-super-italic {
+  font-family: "Druk XCond Italic Super";
+}
+
 .grifinito {
   /* replace with your selector */
   font-family: "Grifinito M Medium";
@@ -152,10 +181,11 @@ a:visited {
   font-style: normal;
 }
 
-.grifinito-italic { /* replace with your selector */
-	font-family: "Grifinito M Medium Italic";
-	font-weight: normal;
-	font-style: normal;
+.grifinito-italic {
+  /* replace with your selector */
+  font-family: "Grifinito M Medium Italic";
+  font-weight: normal;
+  font-style: normal;
 }
 
 .cormo {
@@ -245,6 +275,7 @@ a:visited {
 
 .bio {
   z-index: 3;
+  font-size: 2vw;
 }
 
 .large-photo-anna {
@@ -293,8 +324,8 @@ a:visited {
   object-fit: cover;
 }
 
-.blurb > div,
-.blurb-desktop > div {
+.blurb>div,
+.blurb-desktop>div {
   font-variant: small-caps;
 }
 
@@ -399,6 +430,31 @@ a:visited {
   cursor: -webkit-grabbing;
 }
 
+.anna-hands {
+  background-image: url(/img/000007130029.jpg);
+  background-position: 52% 43%;
+  height: calc(50vw - 316px);
+  min-height: calc(20vw - 316px);
+  max-height: calc(1400px - 316px);
+  /* position: absolute; */
+  background-size: cover;
+  width: auto;
+  z-index: 1;
+}
+
+.anna-hands-2 {
+  background-image: url(/img/000007130017.jpg);
+  background-position: 52% 43%;
+  height: calc(50vw - 316px);
+  min-height: calc(20vw - 316px);
+  max-height: calc(1400px - 316px);
+  /* position: absolute; */
+  background-size: cover;
+  width: auto;
+  z-index: 1;
+  margin-left: 5px;
+}
+
 #intro-image {
   background-position: 52% 43%;
   background-image: url(/img/000007230011.jpg);
@@ -495,6 +551,7 @@ a:visited {
 
   /* transform: translateX(-100%); */
 }
+
 .story-hero-mia-left {
   background-image: url(/img/000007080009.jpg);
   background-size: cover;
@@ -531,6 +588,7 @@ a:visited {
   -moz-background-size: cover;
   background-size: cover;
   margin-top: 0;
+  background-position: 50% 60%;
 
   /* transform: translateX(100%); */
 
@@ -583,7 +641,7 @@ a:visited {
   animation-delay: 750ms;*/
 }
 
-.story-hero-nev-left{
+.story-hero-nev-left {
   background-image: url(/img/000007120010b.jpg);
   background-size: cover;
   background-position: 50% 10%;
@@ -605,7 +663,7 @@ a:visited {
   animation-delay: 750ms;*/
 }
 
-.story-hero-nev-right{
+.story-hero-nev-right {
   background-image: url(/img/bg_nev.jpg);
   background-size: cover;
   background-position: 50% 10%;
@@ -627,7 +685,7 @@ a:visited {
   animation-delay: 750ms;*/
 }
 
-.story-hero-laura-left{
+.story-hero-laura-left {
   background-image: url(/img/000007090031.jpg);
   background-size: cover;
   background-position: 50% 47%;
@@ -649,7 +707,7 @@ a:visited {
   animation-delay: 750ms;*/
 }
 
-.story-hero-laura-right{
+.story-hero-laura-right {
   background-image: url(/img/bg_laura.jpg);
   background-size: cover;
   background-position: 50% 8%;
@@ -670,6 +728,7 @@ a:visited {
   animation-fill-mode: forwards;
   animation-delay: 750ms;*/
 }
+
 .nev-img-left {
   background-image: url(/img/000007130036.jpg);
   background-position: center;
@@ -678,50 +737,56 @@ a:visited {
 
 .test::after {
   background-color:
-rgb(0, 0, 0);
+    rgb(0, 0, 0);
 
-content: ' ';
-display: block;
-height: 45%;
-opacity: 1;
-position: absolute;
-z-index: -1;
-width: calc(101% + 0px);
-bottom: 25px;
-right: 3px;
--webkit-transition: all 0.2s ease-out;
--moz-transition: all 0.2s ease-out;
--o-transition: all 0.2s ease-out;
--ms-transition: all 0.2s ease-out;
+  content: ' ';
+  display: block;
+  height: 45%;
+  opacity: 1;
+  position: absolute;
+  z-index: -1;
+  width: calc(101% + 0px);
+  bottom: 25px;
+  right: 3px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
 
-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 
-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
 
 }
 
 .test-liz::after {
   background-color:
-  #fff0f2;
+    #fff0f2;
 
-content: ' ';
-display: block;
-height: 45%;
-opacity: 1;
-position: absolute;
-z-index: -1;
-width: calc(101% + 0px);
-bottom: 25px;
-right: 3px;
--webkit-transition: all 0.2s ease-out;
--moz-transition: all 0.2s ease-out;
--o-transition: all 0.2s ease-out;
--ms-transition: all 0.2s ease-out;
+  content: ' ';
+  display: block;
+  height: 45%;
+  opacity: 1;
+  position: absolute;
+  z-index: -1;
+  width: calc(101% + 0px);
+  bottom: 15px;
+  right: 3px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
 
-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 
-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
 
+}
+
+.anna-full {
+  background-image: url(/img/000007100008.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 
@@ -761,7 +826,7 @@ transform-origin: 50% 50%;
   line-height: 1em;
 }
 
-.playlist span{
+.playlist span {
   background-color: #efe8d8;
   color: #404040;
   position: fixed;
@@ -779,10 +844,10 @@ transform-origin: 50% 50%;
   justify-content: center;
 
   animation: pulse 2s infinite linear;
-  
+
   transition: 0.3s ease-in-out;
 
-  box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+  box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
 }
 
 .playlist span:hover {
@@ -824,7 +889,8 @@ footer.bottom {
 }
 
 .bg-about {
-  background-color: #e3b79a;;
+  background-color: #e3b79a;
+  ;
 }
 
 .bg-blue {
@@ -1006,6 +1072,7 @@ footer.bottom {
 
 .bg-anna-brown {
   background-color: #d0b298;
+  background-color: #e3b79a;
 }
 
 .bg-anna-cream {
@@ -1496,15 +1563,22 @@ footer.bottom {
 
 #toTop {
   /* display: none; Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 13px; /* Place the button 17px from the bottom of the page */
-  right: 180px; /* Place the button 150px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 13px;
+  /* Place the button 17px from the bottom of the page */
+  right: 180px;
+  /* Place the button 150px from the right */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
   /* background-color: red; Set a background color */
   /* color: white; Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
   /* padding: 15px; Some padding */
   /* border-radius: 10px; Rounded corners */
   /* font-size: 18px; Increase font size */
@@ -1532,17 +1606,27 @@ footer.bottom {
   display: inline-block;
 }
 
+.influences-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.influences {
+  height: 100%;
+  width: 100%;
+}
+
 @keyframes pulse {
   0% {
-      transform: scale(1);
+    transform: scale(1);
   }
 
   50% {
-      transform: scale(1.05);
+    transform: scale(1.05);
   }
 
   100% {
-      transform: scale(1);
+    transform: scale(1);
   }
 }
 
@@ -1695,7 +1779,7 @@ footer.bottom {
     display: none;
   }
 
-  
+
   header.mobile {
     display: none;
   }
@@ -1707,6 +1791,7 @@ footer.bottom {
   .intro-text {
     display: none;
   }
+
   #mobile-nav {
     display: none;
   }
@@ -1786,7 +1871,7 @@ footer.bottom {
   .liz-wrapper {
     display: none;
   }
-  
+
   .image-caption-overlay {
     display: none;
   }
@@ -1820,7 +1905,7 @@ footer.bottom {
     padding-bottom: 0;
   }
 
-  .image-copy-split-small > div {
+  .image-copy-split-small>div {
     width: 100%;
   }
 
@@ -1850,7 +1935,7 @@ footer.bottom {
   .photo-pair {
     height: auto !important;
   }
-  
+
 
   .playlist span {
     display: none;
@@ -1929,7 +2014,7 @@ footer.bottom {
     position: relative !important;
   }
 
-  .footer-mobile > div {
+  .footer-mobile>div {
     padding: 0 1rem !important;
   }
 
@@ -2147,7 +2232,7 @@ footer.bottom {
     flex-direction: column;
   }
 
-  .color-split > div {
+  .color-split>div {
     height: 100vw !important;
     width: 100vw;
   }
@@ -2281,13 +2366,13 @@ screen and (max-height: 600px) {
 .repeatbg {
   overflow: hidden;
   min-height: 500vh;
-  position: relative;    
+  position: relative;
   display: flex;
   justify-content: center;
   padding: 1vw;
 }
 
-.repeatbg > p {
+.repeatbg>p {
   position: absolute;
   font-size: 12vw;
   z-index: -1;
@@ -2437,90 +2522,99 @@ screen and (max-height: 600px) {
 }
 
 .strip {
-  position:absolute;
-  display:inline-block;
-  font-size:10vw;
-  padding:0rem 2rem;
-  background-color:#000;
+  position: absolute;
+  display: inline-block;
+  font-size: 10vw;
+  padding: 0rem 2rem;
+  background-color: #000;
   /* color:#fff; */
   /* text-transform:uppercase;
   font-style:italic; */
-  font-weight:700;
+  font-weight: 700;
   width: auto;
- }
+}
 
- .strip.-one {
-  top:37%;
-  transform:translateX(-30vw) rotate(-20deg);
-  z-index:9
- }
- .strip.-two {
-  top:20%;
-  right:0;
-  transform:translateX(-20vw) rotate(12deg)
- }
- .strip.-three {
-  top:75%;
-  transform:translateX(-14vw) rotate(4deg)
- }
- .strip.-four {
-  top:55%;
-  transform:translateX(10vw) rotate(-10deg)
- }
- .strip.-five {
-  top:5%;
-  transform:translateX(-5vw) rotate(-10deg)
- }
- .strip.-six {
-  top:15%;
-  right:0;
-  transform:translateX(2vw) rotate(-5deg)
- }
- .strip.-seven {
-  top:45%;
-  transform:translateX(5vw) rotate(-10deg)
- }
- .strip.-eight {
-  top:85%;
-  left:0;
-  transform:translateX(-10vw) rotate(10deg)
- }
- .strip.-nine {
-  top:82.5%;
-  right:0;
-  transform:translateX(5vw) rotate(-3deg)
- }
+.strip.-one {
+  top: 37%;
+  transform: translateX(-30vw) rotate(-20deg);
+  z-index: 9
+}
 
- .item__img {
-   background-image: url(/img/000007080004.jpg);
-   background-position: center;
-   background-size: cover;
+.strip.-two {
+  top: 20%;
+  right: 0;
+  transform: translateX(-20vw) rotate(12deg)
+}
 
-   top: 0;
-   right: 0;
+.strip.-three {
+  top: 75%;
+  transform: translateX(-14vw) rotate(4deg)
+}
 
- }
+.strip.-four {
+  top: 55%;
+  transform: translateX(10vw) rotate(-10deg)
+}
 
- .comm-left.small {
-   width: 50%;
- }
+.strip.-five {
+  top: 5%;
+  transform: translateX(-5vw) rotate(-10deg)
+}
 
- svg.question_mia {
-   width: 15vw;
-   height: 15vw;
+.strip.-six {
+  top: 15%;
+  right: 0;
+  transform: translateX(2vw) rotate(-5deg)
+}
 
-   animation: rotation 10s infinite linear;
+.strip.-seven {
+  top: 45%;
+  transform: translateX(5vw) rotate(-10deg)
+}
 
- }
+.strip.-eight {
+  top: 85%;
+  left: 0;
+  transform: translateX(-10vw) rotate(10deg)
+}
 
- svg.question_mia path {
-   fill: #C23B22;
- }
+.strip.-nine {
+  top: 82.5%;
+  right: 0;
+  transform: translateX(5vw) rotate(-3deg)
+}
 
- @keyframes rotation {
+.item__img {
+  background-image: url(/img/000007080004.jpg);
+  background-position: center;
+  background-size: cover;
+
+  top: 0;
+  right: 0;
+
+}
+
+.comm-left.small {
+  width: 50%;
+}
+
+svg.question_mia {
+  width: 15vw;
+  height: 15vw;
+
+  animation: rotation 10s infinite linear;
+
+}
+
+svg.question_mia path {
+  fill: #C23B22;
+}
+
+@keyframes rotation {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(359deg);
   }
@@ -2543,7 +2637,7 @@ svg.question_laura {
 } */
 
 .question_laura {
-  bottom: 60px;
+  bottom: 180px;
   left: 110px;
 }
 
@@ -2560,7 +2654,7 @@ svg.question_laura {
 
   animation: pulse 20s infinite linear;
 
-  box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+  box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
 }
 
 .anna-vid {
@@ -2578,18 +2672,18 @@ svg.question_laura {
 }
 
 .mia-ball span {
-    height: 10vw;
-    width: 10vw;
-    position: absolute;
-    border-radius: 07151986%;
-    background-color: #C23B22;
-  
-    top: 150px;
-    left: 130px;
-  
-    animation: pulse 20s infinite linear;
-  
-    box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+  height: 10vw;
+  width: 10vw;
+  position: absolute;
+  border-radius: 07151986%;
+  background-color: #C23B22;
+
+  top: 150px;
+  left: 130px;
+
+  animation: pulse 20s infinite linear;
+
+  box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
 }
 
 .line-reveal {
@@ -2602,7 +2696,7 @@ svg.question_laura {
   background-color: #ffffffe6;
   width: calc(97% + 0px);
   position: absolute;
-  bottom: 7px;
+  bottom: 5px;
   display: block;
   transform-origin: 0% 50%;
   left: 0;

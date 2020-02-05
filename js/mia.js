@@ -39,7 +39,7 @@ var processScene = new ScrollMagic.Scene({ triggerElement: ".process.main", offs
                         .to(".comm-left p", {duration: 4, opacity: 1, y:"0%", ease: Power4.easeOut, delay: 1.1}, 0)
                         .to(".question-spin-mia", {duration: 2, opacity: 1, y:"0%", ease: Power4.easeOut, delay: 0.5}, 0)
 
-                        var commScene = new ScrollMagic.Scene({ triggerElement: ".comm-left", offset: -200, reverse: false})
+                        var commScene = new ScrollMagic.Scene({ triggerElement: ".comm-left", offset: -500, reverse: false})
                         .setTween(commTween)
                         // .setPin("#target", {pushFollowers: false})
                         // .addIndicators() // add indicators (requires plugin)
@@ -83,7 +83,7 @@ const bgMia2 = gsap.timeline();
 
 var bgMiaTween2 = bgMia2
                     .to(".mia-home", {duration: 2, css:{backgroundColor: "#C23B22"}})
-                    .to(".top-copy p", {css:{color: "#C23B22" }})
+                    .to(".top-copy p", {css:{color: "#C23B22"}})
 
 var miaScene2 = new ScrollMagic.Scene({ triggerElement: ".color-split", offset: 200, duration: 200, reverse: true})
 .setTween(bgMiaTween2)
