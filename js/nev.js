@@ -130,14 +130,14 @@ const nevInfluence = new TimelineMax();
 
 
 var nevTween2 = nevInfluence
-                    .fromTo(".influences p:nth-child(1)", 1, {opacity: 0, x:"-100%"}, {css:{opacity: 1, x:"0"}, ease: Power4.easeInOut})
-                    .fromTo(".influences p:nth-child(2)", 1, {opacity: 0, x:"100%"}, {css:{opacity: 1, x:"0"}, ease: Power4.easeInOut})
-                    .fromTo(".influences p:nth-child(3)", 1, {opacity: 0, x:"-100%"}, {css:{opacity: 1, x:"0"}, ease: Power4.easeInOut})
-                    .fromTo(".influences p:nth-child(4)", 1, {opacity: 0, x:"100%"}, {css:{opacity: 1, x:"0"}, ease: Power4.easeInOut})
+                    .fromTo(".influences p:nth-child(1)", {opacity: 0, x:"-100%"}, {css:{opacity: 1, x:"0"}, ease: Power4.easeInOut})
+                    .fromTo(".influences p:nth-child(2)", {opacity: 0, x:"100%"}, {css:{opacity: 1, x:"0"}, ease: Power4.easeInOut})
+                    .fromTo(".influences p:nth-child(3)", {opacity: 0, x:"-100%"}, {css:{opacity: 1, x:"0"}, ease: Power4.easeInOut})
+                    .fromTo(".influences p:nth-child(4)", {opacity: 0, x:"100%"}, {css:{opacity: 1, x:"0"}, ease: Power4.easeInOut})
 
-var nevScene2 = new ScrollMagic.Scene({ triggerElement: ".influences-wrapper", triggerHook: "0", duration: "400%"})
+var nevScene2 = new ScrollMagic.Scene({ triggerElement: ".influences", triggerHook: "0.5", duration: 300})
 .setTween(nevTween2)
-.setPin(".influences-wrapper", {pushFollowers: true})
+// .setPin(".influences-wrapper", {pushFollowers: true})
 .addIndicators() // add indicators (requires plugin)
 .addTo(controller);
 

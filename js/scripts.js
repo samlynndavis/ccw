@@ -286,13 +286,13 @@ const dragImage2 = () => {
     var slideStartScene = new ScrollMagic.Scene({triggerElement: ".liz-start", triggerHook: "0.5"})    
     .setTween(slideStartTween)
     // .setPin(".liz-start", {pushFollowers: true})
-    .addIndicators() // add indicators (requires plugin)
+    // .addIndicators() // add indicators (requires plugin)
     .addTo(controller);
 
     var slideEndScene = new ScrollMagic.Scene({triggerElement: ".liz-start", offset: 650})    
     .setTween(slideEndTween)
     // .setPin("#target", {pushFollowers: false})
-    .addIndicators() // add indicators (requires plugin)
+    // .addIndicators() // add indicators (requires plugin)
     .addTo(controller);
 
 
@@ -322,7 +322,7 @@ const dragImage2 = () => {
         var splitterScene = new ScrollMagic.Scene({triggerElement: ".split-image-desktop", duration: 500, reverse:false})
                         .setTween(timelineSplitter)
                         // .setPin("#target", {pushFollowers: false})
-                        .addIndicators({name: 'test', indent: 500}) // add indicators (requires plugin)
+                        // .addIndicators({name: 'test', indent: 500}) // add indicators (requires plugin)
                         .addTo(controller);
                 
     }
@@ -427,7 +427,7 @@ const dragImage2 = () => {
     var bgLizScene = new ScrollMagic.Scene({triggerElement: ".color-split", duration: 1000})    
     .setTween(bgLiz)
     // .setPin("#target", {pushFollowers: false})
-    .addIndicators() // add indicators (requires plugin)
+    // .addIndicators() // add indicators (requires plugin)
     .addTo(controller);
     }
 
