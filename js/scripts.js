@@ -301,7 +301,7 @@ const dragImage2 = () => {
     var lizSlideTween = lizSlide.from(".slide-right", {x:"110%", ease: Power4.easeInOut}, 0)
                                 .from(".slide-left", {x:"-110%", ease: Power4.easeInOut}, 0)
 
-    var lizSlideScene = new ScrollMagic.Scene({triggerElement: ".large-copy-split-desktop", reverse: false})    
+    var lizSlideScene = new ScrollMagic.Scene({triggerElement: ".large-copy-split-desktop", reverse: false, duration: "100%"})    
     .setTween(lizSlide)
     // .setPin("#target", {pushFollowers: false})
     // .addIndicators() // add indicators (requires plugin)
@@ -312,7 +312,7 @@ const dragImage2 = () => {
         var timelineSplitter = new TimelineMax();
 
             // var tween1 = timelineSplitter
-            var splitterTween = timelineSplitter.from(".splitter", 1, {opacity: 0, x:-50, ease: Power4.easeInOut})
+            var splitterTween = timelineSplitter.from(".splitter", 1, {opacity: 0, x:"-50%", ease: Power4.easeInOut})
                                                 .from(".splitter-question", 1, {opacity: 0, ease: Power4.easeInOut}, 0)
                                                 .from(".splitter-answer", 1, {opacity: 0, ease: Power4.easeInOut}, 0)
 
