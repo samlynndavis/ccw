@@ -24,7 +24,7 @@ var controller = new ScrollMagic.Controller();
 var processScene = new ScrollMagic.Scene({ triggerElement: ".process-wrapper", triggerHook: "0", duration: "100%" })
   .setTween(processTween)
   .setPin(".process-wrapper", {pushFollowers: true})
-  .addIndicators() // add indicators (requires plugin)
+  // .addIndicators() // add indicators (requires plugin)
   .addTo(controller);
 
   const commSlide = gsap.timeline();
