@@ -10,7 +10,7 @@ var bgAnnaTween1 = bgAnna1
                         .to(".footer-line", {css:{borderColor: "#e3b79a"}, ease: Linear.easeNone})                        
                         .to(".smdvs path", {css:{fill: "#e3b79a"}, ease: Linear.easeNone})
 
-var bgAnnaScene1 = new ScrollMagic.Scene({triggerElement: ".large-copy-split-desktop", duration: 1000})    
+var bgAnnaScene1 = new ScrollMagic.Scene({triggerElement: ".large-copy-split-desktop", duration: 100})    
 .setTween(bgAnnaTween1)
 // .setPin("#target", {pushFollowers: false})
 // .addIndicators() // add indicators (requires plugin)
@@ -45,7 +45,7 @@ var handsAnna = new TimelineMax();
 gsap.set(".hands img", {x:"-20%", opacity: 0})
                     
 var handsAnnaTween = handsAnna
-                              .to(".anna-home", {duration: 1, backgroundColor: "#e3b79a", ease: Linear.easeNone}, 0)
+                              // .to(".anna-home", {duration: 1, backgroundColor: "#e3b79a", ease: Linear.easeNone}, 0)
                             //   .to(".hands p", {duration: 1, color:"#e9eecd", ease: Linear.easeNone}, 0)
                               .to(".hands img", {duration: 1, x:"0%", opacity: 1, ease: Power4.easeOut}, 0)
                          

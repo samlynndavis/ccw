@@ -1835,6 +1835,26 @@ footer.bottom {
 
 @media screen and (max-width: 1024px) {
 
+  .scrollmagic-pin-spacer {
+    display: none !important;
+  }
+
+  .anna.copy {
+    font-size: 5vw !important;
+    line-height: 6vw !important;
+  }
+
+  .anna.large-copy,
+  .anna.top-copy {
+    width: 100% !important;
+  }
+
+  .anna.top-copy p {
+    font-size: 6vw !important;
+    line-height: 8vw !important;
+    margin-bottom: 1em !important;
+  }
+
   .laura-start div {
     padding: 2rem;
     line-height: 1.5;
