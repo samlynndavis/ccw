@@ -84,20 +84,6 @@ a:visited {
 }
 
 @font-face {
-  font-family: "Druk Bold";
-  src: url("/css/fonts/Druk\ Bold.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Druk Super";
-  src: url("/css/fonts/Druk\ Super.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Druk Wide Super";
   src: url("/css/fonts/Druk\ Wide\ Super.otf") format("opentype");
   font-weight: normal;
@@ -105,63 +91,8 @@ a:visited {
 }
 
 @font-face {
-  font-family: "Druk XCond Italic Super";
-  src: url("/css/fonts/Druk\ XCond\ Super\ Italic.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Druk XXCond Super";
   src: url("/css/fonts/Druk\ XXCond\ Super.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Zeit-MediumItalic";
-  src: url("/css/fonts/zeit-medium-italic.eot");
-  src: url("/css/fonts/zeit-medium-italic.svg") format("embedded-opentype"),
-    url("/css/fonts/zeit-medium-italic.woff2") format("woff2"),
-    url("/css/fonts/zeit-medium-italic.woff") format("woff"),
-    url("/css/fonts/zeit-medium-italic.ttf") format("truetype"),
-    url("/css/fonts/zeit-medium-italic.svg#youworkforthem") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Zeit-Extralight";
-  src: url("/css/fonts/zeit-extralight.eot");
-  src: url("/css/fonts/zeit-extralight.eot?#iefix") format("embedded-opentype"),
-    url("/css/fonts/zeit-extralight.woff2") format("woff2"),
-    url("/css/fonts/zeit-extralight.woff") format("woff"),
-    url("/css/fonts/zeit-extralight.ttf") format("truetype"),
-    url("/css/fonts/zeit-extralight.svg#youworkforthem") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Zeit-Heavy";
-  src: url("/css/fonts/zeit-heavy.eot");
-  src: url("/css/fonts/zeit-heavy.eot?#iefix") format("embedded-opentype"),
-    url("/css/fonts/zeit-heavy.woff2") format("woff2"),
-    url("/css/fonts/zeit-heavy.woff") format("woff"),
-    url("/css/fonts/zeit-heavy.ttf") format("truetype"),
-    url("/css/fonts/zeit-heavy.svg#youworkforthem") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Zeit-Light";
-  src: url("/css/fonts/zeit-light.eot");
-  src: url("/css/fonts/zeit-light.eot?#iefix") format("embedded-opentype"),
-    url("/css/fonts/zeit-light.woff2") format("woff2"),
-    url("/css/fonts/zeit-light.woff") format("woff"),
-    url("/css/fonts/zeit-light.ttf") format("truetype"),
-    url("/css/fonts/zeit-light.svg#youworkforthem") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -174,19 +105,13 @@ a:visited {
   font-family: "Druk Wide Super";
 }
 
-.druk-cond-super-italic {
-  font-family: "Druk XCond Italic Super";
-}
-
 .grifinito {
-  /* replace with your selector */
   font-family: "Grifinito M Medium";
   font-weight: normal;
   font-style: normal;
 }
 
 .grifinito-italic {
-  /* replace with your selector */
   font-family: "Grifinito M Medium Italic";
   font-weight: normal;
   font-style: normal;
@@ -216,18 +141,6 @@ a:visited {
 
 .montserrat {
   font-family: Montserrat, sans-serif;
-}
-
-.matahari {
-  font-family: "Matahari-Bold";
-}
-
-.matahari-regular {
-  font-family: "Matahari-Regular";
-}
-
-.matahari-black {
-  font-family: "Matahari-Black";
 }
 
 .chicago {
@@ -1330,7 +1243,7 @@ footer.bottom {
 }
 
 .roster-name {
-  font-size: 2vmax;
+  font-size: 4vw;
 }
 
 .roster-row-two {
