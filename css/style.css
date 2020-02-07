@@ -557,7 +557,7 @@ a:visited {
 }
 
 .story-hero-mia-left {
-  background-image: url(/img/000007080009.jpg);
+  background-image: url(/img/000007080009.webp);
   background-size: cover;
   background-position: 50% 35%;
   height: 100%;
@@ -580,7 +580,7 @@ a:visited {
 }
 
 .story-hero-mia-right {
-  background-image: url(/img/bg_mia.jpg);
+  background-image: url(/img/bg_mia.webp);
   background-size: cover;
   height: 100%;
   position: absolute;
