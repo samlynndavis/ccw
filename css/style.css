@@ -1835,6 +1835,23 @@ footer.bottom {
 
 @media screen and (max-width: 1024px) {
 
+  .laura-start div {
+    padding: 2rem;
+    line-height: 1.5;
+  }
+
+  .laura-process span {
+    font-size: 30vh;
+  }
+
+  .mobile-hide {
+    display: none;
+  }
+
+  .laura.right-side {
+    color: #1fc8a9;
+  }
+
   .large-copy-split-liz-desktop {
     display: none;
   }
