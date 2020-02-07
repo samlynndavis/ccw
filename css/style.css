@@ -1835,9 +1835,9 @@ footer.bottom {
 
 @media screen and (max-width: 1024px) {
 
-  .scrollmagic-pin-spacer {
+  /* .scrollmagic-pin-spacer {
     display: none !important;
-  }
+  } */
 
   .anna.copy {
     font-size: 5vw !important;
@@ -1888,7 +1888,7 @@ footer.bottom {
     display: none
   }
 
-  .scrollmagic-pin-spacer {
+  .liz.scrollmagic-pin-spacer {
     display: none;
   }
 
