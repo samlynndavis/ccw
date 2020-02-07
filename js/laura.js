@@ -8,9 +8,9 @@ const commSlide = gsap.timeline();
   gsap.set(".question-spin-laura", {opacity: 0})
 
   var commTween = commSlide
-                        .to(".comm-right", {duration: 2, x:"0%", ease: Power4.easeOut, delay: 0.3}, 0)
-                        .to(".comm-right p", {duration: 2, x:"0%", opacity: 1, ease: Power4.easeOut}, 0)
-                        .to(".comm-left", {duration: 2, x:"0%", ease: Power4.easeOut}, 0)
+                        .to(".comm-right", {duration: 1.5, x:"0%", ease: Power4.easeOut, delay: 0.3}, 0)
+                        .to(".comm-right p", {duration: 1.5, x:"0%", opacity: 1, ease: Power4.easeOut}, 0)
+                        .to(".comm-left", {duration: 1.5, x:"0%", ease: Power4.easeOut}, 0)
                         .to(".question-spin-laura", {duration: 2, opacity: 1, ease: Power4.easeOut})
 
                         var commScene = new ScrollMagic.Scene({ triggerElement: ".comm-left", reverse: false})
@@ -40,12 +40,12 @@ const processLaura = gsap.timeline();
 
   var lauraTween = processLaura
                         .to(".laura-home", {css:{backgroundColor:"#000"}, ease: Power4.easeOut}, 0)
-                        .to(".dream", {duration: 2, x:"-20%", opacity: 0, ease: Power4.easeOut})
-                        .to(".strategize", {duration: 2, x:"0%", opacity: 1, ease: Power4.easeOut}, 1)
-                        .to(".laura-home", {css:{backgroundColor:"#ffb700"}, ease: Power4.easeOut,}, 1)
-                        .to(".strategize", {duration: 2, x:"-20%", opacity: 0, ease: Power4.easeOut}, 2)
-                        .to(".do", {duration: 2, x:"0%", opacity: 1, ease: Power4.easeOut}, 2)
-                        .to(".laura-home", {css:{backgroundColor:"#ffefe5"}, ease: Power4.easeOut,}, 2)
+                        .to(".dream", {duration: 2, x:"-20%", opacity: 0, ease: Power4.easeOut}, 1)
+                        .to(".strategize", {duration: 2, x:"0%", opacity: 1, ease: Power4.easeOut}, 2)
+                        .to(".laura-home", {css:{backgroundColor:"#ffb700"}, ease: Power4.easeOut}, 2)
+                        .to(".strategize", {duration: 2, x:"-20%", opacity: 0, ease: Power4.easeOut}, 3)
+                        .to(".do", {duration: 2, x:"0%", opacity: 1, ease: Power4.easeOut}, 4)
+                        .to(".laura-home", {css:{backgroundColor:"#ffefe5"}, ease: Power4.easeOut,}, 4)
 
                         var processLauraScene = new ScrollMagic.Scene({ triggerElement: ".laura-process", triggerHook: 0, duration: "300%"})
                         .setTween(lauraTween)

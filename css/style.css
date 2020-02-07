@@ -26,7 +26,7 @@ body.noscroll {
 .reveal {
   width: 100vw;
   height: 100vh;
-  z-index: 1000;
+  z-index: 1001;
   background-color: #000;
   position: absolute;
   overflow: hidden;
@@ -45,6 +45,10 @@ body.noscroll {
 
   top: 0;
   left: 0;
+}
+
+.reveal-cover:hover {
+  cursor: none;
 }
 
 .about {
@@ -760,17 +764,15 @@ a:visited {
 }
 
 .test-liz::after {
-  background-color:
-    #fff0f2;
-
+  background-color:#fff0f2;
   content: ' ';
   display: block;
-  height: 45%;
+  height: 40%;
   opacity: 1;
   position: absolute;
   z-index: -1;
   width: calc(101% + 0px);
-  bottom: 15px;
+  bottom: 20px;
   right: 3px;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
@@ -1133,7 +1135,7 @@ footer.bottom {
 
 .caption a,
 .caption a:link {
-  color: #fff !important;
+  color: #fff;
   text-decoration: underline;
   padding-left: 1px;
 }
@@ -1158,7 +1160,7 @@ footer.bottom {
 
 .caption-header a,
 .caption-header a:link {
-  color: #fff !important;
+  color: #fff;
   text-decoration: underline;
   padding-left: 1px;
 }
@@ -1226,6 +1228,29 @@ footer.bottom {
 #toTop.rest {
   bottom: 60px;
 }
+
+.triangle-left {
+  shape-outside: polygon(0 0, 0 100%, 100% 100%);
+  float: left;
+  width: 300px;
+  height: 170px;
+}
+
+.triangle-right {
+  shape-outside: polygon(100% 0, 0 100%, 100% 100%);
+  float: right;
+  width: 300px;
+  height: 170px;
+}
+
+.influence-bg {
+  z-index: -1;
+  /* -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: black; */
+  color: #bea1a5;
+  opacity: 0;
+}
+
 
 
 
@@ -1561,13 +1586,18 @@ footer.bottom {
   padding-bottom: 0;
 }
 
+.blurb h1 {
+  font-size: 10vw;
+  font-variant: small-caps;
+}
+
 #toTop {
   /* display: none; Hidden by default */
-  position: fixed;
+  position: absolute;
   /* Fixed/sticky position */
-  bottom: 13px;
+  bottom: -1px;
   /* Place the button 17px from the bottom of the page */
-  right: 180px;
+  right: 35px;
   /* Place the button 150px from the right */
   z-index: 99;
   /* Make sure it does not overlap */
@@ -1614,6 +1644,46 @@ footer.bottom {
 .influences {
   height: 100%;
   width: 100%;
+}
+
+.links span {
+  font-size: 5vw;
+  display: inline-block;
+  position: relative;
+
+  transition: 100ms ease;
+}
+
+.links span:after {
+  content: '';
+  height: 2px;
+  background-color: #fff;
+  width: calc(100% + 0px);
+  display: block;
+  position: absolute;
+  /* bottom: calc(50% + 0px); */
+  bottom: 10px;
+  z-index: -1;
+
+  transform: scaleX(0);
+  transform-origin: 50% 0%;
+  transition: 100ms ease;
+}
+
+.links span:hover:after {
+  transform: scaleX(1);
+  transition: 100ms ease;
+}
+
+.links span:hover {
+  font-family: "Grifinito M Medium Italic";
+  font-weight: normal;
+  font-style: normal;
+
+  color: #dd5a54;
+  color: #000;
+
+  transition: 100ms ease;
 }
 
 @keyframes pulse {

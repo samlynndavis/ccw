@@ -54,27 +54,29 @@ header#navigation {
   fill: white;
 }
 
-.instagram {
-  width: 20px;
-  height: 20px;
-}
-
 .instagram path,
 .instagram polygon {
-  fill: transparent;
-  stroke: #dd5a54;
-  /* transition: 200ms ease-in; */
+  fill: #fdd630;
+  transition: 200ms ease-in;
 }
 
-.email {
-  width: 20px;
-  height: 20px;
+.email,
+.instagram {
+  width: 100px;
+  height: 100px;
+  transition: 200ms ease
+}
+
+.email:hover,
+.instagram:hover {
+  transform: translateY(-2px);
+  transition: 200ms ease;
 }
 
 .email path,
 .email polygon {
-  fill: #dd5a54;
-  transition: 200ms ease-in;
+  fill: #fdd630;
+  transition: 200ms ease;
 }
 
 .woman {
@@ -116,7 +118,7 @@ svg.close:hover {
 .email:hover path,
 .email:hover polygon {
   fill: #fff;
-  transition: 200ms ease-in;
+  transition: 200ms ease;
 }
 
 .nav-item {

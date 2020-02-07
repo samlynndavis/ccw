@@ -200,18 +200,19 @@
         </div>
       </div>
 
-      <div class="large-copy-split min-vh-100 w-100 flex flex-column ph3 pv6 justify-center items-center">
-        <div class="large-copy w-100 pa1">
-            <p class="f1 tc lh-headline grifinito">What influences your work the most?</p>
+      <div class="nev-influences large-copy-split min-vh-100 w-100 flex flex-column ph3 pv6 justify-center items-center relative">
+        <div class="absolute flex flex-column items-center justify-center w-100 min-vh-100">
+          <div class="influence-question large-copy pa1">
+              <p class="f3 tc lh-headline druk-wide-super bg-nev-red pa2 z-2">What influences your work the most?</p>
+          </div>
+          <div style="font-size:10vw;" class="flex flex-column w-100 influences justify-around large-copy absolute pa4">
+            <p class="tc lh-headline black cormo">Amy Winehouse</p>
+            <p class="tc lh-headline black cormo">Celia Cruz</p>
+            <p class="tc lh-headline black cormo">Tierra Whack</p>
+            <p class="tc lh-headline black cormo">Tyler, the Creator</p>
+          </div>
         </div>
       </div>
-
-      <div style="font-size:10vw;" class="flex flex-column min-vh-100 w-100 influences large-copy pv6">
-        <p class="tc lh-headline black cormo">Amy Winehouse</p>
-        <p class="tc lh-headline black cormo">Celia Cruz</p>
-        <p class="tc lh-headline black cormo">Tierra Whack</p>
-        <p class="tc lh-headline black cormo">Tyler, the Creator</p>
-    </div>
 
       <!-- <div class="flex">
         <div class="nev-img-left flex flex-column justify-end bg-white min-vh-100 w-50 z-3">
@@ -467,6 +468,7 @@
 <script src="/js/jquery.lettering-0.6.1.min.js"></script>
 <script src="/js/jquery.lettering.js"></script>
 <script src="/js/nev.js"></script>
+<script type="application/javascript" src="/js/js.cookie.js"></script>
 <script src="/js/scripts.js"></script>
 
 <script>
@@ -494,16 +496,5 @@
 
   repeatLeft()
 </script>
-
-<!-- <script>
-  function nevInflucenes() {
-    const title = '<p>  Amy Winehouse. Celia Cruz. Tierra Whack. Tyler the Creator. </p>'
-    const marqueeText = new Array(1000).fill(title).join('')
-
-    document.querySelector('.nev-influences span').innerHTML = marqueeText
-  }
-
-  nevInflucenes()
-</script> -->
 
 </html>
