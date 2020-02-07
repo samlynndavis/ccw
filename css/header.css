@@ -88,16 +88,34 @@ header#navigation {
   fill: #000;
 }
 
+.close-btn {
+  top: -40px;
+  right: -40px;
+
+  z-index: 100;
+}
+
+.close-bg {
+  content: '';
+  height: 30px;
+  width: 30px;
+  border-radius: 07151986px;
+  background-color: #fdd630;
+  z-index: -1;
+}
+
 svg.close {
   fill: #fff;
   height: 25px;
   width: 25px;
 
+  padding: 0.5vw;
+
   transition: 0.2s ease-in-out;
 }
 
 svg.close:hover {
-  fill: #dd5a54;
+  fill: #000;
   transition: 0.2s ease-in-out;
 }
 
