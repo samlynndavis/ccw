@@ -142,15 +142,25 @@ var introSkip = () => {
 
 var cookieWatch = () => {
 
-    if (introCookie == 'undefined' || introCookie == null || introCookie == "" || introCookie == "null") {
+    if ((introCookie == 'undefined' || introCookie == null || introCookie == "" || introCookie == "null") && ($( window ).width() > 1024)) {
         createCookie();
         introScript();
     } else {
         introSkip();
+        createCookie();
     }
 
 };
 
+var widthCheck = () => {
+    if ($( window ).width() <1024) {
+        introSkip();
+        cookieWatch();
+        
+    } else {
+        return;
+    }
+};
 
 $(window).on('load', function () {
     cookieWatch();

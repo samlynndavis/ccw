@@ -1864,8 +1864,12 @@ footer.bottom {
     display: none;
   }
 
-  .process-pieces {
+  .process-wrapper {
     display: none
+  }
+
+  .scrollmagic-pin-spacer {
+    display: none;
   }
 
 
