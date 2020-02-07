@@ -845,14 +845,14 @@ const runScripts = () => {
 
 
 
-        // var openMenu = $('.nav-icon');
-        // var menu = $('#mobile-nav-wrapper');
+        var openMenu = $('.nav-icon');
+        var menu = $('#mobile-nav-wrapper');
 
-        // $(openMenu).on('click', function () {
-        //     $(menu).toggleClass('on');
-        //     $(openMenu).toggleClass('on');
-        //     $("body").toggleClass('noscroll');
-        // });
+        $(openMenu).on('click', function () {
+            $(menu).toggleClass('on');
+            $(openMenu).toggleClass('on');
+            $("body").toggleClass('noscroll');
+        });
 
     const pushFooter = () => {
 
