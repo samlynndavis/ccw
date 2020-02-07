@@ -470,7 +470,7 @@ a:visited {
 }
 
 .story-hero-mia-left {
-  background-image: url(/img/000007080009.webp);
+  background-image: url(/img/000007080009.jpg);
   background-size: cover;
   background-position: 50% 35%;
   height: 100%;
@@ -493,7 +493,7 @@ a:visited {
 }
 
 .story-hero-mia-right {
-  background-image: url(/img/bg_mia.webp);
+  background-image: url(/img/bg_mia.jpg);
   background-size: cover;
   height: 100%;
   position: absolute;
@@ -706,7 +706,7 @@ a:visited {
 
 
 .intro:hover {
-  cursor: url(/img/whitedown1.webp), auto !important;
+  cursor: url(/img/whitedown1.jpg), auto !important;
 }
 
 .hidetext-container {
@@ -1264,11 +1264,11 @@ footer.bottom {
 
 .roster-card-mia {
   transition: 0.2s ease-in-out;
-  background-color: #d9baad;
+  background-color: #C23B22;
 }
 
 .roster-card-mia:hover {
-  box-shadow: 8px 8px #e44b4b;
+  box-shadow: 8px 8px #FFD1A9;
   transform: translateY(-8px);
   transition: 0.2s ease-in-out;
   /* background-color: #d9baad; */
@@ -1276,13 +1276,13 @@ footer.bottom {
 
 .roster-card-mia:hover h1,
 .roster-card-mia:hover p {
-  color: #e44b4b;
+  color: #FFD1A9;
   transition: 0.2s ease-in-out;
 }
 
 .roster-card-mia h1,
 .roster-card-mia p {
-  color: #e44b4b;
+  color: #FFD1A9;
 }
 
 .roster-card-liz {
@@ -1311,11 +1311,11 @@ footer.bottom {
 
 .roster-card-anna {
   transition: 0.2s ease-in-out;
-  background-color: #69744b;
+  background-color: #e9eecd;
 }
 
 .roster-card-anna:hover {
-  box-shadow: 8px 8px #ffdbcc;
+  box-shadow: 8px 8px #e3b79a;
   transform: translateY(-8px);
   transition: 0.2s ease-in-out;
   /* background-color: #2f3924; */
@@ -1323,13 +1323,13 @@ footer.bottom {
 
 .roster-card-anna:hover h1,
 .roster-card-anna:hover p {
-  color: #ffdbcc;
+  color: #e3b79a;
   transition: 0.2s ease-in-out;
 }
 
 .roster-card-anna h1,
 .roster-card-anna p {
-  color: #ffdbcc;
+  color: #e3b79a;
   transition: 0.2s ease-in-out;
 }
 
@@ -1363,28 +1363,25 @@ footer.bottom {
   transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
   /* width: calc(25vw - 20px); */
-  background-color: #f4ecc5;
+  background-color: #ffb606;
 }
 
 .roster-card-nev:hover {
-  box-shadow: 8px 8px #d5514f;
-  box-shadow: 8px 8px #d5514f;
+  box-shadow: 8px 8px #ba201e;
   transform: translateY(-8px);
   transition: 0.2s ease-in-out;
-  /* background-color: #ff9966; */
 }
 
 .roster-card-nev:hover h1,
 .roster-card-nev:hover p {
-  color: #d5514f;
+  color: #ba201e;
   transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
 
 .roster-card-nev h1,
 .roster-card-nev p {
-  color: #d5514f;
-  color: #d5514f;
+  color: #ba201e;
   transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }

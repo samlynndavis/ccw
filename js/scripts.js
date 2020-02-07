@@ -843,55 +843,16 @@ const runScripts = () => {
         //     .addTo(controller);
     }
 
-    const mobileMenu = () => {
 
-        var openMenu = $('.hamburger');
-        var closeMenu = $('.close');
+
+        var openMenu = $('.nav-icon');
         var menu = $('#mobile-nav-wrapper');
-        // var listItems = $('ul#mobile-nav li');
-        var timelineMobile = new TimelineMax({
-            paused: true,
-            reversed: true,
-            onReverseComplete: function () {
-                $(menu).removeClass('on');
-                $("body").removeClass('noscroll');
-            }
-
-        });
-
-        gsap.set("#mobile-nav-wrapper", {
-            y: "100%"
-        })
-
-        timelineMobile
-            .to(menu, 1, {
-                y: "0%",
-                ease: Power4.easeInOut
-            });
 
         $(openMenu).on('click', function () {
             $(menu).toggleClass('on');
-            $("body").addClass('noscroll');
-            timelineMobile.reversed() ? timelineMobile.play() : timelineMobile.reverse();
+            $(openMenu).toggleClass('on');
+            $("body").toggleClass('noscroll');
         });
-
-        $(closeMenu).on('click', function () {
-            timelineMobile.reversed() ? timelineMobile.play() : timelineMobile.reverse();
-        });
-
-    };
-
-    // var options = {
-    //     animate: true,
-    //     patternWidth: 100,
-    //     patternHeight: 100,
-    //     grainOpacity: 0.05,
-    //     grainDensity: 1,
-    //     grainWidth: 1,
-    //     grainHeight: 1
-    // };
-
-    // grained('#grain', options);
 
     const pushFooter = () => {
 
@@ -944,15 +905,16 @@ const runScripts = () => {
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     });
 
-    $(document).ready(function () {
-        $('#nav-icon').click(function () {
-            $('#mobile-nav').toggleClass('open');
-        });
-    });
+    // $(document).ready(function () {
+    //     $('#nav-icon').click(function () {
+    //         $('#mobile-nav').toggleClass('open');
+    //     });
+    // });
 
 
 
     $(document).ready(function () {
+
         if ($('body').hasClass('homepage')) {
             rosterFade();
             cookieWatch();
