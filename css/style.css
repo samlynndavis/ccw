@@ -1737,6 +1737,10 @@ footer.bottom {
 
 @media screen and (min-width: 768px) {
 
+  .desktop-hide {
+    display: none;
+  }
+
   #intro-image {
     min-height: calc(600px - 316px);
     position: absolute;
