@@ -35,6 +35,11 @@ body.noscroll {
   left: 0;
 }
 
+.vitals a:hover {
+  color: #000 !important;
+}
+}
+
 .reveal-cover {
   width: 100vw;
   height: 100vh;
