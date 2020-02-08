@@ -183,18 +183,18 @@ const runScripts = () => {
         })
         // gsap.set(".blurb", {y: "20%", opacity: 0})
 
-        const timeline = new TimelineMax({
+        const enter = new TimelineMax({
             paused: true,
             reversed: true,
             onComplete: function () {
                 $("body").addClass('noscroll');
             },
             onReverseComplete: function () {
-                $("#teambio").removeClass('active');
+                $(".about").removeClass('active');
             }
         });
 
-        timeline
+        enter
             .to(".about", 0.5, {
                 opacity: 1,
                 ease: Power4.easeInOut
@@ -212,11 +212,11 @@ const runScripts = () => {
 
         $(document).on('click', "#about", function () {
             $(".about").addClass('active');
-            timeline.reversed() ? timeline.play() : timeline.reverse();
+            enter.reversed() ? enter.play() : enter.reverse();
         });
 
         $(document).on('click', "#close", function () {
-            timeline.reversed() ? timeline.play() : timeline.reverse();
+            enter.reversed() ? enter.play() : enter.reverse();
             $("body").removeClass('noscroll');
         });
     }
