@@ -1839,10 +1839,6 @@ footer.bottom {
 
 @media screen and (max-width: 1024px) {
 
-  /* .scrollmagic-pin-spacer {
-    display: none !important;
-  } */
-
   .anna.copy {
     font-size: 5vw !important;
     line-height: 6vw !important;
