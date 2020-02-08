@@ -104,8 +104,13 @@ header#navigation {
   z-index: -1;
 }
 
+.close-bg:hover {
+  background-color: transparent;
+  border: 1px solid #fdd630;
+}
+
 svg.close {
-  fill: #000;
+  fill: #e3b79a;
   height: 35px;
   width: 35px;
 
@@ -115,7 +120,7 @@ svg.close {
 }
 
 svg.close:hover {
-  fill: #000;
+  fill: #fdd630;
   transition: 0.2s ease-in-out;
 }
 
