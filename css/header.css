@@ -503,7 +503,7 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #000;
+    background-color: #e3b79a;
     height: 100%;
     text-align: left;
     width: 100vw;
@@ -535,7 +535,7 @@ ul {
 
   #mobile-nav-wrapper a {
     letter-spacing: 2px;
-    color: #f1d3d3;
+    color: #fff;
   }
 
   #mobile-nav {
@@ -544,7 +544,7 @@ ul {
 
   #mobile-nav li {
     padding: 11vw;
-    text-align: left;
+    /* text-align: left; */
   }
   ;
 }
