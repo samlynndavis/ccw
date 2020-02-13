@@ -2139,8 +2139,8 @@ footer.bottom {
   }
 
   .intro {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     /* background-image: url(/img/000007230011.jpg);
     background-size: cover;
     background-position: center */
@@ -2163,6 +2163,10 @@ footer.bottom {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white; */
     letter-spacing: 2px;
+  }
+
+  .intro-text-mobile {
+    z-index: 10;
   }
 
   .bio {
