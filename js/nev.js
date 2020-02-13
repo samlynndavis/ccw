@@ -20,10 +20,10 @@ var nevScene = new ScrollMagic.Scene({ triggerElement: ".large-copy-split"})
 const nevInfluence = new TimelineMax();
 
 var nevTween2 = nevInfluence
-                    .fromTo(".influences p:nth-child(1)", {opacity: 0, x:"-100%"}, {css:{opacity: 1, x:"0"}, ease: Power4.easeInOut})
-                    .fromTo(".influences p:nth-child(2)", {opacity: 0, x:"100%"}, {css:{opacity: 1, x:"0"}, ease: Power4.easeInOut})
-                    .fromTo(".influences p:nth-child(3)", {opacity: 0, x:"-100%"}, {css:{opacity: 1, x:"0"}, ease: Power4.easeInOut})
-                    .fromTo(".influences p:nth-child(4)", {opacity: 0, x:"100%"}, {css:{opacity: 1, x:"0"}, ease: Power4.easeInOut})
+                    .fromTo(".influences p:nth-child(1)", {opacity: 0, x:"-200%"}, {css:{opacity: 1, x:"0"}, ease: Power4.easeInOut})
+                    .fromTo(".influences p:nth-child(2)", {opacity: 0, x:"200%"}, {css:{opacity: 1, x:"0"}, ease: Power4.easeInOut})
+                    .fromTo(".influences p:nth-child(3)", {opacity: 0, x:"-200%"}, {css:{opacity: 1, x:"0"}, ease: Power4.easeInOut})
+                    .fromTo(".influences p:nth-child(4)", {opacity: 0, x:"200%"}, {css:{opacity: 1, x:"0"}, ease: Power4.easeInOut})
                     .fromTo(".nev-influences", {backgroundColor: "#ba201e"}, {css:{backgroundColor: "#ba201e"}, ease: Power4.easeInOut})
 
 var nevScene2 = new ScrollMagic.Scene({ triggerElement: ".nev-influences", triggerHook: "0", duration: "600%"})
