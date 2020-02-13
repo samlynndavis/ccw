@@ -45,7 +45,7 @@
   <div id="teambio" class=" about w-100 vh-100 flex flex-column white bg-anna-brown pa3">
 
     <div class="close-btn absolute">
-      <a id="close" href="#"><svg class="close close-bg" height='100px' width='100px' xmlns="http://www.w3.org/2000/svg"
+      <svg id="close" class="close close-bg" height='100px' width='100px' xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" preserveAspectRatio="none" x="0px" y="0px"
           viewBox="0 0 100 100">
           <defs>
@@ -59,7 +59,6 @@
             <use xlink:href="#a"></use>
           </g>
         </svg>
-      </a>
     </div>
 
     <div class="flex flex-column vh-100 justify-around pa3">
@@ -104,7 +103,7 @@
         <li class="nav-item"><a class="nav-link flex flex-column">the women</a>
           <ul class="nav-link">
             <li><a class="nav-item-child anna-link" href="/anna-michal.html">Anna-Michal Paul</a></li>
-            <li><a class="nav-item-child liz-link" href="/liz.html">Elizabeth de la Piedra</a></li>
+            <li><a class="nav-item-child liz-link" href="/elizabeth.html">Elizabeth de la Piedra</a></li>
             <li><a class="nav-item-child laura-link" href="/laura.html">Laura Sofia Cardozo</a></li>
             <li><a class="nav-item-child mia-link" href="/mia.html">Mia Gholar</a></li>
             <li><a class="nav-item-child nev-link" href="/nev.html">Nev Rosales</a></li>
@@ -137,8 +136,8 @@
         <h1 class="story-title text-mia-red w-100 tr pa4 pb5 ma0 fw1">Mia Gholar</h1>
       </div>
 
-      <div class="story-hero-portrait story-hero-portrait-mia pa5-ns min-vh-100 flex flex-column items-center">
-        <p class="story-title text-mia-red w-75 tc pa4 ma0 fw1 absolute">Mia Gholar</p>
+      <div class="story-hero-portrait story-hero-portrait-mia pa3 pa5-ns flex min-vh-100 flex-column items-center">
+        <p style="padding-bottom: 2rem;" class="story-title text-mia-red w-75 tc pa4 ma0 fw1">Mia Gholar</p>
         <img src="/img/bg_mia.jpg">
       </div>
 
@@ -155,7 +154,7 @@
         </div>
       </div>
 
-      <div class="flex liz-wrapper-mobile min-vh-100 items-center pv5">
+      <div class="flex liz-wrapper-mobile items-center pv5">
         <div class="f1 tc pa3 w-100 text-mia-red">
           <p>Multifaceted Chicago gem, Mia Gholar weaves together African history, spirituality and wellness into her
             art, creating a vivid conversation between artist and audience, creative and Creator.</p>
@@ -250,7 +249,7 @@
         </div>     
       </div>
 
-      <div class="large-copy-split-mobile flex flex-column w-100 flex ph3 pv6 justify-between">
+      <div class="large-copy-split-mobile flex flex-column w-100 flex ph3 pv4 justify-between">
         <div class="right-side-copy w-100 min-vh-100 flex flex-column justify-center pv6 ph6">
           <div class="w-75 large-copy f2 tl pb2 lh-copy white tc">
               <p>Describe your process of creating in a few words.</p>
@@ -274,7 +273,7 @@
         </div>
       </div>
 
-      <div class="fade flex-column large-copy-split-mobile w-100 flex ph3 pv7 justify-between items-start">
+      <div class="fade flex-column large-copy-split-mobile w-100 flex ph3 pv4 tc justify-between items-start">
             <div class="large-copy w-100 ph4">
                 <blockquote>
                     <p class="f1 lh-copy white">Let’s talk a bit about your chosen field. How did you
@@ -406,15 +405,14 @@
         </div>
       </div>
 
-      <div class="large-image-copy-mia-mobile w-100 min-vh-100 flex flex-column justify-center pv6">
-        <div class="w-100 large-copy f2 tl pb2 lh-copy white">
+      <div class="large-image-copy-split large-image-copy-mia-mobile w-100 vh-100 flex flex-column justify-center pv4 tc">
+        <div class="w-100 large-copy f2 pb2 lh-copy white">
             <p>What do you aim to communicate through what you make?</p>
         </div>
         <div class="single-image-mobile w-100 flex items-center justify-center flex-column pa0">
           <div class="w-100 flex flex-column justify-center pa4 items-center">
             <img src="/img/000007080004.jpg">
-            <span style="color:#fff !important" class="pt3 f6 caption-photo">photo by <a style="color:#fff !important" href="https://www.instagram.com/jessicawlevin" rel="noopener"
-                target="_blank">Jessica Levin</a></span>
+            <span style="color:#fff !important" class="pt3 f6 caption-photo">photo by <a style="color:#fff !important" href="https://www.instagram.com/jessicawlevin" rel="noopener" target="_blank">Jessica Levin</a></span>
           </div>
         </div>
         <div class="large-copy w-100 cormo">
@@ -452,7 +450,7 @@
                 </div>
             </div> -->
 
-      <div class="flex items-center justify-center pa5 social">
+      <div class="flex items-center justify-center pa4 social">
         <div class="flex justify-between">
           <div class="flex flex-column items-center ph4 justify-center">
             <a href="https://www.instagram.com/miaghogho/" rel="noopener" target="_blank" class="nav-link ph2 social"><svg
@@ -570,21 +568,14 @@
 </body>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="/js/flickity.pkgd.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.0.4/dist/gsap.min.js"></script>
 <script src="/js/TweenMax.min.js"></script>
 <script src="/js/ScrollMagic.js"></script>
 <script src="/js/animation.gsap.js"></script>
 <script src="/js/debug.addIndicators.js"></script>
-<script src="/js/jquery.lettering-0.6.1.min.js"></script>
-<script src="/js/jquery.lettering.js"></script>
 <script src="/js/mia.js"></script>
 <script type="application/javascript" src="/js/js.cookie.js"></script>
 <script src="/js/scripts.js"></script>
-
-<script>
-  $(".photo-caption").lettering('lines').children('span').lettering('words').children('span').lettering();
-</script>
 
 <script>
   function makeMarquee() {
