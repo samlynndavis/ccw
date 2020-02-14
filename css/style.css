@@ -2740,16 +2740,6 @@ svg.question_laura {
   top: 10%;
 }
 
-/* .anna-vid-mobile {
-  height: calc(49vw - 316px);
-  min-height: calc(20vw - 316px);
-  position: absolute;
-  /* width: auto; */
-  z-index: 2;
-  left: 70%;
-  top: 10%;
-} */
-
 .anna-vid:hover {
   z-index: 3;
 }
