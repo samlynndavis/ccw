@@ -44,6 +44,20 @@ header#navigation {
   stroke: #dd5a54;
 }
 
+.love {
+  width: 30px;
+  height: 30px;
+}
+
+.love-link:hover {
+  cursor: default;
+}
+
+.love path,
+.love polygon {
+  fill: #dd5a54;
+}
+
 .smdvs {
   width: 70px;
   height: auto;
@@ -411,6 +425,8 @@ ul {
     height: 100px;
     position: fixed;
     background-color: transparent;
+
+    z-index: 1000;
   }
 
   header.mobile.nav-up {

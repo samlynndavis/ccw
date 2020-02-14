@@ -2138,6 +2138,10 @@ footer.bottom {
     padding-top: 1.5rem;
   }
 
+  .love-intro {
+    z-index: 1006;
+  }
+
   .intro {
     /* display: flex;
     flex-direction: column; */
@@ -2156,7 +2160,7 @@ footer.bottom {
 
   .intro-text {
     font-size: 20vw;
-    color: #fff;
+    /* color: #fff; */
     text-align: left;
     /* text-transform: uppercase; */
     /* color: transparent;

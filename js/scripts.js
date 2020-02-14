@@ -17,7 +17,9 @@ var introScript = () => {
         }
     });
 
-
+    gsap.set(".love", {
+        opacity: 0
+    }, 0)
     gsap.set(".overview-text-top", {
         opacity: 0
     }, 0)
@@ -125,7 +127,51 @@ var introScript = () => {
             ease: Power4.easeInOut,
             delay: 8
         }, 0)
+        .to(".love", {
+            duration: 1,
+            opacity: 1,
+            ease: Power4.easeOut,
+            delay: 8
+        }, 0)
 };
+
+var introScriptMob = () => {
+
+    $("body").addClass('noscroll');
+
+    const introMobile = gsap.timeline({
+        onComplete() {
+            $("body").removeClass('noscroll');
+            Cookies.set('loveintro', 'true');
+            $(".love-intro").addClass('hidden');
+        }
+    });
+
+    gsap.set(".love-intro", {
+        opacity: 0,
+    }, 0);
+
+    introMobile
+        .to(".love-intro", {
+            duration: 2,
+            opacity: 1,
+            ease: Power4.easeInOut,
+            delay: 1
+        }, 0)
+        .to(".reveal", {
+            duration: 1.5,
+            y: "-100%",
+            ease: Power4.easeInOut,
+            delay: 3
+        }, 1)
+        .to(".reveal-cover", {
+            duration: 1.5,
+            y: "-100%",
+            ease: Power4.easeInOut,
+            delay: 3
+        }, 1)
+}
+
 
 var introSkip = () => {
 
@@ -142,23 +188,20 @@ var introSkip = () => {
 
 var cookieWatch = () => {
 
-    if ((introCookie == 'undefined' || introCookie == null || introCookie == "" || introCookie == "null") && ($( window ).width() > 1024)) {
-        createCookie();
-        introScript();
+    if (introCookie == 'undefined' || introCookie == null || introCookie == "" || introCookie == "null") {
+        widthCheck();
     } else {
         introSkip();
-        createCookie();
     }
 
 };
 
 var widthCheck = () => {
     if ($( window ).width() <1024) {
-        introSkip();
-        cookieWatch();
+        introScriptMob();
         
     } else {
-        return;
+        introScript();
     }
 };
 
