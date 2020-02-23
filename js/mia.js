@@ -1,7 +1,7 @@
 
-  const timeline = gsap.timeline();
+const timeline = gsap.timeline();
 
-  gsap.set(".process.main path", {fill:"#C23B22", stroke:"#C23B22"})
+gsap.set(".process.main path", {fill:"#C23B22", stroke:"#C23B22"})
 
 var processTween = timeline
                       .to(".process.main path", { duration: 2, fill:"#FFD1A9", ease: Power4.easeInOut})
@@ -24,7 +24,6 @@ var controller = new ScrollMagic.Controller();
 var processScene = new ScrollMagic.Scene({ triggerElement: ".process-wrapper", triggerHook: "0", duration: "100%" })
   .setTween(processTween)
   .setPin(".process-wrapper", {pushFollowers: true})
-  // .addIndicators() // add indicators (requires plugin)
   .addTo(controller);
 
   const commSlide = gsap.timeline();
