@@ -224,6 +224,7 @@ const runScripts = () => {
         gsap.set("#close", {
             opacity: 0
         })
+        // gsap.set(".blurb", {y: "20%", opacity: 0})
 
         const enter = new TimelineMax({
             paused: true,
@@ -464,14 +465,15 @@ const runScripts = () => {
                 offset: -100,
                 reverse: false
             })
-            .setTween(fadeTween)
+            .setTween(fadeTween) // trigger a TweenMax.to tween
             .addTo(controller);
 
     });
 
+    // loop through all elements
     $('.line-reveal').each(function () {
 
-
+        // build a tween
         var lineTween = TweenMax.to($(this), 1.8, {
             css: {
                 scaleX: 1,
@@ -480,20 +482,21 @@ const runScripts = () => {
             ease: Power4.easeInOut
         }, 0);
 
-
+        // build a scene
         var scene = new ScrollMagic.Scene({
                 triggerElement: this,
                 offset: -200,
                 reverse: false
             })
-            .setTween(lineTween)
+            .setTween(lineTween) // trigger a TweenMax.to tween
             .addTo(controller);
 
     });
 
+    // loop through all elements
     $('.left-reveal').each(function () {
 
-
+        // build a tween
         var lineTween = TweenMax.from($(this), 1.8, {
             duration: 2,
             x: "20%",
@@ -501,21 +504,21 @@ const runScripts = () => {
             ease: Power4.easeOut
         }, 0);
 
-
+        // build a scene
         var scene = new ScrollMagic.Scene({
                 triggerElement: this,
                 offset: -200,
                 reverse: false
             })
-            .setTween(lineTween)
+            .setTween(lineTween) // trigger a TweenMax.to tween
             .addTo(controller);
 
     });
 
-    
+    // loop through all elements
     $('.text-reveal').each(function () {
 
-        
+        // build a tween
         var lineTween = TweenMax.from($(this), {
             duration: 2,
             y: "20%",
@@ -523,21 +526,21 @@ const runScripts = () => {
             ease: Power4.easeOut
         }, 0);
 
-        
+        // build a scene
         var scene = new ScrollMagic.Scene({
                 triggerElement: this,
                 offset: -400,
                 reverse: false
             })
-            .setTween(lineTween)
+            .setTween(lineTween) // trigger a TweenMax.to tween
             .addTo(controller);
 
     });
 
-    
+    // loop through all elements
     $('.influence-bg').each(function () {
 
-        
+        // build a tween
         var lizInfTween = TweenMax.to($(this), {
             duration: 0.4,
             translateY: "-10px",
@@ -546,10 +549,12 @@ const runScripts = () => {
             ease: Linear.easeNone
         }, 0);
 
+        // build a scene
         var scene = new ScrollMagic.Scene({
                 triggerElement: this
             })
-            .setTween(lizInfTween)
+            .setTween(lizInfTween) // trigger a TweenMax.to tween
+            // .addIndicators() // add indicators (requires plugin)
             .addTo(controller);
 
     });
@@ -569,6 +574,7 @@ const runScripts = () => {
     })
 
     var slideStartTween = slideStart
+        // .to(".liz-home", {backgroundColor: "#000", ease: Linear.noEase})
         .to(".start-left p", {
             duration: 0.8,
             x: "0%",
@@ -583,12 +589,15 @@ const runScripts = () => {
         }, 0)
 
     var slideEndTween = slideEnd
+    // .to(".liz-home", {backgroundColor: "#fff", ease: Linear.noEase}, 0)
 
     var slideStartScene = new ScrollMagic.Scene({
             triggerElement: ".liz-start",
             triggerHook: "0.5"
         })
         .setTween(slideStartTween)
+        // .setPin(".liz-start", {pushFollowers: true})
+        // .addIndicators() // add indicators (requires plugin)
         .addTo(controller);
 
     var slideEndScene = new ScrollMagic.Scene({
@@ -596,6 +605,8 @@ const runScripts = () => {
             offset: 650
         })
         .setTween(slideEndTween)
+        // .setPin("#target", {pushFollowers: false})
+        // .addIndicators() // add indicators (requires plugin)
         .addTo(controller);
 
 
@@ -616,13 +627,15 @@ const runScripts = () => {
             duration: "100%"
         })
         .setTween(lizSlide)
+        // .setPin("#target", {pushFollowers: false})
+        // .addIndicators() // add indicators (requires plugin)
         .addTo(controller);
 
     const splitImageCopy = () => {
-     
+        // build tween
         var timelineSplitter = new TimelineMax();
 
-       
+        // var tween1 = timelineSplitter
         var splitterTween = timelineSplitter.from(".splitter", 1, {
                 opacity: 0,
                 x: "-50%",
@@ -646,6 +659,8 @@ const runScripts = () => {
                 reverse: false
             })
             .setTween(timelineSplitter)
+            // .setPin("#target", {pushFollowers: false})
+            // .addIndicators({name: 'test', indent: 500}) // add indicators (requires plugin)
             .addTo(controller);
 
     }
@@ -686,6 +701,8 @@ const runScripts = () => {
                 duration: 300
             })
             .setTween(bgLeftScrollT1)
+            // .setPin("#target", {pushFollowers: false})
+            // .addIndicators() // add indicators (requires plugin)
             .addTo(controller);
 
         var bgLeftScene1 = new ScrollMagic.Scene({
@@ -694,6 +711,8 @@ const runScripts = () => {
                 duration: 600
             })
             .setTween(bgLeftScrollT2)
+            // .setPin("#target", {pushFollowers: false})
+            // .addIndicators() // add indicators (requires plugin)
             .addTo(controller);
 
         var bgLeftScene2 = new ScrollMagic.Scene({
@@ -702,6 +721,8 @@ const runScripts = () => {
                 duration: 600
             })
             .setTween(bgLeftScrollT3)
+            // .setPin("#target", {pushFollowers: false})
+            // .addIndicators() // add indicators (requires plugin)
             .addTo(controller);
 
         var bgRightScene = new ScrollMagic.Scene({
@@ -709,6 +730,8 @@ const runScripts = () => {
                 duration: 2000
             })
             .setTween(bgRightScrollT1)
+            // .setPin("#target", {pushFollowers: false})
+            // .addIndicators() // add indicators (requires plugin)
             .addTo(controller);
 
 
@@ -749,6 +772,8 @@ const runScripts = () => {
                 offset: 900
             })
             .setTween(picT0)
+            // .setPin("#target", {pushFollowers: false})
+            // .addIndicators() // add indicators (requires plugin)
             .addTo(controller);
 
         var picScene1 = new ScrollMagic.Scene({
@@ -756,6 +781,8 @@ const runScripts = () => {
                 offset: 900
             })
             .setTween(picT1)
+            // .setPin("#target", {pushFollowers: false})
+            // .addIndicators() // add indicators (requires plugin)
             .addTo(controller);
 
         var picScene2 = new ScrollMagic.Scene({
@@ -763,6 +790,8 @@ const runScripts = () => {
                 offset: 1200
             })
             .setTween(picT2)
+            // .setPin("#target", {pushFollowers: false})
+            // .addIndicators() // add indicators (requires plugin)
             .addTo(controller);
 
         var picScene3 = new ScrollMagic.Scene({
@@ -770,6 +799,8 @@ const runScripts = () => {
                 offset: 1500
             })
             .setTween(picT3)
+            // .setPin("#target", {pushFollowers: false})
+            // .addIndicators() // add indicators (requires plugin)
             .addTo(controller);
 
 
@@ -842,6 +873,13 @@ const runScripts = () => {
             ease: Power4.easeInOut
         });
 
+        // var overviewTween = new TweenMax.from('#overview', 2, {
+        //     opacity: "0",
+        //     y: "20%",
+        //     ease: Power4.easeOut,
+        //     delay: 0.2
+        // });
+
         var containerScene = new ScrollMagic.Scene({
                 triggerElement: '#roster',
                 reverse: false
@@ -849,6 +887,13 @@ const runScripts = () => {
             .setTween(rosterTween)
             // .addIndicators()
             .addTo(controller);
+
+        // var introScene = new ScrollMagic.Scene({
+        //         triggerElement: '#intro'
+        //     })
+        //     .setTween(overviewTween)
+        //     .addIndicators()
+        //     .addTo(controller);
     }
 
 
@@ -882,6 +927,11 @@ const runScripts = () => {
     };
 
 
+    // var Scrollbar = window.Scrollbar;
+
+    // Scrollbar.init(document.querySelector('#my-scrollbar'));
+
+
     // Get the button:
     mybutton = document.getElementById("toTop");
 
@@ -908,65 +958,70 @@ const runScripts = () => {
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     });
 
-    const images = document.querySelectorAll("[data-src]");
+    // $(document).ready(function () {
+    //     $('#nav-icon').click(function () {
+    //         $('#mobile-nav').toggleClass('open');
+    //     });
+    // });
 
-    function preloadImage(img) {
-        const src = img.getAttribute("data-src");
-        if(!src) {
-            return;
+
+
+    $(document).ready(function () {
+
+        if ($('body').hasClass('homepage')) {
+            rosterFade();
+            cookieWatch();
         }
-
-        img.src = src;
-    }
-
-    const imgOptions = {
-        threshold: 0,
-        rootMargin: "0px 0px 300px 0px"
-    };
-
-    const imgObserver = new IntersectionObserver((entries, imgObserver) => {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                return;
-            }
-            else {
-                preloadImage(entry.target);
-                imgObserver.unobserve(entry.target);
-            }
-        })
-
-    }, imgOptions);
-
-    images.forEach(image => {
-        imgObserver.observe(image);
-    })
-
-
-
-
-
+        if ($('body').hasClass('liz-home')) {
+            lizTweens();
+        }
+        if (!$('body').hasClass('homepage')) {
+            splitImageCopy();
+        }
+        if ($("#drag-image").length > 0) {
+            dragImage();
+        } else if ($("#drag-image-2").length > 0) {
+            dragImage2();
+        } else {
+            console.log('NOT HERE');
+        }
+    });
 
 }
 
 runScripts();
 
-$(document).ready(function () {
 
-    if ($('body').hasClass('homepage')) {
-        rosterFade();
-        cookieWatch();
-    }
-    if ($('body').hasClass('liz-home')) {
-        lizTweens();
-    }
-    if (!$('body').hasClass('homepage')) {
-        splitImageCopy();
-    }
-    if ($("#drag-image").length > 0) {
-        dragImage();
-    } else if ($("#drag-image-2").length > 0) {
-        dragImage2();
-    } else {
-        console.log('NOT HERE');
-    }
-});
+
+// // Roster Slider
+
+// const slider = document.querySelector('.roster');
+// let isDown = false;
+// let startX;
+// let scrollLeft;
+
+// slider.addEventListener('mousedown', (e) => {
+//   isDown = true;
+//   slider.classList.add('active');
+//   startX = e.pageX - slider.offsetLeft;
+//   scrollLeft = slider.scrollLeft;
+// });
+
+// slider.addEventListener('mouseleave', () => {
+//   isDown = false;
+//   slider.classList.remove('active');
+// });
+
+// slider.addEventListener('mouseup', () => {
+//   isDown = false;
+//   slider.classList.remove('active');
+// });
+
+// slider.addEventListener('mousemove', (e) => {
+//   if(!isDown) return;
+//   e.preventDefault();
+//   const x = e.pageX - slider.offsetLeft;
+//   const walk = x - startX;
+//   slider.scrollLeft = scrollLeft - walk;
+//   console.log(walk);
+// });
