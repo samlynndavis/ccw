@@ -542,16 +542,17 @@ const runScripts = () => {
 
         // build a tween
         var lizInfTween = TweenMax.to($(this), {
-            duration: 0.4,
+            duration: 0.6,
             translateY: "-10px",
             translateX: "10px",
             opacity: 1,
-            ease: Linear.easeNone
+            ease: Power4.easeOut
         }, 0);
 
         // build a scene
         var scene = new ScrollMagic.Scene({
-                triggerElement: this
+                triggerElement: this,
+                reverse: false
             })
             .setTween(lizInfTween) // trigger a TweenMax.to tween
             // .addIndicators() // add indicators (requires plugin)
@@ -636,7 +637,8 @@ const runScripts = () => {
         var timelineSplitter = new TimelineMax();
 
         // var tween1 = timelineSplitter
-        var splitterTween = timelineSplitter.from(".splitter", 1, {
+        var splitterTween = timelineSplitter
+            .from(".splitter", 1, {
                 opacity: 0,
                 x: "-50%",
                 ease: Power4.easeInOut
@@ -655,7 +657,6 @@ const runScripts = () => {
         // build scene
         var splitterScene = new ScrollMagic.Scene({
                 triggerElement: ".split-image-desktop",
-                duration: 500,
                 reverse: false
             })
             .setTween(timelineSplitter)
