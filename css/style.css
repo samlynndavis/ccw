@@ -1622,6 +1622,28 @@ footer.bottom {
   transition: 100ms ease;
 }
 
+.footer-about {
+  padding: 0 2rem;
+}
+
+.about-blurb {
+  width: 50%;
+  
+}
+
+.about-blurb h1 {
+  font-size: 3vw; 
+}
+
+.about-blurb p {
+  font-size: 3.5vw;
+}
+
+.vitals span {
+  font-size: 3vmax;
+  font-family: 'Grifinito M Medium', serif
+}
+
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -1860,6 +1882,23 @@ footer.bottom {
 
 
 @media screen and (max-width: 1024px) {
+
+  .about-blurb {
+    width: 100%;
+  }
+
+  .about-blurb h1 {
+    font-size: 7vw; 
+  }
+
+  .about-blurb p {
+    font-size: 6.5vw;
+  }
+
+  .vitals span {
+    font-size: 6vw;
+    font-family: 'Grifinito M Medium', serif;
+  }
 
   .influences {
     align-items: center;
