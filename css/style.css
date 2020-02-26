@@ -13,6 +13,11 @@ button {
   cursor: url(/img/red_cursor.png), auto !important;
 } */
 
+html {
+  scroll-behavior: smooth;
+  background-color: black;
+}
+
 [data-src] {
   min-width: 50px;
   min-height: 50px;
@@ -2823,11 +2828,4 @@ svg.question_laura {
   transform-origin: 0% 50%;
   left: 0;
   z-index: -1;
-}
-
-html {
-  scroll-behavior: smooth;
-  background-color: black;
-  visibility: visible;
-  opacity: 1;
 }
