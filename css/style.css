@@ -282,14 +282,6 @@ a:visited {
   color: #fff;
 }
 
-/* .overview-title {
-  z-index: 1001
-}
-
-.overview-title {
-  transform: rotate(-90deg) translateY(-40px);
-} */
-
 .socail>svg:hover {
   transform: translateY(2px);
 }
@@ -1598,7 +1590,7 @@ footer.bottom {
   display: block;
   position: absolute;
   /* bottom: calc(50% + 0px); */
-  bottom: 10px;
+  bottom: 4px;
   z-index: -1;
 
   transform: scaleX(0);
@@ -1612,11 +1604,6 @@ footer.bottom {
 }
 
 .links span:hover {
-  font-family: "Grifinito M Medium Italic";
-  font-weight: normal;
-  font-style: normal;
-
-  color: #dd5a54;
   color: #000;
 
   transition: 100ms ease;
@@ -2822,6 +2809,7 @@ svg.question_laura {
 
 html {
   scroll-behavior: smooth;
+  background-color: black;
   visibility: visible;
   opacity: 1;
 }
