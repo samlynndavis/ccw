@@ -1,5 +1,4 @@
 # From Chicago, With Love - Chicago Creative Women Project
-
 Interactive site highlighting the creative processes and background of five, female, Chicago creatives.
 
 Built with:
