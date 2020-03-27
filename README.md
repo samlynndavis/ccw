@@ -1,17 +1,4 @@
 # From Chicago, With Love - Chicago Creative Women Project
-<<<<<<< HEAD
-=======
-Interactive site highlighting the creative processes and backgrounds of five Chicago creatives.
-
-Built with:
-* GSAP
-* [tachyons](https://github.com/tachyons-css/tachyons)
-* [js-cookie](https://github.com/js-cookie/js-cookie)
-* [Lettering.js](https://github.com/davatron5000/Lettering.js)
-* [ScrollMagic](https://github.com/janpaepke/ScrollMagic)
-
-# From Chicago, With Love - Chicago Creative Women Project
->>>>>>> 6aed2c28c76856f164a6ec3f6bda0843afb6c23d
 
 Interactive site highlighting the creative processes and background of five, female, Chicago creatives.
 
