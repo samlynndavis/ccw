@@ -121,13 +121,6 @@ a:visited {
 }
 
 @font-face {
-  font-family: "Zeit-Extralight";
-  src: url("/css/fonts/zeit-extralight.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Grifinito M Medium";
   src: url("/css/fonts/grifinito_m.otf") format("truetype");
   font-weight: normal;
@@ -150,26 +143,6 @@ a:visited {
 
 .cormo {
   font-family: "Cormorant", serif;
-}
-
-.zeit {
-  font-family: "Zeit-MediumItalic";
-}
-
-.zeit-extra {
-  font-family: "Zeit-Extralight";
-}
-
-.zeit-light {
-  font-family: "Zeit-Light";
-}
-
-.zeit-heavy {
-  font-family: "Zeit-Heavy";
-}
-
-.montserrat {
-  font-family: Montserrat, sans-serif;
 }
 
 .chicago {
